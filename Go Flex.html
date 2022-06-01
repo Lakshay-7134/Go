@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go</title>
+
+    <style>
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Kwp5MKg.woff2)format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Nwp5MKg.woff2)format('woff2');
+            unicode-range: U+0370-03FF;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Bwp5MKg.woff2)format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Awp5MKg.woff2)format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Owp4.woff2)format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94Yt3CwZ-Pw.woff2)format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94YtwCwZ-Pw.woff2)format('woff2');
+            unicode-range: U+0370-03FF;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94Yt8CwZ-Pw.woff2)format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94Yt9CwZ-Pw.woff2)format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94YtzCwY.woff2)format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            font-size: 16px;
+            font-family: "Google Sans", Roboto, Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            height: 62px;
+            overflow: hidden;
+            box-shadow: ;
+        }
+
+        .container>div {
+            background: rgba(255, 255, 255, 0);
+            font-size: 1rem;
+            padding: 10px 15px;
+            font-family: inherit;
+            cursor: pointer;
+            margin: 20px;
+        }
+
+
+        .menu-icon {
+            position: absolute;
+            right: 0;
+            display: none;
+            border-radius: 100px;
+        }
+
+        .menu-icon:hover{background: #f8f9fa;}
+
+        .menu-icon div {
+            width: 22px;
+            height: 2px;
+            background-color: black;
+            margin: 5px 0;
+        }
+
+        .logo {
+            cursor: default !important;
+        }
+
+        .logo:hover{background: transparent;}
+
+        @media only screen and (max-width: 991px) {
+
+            .container {
+                justify-content: flex-start;
+            }
+
+            .menu-icon {
+                display: block !important;
+                padding: 13px 15px !important;
+            }
+
+            .logo {
+                display: block !important;
+
+            }
+
+            .container>div {
+                display: none;
+            }
+
+        }
+    </style>
+    <script>
+
+
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo" style="font-size: 2rem;">Go</div>
+        <div>Home</div>
+        <div>Features</div>
+        <div>Review</div>
+        <div>WeUI</div>
+        <div class="menu-icon" id="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <p style="font-size: 60px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima
+        animi consectetur quidem illum
+        provident aut impedit aliquid laboriosam repudiandae iusto nam praesentium sequi nihil necessitatibus
+        voluptates, ipsam atque Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ad dolore eveniet, in
+        ipsam repudiandae! Ipsum ipsa alias corporis dolore sed a laboriosam nulla, vel autem hic quae quod iste? Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Aut, asperiores, eum obcaecati fugiat optio consequatur sed
+        soluta, temporibus corrupti nulla expedita fuga assumenda neque sunt quisquam delectus voluptas. Nihil, minima?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, omnis. Dicta quasi deserunt quod ipsa
+        perferendis vel eaque, veniam explicabo saepe debitis neque, itaque laborum illo repellendus culpa doloribus
+        fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nostrum repudiandae eveniet enim
+        itaque quidem excepturi, accusamus minus consectetur non voluptatibus ducimus ad molestias vel facilis ipsum
+        nemo modi animi?</p>
+</body>
+
+</html>
