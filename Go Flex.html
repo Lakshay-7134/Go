@@ -40,7 +40,7 @@
 
         .container>div {
             background: rgba(255, 255, 255, 0);
-            font-size: 1rem;
+            font-size: .95rem;
             padding: 10px 15px;
             font-family: inherit;
             cursor: pointer;
@@ -49,7 +49,7 @@
         }
 
         .top-opt {
-            transition: color .2s ease;
+            transition: all .2s ease;
         }
 
         .top-opt:hover {
@@ -85,6 +85,20 @@
             background: transparent;
         }
 
+        .login {
+            background: #1a73e8 !important;
+            padding: 10px 22px !important;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1.05rem !important;
+            font-weight: 500;
+            border: 2px solid #1a73e8;
+        }
+
+        .login:hover {
+            background: rgba(255, 255, 255, 0) !important;
+        }
+
         @media only screen and (max-width: 991px) {
 
             .container {
@@ -111,8 +125,9 @@
                 document.getElementById('container').style.background = '#fff';
             }
 
-            else { 
-            document.getElementById('container').style.background = 'transparent'; }
+            else {
+                document.getElementById('container').style.background = 'transparent';
+            }
         }
 
 
@@ -124,8 +139,8 @@
     <div class="container" id="container">
 
         <div class="logo" style="font-size: 2rem;"><img
-                src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
-                style="width: 40px;height:auto" /></div>
+                src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
+                style="width: 120px;height:auto" /></div>
         <div class="top-opt">Home</div>
         <div class="top-opt">Features</div>
         <div class="top-opt">Review</div>
@@ -135,6 +150,7 @@
             <div></div>
             <div></div>
         </div>
+        <div class="top-opt login" style="position:absolute;right: 0;">Sign In</div>
     </div>
     <p style="font-size: 60px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima
         animi consectetur quidem illum
