@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>Go</title>
 
     <style>
@@ -18,7 +19,6 @@
 
         html,
         body {
-            overflow-x: hidden;
             font-size: 16px;
             font-family: "Google Sans", Roboto, Arial, sans-serif;
         }
@@ -36,6 +36,8 @@
             height: 62px;
             overflow: hidden;
             transition: background .2s ease;
+            z-index: 1000;
+            background: #fff;
         }
 
         .container>div {
@@ -44,12 +46,13 @@
             padding: 10px 15px;
             font-family: inherit;
             cursor: pointer;
-            margin: 10px;
+            margin: 8px;
             letter-spacing: .5px;
         }
 
         .top-opt {
             transition: all .2s ease;
+            border: 2px solid transparent;
         }
 
         .top-opt:hover {
@@ -66,7 +69,7 @@
         }
 
         .menu-icon:hover {
-            background: #c0c0c033;
+            background: #f8f9fa;
         }
 
         .menu-icon div {
@@ -93,11 +96,73 @@
             font-size: 1.05rem !important;
             font-weight: 500;
             border: 2px solid #1a73e8;
+            margin-right: 15px !important;
         }
 
         .login:hover {
             background: rgba(255, 255, 255, 0) !important;
         }
+
+        .search-div {
+            background: rgba(255, 255, 255, 0) !important;
+            flex: 1;
+            margin-left: 20% !important;
+            cursor: default !important;
+        }
+
+        .search-bar {
+            width: 100%;
+            height: 35px;
+            outline: 0;
+            border-width: 0 0 1px 0;
+            background: rgba(255, 255, 255, 0);
+            font-size: .95rem;
+            padding: 5px 15px 0 28px;
+            font-family: inherit;
+            letter-spacing: .5px;
+            border-color: #ccc;
+            transition: all .3s ease-in;
+            margin-top: 18px;
+            color: #24292f !important;
+        }
+
+        .search-icon {
+            position: relative;
+            top: -25px;
+            left: 1px;
+            font-size: 1.2rem;
+            color: #24292f;
+            transition: all .3s ease-in;
+        }
+
+        .search-bar:hover {
+            border-color: #1a73e8;
+        }
+
+        .search-bar:hover~.search-icon {
+            color: #1a73e8;
+        }
+
+        .search-bar:focus {
+            border-color: #1a73e8;
+        }
+
+        .search-bar:focus~.search-icon {
+            color: #1a73e8;
+        }
+
+        .side-nav {
+            position: fixed;
+            top: 62px;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            overflow: hidden;
+            background: #ffffff;
+            z-index: 500;
+            display: none;
+        }
+
 
         @media only screen and (max-width: 991px) {
 
@@ -114,22 +179,37 @@
                 display: none !important;
             }
 
+            .search-div {
+                display: none !important;
+            }
+
+            .side-nav {
+                display: block !important;
+            }
+
+        }
+
+        @media only screen and (max-width: 1250px) {
+            .search-div {
+                margin-left: 6% !important;
+            }
+        }
+
+        .side-toggle {
+            width: 100%;
+        }
+
+        .html-body-toggle {
+            overflow: hidden;
         }
     </style>
     <script>
 
-
-        window.onscroll = function () { show_bg() };
-        function show_bg() {
-            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-                document.getElementById('container').style.background = '#fff';
-            }
-
-            else {
-                document.getElementById('container').style.background = 'transparent';
-            }
+        function open_nav() {
+            document.getElementById('side-nav').classList.toggle('side-toggle');
+            document.body.classList.toggle('html-body-toggle');
+            document.html.classList.toggle('html-body-toggle');
         }
-
 
     </script>
 </head>
@@ -145,25 +225,18 @@
         <div class="top-opt">Features</div>
         <div class="top-opt">Review</div>
         <div class="top-opt">WeUI</div>
-        <div class="menu-icon" id="menu-icon">
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="menu-icon" id="menu-icon" onclick="open_nav()">
+            <div id="line-1"></div>
+            <div id="line-2"></div>
+            <div id="line-3"></div>
         </div>
-        <div class="top-opt login" style="position:absolute;right: 0;">Sign In</div>
+        <div class="search-div"><input type="text" class="search-bar" placeholder="Search..." /><i
+                class='bx bx-search search-icon'></i></div>
+        <div class="top-opt login">Sign In</div>
     </div>
-    <p style="font-size: 60px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima
-        animi consectetur quidem illum
-        provident aut impedit aliquid laboriosam repudiandae iusto nam praesentium sequi nihil necessitatibus
-        voluptates, ipsam atque Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ad dolore eveniet, in
-        ipsam repudiandae! Ipsum ipsa alias corporis dolore sed a laboriosam nulla, vel autem hic quae quod iste? Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Aut, asperiores, eum obcaecati fugiat optio consequatur sed
-        soluta, temporibus corrupti nulla expedita fuga assumenda neque sunt quisquam delectus voluptas. Nihil, minima?
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, omnis. Dicta quasi deserunt quod ipsa
-        perferendis vel eaque, veniam explicabo saepe debitis neque, itaque laborum illo repellendus culpa doloribus
-        fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nostrum repudiandae eveniet enim
-        itaque quidem excepturi, accusamus minus consectetur non voluptatibus ducimus ad molestias vel facilis ipsum
-        nemo modi animi?</p>
+
+    <div class="side-nav" id="side-nav"></div>
+    <div style="height:1200px;width:80%;margin:auto;background:#24292f;margin-top:80px"></div>
 </body>
 
 </html>
