@@ -17,8 +17,8 @@
             -webkit-user-drag: none;
         }
 
-        html,
         body {
+            overflow-x: hidden;
             font-size: 16px;
             font-family: "Google Sans", Roboto, Arial, sans-serif;
         }
@@ -72,11 +72,15 @@
             background: #f8f9fa;
         }
 
-        .menu-icon div {
+        .line-1,
+        .line-2,
+        .line-3 {
             width: 18px;
             height: 2px;
             background-color: black;
             margin: 3px 0;
+            border-radius: 100px;
+            transition: all .2s ease;
         }
 
         .logo {
@@ -172,7 +176,7 @@
 
             .menu-icon {
                 display: block !important;
-                padding: 13px 13px !important;
+                padding: 13px !important;
             }
 
             .top-opt {
@@ -202,13 +206,40 @@
         .html-body-toggle {
             overflow: hidden;
         }
+
+        .line-1-toggle {
+            -webkit-transform: rotate(-45deg) translate(-1px, 6px);
+            transform: rotate(-45deg) translate(-1px, 6px);
+            width: 19px;
+            margin-right: 6px !important;
+        }
+
+        .line-2-toggle {
+            opacity: 0;
+            transform: translate(15px, 0px);
+            margin-right: 4px !important;
+        }
+
+        .line-3-toggle {
+            -webkit-transform: rotate(45deg) translate(-1px, -6px);
+            transform: rotate(45deg) translate(-1px, -6px);
+            width: 19px;
+            margin-right: 6px !important;
+        }
+
+        .menu-icon-toggle {
+            padding: 13px 9.5px !important;
+        }
     </style>
     <script>
 
         function open_nav() {
             document.getElementById('side-nav').classList.toggle('side-toggle');
             document.body.classList.toggle('html-body-toggle');
-            document.html.classList.toggle('html-body-toggle');
+            document.getElementById('line-1').classList.toggle('line-1-toggle');
+            document.getElementById('line-2').classList.toggle('line-2-toggle');
+            document.getElementById('line-3').classList.toggle('line-3-toggle');
+            document.getElementById('menu-icon').classList.toggle('menu-icon-toggle');
         }
 
     </script>
@@ -220,15 +251,15 @@
 
         <div class="logo" style="font-size: 2rem;"><img
                 src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
-                style="width: 120px;height:auto" /></div>
+                alt="Go" style="width: 120px;height:auto" /></div>
         <div class="top-opt">Home</div>
         <div class="top-opt">Features</div>
         <div class="top-opt">Review</div>
         <div class="top-opt">WeUI</div>
         <div class="menu-icon" id="menu-icon" onclick="open_nav()">
-            <div id="line-1"></div>
-            <div id="line-2"></div>
-            <div id="line-3"></div>
+            <div id="line-1" class="line-1"></div>
+            <div id="line-2" class="line-2"></div>
+            <div id="line-3" class="line-3"></div>
         </div>
         <div class="search-div"><input type="text" class="search-bar" placeholder="Search..." /><i
                 class='bx bx-search search-icon'></i></div>
