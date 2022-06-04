@@ -10,10 +10,10 @@
         * {
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
-            user-select: none;
             -moz-user-select: none;
             -webkit-user-select: none;
             -ms-user-select: none;
+            user-select: none;
             -webkit-user-drag: none;
         }
 
@@ -159,12 +159,13 @@
             position: fixed;
             top: 62px;
             bottom: 0;
-            left: 0;
+            right: 0;
             width: 0;
             overflow: hidden;
             background: #ffffff;
             z-index: 500;
             display: none;
+            transition: width .08s ease-in-out;
         }
 
 
@@ -211,24 +212,24 @@
             -webkit-transform: rotate(-45deg) translate(-1px, 6px);
             transform: rotate(-45deg) translate(-1px, 6px);
             width: 19px;
-            margin-right: 6px !important;
+            margin-right: 7px !important;
         }
 
         .line-2-toggle {
             opacity: 0;
             transform: translate(15px, 0px);
-            margin-right: 4px !important;
+            margin-right: 7px !important;
         }
 
         .line-3-toggle {
             -webkit-transform: rotate(45deg) translate(-1px, -6px);
-            transform: rotate(45deg) translate(-1px, -6px);
+            transform: rotate(45deg) tmranslate(-1px, -6px);
             width: 19px;
-            margin-right: 6px !important;
+            margin-right: 7px !important;
         }
 
         .menu-icon-toggle {
-            padding: 13px 9.5px !important;
+            padding: 13px 9px !important;
         }
     </style>
     <script>
