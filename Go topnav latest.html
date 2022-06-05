@@ -1,0 +1,352 @@
+<!--HTML Source Code-->
+
+<html>
+
+<head>
+
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="C:\Users\User\Desktop\Project Go\Go Extras\Favicon\apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="C:\Users\User\Desktop\Project Go\Go Extras\Favicon\favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="C:\Users\User\Desktop\Project Go\Go Extras\Favicon\favicon-16x16.png">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <script src="Go.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>WeUI: Towards Project Go
+    </title>
+
+    <style>
+
+
+
+        @import url("https://font.sec.miui.com/font/css?family=MiSans:300,450,500,650:Chinese_Simplify,Latin,Chinese_Traditional&display=swap");
+
+        @font-face {
+            font-family: "Alliance No";
+            font-style: normal;
+            font-weight: 400;
+            src: url("C:\\Users\\User\\Desktop\\Project Go\\Font\\Alliance-No-1-Regular.woff2") format("woff2");
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: "Alliance No";
+            font-style: italic;
+            font-weight: 400;
+            src: url("C:\\Users\\User\\Desktop\\Project Go\\Font\\Alliance-No-1-Italic.woff2") format("woff2");
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: "Alliance No";
+            font-style: normal;
+            font-weight: 450;
+            src: url("C:\\Users\\User\\Desktop\\Project Go\\Font\\Alliance-No-1-Medium.woff2") format("woff2");
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: "Alliance No";
+            font-style: normal;
+            font-weight: 500;
+            src: url("C:\\Users\\User\\Desktop\\Project Go\\Font\\Alliance-No-1-SemiBold.woff2") format("woff2");
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: "Alliance No";
+            font-style: normal;
+            font-weight: 600;
+            src: url("C:\\Users\\User\\Desktop\\Project Go\\Font\\Alliance-No-1-Bold.woff2") format("woff2");
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: "Alliance No";
+            font-style: normal;
+            font-weight: 800;
+            src: url("C:\\Users\\User\\Desktop\\Project Go\\Font\\Alliance-No-1-ExtraBold.woff2") format("woff2");
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: "Alliance Noo";
+            font-style: normal;
+            font-weight: 600;
+            src: url("C:\\Users\\User\\Desktop\\Project Go\\Font\\Alliance-No-2-Bold.woff2") format("woff2");
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: "Alliance Noo";
+            font-style: normal;
+            font-weight: 800;
+            src: url("C:\\Users\\User\\Desktop\\Project Go\\Font\\Alliance-No-2-ExtraBold.woff2") format("woff2");
+            font-display: swap
+        }
+
+        * {
+            font-size: 100%;
+            margin: 0;
+            padding: 0;
+            vertical-align: baseline;
+            -webkit-user-drag: none;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+     
+.material-light {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400
+}
+
+
+.material-symbols-outlined {
+ color: #000;
+}
+
+
+        html {
+            font-size: 16px;
+        }
+
+        html,
+        body {
+            color: #404040;
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        body {
+            display: block;
+        }
+
+        .topnav_class {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            display: block;
+            height: 62px;
+            z-index: 50;
+            overflow: hidden;
+            width: 100%;
+            background: hsla(0, 0%, 100%, .8);
+            backdrop-filter: blur(40px);
+            color: rgba(29, 29, 31, 1);
+            transform: translateZ(0);
+            transform-style: preserve-3d;
+            transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+        }
+
+        .topnav_class .flex_menu_container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            background: transparent;
+            justify-content: space-between;
+            padding: 0 16px;
+            flex-direction: row;
+            align-items: center;
+            margin: 0;
+            border: 0;
+        }
+
+        .topnav_class .flex_menu_container .flex_box_list_item {
+            text-align: center;
+            flex: 1;
+            flex-basis: 1e-9px;
+            flex-direction: row;
+            font-size: 16px;
+            color: #1D1D1F;
+            letter-spacing: 0;
+            font-family: MiSans, Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 450;
+            transition: color .3s ease-in;
+            background: transparent;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        }
+
+        /*
+        .topnav_class .flex_menu_container .flex_box_list_item:hover {
+            color: #0d84ff;
+        }
+*/
+        .topnav_class .flex_menu_container .flex_box_list_item .search_box {
+            height: 40px;
+            width: 100%;
+            border-radius: 4.5px;
+            background: transparent;
+            border: none;
+            outline: 0;
+            font-size: 15px;
+            font-weight: 400;
+            color: #24292f;
+            padding: 0 6px 0 10px;
+            font-family: Alliance No, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+        }
+
+        .search-icon {
+            color: #24292f;
+            font-size: 18px;
+        }
+
+
+        .search-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            transition: border .3s ease-in;
+        }
+
+        .search-container:hover {
+            border-bottom: 1px solid #0969da;
+        }
+
+        .focused {
+            border-bottom: 1px solid #0969da;
+        }
+        .focu {
+            color: #000 ;
+        }
+      
+        .sidenav-icon{font-size:24px;padding:  12px;color: #24292f;}
+
+        .topnav-hover{border-radius: 100%;
+        }
+         .topnav-hover:hover{background: #f8f9fa;color: #000;
+        }
+        .topnav-hover-2{border-radius: 5px;
+        }
+        .topnav-hover-2:hover{background: #f8f9fa;
+        }
+        .sidenav-container{}
+    </style>
+
+
+    <script>
+        function intfocus() {
+
+            document.getElementById("search_ccontainer").classList.add("focused");
+            document.getElementById("search_icon").classList.add("focu");
+
+
+        }
+
+        function intfocusrmv() {
+
+            document.getElementById("search_ccontainer").classList.remove("focused");
+            document.getElementById("search_icon").classList.remove("focu");
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="topnav_class" id="topnav_id">
+
+
+
+        <div class="flex_menu_container">
+
+
+            <div class="flex_box_list_item" style="justify-content: flex-start;cursor: default;">
+                <div class="topnav-hover sidenav-container"><span class="material-symbols-outlined sidenav-icon">
+                        menu
+                    </span>
+                
+                </div>
+                <div style="width: 45px;">
+                    <img src="https://raw.githubusercontent.com/Lakshay-7134/Go/main/Favicon%20Logo.png"
+                        style="height: 28px;width: auto;">
+                </div>
+
+                <div style="font-size: 16px;
+            font-family: MiSans, system-ui, 微软雅黑, sans-serif;color: #1D1D1F;">
+                    WeUI
+                </div>
+
+            </div>
+
+
+            <div class="flex_box_list_item">
+                <div class="search-container" id="search_ccontainer">
+                    <span class="material-symbols-outlined search-icon" id="search_icon">
+                        search
+                    </span>
+                    
+
+
+                    <input type="text" class="search_box" placeholder="Search..." onfocus="intfocus()"
+                        onfocusout="intfocusrmv()">
+                    <button></button>
+                </div>
+
+            </div>
+
+
+
+            <div class="flex_box_list_item" style="justify-content: flex-end;">
+
+
+                <div class="topnav-hover"><span class="material-symbols-outlined" style="
+                    font-size: 25px; padding:  12px; color: #24292f; ">
+                        schedule
+                    </span>
+
+                   
+                </div>
+
+                <div class="topnav-hover">
+                    <span class="material-symbols-outlined" style=" font-size: 25px;padding: 12px; color: #24292f; ">
+                        apps
+                        </span>
+
+                        
+                </div>
+            
+         
+            <div
+                style=" 
+
+            border: none;
+            outline: 0;
+            font-size: 15px;
+            font-weight: 500;
+            color: #24292f;
+            padding: 8px 12px;
+            font-family: Alliance No, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;display: flex;align-items: center;" class="topnav-hover-2"><img src="https://yt3.ggpht.com/yti/APfAmoFlzHKerP6t_iyfsNhwOPXYLcbCsCUycHt6yQ=s108-c-k-c0x00ffffff-no-rj" style="border-radius: 100%;width: 32px;
+  height: 32px;">
+                <span style="padding-left: 8px">Hi Piyush</span></div>
+        </div>
+
+
+    </div>
+
+
+
+    </div>
+
+</body>
+
+</html>
