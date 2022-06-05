@@ -154,11 +154,13 @@
         .search-bar:focus~.search-icon {
             color: #1a73e8;
         }
- 
+
         @media only screen and (min-width: 991px) {
 
-            .shadow-menu{display: none !important;}
-            
+            .shadow-menu {
+                display: none !important;
+            }
+
         }
 
 
@@ -194,80 +196,80 @@
         }
 
 
-                
+
         .bottom-menu {
-      position: fixed;
-      right: 0;
-      left: 0;
-      background-color: #ffffff;
-      height: 0;
-      width: 100%;
-      bottom: 0;
-      transition: height 0.2s, border-radius 0.8s;
-      border-radius: 25px 25px 0 0;
-      z-index: 1;
-      display: none;
-    }
+            position: fixed;
+            right: 0;
+            left: 0;
+            background-color: #ffffff;
+            height: 0;
+            width: 100%;
+            bottom: 0;
+            transition: height 0.2s, border-radius 0.8s;
+            border-radius: 25px 25px 0 0;
+            z-index: 1;
+            display: none;
+        }
 
-   
 
-    .shadow-menu {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      width: 100%;
-      display: none;
-      background-color: rgba(0, 0, 0, 0.4);
-    }
 
-    .line-menu {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      width: 100%;
-      background-color: #ffffff;
-      height: 24px;
-      border-radius: 25px 25px 0 0;
-      transition: border-radius 0.8s;
-    }
+        .shadow-menu {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
 
-    .line-menu::after {
-      content: '';
-      position: absolute;
-      width: 12%;
-      background-color: rgba(225, 227, 225, 255);
-      height: 4px;
-      right: 44%;
-      left: 44%;
-      top: 10px;
-      border-radius: 100px;
-    }
+        .line-menu {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            height: 24px;
+            border-radius: 25px 25px 0 0;
+            transition: border-radius 0.8s;
+        }
 
-    .content-menu {
-      position: absolute;
-      top: 24px;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      background-color: #ffffff;
-      width: 100%;
-      overflow: auto;
-    }
+        .line-menu::after {
+            content: '';
+            position: absolute;
+            width: 12%;
+            background-color: rgba(225, 227, 225, 255);
+            height: 4px;
+            right: 44%;
+            left: 44%;
+            top: 10px;
+            border-radius: 100px;
+        }
 
-    .bottom-menu *::-webkit-scrollbar {
-      height: 0;
-      width: 0;
-      display: none;
-    }
+        .content-menu {
+            position: absolute;
+            top: 24px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #ffffff;
+            width: 100%;
+            overflow: auto;
+        }
 
-    .bottom-menu *::-webkit-scrollbar-button {
-      height: 0;
-      width: 0;
-      display: none;
-    }
+        .bottom-menu *::-webkit-scrollbar {
+            height: 0;
+            width: 0;
+            display: none;
+        }
+
+        .bottom-menu *::-webkit-scrollbar-button {
+            height: 0;
+            width: 0;
+            display: none;
+        }
 
         .body-toggle {
             overflow: hidden;
@@ -297,10 +299,60 @@
             padding: 13px 9px !important;
         }
 
-        .bottom-toggle{height:calc(100% - 30%);}
+        .bottom-toggle {
+            height: calc(100% - 30%);
+        }
 
-        .shadow-toggle{display: initial;}
+        .shadow-toggle {
+            display: initial;
+        }
 
+        .bottom-content {
+            position: relative;
+            display: flex;
+            background: #1a73e8;
+            height: 100%;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: space-around;
+            overflow: auto;
+        }
+
+        .bottom-opt {
+            background: #1ae8bb;
+            border-radius: 100px;
+            margin: 25px;
+            font-size: 25px;
+            padding: 15px 15px 11px 15px;
+        }
+
+        .bottom-opt-1 {
+            padding: 15px 15px 11px 15px;
+        }
+
+        .bottom-opt-2 {
+            padding: 15px 15px 11px 15px;
+        }
+
+        .bottom-opt-3 {
+            padding: 15px 15px 11px 15px;
+        }
+
+        .bottom-opt-4 {
+            font-size: 28px !important;
+            padding: 13px 13.5px 9px 13.5px;
+        }
+
+        .flexbox-1,
+        .flexbox-2 {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: space-around;
+            width: 100%;
+        }
     </style>
     <script>
 
@@ -313,11 +365,11 @@
             document.getElementById('menu-icon').classList.toggle('menu-icon-toggle');
             document.getElementById("shadow-menu").classList.toggle('shadow-toggle');
         }
-        
+
     </script>
 </head>
 
-<body bgcolor="#eff7cf">
+<body bgcolor="#fd8c73">
 
     <div class="container" id="container">
 
@@ -339,22 +391,27 @@
     </div>
 
     <div class="shadow-menu" id="shadow-menu" onclick="closemenu()"></div>
-  <div class="bottom-menu" id="bottom-menu">
-    <a class="line-menu" id="line-menu"></a>
-    <div class="content-menu" id="content-menu">
+    <div class="bottom-menu" id="bottom-menu">
+        <a class="line-menu" id="line-menu"></a>
+        <div class="content-menu" id="content-menu">
 
-      <div class="flex-container">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-      </div>
+            <div class="bottom-content">
 
+                <div class="flexbox-1">
+                    <div class="bottom-opt bottom-opt-1"><i class='bx bx-home-alt'></i></div>
+                    <div class="bottom-opt bottom-opt-2"><i class='bx bx-mobile-alt'></i></div>
+                </div>
+
+                <div class="flexbox-2">
+                    <div class="bottom-opt bottom-opt-3"><i class='bx bx-window-alt'></i></div>
+                    <div class="bottom-opt bottom-opt-4"><i class='bx bx-compass'></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </div>
-  </div>
 
     <div style="height:1200px;width:80%;margin:auto;background:#24292f;margin-top:80px"></div>
 </body>
