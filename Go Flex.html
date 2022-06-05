@@ -154,18 +154,11 @@
         .search-bar:focus~.search-icon {
             color: #1a73e8;
         }
+ 
+        @media only screen and (min-width: 991px) {
 
-        .side-nav {
-            position: fixed;
-            top: 62px;
-            bottom: 0;
-            right: 0;
-            width: 0;
-            overflow: hidden;
-            background: #ffffff;
-            z-index: 500;
-            display: none;
-            transition: width .08s ease-in-out;
+            .shadow-menu{display: none !important;}
+            
         }
 
 
@@ -188,7 +181,7 @@
                 display: none !important;
             }
 
-            .side-nav {
+            .bottom-menu {
                 display: block !important;
             }
 
@@ -200,11 +193,83 @@
             }
         }
 
-        .side-toggle {
-            width: 100%;
-        }
 
-        .html-body-toggle {
+                
+        .bottom-menu {
+      position: fixed;
+      right: 0;
+      left: 0;
+      background-color: #ffffff;
+      height: 0;
+      width: 100%;
+      bottom: 0;
+      transition: height 0.2s, border-radius 0.8s;
+      border-radius: 25px 25px 0 0;
+      z-index: 1;
+      display: none;
+    }
+
+   
+
+    .shadow-menu {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      display: none;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .line-menu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      height: 24px;
+      border-radius: 25px 25px 0 0;
+      transition: border-radius 0.8s;
+    }
+
+    .line-menu::after {
+      content: '';
+      position: absolute;
+      width: 12%;
+      background-color: rgba(225, 227, 225, 255);
+      height: 4px;
+      right: 44%;
+      left: 44%;
+      top: 10px;
+      border-radius: 100px;
+    }
+
+    .content-menu {
+      position: absolute;
+      top: 24px;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: #ffffff;
+      width: 100%;
+      overflow: auto;
+    }
+
+    .bottom-menu *::-webkit-scrollbar {
+      height: 0;
+      width: 0;
+      display: none;
+    }
+
+    .bottom-menu *::-webkit-scrollbar-button {
+      height: 0;
+      width: 0;
+      display: none;
+    }
+
+        .body-toggle {
             overflow: hidden;
         }
 
@@ -223,7 +288,7 @@
 
         .line-3-toggle {
             -webkit-transform: rotate(45deg) translate(-1px, -6px);
-            transform: rotate(45deg) tmranslate(-1px, -6px);
+            transform: rotate(45deg) translate(-1px, -6px);
             width: 19px;
             margin-right: 7px !important;
         }
@@ -231,18 +296,24 @@
         .menu-icon-toggle {
             padding: 13px 9px !important;
         }
+
+        .bottom-toggle{height:calc(100% - 30%);}
+
+        .shadow-toggle{display: initial;}
+
     </style>
     <script>
 
         function open_nav() {
-            document.getElementById('side-nav').classList.toggle('side-toggle');
-            document.body.classList.toggle('html-body-toggle');
+            document.getElementById('bottom-menu').classList.toggle('bottom-toggle');
+            document.body.classList.toggle('body-toggle');
             document.getElementById('line-1').classList.toggle('line-1-toggle');
             document.getElementById('line-2').classList.toggle('line-2-toggle');
             document.getElementById('line-3').classList.toggle('line-3-toggle');
             document.getElementById('menu-icon').classList.toggle('menu-icon-toggle');
+            document.getElementById("shadow-menu").classList.toggle('shadow-toggle');
         }
-
+        
     </script>
 </head>
 
@@ -267,7 +338,24 @@
         <div class="top-opt login">Sign In</div>
     </div>
 
-    <div class="side-nav" id="side-nav"></div>
+    <div class="shadow-menu" id="shadow-menu" onclick="closemenu()"></div>
+  <div class="bottom-menu" id="bottom-menu">
+    <a class="line-menu" id="line-menu"></a>
+    <div class="content-menu" id="content-menu">
+
+      <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+      </div>
+
+    </div>
+  </div>
+
     <div style="height:1200px;width:80%;margin:auto;background:#24292f;margin-top:80px"></div>
 </body>
 
