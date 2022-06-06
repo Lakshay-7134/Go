@@ -241,26 +241,40 @@
         }
         .sidenav-container{}
         .sidebar{position: fixed;top:62px;bottom:0;left: 0;
-            width: 240px;
+            width: 245px;
  height: 100%;
- padding: 30px;
- transition: width .3s ease-in; ;
+
  overflow-y: auto;
  overflow-x: hidden;
-background: red;
+ background: hsla(0, 0%, 100%, .8);
+            backdrop-filter: blur(40px);
+            color: rgba(29, 29, 31, 1);
+display:flex;
+flex-direction: column;
+
+
         }
         .sidebar-collapsed{width: 72px;}
-
-        .sidebar a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  display: block;
+        .sidebar-collapsed .hidden{display:none}
+        .sidebar div {
+  font-size: 14px;
+  display: flex;height: 52px;overflow: hidden;width: 220px;align-items: center;font-family: Alliance No, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }
 
-.sidebar a:hover {
-  color: #f1f1f1;
+.sidebar div:hover {
+  color: #030303;background: #f2f2f2;
 }
+.sidebar div .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 350
+}
+.sidebar div:hover .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 350
+}
+
     </style>
 
 
@@ -380,10 +394,49 @@ document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed
 
 
     <div class="sidebar" id="sidebar-container">
-        <a class="active">Home</a>
-        <a>News</a>
-        <a>Contact</a>
-        <a>About</a>
+
+        <div>
+      <div>
+<span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+    home
+    </span>  </div>   
+           <div class="hidden">Home</div></div>
+       
+
+           <div style="border-bottom:solid rgb(204, 204, 204) 1px; ">
+            <div>
+      <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;" >
+          explore
+          </span>  </div>   
+                 <div class="hidden">Home</div></div>
+
+                 <div >
+                    <div>
+              <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+                  history
+                  </span>  </div>   
+                         <div class="hidden">Home</div></div>
+
+                         <div>
+                            <div>
+                      <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+                          favorite
+                          </span>  </div>   
+                                 <div class="hidden">Home</div></div>
+
+                                 <div  style="border-bottom:solid rgb(204, 204, 204) 1px; ">
+                                    <div>
+                              <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+                                bookmark_added
+                                  </span>  </div>   
+                                         <div class="hidden">Home</div></div>
+
+                                         <div>
+                                            <div>
+                                      <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+                                          lock
+                                          </span>  </div>   
+                                                 <div class="hidden">Home</div></div>
 
     </div>
 </body>
