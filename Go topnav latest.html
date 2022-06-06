@@ -240,6 +240,27 @@
         .topnav-hover-2:hover{background: #f8f9fa;
         }
         .sidenav-container{}
+        .sidebar{position: fixed;top:62px;bottom:0;left: 0;
+            width: 240px;
+ height: 100%;
+ padding: 30px;
+ transition: width .3s ease-in; ;
+ overflow-y: auto;
+ overflow-x: hidden;
+background: red;
+        }
+        .sidebar-collapsed{width: 72px;}
+
+        .sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
     </style>
 
 
@@ -258,6 +279,16 @@
             document.getElementById("search_icon").classList.remove("focu");
 
         }
+
+        function sidebar_toggle() {
+
+document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed");
+
+
+}
+        
+
+
     </script>
 </head>
 
@@ -271,7 +302,7 @@
 
 
             <div class="flex_box_list_item" style="justify-content: flex-start;cursor: default;">
-                <div class="topnav-hover sidenav-container"><span class="material-symbols-outlined sidenav-icon">
+                <div class="topnav-hover sidenav-container" onclick="sidebar_toggle()"><span class="material-symbols-outlined sidenav-icon" >
                         menu
                     </span>
                 
@@ -299,7 +330,7 @@
 
                     <input type="text" class="search_box" placeholder="Search..." onfocus="intfocus()"
                         onfocusout="intfocusrmv()">
-                    <button></button>
+                   
                 </div>
 
             </div>
@@ -337,7 +368,7 @@
             padding: 8px 12px;
             font-family: Alliance No, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;display: flex;align-items: center;" class="topnav-hover-2"><img src="https://yt3.ggpht.com/yti/APfAmoFlzHKerP6t_iyfsNhwOPXYLcbCsCUycHt6yQ=s108-c-k-c0x00ffffff-no-rj" style="border-radius: 100%;width: 32px;
   height: 32px;">
-                <span style="padding-left: 8px">Hi Piyush</span></div>
+                <span style="padding-left: 8px">Hi, Piyush</span></div>
         </div>
 
 
@@ -347,6 +378,14 @@
 
     </div>
 
+
+    <div class="sidebar" id="sidebar-container">
+        <a class="active">Home</a>
+        <a>News</a>
+        <a>Contact</a>
+        <a>About</a>
+
+    </div>
 </body>
 
 </html>
