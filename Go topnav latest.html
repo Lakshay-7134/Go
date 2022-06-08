@@ -258,7 +258,7 @@ flex-direction: column;
         .sidebar-collapsed .hidden{display:none}
         .sidebar div {
   font-size: 14px;
-  display: flex;height: 52px;overflow: hidden;width: 220px;align-items: center;font-family: Alliance No, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  display: flex;height: 52px;overflow: hidden;width: 220px;align-items: center;font-family: Alliance No, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;border-radius: 0 100px 100px 0;
 }
 
 .sidebar div:hover {
@@ -275,6 +275,12 @@ flex-direction: column;
   'wght' 350
 }
 
+
+@media only screen and (min-height: 600px) {
+.exception {
+ position: absolute;bottom:80px
+  }
+}
     </style>
 
 
@@ -408,36 +414,41 @@ document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed
       <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;" >
           explore
           </span>  </div>   
-                 <div class="hidden">Home</div></div>
+                 <div class="hidden">Explore</div></div>
 
                  <div >
                     <div>
               <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
                   history
                   </span>  </div>   
-                         <div class="hidden">Home</div></div>
+                         <div class="hidden">History</div></div>
 
                          <div>
                             <div>
                       <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
                           favorite
                           </span>  </div>   
-                                 <div class="hidden">Home</div></div>
+                                 <div class="hidden">Favourites</div></div>
 
                                  <div  style="border-bottom:solid rgb(204, 204, 204) 1px; ">
                                     <div>
                               <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
                                 bookmark_added
                                   </span>  </div>   
-                                         <div class="hidden">Home</div></div>
+                                         <div class="hidden">Tags</div></div>
 
                                          <div>
                                             <div>
                                       <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
                                           lock
                                           </span>  </div>   
-                                                 <div class="hidden">Home</div></div>
+                                                 <div class="hidden">Secure</div></div>
 
+                                                 <div class="exception">
+                                                    <div><img src="https://yt3.ggpht.com/yti/APfAmoFlzHKerP6t_iyfsNhwOPXYLcbCsCUycHt6yQ=s108-c-k-c0x00ffffff-no-rj" style="border-radius: 100%;width: 32px;
+                                                        height: 32px;margin-left: 25px;">
+                                             </div>   
+                                                         <div class="hidden">Hi, Piyush</div></div>
     </div>
 </body>
 
