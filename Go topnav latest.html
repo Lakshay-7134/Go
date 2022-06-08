@@ -237,13 +237,13 @@
         }
          .topnav-hover:hover{background: #f8f9fa;color: #000;
         }
-        .topnav-hover-2{border-radius: 5px;
+        .topnav-hover-2{border-radius: 100%;
         }
         .topnav-hover-2:hover{background: #f8f9fa;
         }
         .sidenav-container{}
         .sidebar{position: fixed;top:62px;bottom:0;left: 0;
-            width: 245px;
+            width: 220px;
  height: 100%;
 
  overflow-y: auto;
@@ -258,14 +258,15 @@ flex-direction: column;
         }
         .sidebar-collapsed{width: 72px;}
         .sidebar-collapsed .hidden{display:none}
-        .sidebar-collapsed .div{width: 100%;}
+     
         .sidebar div {
   font-size: 14px;
-  display: flex;height: 52px;overflow: hidden;width: 220px;align-items: center;font-family: Alliance No, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;border-radius: 16px;
+  display: flex;height: 48px;overflow: hidden;width: 220px;align-items: center;font-family:  Roboto,RobotoDraft,Helvetica,Arial,sans-serif;border-radius: 0 100px 100px 0; 
+    font-weight: 500
 }
 
 .sidebar div:hover {
-  color: #030303;background: #f2f2f2;
+  color: #030303;background: #f8f9fa;
 }
 .sidebar div .material-symbols-outlined {
   font-variation-settings:
@@ -279,11 +280,12 @@ flex-direction: column;
 }
 
 
-@media only screen and (min-height: 600px) {
+@media only screen and (min-height: 525px) {
 .exception {
  position: absolute;bottom:80px
   }
 }
+.sidebar-collapsed div{width: 72px;height: 53px;}
     </style>
 
 
@@ -390,7 +392,7 @@ document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed
             padding: 8px 12px;
             font-family: Alliance No, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;display: flex;align-items: center;" class="topnav-hover-2"><img src="https://yt3.ggpht.com/yti/APfAmoFlzHKerP6t_iyfsNhwOPXYLcbCsCUycHt6yQ=s108-c-k-c0x00ffffff-no-rj" style="border-radius: 100%;width: 32px;
   height: 32px;">
-                <span style="padding-left: 8px">Hi, Piyush</span></div>
+                </div>
         </div>
 
 
@@ -403,7 +405,7 @@ document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed
 
     <div class="sidebar" id="sidebar-container">
 
-        <div>
+        <div style="margin-top: 10px;">
       <div>
 <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
     home
@@ -424,7 +426,7 @@ document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed
                   history
                   </span>  </div>   
                          <div class="hidden">History</div></div>
-<hr style="width: ;">
+<hr style="width: 75%;height:1px;margin: 3px auto;">
                          <div>
                             <div>
                       <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
