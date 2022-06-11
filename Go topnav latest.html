@@ -25,9 +25,6 @@
     </title>
 
     <style>
-
-
-
         @import url("https://font.sec.miui.com/font/css?family=MiSans:300,450,500,650:Chinese_Simplify,Latin,Chinese_Traditional&display=swap");
 
         @font-face {
@@ -99,6 +96,12 @@
             margin: 0;
             padding: 0;
             vertical-align: baseline;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
             -webkit-user-drag: none;
         }
 
@@ -108,19 +111,337 @@
             box-sizing: border-box;
         }
 
-     
-@font-face { font-family: 'Google Sans'; font-style: normal; font-weight: 400; src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Kwp5MKg.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; } @font-face { font-family: 'Google Sans'; font-style: normal; font-weight: 400; src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Nwp5MKg.woff2) format('woff2'); unicode-range: U+0370-03FF; } @font-face { font-family: 'Google Sans'; font-style: normal; font-weight: 400; src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Bwp5MKg.woff2) format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB; } @font-face { font-family: 'Google Sans'; font-style: normal; font-weight: 400; src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Awp5MKg.woff2) format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; } @font-face { font-family: 'Google Sans'; font-style: normal; font-weight: 400; src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Owp4.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Google Sans'; font-style: normal; font-weight: 500; src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94Yt3CwZ-Pw.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; } @font-face { font-family: 'Google Sans'; font-style: normal; font-weight: 500; src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94YtwCwZ-Pw.woff2) format('woff2'); unicode-range: U+0370-03FF; } @font-face { font-family: 'Google Sans'; font-style: normal; font-weight: 500; src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94Yt8CwZ-Pw.woff2) format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB; } @font-face { font-family: 'Google Sans'; font-style: normal; font-weight: 500; src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94Yt9CwZ-Pw.woff2) format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; } @font-face { font-family: 'Google Sans'; font-style: normal; font-weight: 500; src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94YtzCwY.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Product Sans'; font-style: normal; font-weight: 400; src: url(//fonts.gstatic.com/s/productsans/v9/pxiDypQkot1TnFhsFMOfGShVGdeOcEg.woff2) format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; } @font-face { font-family: 'Product Sans'; font-style: normal; font-weight: 400; src: url(//fonts.gstatic.com/s/productsans/v9/pxiDypQkot1TnFhsFMOfGShVF9eO.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Roboto'; font-style: italic; font-weight: 400; src: url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xFIzIFKw.woff2) format('woff2'); unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; } @font-face { font-family: 'Roboto'; font-style: italic; font-weight: 400; src: url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xMIzIFKw.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; } @font-face { font-family: 'Roboto'; font-style: italic; font-weight: 400; src: url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xEIzIFKw.woff2) format('woff2'); unicode-range: U+1F00-1FFF; } @font-face { font-family: 'Roboto'; font-style: italic; font-weight: 400; src: url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xLIzIFKw.woff2) format('woff2'); unicode-range: U+0370-03FF; } @font-face { font-family: 'Roboto'; font-style: italic; font-weight: 400; src: url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xHIzIFKw.woff2) format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB; } @font-face { font-family: 'Roboto'; font-style: italic; font-weight: 400; src: url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xGIzIFKw.woff2) format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; } @font-face { font-family: 'Roboto'; font-style: italic; font-weight: 400; src: url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xIIzI.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400; src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2'); unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400; src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400; src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2'); unicode-range: U+1F00-1FFF; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400; src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2'); unicode-range: U+0370-03FF; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400; src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400; src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400; src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 500; src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCRc4EsA.woff2) format('woff2'); unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 500; src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fABc4EsA.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 500; src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCBc4EsA.woff2) format('woff2'); unicode-range: U+1F00-1FFF; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 500; src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBxc4EsA.woff2) format('woff2'); unicode-range: U+0370-03FF; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 500; src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2) format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 500; src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2) format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 500; src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 700; src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2) format('woff2'); unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 700; src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 700; src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2) format('woff2'); unicode-range: U+1F00-1FFF; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 700; src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2) format('woff2'); unicode-range: U+0370-03FF; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 700; src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2) format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 700; src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; } @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 700; src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
-.material-light {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400
-}
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Kwp5MKg.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Nwp5MKg.woff2) format('woff2');
+            unicode-range: U+0370-03FF;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Bwp5MKg.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Awp5MKg.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Owp4.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94Yt3CwZ-Pw.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94YtwCwZ-Pw.woff2) format('woff2');
+            unicode-range: U+0370-03FF;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94Yt8CwZ-Pw.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94Yt9CwZ-Pw.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        @font-face {
+            font-family: 'Google Sans';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94YtzCwY.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: 'Product Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/productsans/v9/pxiDypQkot1TnFhsFMOfGShVGdeOcEg.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        @font-face {
+            font-family: 'Product Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/productsans/v9/pxiDypQkot1TnFhsFMOfGShVF9eO.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: italic;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xFIzIFKw.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: italic;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xMIzIFKw.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: italic;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xEIzIFKw.woff2) format('woff2');
+            unicode-range: U+1F00-1FFF;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: italic;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xLIzIFKw.woff2) format('woff2');
+            unicode-range: U+0370-03FF;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: italic;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xHIzIFKw.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: italic;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xGIzIFKw.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: italic;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1Mu51xIIzI.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
+            unicode-range: U+1F00-1FFF;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+            unicode-range: U+0370-03FF;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCRc4EsA.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fABc4EsA.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCBc4EsA.woff2) format('woff2');
+            unicode-range: U+1F00-1FFF;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBxc4EsA.woff2) format('woff2');
+            unicode-range: U+0370-03FF;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2) format('woff2');
+            unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2) format('woff2');
+            unicode-range: U+1F00-1FFF;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2) format('woff2');
+            unicode-range: U+0370-03FF;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2) format('woff2');
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        .material-light {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400
+        }
 
 
-.material-symbols-outlined {
- color: #000;
-}
+        .material-symbols-outlined {
+            color: #000;
+        }
 
 
         html {
@@ -227,65 +548,120 @@
         .focused {
             border-bottom: 1px solid #0969da;
         }
+
         .focu {
-            color: #000 ;
+            color: #000;
         }
-      
-        .sidenav-icon{font-size:24px;padding:  12px;color: #24292f;}
 
-        .topnav-hover{border-radius: 100%;
+        .sidenav-icon {
+            font-size: 24px;
+            padding: 12px;
+            color: #24292f;
         }
-         .topnav-hover:hover{background: #f8f9fa;color: #000;
+
+        .topnav-hover {
+            border-radius: 100%;
         }
-        .topnav-hover-2{border-radius: 100%;
+
+        .topnav-hover:hover {
+            background: #f8f9fa;
+            color: #000;
         }
-        .topnav-hover-2:hover{background: #f8f9fa;
+
+        .topnav-hover-2 {
+            border-radius: 100%;
         }
-        .sidenav-container{}
-        .sidebar{position: fixed;top:62px;bottom:0;left: 0;
+
+        .topnav-hover-2:hover {
+            background: #f8f9fa;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 62px;
+            bottom: 0;
+            left: 0;
             width: 220px;
- height: 100%;
-
- overflow-y: auto;
- overflow-x: hidden;
- background: hsla(0, 0%, 100%, .8);
+            height: 100%;
+            letter-spacing: .5px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background: hsla(0, 0%, 100%, .8);
             backdrop-filter: blur(40px);
             color: rgba(29, 29, 31, 1);
-display:flex;
-flex-direction: column;
+            display: flex;
+            flex-direction: column;
 
 
         }
-        .sidebar-collapsed{width: 72px;}
-        .sidebar-collapsed .hidden{display:none}
-     
+
+        .sidebar-collapsed {
+            width: 72px;
+        }
+
+        .sidebar-collapsed .hidden {
+            display: none
+        }
+
         .sidebar div {
-  font-size: 14px;
-  display: flex;height: 48px;overflow: hidden;width: 220px;align-items: center;font-family:  Roboto,RobotoDraft,Helvetica,Arial,sans-serif;border-radius: 0 100px 100px 0; 
-    font-weight: 500
-}
+            margin-top: 3px;
+            font-size: 14px;
+            display: flex;
+            height: 48px;
+            overflow: hidden;
+            width: 220px;
+            align-items: center;
+            font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+            border-radius: 0 100px 100px 0;
+            font-weight: 500;
+        }
 
-.sidebar div:hover {
-  color: #030303;background: #f8f9fa;
-}
-.sidebar div .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 350
-}
-.sidebar div:hover .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 350
-}
+        .sidebar-item{flex:none;}
+
+        .sidebar .sidebar-item:hover {
+            color: #030303;
+            background: #f8f9fa;
+        }
+
+        .sidebar .sidebar-item .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 350
+        }
+
+        .sidebar .sidebar-item:hover .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 1,
+                'wght' 350
+        }
 
 
-@media only screen and (min-height: 525px) {
-.exception {
- position: absolute;bottom:80px
-  }
-}
-.sidebar-collapsed div{width: 72px;height: 53px;}
+        @media only screen and (min-height: 525px) {
+            .exception {
+                position: absolute;
+                bottom: 80px
+            }
+        }
+
+        .sidebar-collapsed .sidebar-item {
+            width: 72px;
+        }
+
+        .active {
+            background: #f1f1f1;
+        }
+
+
+
+        .active .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 1,
+                'wght' 350 !important
+        }
+
+        .active:hover {
+            background: #f2f2f2 !important;
+        }
     </style>
 
 
@@ -307,11 +683,11 @@ flex-direction: column;
 
         function sidebar_toggle() {
 
-document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed");
+            document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed");
 
 
-}
-        
+        }
+
 
 
     </script>
@@ -327,10 +703,11 @@ document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed
 
 
             <div class="flex_box_list_item" style="justify-content: flex-start;cursor: default;">
-                <div class="topnav-hover sidenav-container" onclick="sidebar_toggle()"><span class="material-symbols-outlined sidenav-icon" >
+                <div class="topnav-hover sidenav-container" onclick="sidebar_toggle()"><span
+                        class="material-symbols-outlined sidenav-icon">
                         menu
                     </span>
-                
+
                 </div>
                 <div style="width: 45px;">
                     <img src="https://raw.githubusercontent.com/Lakshay-7134/Go/main/Favicon%20Logo.png"
@@ -350,12 +727,12 @@ document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed
                     <span class="material-symbols-outlined search-icon" id="search_icon">
                         search
                     </span>
-                    
+
 
 
                     <input type="text" class="search_box" placeholder="Search..." onfocus="intfocus()"
                         onfocusout="intfocusrmv()">
-                   
+
                 </div>
 
             </div>
@@ -370,33 +747,35 @@ document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed
                         schedule
                     </span>
 
-                   
+
                 </div>
 
                 <div class="topnav-hover">
                     <span class="material-symbols-outlined" style=" font-size: 25px;padding: 12px; color: #24292f; ">
                         apps
-                        </span>
+                    </span>
 
-                        
+
                 </div>
-            
-         
-            <div
-                style=" 
+
+
+                <div style=" 
             border: none;
             outline: 0;
             font-size: 15px;
             font-weight: 500;
             color: #24292f;
-            padding: 8px 12px;
-            font-family: Alliance No, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;display: flex;align-items: center;" class="topnav-hover-2"><img src="https://yt3.ggpht.com/yti/APfAmoFlzHKerP6t_iyfsNhwOPXYLcbCsCUycHt6yQ=s108-c-k-c0x00ffffff-no-rj" style="border-radius: 100%;width: 32px;
+            padding: 8px;
+            font-family: Alliance No, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;display: flex;align-items: center;"
+                    class="topnav-hover-2"><img
+                        src="https://yt3.ggpht.com/yti/APfAmoFlzHKerP6t_iyfsNhwOPXYLcbCsCUycHt6yQ=s108-c-k-c0x00ffffff-no-rj"
+                        style="border-radius: 100%;width: 32px;
   height: 32px;">
                 </div>
+            </div>
+
+
         </div>
-
-
-    </div>
 
 
 
@@ -405,50 +784,71 @@ document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed
 
     <div class="sidebar" id="sidebar-container">
 
-        <div style="margin-top: 10px;">
-      <div>
-<span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
-    home
-    </span>  </div>   
-           <div class="hidden">Home</div></div>
-       
-
-           <div>
+        <div style="margin-top: 10px;" class="sidebar-item active">
             <div>
-      <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;" >
-          explore
-          </span>  </div>   
-                 <div class="hidden">Explore</div></div>
+                <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+                    home
+                </span>
+            </div>
+            <div class="hidden">Home</div>
+        </div>
 
-                 <div >
-                    <div>
-              <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
-                  history
-                  </span>  </div>   
-                         <div class="hidden">History</div></div>
-<hr style="width: 75%;height:1px;margin: 3px auto;">
-                         <div>
-                            <div>
-                      <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
-                          favorite
-                          </span>  </div>   
-                                 <div class="hidden">Favourites</div></div>
 
-                                 <div>
-                                    <div>
-                              <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
-                                bookmark_added
-                                  </span>  </div>   
-                                         <div class="hidden">Tags</div></div>
+        <div class="sidebar-item">
+            <div>
+                <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+                    explore
+                </span>
+            </div>
+            <div class="hidden">Explore</div>
+        </div>
 
-                                         <div class="exception">
-                                            <div>
-                                      <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
-                                          lock
-                                          </span>  </div>   
-                                                 <div class="hidden">Secure</div></div>
+        <div class="sidebar-item">
+            <div>
+                <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+                    history
+                </span>
+            </div>
+            <div class="hidden">History</div>
+        </div>
+        <hr style="    height: 0;
+margin: 15px auto;
+width: 75%;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
+        <div class="sidebar-item">
+            <div>
+                <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+                    favorite
+                </span>
+            </div>
+            <div class="hidden">Favourite</div>
+        </div>
 
-                                              
+        <div class="sidebar-item">
+            <div>
+                <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+                    bookmark_added
+                </span>
+            </div>
+            <div class="hidden">Tags</div>
+        </div>
+
+        <div class="sidebar-item exception">
+            <div>
+                <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+                    lock
+                </span>
+            </div>
+            <div class="hidden">Secure</div>
+        </div>
+
+        <div class="sidebar-item special">
+           
+        </div>
+
     </div>
 </body>
 
