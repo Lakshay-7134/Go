@@ -15,6 +15,13 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+
+
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="Go.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -452,7 +459,7 @@
         body {
             color: #404040;
             font-family: Roboto, Helvetica, Arial, sans-serif;
-            overflow-x: hidden;
+            overflow-x: hidden;background: url('https://github.com/Lakshay-7134/Go/blob/main/IDR_THEME_NTP_BACKGROUND.png?raw=true');
         }
 
         body {
@@ -465,12 +472,12 @@
             right: 0;
             top: 0;
             display: block;
-            height: 62px;
+            height: 74px;
             z-index: 50;
             overflow: hidden;
             width: 100%;
-            background: hsla(0, 0%, 100%, .8);
-            backdrop-filter: blur(40px);
+            background: transparent;
+       
             color: rgba(29, 29, 31, 1);
             transform: translateZ(0);
             transform-style: preserve-3d;
@@ -478,17 +485,18 @@
         }
 
         .topnav_class .flex_menu_container {
-            height: 100%;
-            width: 100%;
+            height: 58px;
+            width: 912px;
             display: flex;
-            background: transparent;
+            background: hsla(0, 0%, 100%, .8);
+            backdrop-filter: saturate(200%) blur(30px);
             justify-content: space-between;
             padding: 0 16px;
             flex-direction: row;
             align-items: center;
-            margin: 0;
-            border: 0;
-        }
+            border: 0;border-radius: 40px;margin: 16px auto;margin-bottom: 0;    box-shadow: 0 .3125rem .625rem 0 rgba(0,0,0,.12)!important;
+}
+        
 
         .topnav_class .flex_menu_container .flex_box_list_item {
             text-align: center;
@@ -553,11 +561,7 @@
             color: #000;
         }
 
-        .sidenav-icon {
-            font-size: 24px;
-            padding: 12px;
-            color: #24292f;
-        }
+     
 
         .topnav-hover {
             border-radius: 100%;
@@ -576,92 +580,6 @@
             background: #f8f9fa;
         }
 
-        .sidebar {
-            position: fixed;
-            top: 62px;
-            bottom: 0;
-            left: 0;
-            width: 220px;
-            height: 100%;
-            letter-spacing: .5px;
-            overflow-y: auto;
-            overflow-x: hidden;
-            background: hsla(0, 0%, 100%, .8);
-            backdrop-filter: blur(40px);
-            color: rgba(29, 29, 31, 1);
-            display: flex;
-            flex-direction: column;
-
-
-        }
-
-        .sidebar-collapsed {
-            width: 72px;
-        }
-
-        .sidebar-collapsed .hidden {
-            display: none
-        }
-
-        .sidebar div {
-            margin-top: 3px;
-            font-size: 14px;
-            display: flex;
-            height: 48px;
-            overflow: hidden;
-            width: 220px;
-            align-items: center;
-            font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
-            border-radius: 0 100px 100px 0;
-            font-weight: 500;
-        }
-
-        .sidebar-item{flex:none;}
-
-        .sidebar .sidebar-item:hover {
-            color: #030303;
-            background: #f8f9fa;
-        }
-
-        .sidebar .sidebar-item .material-symbols-outlined {
-            font-variation-settings:
-                'FILL' 0,
-                'wght' 350
-        }
-
-        .sidebar .sidebar-item:hover .material-symbols-outlined {
-            font-variation-settings:
-                'FILL' 1,
-                'wght' 350
-        }
-
-
-        @media only screen and (min-height: 525px) {
-            .exception {
-                position: absolute;
-                bottom: 80px
-            }
-        }
-
-        .sidebar-collapsed .sidebar-item {
-            width: 72px;
-        }
-
-        .active {
-            background: #f1f1f1;
-        }
-
-
-
-        .active .material-symbols-outlined {
-            font-variation-settings:
-                'FILL' 1,
-                'wght' 350 !important
-        }
-
-        .active:hover {
-            background: #f2f2f2 !important;
-        }
     </style>
 
 
@@ -681,12 +599,7 @@
 
         }
 
-        function sidebar_toggle() {
-
-            document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed");
-
-
-        }
+     
 
 
 
@@ -703,12 +616,7 @@
 
 
             <div class="flex_box_list_item" style="justify-content: flex-start;cursor: default;">
-                <div class="topnav-hover sidenav-container" onclick="sidebar_toggle()"><span
-                        class="material-symbols-outlined sidenav-icon">
-                        menu
-                    </span>
-
-                </div>
+               
                 <div style="width: 45px;">
                     <img src="https://raw.githubusercontent.com/Lakshay-7134/Go/main/Favicon%20Logo.png"
                         style="height: 28px;width: auto;">
@@ -730,7 +638,7 @@
 
 
 
-                    <input type="text" class="search_box" placeholder="Search..." onfocus="intfocus()"
+                    <input type="text" class="search_box" placeholder="Search or jump to..." onfocus="intfocus()"
                         onfocusout="intfocusrmv()">
 
                 </div>
@@ -742,35 +650,19 @@
             <div class="flex_box_list_item" style="justify-content: flex-end;">
 
 
-                <div class="topnav-hover"><span class="material-symbols-outlined" style="
-                    font-size: 25px; padding:  12px; color: #24292f; ">
-                        schedule
-                    </span>
-
-
-                </div>
-
-                <div class="topnav-hover">
-                    <span class="material-symbols-outlined" style=" font-size: 25px;padding: 12px; color: #24292f; ">
-                        apps
-                    </span>
-
-
-                </div>
+              
 
 
                 <div style=" 
             border: none;
-            outline: 0;
-            font-size: 15px;
-            font-weight: 500;
-            color: #24292f;
+        
             padding: 8px;
-            font-family: Alliance No, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;display: flex;align-items: center;"
-                    class="topnav-hover-2"><img
-                        src="https://yt3.ggpht.com/yti/APfAmoFlzHKerP6t_iyfsNhwOPXYLcbCsCUycHt6yQ=s108-c-k-c0x00ffffff-no-rj"
-                        style="border-radius: 100%;width: 32px;
-  height: 32px;">
+        "
+                    class="topnav-hover-2">
+                    <div style=" border-radius: 100%;width: 32px;
+                    height: 32px;background: url('https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp');  background-position: center center;background-size: 64px auto; "
+                    ></div>
+                  
                 </div>
             </div>
 
@@ -782,74 +674,7 @@
     </div>
 
 
-    <div class="sidebar" id="sidebar-container">
-
-        <div style="margin-top: 10px;" class="sidebar-item active">
-            <div>
-                <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
-                    home
-                </span>
-            </div>
-            <div class="hidden">Home</div>
-        </div>
-
-
-        <div class="sidebar-item">
-            <div>
-                <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
-                    explore
-                </span>
-            </div>
-            <div class="hidden">Explore</div>
-        </div>
-
-        <div class="sidebar-item">
-            <div>
-                <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
-                    history
-                </span>
-            </div>
-            <div class="hidden">History</div>
-        </div>
-        <hr style="    height: 0;
-margin: 15px auto;
-width: 75%;
-overflow: hidden;
-background: transparent;
-border: 0;
-border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
-        <div class="sidebar-item">
-            <div>
-                <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
-                    favorite
-                </span>
-            </div>
-            <div class="hidden">Favourite</div>
-        </div>
-
-        <div class="sidebar-item">
-            <div>
-                <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
-                    bookmark_added
-                </span>
-            </div>
-            <div class="hidden">Tags</div>
-        </div>
-
-        <div class="sidebar-item exception">
-            <div>
-                <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
-                    lock
-                </span>
-            </div>
-            <div class="hidden">Secure</div>
-        </div>
-
-        <div class="sidebar-item special">
-           
-        </div>
-
-    </div>
+   
 </body>
 
 </html>
