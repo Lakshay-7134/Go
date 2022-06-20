@@ -7,6 +7,8 @@
     <title>Go</title>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
         * {
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -15,14 +17,14 @@
             -ms-user-select: none;
             user-select: none;
             -webkit-user-drag: none;
-            -webkit-tap-highlight-color: rgba(0,0,0,0);
-            -webkit-tap-highlight-color: transparent; 
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
             overflow-x: hidden;
             font-size: 16px;
-            font-family: "Google Sans", Roboto, Arial, sans-serif;
+            font-family: 'Nunito Sans', sans-serif;
         }
 
         .container {
@@ -55,10 +57,28 @@
         .top-opt {
             transition: all .2s ease;
             border: 2px solid transparent;
+            position: relative;
         }
 
         .top-opt:hover {
             color: #1a73e8;
+        }
+
+        #home {
+            color: #1a73e8 !important;
+        }
+
+        #home::after {
+            content: '';
+            height: 2px;
+            width: 74px;
+            background: #1a73e8;
+            z-index: 1000;
+            position: absolute;
+            bottom: -11px;
+            left: 0;
+            cursor: default;
+            border-radius: 100px;
         }
 
         .menu-icon {
@@ -130,6 +150,7 @@
             transition: all .3s ease-in;
             margin-top: 18px;
             color: #24292f !important;
+            caret-color: #1a73e8;
         }
 
         .search-icon {
@@ -254,7 +275,7 @@
             position: absolute;
             top: 24px;
             right: 0;
-            left:0;
+            left: 0;
             background-color: #ffffff;
             width: 100%;
             overflow: auto;
@@ -332,6 +353,8 @@
             padding: 15px 15px 11px 15px;
         }
 
+
+
         .bottom-opt-2 {
             padding: 15px 15px 11px 15px;
         }
@@ -371,6 +394,7 @@
             transition: all .3s ease-in;
             margin: 0 10%;
             color: #24292f !important;
+            caret-color: #1a73e8;
         }
 
         .search-icon-bottom {
@@ -421,7 +445,7 @@
         <div class="logo" style="font-size: 2rem;"><img
                 src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
                 alt="Go" style="width: 120px;height:auto" /></div>
-        <div class="top-opt">Home</div>
+        <div class="top-opt" id="home">Home</div>
         <div class="top-opt">Features</div>
         <div class="top-opt">Review</div>
         <div class="top-opt">WeUI</div>
