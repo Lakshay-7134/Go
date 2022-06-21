@@ -39,7 +39,6 @@
             align-items: center;
             height: 62px;
             overflow: hidden;
-            transition: background .2s ease;
             z-index: 1000;
             background: #fff;
         }
@@ -87,7 +86,7 @@
             display: none;
             border-radius: 100px;
             margin: 10px !important;
-            transition: background .2s ease;
+            transition: all .2s ease;
         }
 
         .menu-icon:hover {
@@ -228,8 +227,8 @@
             height: 0;
             width: 100%;
             bottom: 0;
-            transition: height 0.2s, border-radius 0.8s;
-            border-radius: 25px 25px 0 0;
+            transition: height 0.2s;
+            border-radius: 15px 15px 0 0;
             z-index: 1;
             display: none;
         }
@@ -255,8 +254,7 @@
             width: 100%;
             background-color: #ffffff;
             height: 24px;
-            border-radius: 25px 25px 0 0;
-            transition: border-radius 0.8s;
+            border-radius: 15px 15px 0 0;
         }
 
         .line-menu::after {
@@ -469,15 +467,18 @@
                 <div class="flexbox-search"><input type="text" class="search-bar-bottom" placeholder="Search..." /><i
                         class='bx bx-search search-icon-bottom'></i></div>
 
-                <div class="flexbox-1">
-                    <div class="bottom-opt bottom-opt-1"><i class='bx bx-home-alt'></i></div>
-                    <div class="bottom-opt bottom-opt-2"><i class='bx bx-mobile-alt'></i></div>
-                </div>
+                <div style="width: 100%;overflow: auto;">
 
-                <div class="flexbox-2">
-                    <div class="bottom-opt bottom-opt-3"><i class='bx bx-window-alt'></i></div>
-                    <div class="bottom-opt bottom-opt-4"><i class='bx bx-compass'></i>
+                    <div class="flexbox-1">
+                        <div class="bottom-opt bottom-opt-1"><i class='bx bx-home-alt'></i></div>
+                        <div class="bottom-opt bottom-opt-2"><i class='bx bx-mobile-alt'></i></div>
                     </div>
+
+                    <div class="flexbox-2">
+                        <div class="bottom-opt bottom-opt-3"><i class='bx bx-window-alt'></i></div>
+                        <div class="bottom-opt bottom-opt-4"><i class='bx bx-compass'></i></div>
+                    </div>
+
                 </div>
 
             </div>
