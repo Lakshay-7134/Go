@@ -61,7 +61,7 @@
             position: relative;
             display: flex;
             align-items: center;
-            color: #1d1d1f;
+            color: #24292f;
         }
 
         .top-opt:hover {
@@ -80,12 +80,12 @@
         #home::after {
             content: '';
             height: 3px;
-            width: 74px;
+            width: 22px;
             background: #1a73e8;
             z-index: 1000;
             position: absolute;
             bottom: -11px;
-            left: 0;
+            left: 26px;
             cursor: default;
             border-radius: 100px;
         }
@@ -187,15 +187,6 @@
             stroke: #1a73e8;
         }
 
-        @media only screen and (min-width: 991px) {
-
-            .shadow-menu {
-                display: none !important;
-            }
-
-        }
-
-
         @media only screen and (max-width: 991px) {
 
             .topnav {
@@ -215,10 +206,6 @@
                 display: none !important;
             }
 
-            .bottom-menu {
-                display: block !important;
-            }
-
             .drop-content {
                 display: none !important;
             }
@@ -229,80 +216,6 @@
             .search-div {
                 margin-left: 6% !important;
             }
-        }
-
-
-
-        .bottom-menu {
-            position: fixed;
-            right: 0;
-            left: 0;
-            background-color: #ffffff;
-            height: 0;
-            width: 100%;
-            bottom: 0;
-            transition: height 0.2s;
-            border-radius: 15px 15px 0 0;
-            z-index: 1;
-            display: none;
-        }
-
-
-
-        .shadow-menu {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            width: 100%;
-            display: none;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-
-        .line-menu {
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            width: 100%;
-            background-color: #ffffff;
-            height: 24px;
-            border-radius: 15px 15px 0 0;
-        }
-
-        .line-menu::after {
-            content: '';
-            position: absolute;
-            width: 12%;
-            background-color: rgba(225, 227, 225, 255);
-            height: 4px;
-            right: 44%;
-            left: 44%;
-            top: 10px;
-            border-radius: 100px;
-        }
-
-        .content-menu {
-            position: absolute;
-            top: 24px;
-            right: 0;
-            left: 0;
-            background-color: #ffffff;
-            width: 100%;
-            overflow: auto;
-        }
-
-        .bottom-menu *::-webkit-scrollbar {
-            height: 0;
-            width: 0;
-            display: none;
-        }
-
-        .bottom-menu *::-webkit-scrollbar-button {
-            height: 0;
-            width: 0;
-            display: none;
         }
 
         .body-toggle {
@@ -333,14 +246,6 @@
             padding: 13px 9px !important;
         }
 
-        .bottom-toggle {
-            height: calc(100% - 30%);
-        }
-
-        .shadow-toggle {
-            display: initial;
-        }
-
 
         #drop-opt {
             overflow: hidden;
@@ -354,7 +259,7 @@
             font-size: 14px;
             display: none;
             border-radius: 8px;
-            margin-top: 20px;
+            margin-top: 15px;
             overflow: hidden;
             width: 140px;
             height: auto;
@@ -376,7 +281,8 @@
             align-items: center;
             border-radius: 4px;
             margin: 6px;
-            color: #1d1d1f;
+            color: #24292f;
+            transition: all .1s ease;
         }
 
         .drop-common:hover {
@@ -384,7 +290,7 @@
         }
 
         #drop-chevron {
-            stroke: #1d1d1f;
+            stroke: #24292f;
             transition: all .2s ease;
             margin-left: .5px;
         }
@@ -400,13 +306,11 @@
     <script>
 
         function open_nav() {
-            document.getElementById('bottom-menu').classList.toggle('bottom-toggle');
             document.body.classList.toggle('body-toggle');
             document.getElementById('line-1').classList.toggle('line-1-toggle');
             document.getElementById('line-2').classList.toggle('line-2-toggle');
             document.getElementById('line-3').classList.toggle('line-3-toggle');
             document.getElementById('menu-icon').classList.toggle('menu-icon-toggle');
-            document.getElementById("shadow-menu").classList.toggle('shadow-toggle');
         }
 
     </script>
@@ -436,7 +340,7 @@
             <div class="drop-content" id="drop-content">
                 <div class="drop-1 drop-common">
                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
-                        stroke="#1d1d1f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        stroke="#24292f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-compass">
                         <circle cx="12" cy="12" r="10" />
                         <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
@@ -448,7 +352,7 @@
 
                 <div class="drop-2 drop-common">
                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
-                        stroke="#1d1d1f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        stroke="#24292f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-rotate-ccw">
                         <polyline points="1 4 1 10 7 10" />
                         <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
@@ -459,7 +363,7 @@
                 </div>
 
                 <div class="drop-3 drop-common"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
-                        viewBox="0 0 24 24" fill="none" stroke="#1d1d1f" stroke-width="2" stroke-linecap="round"
+                        viewBox="0 0 24 24" fill="none" stroke="#24292f" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="feather feather-smartphone">
                         <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
                         <line x1="12" y1="18" x2="12.01" y2="18" />
@@ -486,13 +390,6 @@
         <div class="top-opt login condiv">Sign In</div>
     </div>
 
-    <div class="shadow-menu" id="shadow-menu"></div>
-    <div class="bottom-menu" id="bottom-menu">
-        <a class="line-menu" id="line-menu"></a>
-        <div class="content-menu" id="content-menu">
-
-        </div>
-    </div>
 
 </body>
 
