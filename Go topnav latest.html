@@ -79,7 +79,7 @@
             background: hsla(0, 0%, 100%, .8);
             backdrop-filter: saturate(200%) blur(30px);
             justify-content: space-between;
-            padding: 0 16px;
+            padding: 0 32px;
             flex-flow: row nowrap;
             align-items: center;
             position: fixed;
@@ -357,14 +357,14 @@
         }
 
         #mobilelogoimage {
-            display: none
+            display: none;
         }
 
         #mobilelogotext {
-            display: none
+            display: none;
         }
 
-        @media only screen and (max-width: 991px) {
+        @media only screen and (max-width: 859px) {
 
             .menu-icon {
                 display: block;
@@ -397,25 +397,36 @@
             #flex-search {
                 justify-content: center;
             }
+
+            #login-pic{height: 35px !important;width: 35px !important;}
+
+            .flex_menu_container {
+            
+            padding: 0 16px;
+          
+        }
         }
 
-        @media only screen and (max-width: 1115px) {
+        @media only screen and (max-width: 1119px) {
             #login-name {
                 display: none !important;
             }
 
             .topnav-hover-2 {
-                background: rgb(255, 0, 0 ); border-radius: 100%;padding: 1px;
-            }
-
-            #login-pic {
-                
+                background: rgba(255, 255, 255, 0);
             }
 
             #topnav-hover-dark {
                 margin-right: 5px !important;
             }
 
+        }
+        @media only screen and (max-width: 1011px){
+            .flex_menu_container {
+            
+            padding: 0 24px;
+          
+        }
         }
     </style>
 
@@ -478,13 +489,13 @@
                 <div id="line-3" class="line-3"></div>
             </div>
 
-            <div style="width:auto;margin-left: 9px;" id="logoimage">
+            <div style="width:auto;" id="logoimage">
                 <img src="https://raw.githubusercontent.com/Lakshay-7134/Go/main/Favicon%20Logo.png"
                     style="height: 30px;width: auto;">
             </div>
 
             <div style="font-size: 16.5px;
-            font-family: MiSans, system-ui, 微软雅黑, sans-serif;color: #1D1D1F;padding-left: 10px;" id="logotext">
+            font-family: MiSans, system-ui, sans-serif;color: #1D1D1F;padding-left: 10px;letter-spacing: .5px;" id="logotext">
                 WeUI
             </div>
 
@@ -650,7 +661,7 @@
             </div>
 
             <div style="font-size: 16.5px;
-            font-family: MiSans, system-ui, 微软雅黑, sans-serif;color: #1D1D1F;padding-left: 10px;" id="mobilelogotext">
+            font-family: MiSans, system-ui, sans-serif;color: #1D1D1F;padding-left: 10px;letter-spacing: .5px;font-weight: 600" id="mobilelogotext">
                 WeUI
             </div>
 
