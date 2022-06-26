@@ -1,5 +1,3 @@
-<!--HTML Source Code-->
-
 <html>
 
 <head>
@@ -16,46 +14,37 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 
-
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
 
+
     <script src="Go.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-
-    <title>WeUI: Towards Project Go
-    </title>
+    <title>WeUI: Towards Project Go</title>
 
     <style>
         @import url("https://font.sec.miui.com/font/css?family=MiSans:300,450,500,650:Chinese_Simplify,Latin,Chinese_Traditional&display=swap");
+
 
         * {
             font-size: 100%;
             margin: 0;
             padding: 0;
             vertical-align: baseline;
-            -webkit-box-sizing: border-box;
             box-sizing: border-box;
+            -webkit-box-sizing: border-box;
             -moz-user-select: none;
             -webkit-user-select: none;
             -ms-user-select: none;
             user-select: none;
             -webkit-user-drag: none;
         }
+
 
         *,
         *::before,
@@ -64,88 +53,61 @@
         }
 
 
-        .material-light {
-            font-variation-settings:
-                'FILL' 0,
-                'wght' 400
-        }
-
-
-        .material-symbols-outlined {
-            color: #000;
-        }
-
-
         html {
             font-size: 16px;
         }
 
+
         html,
         body {
-            color: #404040;
+            color: #000;
             font-family: Roboto, Helvetica, Arial, sans-serif;
             overflow-x: hidden;
             background: url('https://github.com/Lakshay-7134/Go/blob/main/IDR_THEME_NTP_BACKGROUND.png?raw=true');
         }
 
+
         body {
             display: block;
         }
 
-        .topnav_class {
-            position: fixed;
-            left: 0;
-            right: 0;
-            top: 0;
-            display: block;
-            min-height: 500px;
-            z-index: 10;
-            overflow-x: hidden;
-            width: 100%;
-            background: transparent;
 
-            color: rgba(29, 29, 31, 1);
-            transform: translateZ(0);
-            transform-style: preserve-3d;
-            transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1);
-        }
-
-        .topnav_class .flex_menu_container {
-            height: 64px;
+        .flex_menu_container {
+            height: 62px;
             width: 100%;
             display: flex;
             background: hsla(0, 0%, 100%, .8);
             backdrop-filter: saturate(200%) blur(30px);
-
             justify-content: space-between;
             padding: 0 16px;
-            flex-direction: row;
+            flex-flow: row nowrap;
             align-items: center;
-            border: 0;
-            margin: 0;
-        
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 1000;
         }
-       
 
-        .topnav_class .flex_menu_container .flex_box_list_item {
-            text-align: center;
-            flex: 1;
-            flex-basis: 1e-9px;
-            flex-direction: row;
+
+        .flex_menu_container .flex_box_list_item {
+
             font-size: 16px;
             color: #1D1D1F;
             letter-spacing: 0;
-            font-family: MiSans, Roboto, Helvetica, Arial, sans-serif;
             font-weight: 450;
             transition: color .3s ease-in;
             background: transparent;
             display: flex;
             flex-direction: row;
             align-items: center;
+            flex: 1;
+            flex-basis: 1e-9px;
+            flex-direction: row;
 
         }
 
-        .topnav_class .flex_menu_container .flex_box_list_item .search_box {
+        .flex_menu_container .flex_box_list_item .search_box {
             height: 40px;
             width: 100%;
             border-radius: 4.5px;
@@ -155,8 +117,10 @@
             font-size: 15px;
             font-weight: 400;
             color: #000;
-            padding: 0 8px 0 10px;
-            font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;
+            padding: 0 10px 0 12.5px;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+            letter-spacing: .5px;
+            caret-color: #0067c0;
         }
 
         .search_box::-webkit-input-placeholder {
@@ -174,8 +138,8 @@
         }
 
         .search-icon {
-            color: #24292f;
-            font-size: 20px;
+            fill: #24292f;
+            margin-left: 5px;
         }
 
 
@@ -185,6 +149,7 @@
             align-items: center;
             border-bottom: 1px solid #ccc;
             transition: border .3s ease-in;
+            border-radius: 4px 4px 0 0;
         }
 
         .search-container:hover {
@@ -196,13 +161,14 @@
         }
 
         .focu {
-            color: #000;
+            fill: #000;
         }
 
 
 
         .topnav-hover {
-            border-radius: 100%;padding:12px;
+            border-radius: 100%;
+            padding: 12px;
         }
 
         .topnav-hover:hover {
@@ -213,40 +179,32 @@
         .topnav-hover-2 {
             border-radius: 4px;
             background: #fff;
+            padding: 5px 12px;
         }
 
 
         .dropdown-content {
 
             position: absolute;
-            background-color: #f9f9f9;
             width: 160px;
             background: hsla(0, 0%, 100%, .8);
-
             backdrop-filter: saturate(200%) blur(30px);
-            top: 75px;
-            right: 16px;
             border-radius: 8px;
             overflow-x: hidden;
-            height: 0;
             overflow-y: auto;
-            display: flex;
-            flex-direction: column;
             color: rgba(29, 29, 31, 1);
-            flex: none;
+            display: none;
+            z-index: 5;
+            margin-top: 29px;
+            right: 0;
+            height: auto;
         }
 
         .dropdown-content .dropitem {
-
-
-            font-size: 14px;
             display: flex;
             height: 36px;
             flex: none;
-
             align-items: center;
-            font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
-            font-weight: 500;
             flex: none;
             border-radius: 4px;
             margin: 6px;
@@ -262,239 +220,582 @@
         }
 
         .showit {
+            display: block;
+        }
+
+
+        .dropdown-content2 {
+
+            position: absolute;
+            background: hsla(0, 0%, 100%, .8);
+            backdrop-filter: saturate(200%) blur(30px);
+            border-radius: 0 0 8px 8px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            color: rgba(29, 29, 31, 1);
+            display: none;
+            z-index: 5;
+            left: 0;
+            top: 51.5px;
+            right: 0;
             height: auto;
         }
-        #mydrop{
-            left: 0;right: 0;
-        }
-.searchtooltip:hover #mydrop{height: auto;}
-        .dark-mode  {
-  background: url('https://github.com/Lakshay-7134/Go/blob/main/Dark%20Wallpaper.jpg?raw=true');
 
-}
-.dark-mode  .flex_menu_container{
-    background: rgba(32,32,32,.75);}
-
-
-    .dark-mode .search-container:hover {
-            border-bottom: 1px solid #4cc2ff;
-        }
-
-        .dark-mode  .focused {
-            border-bottom: 1px solid #4cc2ff;
-        }
-
-        .dark-mode  .topnav-hover:hover {
-            background: rgb(255 255 255/5%);
-            color: #000;
-        }
-
-        .dark-mode  .topnav-hover-2 {
+        .dropdown-content2 .dropitem2 {
+            display: flex;
+            height: 45px;
+            flex: none;
+            align-items: center;
             border-radius: 4px;
-            background: #fff;
+            margin: 6px;
+            padding: 4px 6px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
         }
 
+        .dropdown-content2 .dropitem2:hover {
+            background: rgb(0 0 0/5%);
+        }
+
+        .showit2 {
+            display: block;
+        }
+
+        .notify {
+            position: absolute;
+            background: hsla(0, 0%, 100%, .8);
+            backdrop-filter: saturate(200%) blur(30px);
+            border-radius: 8px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            color: rgba(29, 29, 31, 1);
+            width: 200px;
+            z-index: 5;
+            margin-top: 33px;
+            right: 0;
+            height: 200px;
+            display: none;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+        }
+
+        .notify-showit {
+            display: block;
+        }
+
+        .dark-mode {
+            background: #0d1117;
+
+        }
+
+        .dark-mode .flex_menu_container {
+            background: #161b22;
+        }
+
+        .dark-mode .search-container {
+            background: hsla(0, 0%, 100%, .033);
+            border-bottom: 1px solid #4cc2ff;
+
+        }
+
+        .menu-icon {
+            background: rgba(255, 255, 255, 0);
+
+            padding: 13px;
+            display: none;
+
+
+            border-radius: 100px;
+
+            transition: all .2s ease-in;
+        }
+
+        .menu-icon:hover {
+            background: rgb(0 0 0/5%);
+        }
+
+        .line-1,
+        .line-2,
+        .line-3 {
+            width: 18px;
+            height: 2px;
+            background-color: black;
+            margin: 3px 0;
+            border-radius: 100px;
+            transition: all .2s ease-in;
+        }
+
+        .body-toggle {
+            overflow: hidden;
+        }
+
+        .line-1-toggle {
+            -webkit-transform: rotate(-45deg) translate(-1px, 6px);
+            transform: rotate(-45deg) translate(-1px, 6px);
+            width: 19px;
+            margin-right: 7px;
+        }
+
+        .line-2-toggle {
+            opacity: 0;
+            transform: translate(4px, 0px);
+            margin-right: 7px;
+        }
+
+        .line-3-toggle {
+            -webkit-transform: rotate(45deg) translate(-1px, -6px);
+            transform: rotate(45deg) translate(-1px, -6px);
+            width: 19px;
+            margin-right: 7px;
+        }
+
+        .menu-icon-toggle {
+            padding: 13px 9px;
+        }
+
+        #mobilelogoimage {
+            display: none
+        }
+
+        #mobilelogotext {
+            display: none
+        }
+
+        @media only screen and (max-width: 991px) {
+
+            .menu-icon {
+                display: block;
+            }
+
+            #search_container {
+                display: none;
+            }
+
+            .topnav-hover-container {
+                display: none;
+            }
+            #topnav-hover-dark{ display: none;}
+            #logoimage {
+                display: none;
+            }
+
+            #logotext {
+                display: none;
+            }
+
+            #mobilelogoimage {
+                display: block;
+            }
+
+            #mobilelogotext {
+                display: block;
+            }
+
+            #flex-search {
+                justify-content: center;
+            }
+        }
+
+        @media only screen and (max-width: 1115px) {
+            #login-name {
+                display: none !important;
+            }
+
+            .topnav-hover-2 {
+                background: rgb(255, 0, 0 ); border-radius: 100%;padding: 1px;
+            }
+
+            #login-pic {
+                
+            }
+
+            #topnav-hover-dark {
+                margin-right: 5px !important;
+            }
+
+        }
     </style>
 
 
     <script>
+
         function intfocus() {
-
-            document.getElementById("search_ccontainer").classList.add("focused");
+            document.getElementById("search_container").classList.add("focused");
             document.getElementById("search_icon").classList.add("focu");
-
-
+            document.getElementById('dropdowncontent2').classList.toggle('showit2');
+            document.getElementById('notify-content').classList.remove('notify-showit');
+            document.getElementById('myDropdown').classList.remove('showit');
         }
 
         function intfocusrmv() {
-
-            document.getElementById("search_ccontainer").classList.remove("focused");
+            document.getElementById("search_container").classList.remove("focused");
             document.getElementById("search_icon").classList.remove("focu");
-
+            document.getElementById("dropdowncontent2").classList.remove("showit2");
         }
-
 
         function opendropdown() {
             document.getElementById("myDropdown").classList.toggle("showit");
+            document.getElementById('notify-content').classList.remove('notify-showit');
         }
 
         function darkmode() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
+            alert('Dark mode will be available soon');
+            /* var element = document.body;
+             element.classList.toggle("dark-mode");*/
+        }
+
+
+        function open_notify() {
+            document.getElementById('notify-content').classList.toggle('notify-showit');
+            document.getElementById('myDropdown').classList.remove('showit');
+        }
+
+        function open_nav() {
+            document.body.classList.toggle('body-toggle');
+            document.getElementById('line-1').classList.toggle('line-1-toggle');
+            document.getElementById('line-2').classList.toggle('line-2-toggle');
+            document.getElementById('line-3').classList.toggle('line-3-toggle');
+            document.getElementById('menu-icon').classList.toggle('menu-icon-toggle');
+        }
     </script>
+
 </head>
 
 <body>
 
-    <div class="topnav_class" id="topnav_id">
+    <div class="flex_menu_container">
 
 
 
-        <div class="flex_menu_container">
+        <div class="flex_box_list_item" id="logo" style="justify-content: flex-start;cursor: default;">
+
+            <div class="menu-icon" id="menu-icon" onclick="open_nav()">
+                <div id="line-1" class="line-1"></div>
+                <div id="line-2" class="line-2"></div>
+                <div id="line-3" class="line-3"></div>
+            </div>
+
+            <div style="width:auto;margin-left: 9px;" id="logoimage">
+                <img src="https://raw.githubusercontent.com/Lakshay-7134/Go/main/Favicon%20Logo.png"
+                    style="height: 30px;width: auto;">
+            </div>
+
+            <div style="font-size: 16.5px;
+            font-family: MiSans, system-ui, 微软雅黑, sans-serif;color: #1D1D1F;padding-left: 10px;" id="logotext">
+                WeUI
+            </div>
+
+
+        </div>
 
 
 
-            <div class="flex_box_list_item" style="justify-content: flex-start;cursor: default;">
+        <div class="flex_box_list_item" id="flex-search">
 
 
-                <div style="width: 45px;">
-                    <img src="https://raw.githubusercontent.com/Lakshay-7134/Go/main/Favicon%20Logo.png"
-                        style="height: 28px;width: auto;">
-                </div>
+            <div class="search-container" id="search_container" style="position: relative;"
+                onclick="document.getElementById('searchbox').focus;">
 
-                <div style="font-size: 16.5px;
-            font-family: MiSans, system-ui, 微软雅黑, sans-serif;color: #1D1D1F;padding-left: 3px;">
-                    WeUI
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20px" height="20px"
+                    class="search-icon" id="search_icon">
+                    <path
+                        d="M 20.5 6 C 12.509634 6 6 12.50964 6 20.5 C 6 28.49036 12.509634 35 20.5 35 C 23.956359 35 27.133709 33.779044 29.628906 31.75 L 39.439453 41.560547 A 1.50015 1.50015 0 1 0 41.560547 39.439453 L 31.75 29.628906 C 33.779044 27.133709 35 23.956357 35 20.5 C 35 12.50964 28.490366 6 20.5 6 z M 20.5 9 C 26.869047 9 32 14.130957 32 20.5 C 32 23.602612 30.776198 26.405717 28.791016 28.470703 A 1.50015 1.50015 0 0 0 28.470703 28.791016 C 26.405717 30.776199 23.602614 32 20.5 32 C 14.130953 32 9 26.869043 9 20.5 C 9 14.130957 14.130953 9 20.5 9 z" />
+                </svg>
+                <input type="text" class="search_box" placeholder="Search or jump to..." onfocus="intfocus()"
+                    onfocusout="intfocusrmv()" id="searchbox">
+
+
+                <div class="dropdown-content2" id="dropdowncontent2">
+
+
+                    <div class="dropitem2">
+
+                        <div
+                            style=" border-radius: 2px;width: 36px;
+                        height: 36px;background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGI_cDvFufG0eFqNUEbOjeP8fJ5qHkiD6Pug&usqp=CAU');  background-position: center center;background-size: cover;">
+
+                        </div>
+
+                        <div
+                            style="padding-left: 12px;flex: 1;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;letter-spacing: .5px;">
+                            Pokémon Journeys: The Series</div>
+                        <div style="padding-left: 12px;padding-right: 5px;"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 12 12" fill="#24292f" class="site-nav-dropdown-arrow icon-12 fill-current"
+                                style="    width: 12px;
+                            height: 12px;">
+                                <path
+                                    d="M11.7803 6.53033C12.0732 6.23744 12.0732 5.76257 11.7803 5.46967L7.18414 0.873479C6.89124 0.580585 6.41637 0.580585 6.12348 0.873478C5.83058 1.16637 5.83058 1.64125 6.12348 1.93414L9.43934 5.25H0.75C0.335787 5.25 0 5.58579 0 6C0 6.41422 0.335787 6.75 0.75 6.75H9.43934L6.12348 10.0659C5.83058 10.3588 5.83058 10.8336 6.12348 11.1265C6.41637 11.4194 6.89124 11.4194 7.18414 11.1265L11.7803 6.53033Z">
+                                </path>
+                            </svg></div>
+                    </div>
+
+
+                    <div class="dropitem2">
+
+                        <div
+                            style=" border-radius: 2px;width: 36px;
+                        height: 36px;background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-mHSLpme6XRAIeQL257O3wiFe13ZR42Bc8g&usqp=CAU');  background-position: center center;background-size: cover;">
+
+                        </div>
+
+                        <div
+                            style="padding-left: 12px;flex: 1;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;letter-spacing: .5px;">
+                            Dragon Ball Super: Super Hero</div>
+                        <div style="padding-left: 12px;padding-right: 5px;"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 12 12" fill="#24292f" class="site-nav-dropdown-arrow icon-12 fill-current"
+                                style="    width: 12px;
+                            height: 12px;">
+                                <path
+                                    d="M11.7803 6.53033C12.0732 6.23744 12.0732 5.76257 11.7803 5.46967L7.18414 0.873479C6.89124 0.580585 6.41637 0.580585 6.12348 0.873478C5.83058 1.16637 5.83058 1.64125 6.12348 1.93414L9.43934 5.25H0.75C0.335787 5.25 0 5.58579 0 6C0 6.41422 0.335787 6.75 0.75 6.75H9.43934L6.12348 10.0659C5.83058 10.3588 5.83058 10.8336 6.12348 11.1265C6.41637 11.4194 6.89124 11.4194 7.18414 11.1265L11.7803 6.53033Z">
+                                </path>
+                            </svg></div>
+                    </div>
+
+                    <div class="dropitem2">
+
+                        <div
+                            style=" border-radius: 2px;width: 36px;
+                        height: 36px;background: url('https://wallpapercave.com/wp/wp10431065.png');  background-position: center center;background-size: cover;">
+
+                        </div>
+
+                        <div
+                            style="padding-left: 12px;flex: 1;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;letter-spacing: .5px;">
+                            Pokémon Master Journeys: The Series</div>
+                        <div style="padding-left: 12px;padding-right: 5px;"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 12 12" fill="#24292f" class="site-nav-dropdown-arrow icon-12 fill-current"
+                                style="    width: 12px;
+                            height: 12px;">
+                                <path
+                                    d="M11.7803 6.53033C12.0732 6.23744 12.0732 5.76257 11.7803 5.46967L7.18414 0.873479C6.89124 0.580585 6.41637 0.580585 6.12348 0.873478C5.83058 1.16637 5.83058 1.64125 6.12348 1.93414L9.43934 5.25H0.75C0.335787 5.25 0 5.58579 0 6C0 6.41422 0.335787 6.75 0.75 6.75H9.43934L6.12348 10.0659C5.83058 10.3588 5.83058 10.8336 6.12348 11.1265C6.41637 11.4194 6.89124 11.4194 7.18414 11.1265L11.7803 6.53033Z">
+                                </path>
+                            </svg></div>
+                    </div>
+
+                    <div class="dropitem2">
+
+                        <div
+                            style=" border-radius: 2px;width: 36px;
+                        height: 36px;background: url('https://upload.wikimedia.org/wikipedia/en/thumb/1/13/DB_THE_MOVIE_NO._20.jpg/220px-DB_THE_MOVIE_NO._20.jpg');  background-position: center center;background-size: cover;">
+
+                        </div>
+
+                        <div
+                            style="padding-left: 12px;flex: 1;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;letter-spacing: .5px;">
+                            Dragon Ball Super: Broly</div>
+                        <div style="padding-left: 12px;padding-right: 5px;"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 12 12" fill="#24292f" class="site-nav-dropdown-arrow icon-12 fill-current"
+                                style="    width: 12px;
+                            height: 12px;">
+                                <path
+                                    d="M11.7803 6.53033C12.0732 6.23744 12.0732 5.76257 11.7803 5.46967L7.18414 0.873479C6.89124 0.580585 6.41637 0.580585 6.12348 0.873478C5.83058 1.16637 5.83058 1.64125 6.12348 1.93414L9.43934 5.25H0.75C0.335787 5.25 0 5.58579 0 6C0 6.41422 0.335787 6.75 0.75 6.75H9.43934L6.12348 10.0659C5.83058 10.3588 5.83058 10.8336 6.12348 11.1265C6.41637 11.4194 6.89124 11.4194 7.18414 11.1265L11.7803 6.53033Z">
+                                </path>
+                            </svg></div>
+                    </div>
+
+                    <div class="dropitem2">
+
+                        <div
+                            style=" border-radius: 2px;width: 36px;
+                        height: 36px;background: url('https://www.whats-on-netflix.com/wp-content/uploads/2022/05/pokemon-ultimate-journeys-coming-to-netflix-in-2022.webp');  background-position: center center;background-size: cover;">
+
+                        </div>
+
+                        <div
+                            style="padding-left: 12px;flex: 1;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;letter-spacing: .5px;">
+                            Pokémon Ultimate Journeys: The Series</div>
+                        <div style="padding-left: 12px;padding-right: 5px;"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 12 12" fill="#24292f" class="site-nav-dropdown-arrow icon-12 fill-current"
+                                style="    width: 12px;
+                            height: 12px;">
+                                <path
+                                    d="M11.7803 6.53033C12.0732 6.23744 12.0732 5.76257 11.7803 5.46967L7.18414 0.873479C6.89124 0.580585 6.41637 0.580585 6.12348 0.873478C5.83058 1.16637 5.83058 1.64125 6.12348 1.93414L9.43934 5.25H0.75C0.335787 5.25 0 5.58579 0 6C0 6.41422 0.335787 6.75 0.75 6.75H9.43934L6.12348 10.0659C5.83058 10.3588 5.83058 10.8336 6.12348 11.1265C6.41637 11.4194 6.89124 11.4194 7.18414 11.1265L11.7803 6.53033Z">
+                                </path>
+                            </svg></div>
+                    </div>
+
+                    <div class="dropitem2">
+
+                        <div
+                            style=" border-radius: 2px;width: 36px;
+                        height: 36px;background: url('https://i.ytimg.com/vi/hCr4XKf3Dsk/maxresdefault.jpg');  background-position: center center;background-size: cover;">
+
+                        </div>
+
+                        <div
+                            style="padding-left: 12px;flex: 1;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;letter-spacing: .5px;">
+                            Super Dragon Ball Heroes</div>
+                        <div style="padding-left: 12px;padding-right: 5px;"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 12 12" fill="#24292f" class="site-nav-dropdown-arrow icon-12 fill-current"
+                                style="    width: 12px;
+                            height: 12px;">
+                                <path
+                                    d="M11.7803 6.53033C12.0732 6.23744 12.0732 5.76257 11.7803 5.46967L7.18414 0.873479C6.89124 0.580585 6.41637 0.580585 6.12348 0.873478C5.83058 1.16637 5.83058 1.64125 6.12348 1.93414L9.43934 5.25H0.75C0.335787 5.25 0 5.58579 0 6C0 6.41422 0.335787 6.75 0.75 6.75H9.43934L6.12348 10.0659C5.83058 10.3588 5.83058 10.8336 6.12348 11.1265C6.41637 11.4194 6.89124 11.4194 7.18414 11.1265L11.7803 6.53033Z">
+                                </path>
+                            </svg></div>
+                    </div>
+
+
                 </div>
 
 
             </div>
 
+            <div style="width:auto;" id="mobilelogoimage">
+                <img src="https://raw.githubusercontent.com/Lakshay-7134/Go/main/Favicon%20Logo.png"
+                    style="height: 30px;width: auto;">
+            </div>
+
+            <div style="font-size: 16.5px;
+            font-family: MiSans, system-ui, 微软雅黑, sans-serif;color: #1D1D1F;padding-left: 10px;" id="mobilelogotext">
+                WeUI
+            </div>
+
+        </div>
 
 
-            <div class="flex_box_list_item ">
+
+        <div class="flex_box_list_item " style="justify-content: flex-end;">
+            <div style="margin-right: 5px;position: relative;" class="topnav-hover-container">
 
 
-                <div class="search-container" id="search_ccontainer">
+<div class="topnav-hover" onclick="open_notify()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-bell">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                </svg>
+            </div>
 
-                    <span class="material-symbols-outlined search-icon" id="search_icon">
-                        search
-                    </span>
-
-                    <input type="text" class="search_box" placeholder="Search or jump to..." onfocus="intfocus()"
-                        onfocusout="intfocusrmv()">
-
+                <div class="notify" id="notify-content">
+                    <div style="display: flex;align-items: center;width: 100%;height: 100%;">
+                        <div style="text-align: center;flex: 1;"> No new notifications<br>yet!</div>
+                    </div>
                 </div>
-                <div class="dropdown-content" id="myDrop">
-                    Dark-mode
-                                    </div>
 
             </div>
 
+            <div class="topnav-hover" style="margin-right: 15px;" id="topnav-hover-dark" onclick="darkmode()">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-moon">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
 
 
-            <div class="flex_box_list_item " style="justify-content: flex-end;">
-                <div class="topnav-hover" style="margin-right: 2px;">
-                    
-                    
-            
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell" ><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
 
-                </div>
+            </div>
 
-                <div class="topnav-hover" style="margin-right: 12px;" onclick="darkmode()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <div style="position: relative;" class="topnav-hover-2 dropdown" onclick="opendropdown()">
 
-              
-
-                </div>
-
-                <div style="border: none; padding: 5px 12px;display: flex;align-items: center;flex: none;"
-                    class="topnav-hover-2 dropdown" onclick="opendropdown()">
-
-                    <div style="
+                <div style="
             border: none;
             outline: 0;
             font-size: 15px;
             font-weight: 600;
             color: #24292f;
             padding: 0 12px 0 0;
-            font-family: 'Open Sans', sans-serif;">Welcome back</div>
+            font-family: 'Open Sans', sans-serif;display: inline-block;vertical-align: middle;" id="login-name">Hi,
+                    Alec</div>
 
 
-                    <div
-                        style=" border-radius: 100%;width: 32px;
-                    height: 32px;background: url('https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp');  background-position: center center;background-size: 64px auto; ">
+                <div style=" border-radius: 100%;width: 32px;
+                    height: 32px;background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4z_-B1t1quipQzVBja6FFKTXEluEfEjV2Rg&usqp=CAU');  background-position: center center;background-size: 64px auto;display: inline-block; vertical-align: middle;"
+                    id="login-pic">
+                </div>
+
+                <div class="dropdown-content" id="myDropdown">
+
+                    <div class="dropitem">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-user" style="margin-left: 16px;">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                        </div>
+
+                        <div style="padding-left: 12px;">Profile</div>
+
                     </div>
 
-                    <div class="dropdown-content" id="myDropdown">
-
-                        <div class="dropitem">
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-user" style="margin-left: 16px;">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                                    <circle cx="12" cy="7" r="4" />
-                                </svg>
-                            </div>
-
-                            <div style="padding-left: 12px;">Profile</div>
-
+                    <div class="dropitem">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-compass" style="margin-left: 16px;">
+                                <circle cx="12" cy="12" r="10" />
+                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                            </svg>
                         </div>
 
-                        <div class="dropitem">
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-compass" style="margin-left: 16px;">
-                                    <circle cx="12" cy="12" r="10" />
-                                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
-                                </svg>
-                            </div>
+                        <div style="padding-left: 12px;">Explore</div>
 
-                            <div style="padding-left: 12px;">Explore</div>
+                    </div>
 
+
+                    <div class="dropitem">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-heart" style="margin-left: 16px;">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg>
                         </div>
 
+                        <div style="padding-left: 12px;">Favourite</div>
 
-                        <div class="dropitem">
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-heart" style="margin-left: 16px;">
-                                    <path
-                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                                </svg>
-                            </div>
+                    </div>
 
-                            <div style="padding-left: 12px;">Favourite</div>
-
+                    <div class="dropitem">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-lock" style="margin-left: 16px;">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            </svg>
                         </div>
 
-                        <div class="dropitem">
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-lock" style="margin-left: 16px;">
-                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                                </svg>
-                            </div>
+                        <div style="padding-left: 12px;">Secure</div>
 
-                            <div style="padding-left: 12px;">Secure</div>
+                    </div>
 
+
+                    <div class="dropitem">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-settings" style="margin-left: 16px;">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                            </svg>
                         </div>
 
-
-                        <div class="dropitem">
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-settings" style="margin-left: 16px;">
-                                    <circle cx="12" cy="12" r="3" />
-                                    <path
-                                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
-                                </svg>
-                            </div>
-
-                            <div style="padding-left: 12px;">Settings</div>
-
-                        </div>
+                        <div style="padding-left: 12px;">Settings</div>
 
                     </div>
 
                 </div>
 
-
             </div>
-
 
 
         </div>
 
+
+
     </div>
+
+
 
 
 </body>
