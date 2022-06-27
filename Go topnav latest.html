@@ -377,7 +377,11 @@
             .topnav-hover-container {
                 display: none;
             }
-            #topnav-hover-dark{ display: none;}
+
+            #topnav-hover-dark {
+                display: none;
+            }
+
             #logoimage {
                 display: none;
             }
@@ -398,13 +402,16 @@
                 justify-content: center;
             }
 
-            #login-pic{height: 35px !important;width: 35px !important;}
+            #login-pic {
+                height: 35px !important;
+                width: 35px !important;
+            }
 
             .flex_menu_container {
-            
-            padding: 0 16px;
-          
-        }
+
+                padding: 0 16px;
+
+            }
         }
 
         @media only screen and (max-width: 1119px) {
@@ -421,12 +428,13 @@
             }
 
         }
-        @media only screen and (max-width: 1011px){
+
+        @media only screen and (max-width: 1011px) {
             .flex_menu_container {
-            
-            padding: 0 24px;
-          
-        }
+
+                padding: 0 24px;
+
+            }
         }
     </style>
 
@@ -495,7 +503,8 @@
             </div>
 
             <div style="font-size: 16.5px;
-            font-family: MiSans, system-ui, sans-serif;color: #1D1D1F;padding-left: 10px;letter-spacing: .5px;" id="logotext">
+            font-family: MiSans, system-ui, sans-serif;color: #1D1D1F;padding-left: 10px;letter-spacing: .5px;"
+                id="logotext">
                 WeUI
             </div>
 
@@ -661,7 +670,8 @@
             </div>
 
             <div style="font-size: 16.5px;
-            font-family: MiSans, system-ui, sans-serif;color: #1D1D1F;padding-left: 10px;letter-spacing: .5px;font-weight: 600" id="mobilelogotext">
+            font-family: MiSans, system-ui, sans-serif;color: #1D1D1F;padding-left: 10px;letter-spacing: .5px;font-weight: 500"
+                id="mobilelogotext">
                 WeUI
             </div>
 
@@ -673,14 +683,14 @@
             <div style="margin-right: 5px;position: relative;" class="topnav-hover-container">
 
 
-<div class="topnav-hover" onclick="open_notify()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
-                    class="feather feather-bell">
-                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
-                    <path d="M13.73 21a2 2 0 0 1-3.46 0" />
-                </svg>
-            </div>
+                <div class="topnav-hover" onclick="open_notify()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-bell">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                    </svg>
+                </div>
 
                 <div class="notify" id="notify-content">
                     <div style="display: flex;align-items: center;width: 100%;height: 100%;">
@@ -691,7 +701,7 @@
             </div>
 
             <div class="topnav-hover" style="margin-right: 15px;" id="topnav-hover-dark" onclick="darkmode()">
-                
+
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
                     class="feather feather-moon">
