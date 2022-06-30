@@ -120,7 +120,7 @@
             padding: 0 10px 0 12.5px;
             font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
             letter-spacing: .5px;
-            caret-color: #0067c0;
+            caret-color: #0c84ff;
         }
 
         .search_box::-webkit-input-placeholder {
@@ -153,11 +153,11 @@
         }
 
         .search-container:hover {
-            border-bottom: 1px solid #0067c0;
+            border-bottom: 1px solid #0c84ff;
         }
 
         .focused {
-            border-bottom: 1px solid #0067c0;
+            border-bottom: 1px solid #0c84ff;
         }
 
         .focu {
@@ -190,7 +190,7 @@
             background: hsla(0, 0%, 100%, .8);
             backdrop-filter: saturate(200%) blur(30px);
             background: #fff;
-            border-radius: 8px;
+            border-radius: 15px;
             overflow-x: hidden;
             overflow-y: auto;
             color: rgba(29, 29, 31, 1);
@@ -214,8 +214,7 @@
             height: 45px;
             flex: none;
             align-items: center;
-            border-radius: 4px;
-            margin: 6px;
+            margin: 6px 0;
             padding: 4px 6px;
             font-size: 14px;
             font-weight: 500;
@@ -233,26 +232,26 @@
             margin: 0;
             background: url('https://i.pinimg.com/736x/23/22/f5/2322f5cd044bf7abf6c2689554e5df4c.jpg');
             width: 100%;
-            height: 135px;
+            height: 160px;
             filter: blur(0px);
             background-size: cover;
             background-position: center;
             display: flex;
-            justify-content: center;
+           justify-content: center;
 
         }
 
         .dropdown-content .drop-pic {
-            position: absolute;
-            top: 65px;
             border-radius: 100%;
             background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4z_-B1t1quipQzVBja6FFKTXEluEfEjV2Rg&usqp=CAU');
-            width: 100px;
-            height: 100px;
+            width: 110px;
+            height: 110px;
             background-size: cover;
             background-position: center;
             flex: none;
             z-index: 50;
+            position: absolute;
+            margin-top: 105px;
 
         }
 
@@ -266,6 +265,7 @@
             position: absolute;
             background: hsla(0, 0%, 100%, .8);
             backdrop-filter: saturate(200%) blur(30px);
+            background: #fff;
             border-radius: 0 0 8px 8px;
             overflow-x: hidden;
             overflow-y: auto;
@@ -303,6 +303,7 @@
             position: absolute;
             background: hsla(0, 0%, 100%, .8);
             backdrop-filter: saturate(200%) blur(30px);
+            background: #fff;
             border-radius: 8px;
             overflow-x: hidden;
             overflow-y: auto;
@@ -795,10 +796,10 @@
     <div class="dropdown-content" id="myDropdown">
 
         <div class="drop-profile">
+          
             <div
-                style="position: absolute;top: 0;bottom:0;left: 0;right: 0;background: linear-gradient(to top,#202124 0,rgba(0,0,0,0) 56%);">
-            </div>
-
+            style="position: absolute;top: 0;bottom:0;left: 0;right: 0;background: linear-gradient(to top,#202124 0,rgba(0,0,0,0) 56%);">
+        </div>
             <div class="drop-pic">
 
             </div>
@@ -806,8 +807,8 @@
         </div>
 
 
-        <div class="dropitem" style="margin-top: 55px;">
-            <div>
+        <div class="dropitem" style="margin-top: 63px;">
+            <div style="flex:1">
 
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg" width="36"
                     height="36" viewBox="0, 0, 400,394.11764705882354" version="1.1" style="margin-left: 30px;">
@@ -822,12 +823,12 @@
                 </svg>
             </div>
 
-            <div style="padding-left: 25px;">Profile</div>
+            <div style="padding-left: 25px;flex: 1;">Profile</div>
 
         </div>
 
         <div class="dropitem">
-            <div>
+            <div style="flex:1">
 
 
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg"
@@ -843,13 +844,13 @@
                 </svg>
             </div>
 
-            <div style="padding-left: 25px;">Explore</div>
+            <div style="padding-left: 25px;flex: 1;">Explore</div>
 
         </div>
 
 
         <div class="dropitem">
-            <div>
+            <div style="flex:1">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg"
                     version="1.1" width="51" height="51" viewBox="0, 0, 400,404.54545454545456"
                     style="margin-left: 23px">
@@ -864,12 +865,12 @@
                 </svg>
             </div>
 
-            <div style="padding-left: 18px;">Favourite</div>
+            <div style="padding-left: 25px;flex: 1;">Favourite</div>
 
         </div>
 
         <div class="dropitem">
-            <div>
+            <div style="flex: 1;">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg"
                     version="1.1" width="27" height="27" viewBox="0, 0, 400,400" style="margin-left: 34px">
                     <g id="svgg">
@@ -883,13 +884,13 @@
                 </svg>
             </div>
 
-            <div style="padding-left: 32px;">Secure</div>
+            <div style="padding-left: 25px;flex: 1;">Secure</div>
 
         </div>
 
 
         <div class="dropitem">
-            <div>
+            <div style="flex:1">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg"
                     version="1.1" width="26" height="26" viewBox="0, 0, 400,400" style="margin-left: 35px">
                     <g id="svgg">
@@ -903,13 +904,13 @@
                 </svg>
             </div>
 
-            <div style="padding-left: 33px;">Settings</div>
+            <div style="padding-left: 25px;flex: 1;">Settings</div>
 
         </div>
 
 
-        <div class="dropitem">
-            <div>
+        <div class="dropitem" style="margin:6px 0 0 0;">
+            <div style="flex:1">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg"
                     version="1.1" width="37" height="37" viewBox="0, 0, 400,400" style="margin-left: 31px">
                     <g id="svgg">
@@ -923,7 +924,7 @@
                 </svg>
             </div>
 
-            <div style="padding-left: 26px;">Settings</div>
+            <div style="padding-left: 25px;flex: 1;">Settings</div>
 
         </div>
 
