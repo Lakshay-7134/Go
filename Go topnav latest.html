@@ -410,6 +410,88 @@
             display: none;
         }
 
+        .sidebar {
+            position: fixed;
+            top: 62px;
+            bottom: 0;
+            left: 0;
+            width: 220px;
+            height: 100%;
+            letter-spacing: .5px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background: hsla(0, 0%, 100%, .8);
+            backdrop-filter: blur(40px);
+            color: rgba(29, 29, 31, 1);
+
+        }
+
+        .sidebar-collapsed {
+            width: 72px;
+        }
+
+        .sidebar-collapsed .hidden {
+            display: none
+        }
+
+        .sidebar .sidebar-item {
+            margin-top: 3px;
+            font-size: 14px;
+            display: flex;
+            height: 48px;
+            overflow: hidden;
+            width: 220px;
+            align-items: center;
+            font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+            border-radius: 0 100px 100px 0;
+            font-weight: 500;
+            flex:none;
+        }
+
+        .sidebar .sidebar-item:hover {
+            color: #030303;
+            background: #f8f9fa;
+        }
+
+        .sidebar .sidebar-item .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 350
+        }
+
+        .sidebar .sidebar-item:hover .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 1,
+                'wght' 350
+        }
+
+
+        @media only screen and (min-height: 525px) {
+            .exception {
+                position: absolute;
+                bottom: 80px
+            }
+        }
+
+        .sidebar-collapsed .sidebar-item {
+            width: 72px;
+        }
+
+        .active {
+            background: #f1f1f1;
+        }
+
+
+
+        .active .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 1,
+                'wght' 350 !important
+        }
+
+        .active:hover {
+            background: #f2f2f2 !important;
+        }
         @media only screen and (max-width: 859px) {
 
             .menu-icon {
@@ -501,7 +583,7 @@ right: 10px !important;
             .dropdown-content  {
 
 
-right: 24px !important;
+right: 24px;
 
 }
         }
@@ -911,6 +993,77 @@ right: 24px !important;
         </div>
 
     </div>
+</div>
+
+
+
+<div class="sidebar" id="sidebar-container">
+
+    <div style="margin-top: 10px;" class="sidebar-item active">
+        <div>
+            <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+                home
+            </span>
+        </div>
+        <div class="hidden">Home</div>
+    </div>
+
+
+    <div class="sidebar-item">
+        <div>
+            <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+                explore
+            </span>
+        </div>
+        <div class="hidden">Explore</div>
+    </div>
+
+    <div class="sidebar-item">
+        <div>
+            <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+                history
+            </span>
+        </div>
+        <div class="hidden">History</div>
+    </div>
+    <hr style="    height: 0;
+margin: 15px auto;
+width: 75%;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
+    <div class="sidebar-item">
+        <div>
+            <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+                favorite
+            </span>
+        </div>
+        <div class="hidden">Favourite</div>
+    </div>
+
+    <div class="sidebar-item">
+        <div>
+            <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+                bookmark_added
+            </span>
+        </div>
+        <div class="hidden">Tags</div>
+    </div>
+
+    <div class="sidebar-item exception">
+        <div>
+            <span class="material-symbols-outlined" style="font-size: 25px;margin-left: 28px;">
+                lock
+            </span>
+        </div>
+        <div class="hidden">Secure</div>
+    </div>
+
+    <div class="sidebar-item special">
+       
+    </div>
+
 </div>
 
 </body>
