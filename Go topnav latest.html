@@ -69,7 +69,7 @@
             color: #000;
             font-family: MiSans, system-ui, sans-serif;
             overflow-x: hidden;
-            background: url('https://github.com/Lakshay-7134/Go/blob/main/IDR_THEME_NTP_BACKGROUND.png?raw=true');
+           
         }
 
 
@@ -220,6 +220,7 @@
             transition-timing-function: linear, cubic-bezier(0, 0, 0.2, 1), cubic-bezier(0, 0, 0.2, 1);
             transition-delay: 0s, 0s, 0s;
             opacity: 0;
+            box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
 
 
         }
@@ -302,6 +303,8 @@
             font-weight: 450;
             font-family: inherit;
         }
+        .site-nav-dropdown-arrow{visibility: hidden;}
+        .dropitem2:hover .site-nav-dropdown-arrow{visibility: visible;}
 
         .dropdown-content2 .dropitem2:hover {
             background: #f5f5f5;
@@ -329,7 +332,7 @@
             font-size: 14px;
             font-weight: 500;
             font-family: inherit;
-
+            box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
         }
 
         .notify-showit {
@@ -419,7 +422,6 @@
             bottom: 0;
             left: 0;
             width: 72px;
-            height: 100%;
             letter-spacing: .5px;
             overflow-y: auto;
             overflow-x: hidden;
@@ -484,7 +486,7 @@
             background: #0c84ff;
             border-radius: 4px;
             width: 4px;
-            height: 16px;
+            height: 20px;
             left: -3px;
             position: absolute;
             margin: auto 0;
@@ -495,6 +497,40 @@
         .active:hover {
             background: #f2f2f2 !important;
         }
+        .mini-sidebar {
+            position: fixed;
+            top: 62px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            letter-spacing: .5px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background: #fff;
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+            color: rgba(29, 29, 31, 1);
+display: none;
+        }
+
+
+        .mini-sidebar::-webkit-scrollbar {
+            display: none;
+        }
+        .mini-sidebar-item {
+            margin: 4px auto;
+            display: flex;
+            height: 56px;
+            width: 100%;
+            align-items: center;
+            border-radius: 4px;
+            flex: none;
+            flex-direction: row;
+            position: relative;
+        }
+        .mini-sidebar-collapsed{display: block;}
 
         @media only screen and (max-width: 859px) {
 .sidebar{display: none;}
@@ -648,7 +684,7 @@
         }
         function sidebar_toggle() {
 
-            document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed");
+            document.getElementById("mini-sidebar-container").classList.toggle("mini-sidebar-collapsed");
 
 
         }
@@ -665,7 +701,7 @@
 
         <div class="flex_box_list_item" id="logo" style="justify-content: flex-start;cursor: default;">
 
-            <div class="menu-icon" id="menu-icon" onclick="open_nav()">
+            <div class="menu-icon" id="menu-icon" onclick="open_nav(),sidebar_toggle()">
                 <div id="line-1" class="line-1"></div>
                 <div id="line-2" class="line-2"></div>
                 <div id="line-3" class="line-3"></div>
@@ -1159,6 +1195,32 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
 
     </div>
 
+
+    <div class="mini-sidebar" id="mini-sidebar-container">
+
+        <div style="margin-top: 10px;" class="mini-sidebar-item active">
+            <div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg"
+                    version="1.1" width="36" height="36" viewBox="0, 0, 400,400">
+                    <g id="svgg">
+                        <path id="path0"
+                            d="M200.482 114.424 C 194.551 115.474,187.794 119.470,179.429 126.875 C 172.148 133.320,168.369 136.481,163.800 139.944 C 161.600 141.612,158.540 144.067,157.000 145.401 C 150.115 151.365,133.982 164.890,130.283 167.800 C 115.887 179.124,108.980 187.724,107.313 196.400 C 106.422 201.039,106.255 293.137,107.130 297.861 C 109.573 311.061,121.177 316.093,146.103 314.762 C 159.258 314.059,164.282 312.282,167.862 307.063 C 170.701 302.925,170.859 301.775,171.225 282.600 C 171.826 251.151,176.108 242.080,193.600 235.194 C 211.139 228.290,230.956 240.051,235.397 260.000 C 235.916 262.332,236.147 266.610,236.436 279.200 C 236.986 303.216,237.527 305.562,243.633 310.388 C 252.084 317.069,284.622 316.561,293.839 309.605 C 301.153 304.085,301.290 302.922,301.274 246.200 C 301.256 182.850,303.484 189.074,271.200 162.200 C 266.470 158.263,260.819 153.729,258.642 152.124 C 256.465 150.519,249.912 145.110,244.079 140.103 C 238.246 135.096,232.377 130.109,231.037 129.020 C 229.697 127.931,227.254 125.875,225.609 124.452 C 216.615 116.669,207.761 113.135,200.482 114.424 "
+                            stroke="red" fill="none" fill-rule="evenodd" />
+                        <path id="path1"
+                            d="M0.000 200.000 L 0.000 400.000 200.000 400.000 L 400.000 400.000 400.000 200.000 L 400.000 0.000 200.000 0.000 L 0.000 0.000 0.000 200.000 M210.291 115.255 C 214.987 116.702,220.430 119.970,225.609 124.452 C 227.254 125.875,229.697 127.931,231.037 129.020 C 232.377 130.109,238.246 135.096,244.079 140.103 C 249.912 145.110,256.465 150.519,258.642 152.124 C 266.514 157.927,289.915 177.808,293.282 181.554 C 296.785 185.449,299.333 191.743,300.590 199.600 C 301.438 204.898,301.633 284.728,300.821 293.778 C 299.369 309.949,291.569 314.949,267.800 314.943 C 249.451 314.938,242.436 312.292,238.608 303.929 C 237.142 300.729,236.854 297.440,236.436 279.200 C 236.034 261.664,235.828 259.854,233.561 253.966 C 229.064 242.286,216.494 233.234,204.735 233.207 C 193.078 233.181,180.790 240.420,175.894 250.200 C 172.330 257.321,171.613 262.293,171.225 282.600 C 170.859 301.775,170.701 302.925,167.862 307.063 C 164.282 312.282,159.258 314.059,146.103 314.762 C 121.177 316.093,109.573 311.061,107.130 297.861 C 106.255 293.137,106.422 201.039,107.313 196.400 C 108.980 187.724,115.887 179.124,130.283 167.800 C 133.982 164.890,150.115 151.365,157.000 145.401 C 158.540 144.067,161.600 141.612,163.800 139.944 C 168.369 136.481,172.148 133.320,179.429 126.875 C 192.308 115.473,200.721 112.306,210.291 115.255 "
+                            stroke="none" fill="none" fill-rule="evenodd" />
+                    </g>
+                </svg>
+
+
+            </div>
+            <div class="hidden">Home</div>
+        </div>
+
+
+        
+    </div>
 </body>
 
 </html>
