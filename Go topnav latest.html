@@ -94,8 +94,20 @@
             right: 0;
             top: 0;
             z-index: 1000;
+            position: relative;
         }
-
+        .flex_menu_container::after {
+            content: "";
+    height: 1px;
+    opacity: 1;
+    position: absolute;
+    right: 0px;
+    width: 100%;
+    z-index: 3;
+    bottom: -1px;
+    left: 72px;
+    background:#e5e5e5
+        }
 
         .flex_menu_container .flex_box_list_item {
 
@@ -124,7 +136,7 @@
             font-size: 15px;
             font-weight: 400;
             color: #000;
-            padding: 0 10px 0 12.5px;
+            padding: 0 10px 0 20.5px;
             font-family: MiSans, system-ui, sans-serif;
             letter-spacing: .5px;
             caret-color: #0c84ff;
@@ -146,7 +158,7 @@
 
         .search-icon {
             fill: #24292f;
-            margin-left: 5px;
+            margin-left: 17px;
         }
 
 
@@ -154,17 +166,25 @@
             width: 100%;
             display: flex;
             align-items: center;
-            border-bottom: 1px solid #ccc;
             transition: border .3s ease-in;
-            border-radius: 4px 4px 0 0;
+            border-radius: 4px;
+           background: #f5f5f5;position: relative;
         }
-
+        .search-container::after {content:'';margin: 0 auto;bottom: 0;left: 0;right: 0;
+            width: 0;height:1px;position: absolute;
+            background: transparent;
+        }
         .search-container:hover {
-            border-bottom: 1px solid #0c84ff;
+       
+            background: #fff;
         }
 
         .focused {
-            border-bottom: 1px solid #0c84ff;
+            background: #fff;
+        }
+        .focused::after {transition: width .1s ease-in;
+            width: 100%;
+            background:#0c84ff;
         }
 
         .focu {
@@ -536,6 +556,9 @@ display: none;
         .mini-sidebar-collapsed{display: block;}
 
         @media only screen and (max-width: 859px) {
+            .flex_menu_container::after {
+left: 0;
+        }
 .sidebar{display: none;}
             .menu-icon {
                 display: block;
@@ -737,6 +760,7 @@ display: none;
                     <path
                         d="M 20.5 6 C 12.509634 6 6 12.50964 6 20.5 C 6 28.49036 12.509634 35 20.5 35 C 23.956359 35 27.133709 33.779044 29.628906 31.75 L 39.439453 41.560547 A 1.50015 1.50015 0 1 0 41.560547 39.439453 L 31.75 29.628906 C 33.779044 27.133709 35 23.956357 35 20.5 C 35 12.50964 28.490366 6 20.5 6 z M 20.5 9 C 26.869047 9 32 14.130957 32 20.5 C 32 23.602612 30.776198 26.405717 28.791016 28.470703 A 1.50015 1.50015 0 0 0 28.470703 28.791016 C 26.405717 30.776199 23.602614 32 20.5 32 C 14.130953 32 9 26.869043 9 20.5 C 9 14.130957 14.130953 9 20.5 9 z" />
                 </svg>
+                
                 <input type="text" class="search_box" placeholder="Search or jump to..." onfocus="intfocus()"
                     onfocusout="intfocusrmv()" id="searchbox">
 
