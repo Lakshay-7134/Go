@@ -172,9 +172,18 @@
         }
         .search-container::after {content:'';margin: 0 auto;bottom: 0;left: 0;right: 0;
             width: 0;height:1px;position: absolute;
-            background: transparent;
+            background: transparent;z-index: 3;
         }
-        .search-container:hover {
+        .search-container::before {content:'';margin: 0 auto;bottom: 0;left: 0;right: 0;
+            width: 100%;height:1px;position: absolute;
+            background: transparent;z-index: 2;
+        }
+        
+        .search-container:hover::before {
+            background: #ccc;
+        }
+        
+        .search-container:hover{
        
             background: #fff;
         }
@@ -460,7 +469,7 @@
             display: none;
         }
         .sidebar .sidebar-item {
-            margin: 4px auto;
+            margin: 9px auto;
             display: flex;
             height: 56px;
             width: 64px;
