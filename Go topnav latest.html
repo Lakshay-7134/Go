@@ -82,9 +82,7 @@
             height: 62px;
             width: 100%;
             display: flex;
-            background: hsla(0, 0%, 100%, .8);
-            backdrop-filter: saturate(200%) blur(30px);
-            background: #fff;
+            background:rgba(255, 255, 255, 0.98);;
             justify-content: space-between;
             padding: 0 32px;
             flex-flow: row nowrap;
@@ -236,7 +234,7 @@
 
         .topnav-hover-2 {
             border-radius: 4px;
-            background: #fff;
+            background: transparent;
             padding: 5px 12px;
         }
 
@@ -245,9 +243,7 @@
 
             position: absolute;
             width: 275px;
-            background: hsla(0, 0%, 100%, .8);
-            backdrop-filter: saturate(200%) blur(30px);
-            background: #fff;
+            background: rgba(255, 255, 255, 0.98);;
             border-radius: 12px;
             overflow-x: hidden;
             overflow-y: auto;
@@ -329,7 +325,7 @@
             position: absolute;
             background: hsla(0, 0%, 100%, .8);
             backdrop-filter: saturate(200%) blur(30px);
-            background: #fff;
+            background: rgba(255, 255, 255, 0.98);;
             border-radius: 0 0 8px 8px;
             overflow-x: hidden;
             overflow-y: auto;
@@ -377,9 +373,7 @@
 
         .notify {
             position: absolute;
-            background: hsla(0, 0%, 100%, .8);
-            backdrop-filter: saturate(200%) blur(30px);
-            background: #fff;
+            background: rgba(255, 255, 255, 0.98);;
             border-radius: 8px;
             overflow-x: hidden;
             overflow-y: auto;
@@ -406,14 +400,18 @@
         }
 
         .dark-mode .flex_menu_container {
-            background: #161b22;
+            background: rgba(33, 33, 33, 0.98);
         }
 
         .dark-mode .search-container {
             background: hsla(0, 0%, 100%, .033);
-            border-bottom: 1px solid #4cc2ff;
+            
         }
-
+        .dark-mode .sidebar {
+            background:  #212121;
+            
+        }
+       
         .menu-icon {
             background: rgba(255, 255, 255, 0);
 
@@ -486,7 +484,7 @@
             letter-spacing: .5px;
             overflow-y: auto;
             overflow-x: hidden;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.98);;
             -ms-overflow-style: none;
             /* IE and Edge */
             scrollbar-width: none;
