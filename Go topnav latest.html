@@ -26,8 +26,7 @@
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
 
-
-    <script src="Go.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
 
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -379,11 +378,11 @@
             overflow-x: hidden;
             overflow-y: auto;
             color: rgba(29, 29, 31, 1);
-            width: 200px;
+            width: 260px;
             z-index: 5;
             margin-top: 33px;
             right: 0;
-            height: 200px;
+            height: 290px;
             display: none;
             font-size: 14px;
             font-weight: 500;
@@ -391,6 +390,10 @@
             border: 1px solid rgba(0, 0, 0, 0.1);
         }
 
+        .progress-player-hidden{  width:400px;z-index: 1000;display:none;position: absolute;margin-top: 33px;right:0;}
+        .progress-player-show{display: block;}
+        
+      
         .notify-showit {
             display: block;
         }
@@ -504,7 +507,7 @@
             height: 74px;
             width: 64px;
             align-items: center;
-            border-radius: 4px;
+            border-radius: 10px;
             flex: none;
             flex-direction: column;
             justify-content: center;
@@ -528,7 +531,7 @@
             background: #f8f9fa;
         }
 
-      
+       
 
 
         .mini-sidebar {
@@ -566,100 +569,60 @@
             position: relative;
         }
 
-        .mini-sidebar-collapsed {
-            display: block;
+        .sidebar-collapsed {
+            width: 220px;z-index: 1000;
+            
         }
 
-        .contentarea1{position: fixed;right:0;left:72px;background: url(https://wallpapershome.com/images/wallpapers/macos-big-sur-2560x1440-iridescence-apple-october-2020-event-5k-23123.jpg);
-    background-position: center center;
-    background-repeat: no-repeat no-repeat;    background-attachment: fixed;
-    background-size: cover;top:56px;bottom: 0;overflow: hidden;}
-       
+          .sidebar-collapsed .sidebar-item {
+            margin: 9px auto;
+            display: flex;
+            height: 48px;
+            width: 100%;
+            align-items: center;
+            border-radius: 0 100px 100px 0;
+            flex: none;
+            flex-direction: row;
+            justify-content: left;
+           
+        }
+
+        .sidebar-collapsed .sidebar-item div {
+
+            display: flex;
+            font-size: 14px;
+            align-items: center;
+            font-family: MiSans, system-ui, sans-serif;
+            font-weight: 500;
+            flex: none;
+justify-content: left;min-width: 50px;
+margin-left: 25px;          
+        }
+        .sidebar-collapsed .sidebar-item .hidden {
+
+display: flex;
+font-size: 14px;
+align-items: center;
+font-family: MiSans, system-ui, sans-serif;
+font-weight: 450;
+flex: none;
+justify-content: left;
+margin-left: 0;          
+}
+.active {
+   
+    background: #f5f5f5;
+        }
+        .sidebar-collapsed .sidebar-item div svg {
+width: 30px;
+height: 30px;
+        }
+
+
         
-        .contentarea2{position: relative;margin-left:72px;background: hsla(0, 0%, 100%, .8);
+        .contentarea2{position: relative;margin-left:72px;
     min-height:calc(100% - 56px); margin-top:56px;overflow-x: hidden;overflow-y: auto;}
 
-    ::-webkit-scrollbar {
-    width: 14px;
-    height: 14px;
-    /* background-color: #3170f5; */
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, .5);;
-    background-clip: content-box;
-    border: 4px solid transparent;
-    border-radius: 0.625rem;
-  }
-  
-  html.no-border-radius ::-webkit-scrollbar-thumb {
-    border-radius: 0;
-  }
-  
-  ::-webkit-scrollbar-corner {
-    background-color: transparent;
-  }
-  
-  /* Buttons */
-  
-  ::-webkit-scrollbar-button:single-button {
-    display: block;
-    background-repeat: no-repeat;
-    border: 0;
-    width: 14px;
-    height: 14px;
-  }
-  
-  /* Up */
-  
-  ::-webkit-scrollbar-button:single-button:vertical:decrement {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
-    background-size: 8px;
-    background-position: 3px bottom;
-  }
-  
-  .dark ::-webkit-scrollbar-button:single-button:vertical:decrement {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iI0RERERERCIvPgo8L3N2Zz4K");
-  }
-  
-  /* Down */
-  
-  ::-webkit-scrollbar-button:single-button:vertical:increment {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjODg4Ii8+PC9zdmc+");
-    background-size: 8px;
-    background-position: 3px top;
-  }
-  
-  .dark *::-webkit-scrollbar-button:single-button:vertical:increment {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjREREIi8+PC9zdmc+");
-  }
-  
-  /* Left */
-  
-  ::-webkit-scrollbar-button:single-button:horizontal {
-    background-size: 4.6px;
-  }
-  
-  ::-webkit-scrollbar-button:single-button:horizontal:decrement {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMTZMMTggMC40MTE1NDVMMTggMzEuNTg4NUwwIDE2WiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
-    background-position: right 3px;
-  }
-  
-  .dark ::-webkit-scrollbar-button:single-button:horizontal:decrement {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMTZMMTggLjQxMnYzMS4xNzdMMCAxNnoiIGZpbGw9IiNEREQiLz48L3N2Zz4=");
-  }
-  
-  /* Right */
-  
-  ::-webkit-scrollbar-button:single-button:horizontal:increment {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4NUwwIDAuNDExNTQzTDE4IDE2WiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
-    background-position: left 3px;
-  }
-  
-  .dark ::-webkit-scrollbar-button:single-button:horizontal:increment {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4Vi40MTNMMTggMTZ6IiBmaWxsPSIjREREIi8+PC9zdmc+");
-  }
-  
         @media only screen and (max-width: 859px) {
             .flex_menu_container::after {
                 left: 0;
@@ -808,7 +771,11 @@
             document.getElementById('notify-content').classList.toggle('notify-showit');
             document.getElementById('myDropdown').classList.remove('showit');
         }
-
+        function open_progress_player() {
+            document.getElementById('progress-player-id').classList.toggle('progress-player-show');
+            document.getElementById('myDropdown').classList.remove('showit');
+        }
+        
         function open_nav() {
             document.body.classList.toggle('body-toggle');
             document.getElementById('line-1').classList.toggle('line-1-toggle');
@@ -818,7 +785,7 @@
         }
         function sidebar_toggle() {
 
-            document.getElementById("mini-sidebar-container").classList.toggle("mini-sidebar-collapsed");
+            document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed");
 
 
         }
@@ -835,7 +802,7 @@
 
         <div class="flex_box_list_item" id="logo" style="justify-content: flex-start;cursor: default;">
 
-            <div class="menu-icon" id="menu-icon" onclick="open_nav(),sidebar_toggle()">
+            <div class="menu-icon" id="menu-icon" onclick="sidebar_toggle()">
                 <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24px; height: 24px;"><g class="style-scope yt-icon"><path d="M21,6H3V5h18V6z M21,11H3v1h18V11z M21,17H3v1h18V17z" class="style-scope yt-icon"></path></g></svg>
             </div>
 
@@ -1031,27 +998,92 @@
                 </div>
 
                 <div class="notify" id="notify-content">
-                    <div style="display: flex;align-items: center;width: 100%;height: 100%;">
-                        <div style="text-align: center;flex: 1;"> No new notifications<br>yet!</div>
+                    <div style="display: flex;align-items: center;width: 100%;height: 100%;flex-direction: column;justify-content: center;">
+                        <div><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 65px; height: 65px;fill:rgba(0,0,0,.4)"><g class="style-scope yt-icon"><path d="M10,20h4c0,1.1-0.9,2-2,2S10,21.1,10,20z M20,17.35V19H4v-1.65l2-1.88v-5.15c0-2.92,1.56-5.22,4-5.98V3.96 c0-1.42,1.49-2.5,2.99-1.76C13.64,2.52,14,3.23,14,3.96l0,0.39c2.44,0.75,4,3.06,4,5.98v5.15L20,17.35z M19,17.77l-2-1.88v-5.47 c0-2.47-1.19-4.36-3.13-5.1c-1.26-0.53-2.64-0.5-3.84,0.03C8.15,6.11,7,7.99,7,10.42v5.47l-2,1.88V18h14V17.77z" class="style-scope yt-icon"></path></g></svg></div>
+                        <div style="text-align: center;height: 60px;display: flex;align-items: center;color: rgba(0,0,0,.9);"> No new notifications<br>yet!</div>
                     </div>
                 </div>
 
             </div>
+<div style="position: relative;">
+            <div class="topnav-hover" style="margin-right: 15px;" id="topnav-hover-dark" onclick="open_progress_player()">
 
-            <div class="topnav-hover" style="margin-right: 15px;" id="topnav-hover-dark" onclick="darkmode()">
+       <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24px; height: 24px;"><g class="style-scope yt-icon"><path d="M14,13h-3v3H9v-3H6v-2h3V8h2v3h3V13z M17,6H3v12h14v-6.39l4,1.83V8.56l-4,1.83V6 M18,5v3.83L22,7v8l-4-1.83V19H2V5H18L18,5 z" class="style-scope yt-icon"></path></g></svg> </div>
 
-       <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24px; height: 24px;"><g class="style-scope yt-icon"><path d="M14,13h-3v3H9v-3H6v-2h3V8h2v3h3V13z M17,6H3v12h14v-6.39l4,1.83V8.56l-4,1.83V6 M18,5v3.83L22,7v8l-4-1.83V19H2V5H18L18,5 z" class="style-scope yt-icon"></path></g></svg>
-
-
+            <div class="progress-player-hidden" id="progress-player-id">
+                <div class="bg-white border-slate-100 dark:bg-slate-800 dark:border-slate-500 border-b rounded-t-xl p-4 pb-6 sm:p-10 sm:pb-8 lg:p-6 xl:p-10 xl:pb-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8"style="height: 164.955752px; padding-top:1rem">
+                  <div class="flex items-center space-x-4">
+                    <img src="https://images.news18.com/ibnlive/uploads/2022/08/dragon-ball-super_-super-hero.jpg" alt="" width="88" height="88" class="flex-none rounded-lg bg-slate-100" loading="lazy" />
+                    <div class="min-w-0 flex-auto space-y-1 font-semibold">
+                      <p class="text-cyan-500 dark:text-cyan-400 text-sm leading-6">
+                        <a title="Episode">Ep.</a> 128
+                      </p>
+                      <h2 class="text-slate-500 dark:text-slate-400 text-sm leading-6 truncate">
+                        Scaling CSS at Heroku with Utility Classes
+                      </h2>
+                      <p class="text-slate-900 dark:text-slate-50 text-lg">
+                        Full Stack Radio
+                      </p>
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="relative">
+                      <div class="bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                        <div class="bg-cyan-500 dark:bg-cyan-400 w-1/2 h-2" role="progressbar" aria-label="music progress" aria-valuenow="1456" aria-valuemin="0" aria-valuemax="4550"></div>
+                      </div>
+                      <div class="ring-cyan-500 dark:ring-cyan-400 ring-2 absolute left-1/2 top-1/2 w-4 h-4 -mt-2 -ml-2 flex items-center justify-center bg-white rounded-full shadow">
+                        <div class="w-1.5 h-1.5 bg-cyan-500 dark:bg-cyan-400 rounded-full ring-1 ring-inset ring-slate-900/5"></div>
+                      </div>
+                    </div>
+                  
+                  </div>
+                </div>
+                <div class="bg-slate-50 text-slate-500 dark:bg-slate-600 dark:text-slate-200 rounded-b-xl flex items-center" style="height: 45.3097345px;">
+                  <div class="flex-auto flex items-center justify-evenly">
+                    <button type="button" aria-label="Add to favorites">
+                      <svg width="24" height="24">
+                        <path d="M7 6.931C7 5.865 7.853 5 8.905 5h6.19C16.147 5 17 5.865 17 6.931V19l-5-4-5 4V6.931Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                    
+                    <button type="button" aria-label="Rewind 10 seconds">
+                      <svg width="24" height="24" fill="none">
+                        <path d="M6.492 16.95c2.861 2.733 7.5 2.733 10.362 0 2.861-2.734 2.861-7.166 0-9.9-2.862-2.733-7.501-2.733-10.362 0A7.096 7.096 0 0 0 5.5 8.226" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M5 5v3.111c0 .491.398.889.889.889H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <button type="button" class="bg-white text-slate-900 dark:bg-slate-100 dark:text-slate-700 flex-none -my-2 mx-auto w-20 h-20 rounded-full ring-1 ring-slate-900/5 shadow-md flex items-center justify-center" aria-label="Pause" style="width:4rem;height:4rem">
+                    <svg width="30" height="32" fill="currentColor">
+                      <rect x="6" y="4" width="4" height="24" rx="2" />
+                      <rect x="20" y="4" width="4" height="24" rx="2" />
+                    </svg>
+                  </button>
+                  <div class="flex-auto flex items-center justify-evenly">
+                    <button type="button" aria-label="Skip 10 seconds">
+                      <svg width="24" height="24" fill="none">
+                        <path d="M17.509 16.95c-2.862 2.733-7.501 2.733-10.363 0-2.861-2.734-2.861-7.166 0-9.9 2.862-2.733 7.501-2.733 10.363 0 .38.365.711.759.991 1.176" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M19 5v3.111c0 .491-.398.889-.889.889H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                   
+                    <button type="button" class="rounded-lg text-xs leading-6 font-semibold px-2 ring-2 ring-inset ring-slate-500 text-slate-500 dark:text-slate-100 dark:ring-0 dark:bg-slate-500">
+                      1x
+                    </button>
+                  </div>
+                </div>
             </div>
+               
 
+           
+        </div>
             <div style="position: relative;" class="topnav-hover-2 dropdown" onclick="opendropdown()">
 
            
 
 
                 <div style=" border-radius: 100%;width: 32px;
-                    height: 32px;background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4z_-B1t1quipQzVBja6FFKTXEluEfEjV2Rg&usqp=CAU');  background-position: center center;background-size: 70px auto;display: inline-block; vertical-align: middle;"
+                    height: 32px;background: url('C:\\Users\\Mr. Lokender ji\\Desktop\\men-icon-trendy-avatar-character-cheerful-happy-people-flat-vector-illustration-round-frame-male-portraits-group-team-adorable-guys-isolated-white-background_275421-282.jpg');  background-position: center center;background-size: 70px auto;display: inline-block; vertical-align: middle;"
                     id="login-pic">
                 </div>
 
@@ -1074,7 +1106,7 @@
                     <div style="flex: 1;display: flex;align-items: center;justify-content: center;">
                         <div
                             style=" border-radius: 100%;width: 65px;
-                height: 65px;background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4z_-B1t1quipQzVBja6FFKTXEluEfEjV2Rg&usqp=CAU');  background-position: center center;background-size: 136px auto;">
+                height: 65px;background: url('C:\\Users\\Mr. Lokender ji\\Desktop\\men-icon-trendy-avatar-character-cheerful-happy-people-flat-vector-illustration-round-frame-male-portraits-group-team-adorable-guys-isolated-white-background_275421-282.jpg');  background-position: center center;background-size: 136px auto;">
                         </div>
                     </div>
 
@@ -1249,9 +1281,19 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
         
 
     </div>
-    <div class="contentarea1" onclick="opendropdown()"></div>
-     <div class="contentarea2" onclick="opendropdown()"></div>
+    
+
+     <div class="contentarea2">
+    <div style="display:flex; flex-direction: row;width: 100%;height: 314.48px;position: relative;margin: 0 16px;">
+<div style="margin-bottom: 40px;background: #f9f9f9;width: 289.31px;height: 100%;"></div>
+<div style="margin-bottom: 40px;background: #f9f9f9;width: 289.31px;height: 100%;"></div>
+<div style="margin-bottom: 40px;background: #f9f9f9;width: 289.31px;height: 100%;"></div>
+<div style="margin-bottom: 40px;background: #f9f9f9;width: 289.31px;height: 100%;"></div>
+<div style="margin-bottom: 40px;background: #f9f9f9;width: 289.31px;height: 100%;"></div>
+<div style="margin-bottom: 40px;background: #f9f9f9;width: 289.31px;height: 100%;"></div>
+<div style="margin-bottom: 40px;background: #f9f9f9;width: 289.31px;height: 100%;"></div>
+    </div>
+    </div>
 </body>
 
 </html>
-
