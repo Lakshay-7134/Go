@@ -55,7 +55,7 @@
         *::before,
         *::after {
             box-sizing: border-box;
-            border:none;
+            border: none;
         }
 
 
@@ -146,7 +146,7 @@
 
         .search-icon {
             fill: #24292f;
-            margin-left: 17px;
+            margin-left: 26px;
         }
 
 
@@ -317,7 +317,7 @@
             backdrop-filter: saturate(200%) blur(30px);
             background: rgba(255, 255, 255, 0.98);
             ;
-            border-radius: 0 0 8px 8px;
+            border-radius: 0 0 0.5rem 0.5rem;
             overflow-x: hidden;
             overflow-y: auto;
             color: rgba(29, 29, 31, 1);
@@ -338,8 +338,8 @@
             height: 48px;
             flex: none;
             align-items: center;
-            border-radius: 4px;
-            margin: 6px 0;
+            border-radius: 0.375rem;
+            margin: 6px 6px;
             padding: 4px 12px;
             font-size: 13.5px;
             font-weight: 450;
@@ -719,8 +719,32 @@
             justify-content: center;
         }
 
+        .tabbar-shadow-right {
+            background: #fff;
+            height: 56px;
+            width: 56px;
+            position: fixed;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .uppertabbar .tabbar-shadow:hover {
             background: #fff !important;
+        }
+
+        .uppertabbar .tabbar-shadow-right:hover {
+            background: #fff !important;
+        }
+
+        .uppertabbar .tabbar-shadow-right::after {
+            background: linear-gradient(to left, #fff 20%, rgba(255, 255, 255, 0) 80%);
+            content: "";
+            width: 50px;
+            height: 100%;
+            position: absolute;
+            left: -50px;
         }
 
         .tabbar-shadow::after {
@@ -733,16 +757,15 @@
         }
 
         button {
-            -webkit-appearance: button;
             background-color: transparent;
             background-image: none;
             cursor: pointer;
-                font-family: inherit;
-    line-height: inherit;
-    color: inherit;
-    margin: 0px;
-    padding: 0px;
-            
+            font-family: inherit;
+            line-height: inherit;
+            color: inherit;
+            margin: 0px;
+            padding: 0px;
+
         }
 
         .player-top {
@@ -943,9 +966,27 @@
             let x = document.getElementById("uppertabbar").scrollLeft;
             if (x != 0) {
                 document.getElementById("tabbar-shadow").style.display = "flex";
+            }
 
-            } else {
+            else {
                 document.getElementById("tabbar-shadow").style.display = "none";
+
+            }
+
+        }
+
+        function showarrowright() {
+
+
+            let z = document.getElementById("uppertabbar").scrollLeft;
+            let y = document.getElementById("uppertabbar").width() - document.body.width();
+
+            if (z = y) {
+                document.getElementById("tabbar-shadow-right").style.display = "none";
+            }
+
+            else {
+                document.getElementById("tabbar-shadow-right").style.display = "flex";
 
             }
 
@@ -1012,7 +1053,7 @@
                     <div class="dropitem2">
 
                         <div
-                            style=" border-radius: 2px;width: 36px;
+                            style=" border-radius: 0.375rem;width: 36px;
                         height: 36px;background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGI_cDvFufG0eFqNUEbOjeP8fJ5qHkiD6Pug&usqp=CAU');  background-position: center center;background-size: cover;">
 
                         </div>
@@ -1034,7 +1075,7 @@
                     <div class="dropitem2">
 
                         <div
-                            style=" border-radius: 2px;width: 36px;
+                            style=" border-radius: 0.375rem;width: 36px;
                         height: 36px;background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-mHSLpme6XRAIeQL257O3wiFe13ZR42Bc8g&usqp=CAU');  background-position: center center;background-size: cover;">
 
                         </div>
@@ -1055,7 +1096,7 @@
                     <div class="dropitem2">
 
                         <div
-                            style=" border-radius: 2px;width: 36px;
+                            style=" border-radius: 0.375rem;width: 36px;
                         height: 36px;background: url('https://wallpapercave.com/wp/wp10431065.png');  background-position: center center;background-size: cover;">
 
                         </div>
@@ -1076,7 +1117,7 @@
                     <div class="dropitem2">
 
                         <div
-                            style=" border-radius: 2px;width: 36px;
+                            style=" border-radius: 0.375rem;width: 36px;
                         height: 36px;background: url('https://upload.wikimedia.org/wikipedia/en/thumb/1/13/DB_THE_MOVIE_NO._20.jpg/220px-DB_THE_MOVIE_NO._20.jpg');  background-position: center center;background-size: cover;">
 
                         </div>
@@ -1097,7 +1138,7 @@
                     <div class="dropitem2">
 
                         <div
-                            style=" border-radius: 2px;width: 36px;
+                            style=" border-radius: 0.375rem;width: 36px;
                         height: 36px;background: url('https://www.whats-on-netflix.com/wp-content/uploads/2022/05/pokemon-ultimate-journeys-coming-to-netflix-in-2022.webp');  background-position: center center;background-size: cover;">
 
                         </div>
@@ -1118,7 +1159,7 @@
                     <div class="dropitem2">
 
                         <div
-                            style=" border-radius: 2px;width: 36px;
+                            style=" border-radius: 0.375rem;width: 36px;
                         height: 36px;background: url('https://i.ytimg.com/vi/hCr4XKf3Dsk/maxresdefault.jpg');  background-position: center center;background-size: cover;">
 
                         </div>
@@ -1497,6 +1538,102 @@
 
 
         </div>
+
+
+        <div style="position: fixed;top:0;right:0;bottom:0;left:0;background:#fff;
+        ">
+            <div class="dropitem" style="border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgba(0, 0, 0, .12);
+      ">
+                <div>
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-chevron-left" style="margin-left: 12px;">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                </div>
+
+
+                <div
+                    style="padding-left: 50px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                    Change Theme
+                </div>
+
+
+
+            </div>
+
+
+            <div class="dropitem">
+                <div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-sun" style="margin-left: 25px;">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </div>
+
+
+                <div
+                    style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                    Light Theme
+                </div>
+
+
+
+            </div>
+            <div class="dropitem">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-moon" style="margin-left: 25px;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </div>
+
+                <div
+                    style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                    Dark Theme</div>
+
+
+
+            </div>
+            <div class="dropitem">
+                <div>
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-monitor" style="margin-left: 25px;">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                        <line x1="8" y1="21" x2="16" y2="21" />
+                        <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg>
+                </div>
+
+                <div
+                    style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                    System Default</div>
+
+
+
+            </div>
+
+
+
+        </div>
     </div>
 
 
@@ -1686,7 +1823,7 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
 
         </div>
     </div>
-    <div id="uppertabbar" class="uppertabbar scrollbar-hidden" onscroll="showarrow()">
+    <div id="uppertabbar" class="uppertabbar scrollbar-hidden" onscroll="showarrow();showarrowright()">
         <div class="tabbar-shadow" id="tabbar-shadow">
             <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"
                 style="pointer-events: none; display: block; width: 24px; height: 24px">
@@ -1747,6 +1884,15 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
         <div
             style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;margin-right: 24px;">
             More
+        </div>
+        <div class="tabbar-shadow-right" id="tabbar-shadow-right">
+            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"
+                style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                <g mirror-in-rtl="" class="style-scope yt-icon">
+                    <path d="M9.4,18.4l-0.7-0.7l5.6-5.6L8.6,6.4l0.7-0.7l6.4,6.4L9.4,18.4z" class="style-scope yt-icon">
+                    </path>
+                </g>
+            </svg>
         </div>
     </div>
 </body>
