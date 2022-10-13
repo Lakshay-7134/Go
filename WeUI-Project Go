@@ -1401,8 +1401,8 @@
 
 
                 <div style=" border-radius: 100%;width: 32px;
-                    height: 32px; background-position: center center;background-size: 70px auto;display: inline-block; vertical-align: middle;    background: url(https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp);"
-                    id="login-pic">
+                    height: 32px; background-position: center center;background-size: 70px auto;display: inline-block; vertical-align: middle;    background: url(https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp);
+    background-size: 64px auto;" id="login-pic">
                 </div>
 
 
@@ -1424,7 +1424,7 @@
                 <div style="flex: 1;display: flex;align-items: center;justify-content: center;">
                     <div
                         style=" border-radius: 100%;width: 65px;
-                height: 65px;background: url('C:\\Users\\Mr. Lokender ji\\Desktop\\men-icon-trendy-avatar-character-cheerful-happy-people-flat-vector-illustration-round-frame-male-portraits-group-team-adorable-guys-isolated-white-background_275421-282.jpg');  background-position: center center;background-size: 136px auto;">
+                height: 65px;    background: url(https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp);background-position: center center;background-size: 136px auto;">
                     </div>
                 </div>
 
