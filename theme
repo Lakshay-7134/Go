@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.container{display:flex;justify-content:space-around;width:200px;margin-top:30px;}
+
+.container div{height:35px;width:35px;border-radius:10px;border:solid 2px #fff;}
+.div1{background:#7367f0;outline:1px solid #7367f0;}
+.div2{background:#28c76f;outline:1px solid #28c76f;}
+.div3{background:#82868b;outline:1px solid #82868b;}
+.div5{background:#ea5455;outline:1px solid #ea5455;}
+.div6{background:#ff9f43;outline:1px solid #ff9f43;}
+.div7{background:#4b4b4b;outline:1px solid #4b4b4b;}
+</style></head>
+<body>
+<div class="container">
+<div class="div1"></div>
+<div class="div2"></div>
+<div class="div3"></div></div>
+<div class="container">
+<div class="div5"></div>
+<div class="div6"></div>
+<div class="div7"></div></div>
+
+
+</body>
+</html>
+
+
