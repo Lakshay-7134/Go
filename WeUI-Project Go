@@ -1401,7 +1401,7 @@
 
 
                 <div style=" border-radius: 100%;width: 32px;
-                    height: 32px;background: url('C:\\Users\\Mr. Lokender ji\\Desktop\\men-icon-trendy-avatar-character-cheerful-happy-people-flat-vector-illustration-round-frame-male-portraits-group-team-adorable-guys-isolated-white-background_275421-282.jpg');  background-position: center center;background-size: 70px auto;display: inline-block; vertical-align: middle;"
+                    height: 32px; background-position: center center;background-size: 70px auto;display: inline-block; vertical-align: middle;    background: url(https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp);"
                     id="login-pic">
                 </div>
 
