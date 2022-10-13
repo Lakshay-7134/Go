@@ -1424,7 +1424,7 @@
                 <div style="flex: 1;display: flex;align-items: center;justify-content: center;">
                     <div
                         style=" border-radius: 100%;width: 65px;
-                height: 65px;    background: url(https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp);background-position: center center;background-size: 136px auto;">
+                height: 65px;    background: url(https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp);background-position: center center;background-size: 136px auto;background-size: 130px auto;">
                     </div>
                 </div>
 
