@@ -675,9 +675,11 @@
             position: relative;
             margin-left: 72px;
             min-height: calc(100% - 56px);
-            margin-top: 56px;
+            margin-top: 112px;
             overflow-x: hidden;
             overflow-y: auto;
+            width: 100%;
+            background: #f9f9f9;
         }
 
         .uppertabbar {
