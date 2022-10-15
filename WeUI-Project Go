@@ -302,11 +302,7 @@
             justify-content: center;
         }
 
-        .showit {
-            transform: scale(1, 1);
-            opacity: 1;
-        }
-
+      
 
         .dropdown-content2 {
 
@@ -391,12 +387,11 @@
         }
 
         .progress-player-hidden {
-            width: 400px;
-            z-index: 1000;
+            width: 400px;right: 24px;bottom: 24px;max-width: calc(100vw - 48px);
+            z-index: 100000000000;
             display: block;
             position: absolute;
-            margin-top: 4px;
-            right: 0;
+            right: 32px;
             transition: opacity .03s linear, transform .12s cubic-bezier(0, 0, 0.2, 1);
             transform: scale(0, 0);
             transform-origin: top;
@@ -679,7 +674,7 @@
             overflow-x: hidden;
             overflow-y: auto;
             width: 100%;
-            background: #f9f9f9;
+            background: #f9f9f9;z-index: 10;
         }
 
         .uppertabbar {
@@ -694,6 +689,7 @@
             align-items: center;
             overflow-y: hidden;
             overflow-x: scroll;
+            background: rgba(255, 255, 255, 0.98);z-index: 100;
         }
 
         .uppertabbar div:hover {
@@ -778,6 +774,40 @@
             border-top-right-radius: 0.75rem;
         }
 
+        .container{display:flex;justify-content:space-evenly;width:100%;margin-top:28px;}
+            
+            .container div{height:35px;width:35px;border-radius:1000px;border:solid 2px #fff;}
+            .div1{background:#7367f0;outline:1px solid #7367f0;}
+            .div2{background:#28c76f;outline:1px solid #28c76f;}
+            .div3{background:#82868b;outline:1px solid #82868b;}
+            .div5{background:#ea5455;outline:1px solid #ea5455;}
+            .div6{background:#ff9f43;outline:1px solid #ff9f43;}
+            .div7{background:#4b4b4b;outline:1px solid #4b4b4b;}
+            .div8{background:#0c84ff;outline:1px solid #0c84ff; }
+
+            .theme-container{ position: fixed;background:#fff;right: 0;top: 0;bottom: 0;opacity: 0; height:100%;
+                width: 0;overflow-x: hidden;overflow-y: auto;
+
+            transition: opacity .03s linear, width 250ms cubic-bezier(0, 0, 0.2, 1);
+            transition-property: opacity, width;
+            transition-duration: 0.03s, 0.12s;
+            transition-timing-function: linear, cubic-bezier(0, 0, 0.2, 1);
+            transition-delay: 0s, 0s;
+              
+        }
+.theme-container .exception:hover{background: initial !important;}
+        .showit3 {
+           
+          
+            opacity: 1;
+            width: 100%; 
+        }
+
+        .showit {
+            transform: scale(1, 1);
+            opacity: 1;
+        }
+       
         @media only screen and (min-width: 640px) {
             .player-top {
                 padding: 2.5rem;
@@ -928,6 +958,7 @@
             document.getElementById('notify-content').classList.remove('notify-showit');
             document.getElementById('progress-player-id').classList.remove('progress-player-show');
         }
+    
 
         function darkmode() {
             var element = document.body;
@@ -953,6 +984,7 @@
             document.getElementById('line-3').classList.toggle('line-3-toggle');
             document.getElementById('menu-icon').classList.toggle('menu-icon-toggle');
         }
+
         function sidebar_toggle() {
 
             document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed");
@@ -960,6 +992,16 @@
 
 
         }
+
+        function openthemes() {
+            document.getElementById("theme-container").classList.add("showit3");
+        
+        }
+        function closethemes() {
+            document.getElementById("theme-container").classList.remove("showit3");
+        
+        }
+
         function showarrow() {
 
 
@@ -979,9 +1021,10 @@
 
 
             let z = document.getElementById("uppertabbar").scrollLeft;
-            let y = document.getElementById("uppertabbar").width() - document.body.width();
+            let y = document.getElementById("uppertabbar").scrollWidth - document.getElementById("uppertabbar").clientWidth;
 
-            if (z = y) {
+
+            if (z == y) {
                 document.getElementById("tabbar-shadow-right").style.display = "none";
             }
 
@@ -1262,135 +1305,7 @@
 
                 </div>
 
-                <div class="progress-player-hidden" id="progress-player-id">
-
-
-
-
-
-                    <div class="player-top" style="height: 164.955752px; padding-top:1rem;">
-                        <div style="align-items: center;display: flex;">
-
-
-                            <img src="https://i1.sndcdn.com/artworks-000515401857-zj2fzl-t500x500.jpg"
-                                style="width:88px;background-color: rgb(241 245 249 / 1);    border-radius: 0.5rem;flex: none;max-width: 100%;  height: auto; display: block; aspect-ratio: auto 88 / 88;">
-
-
-                            <div style="min-width: 0;font-weight:600;flex:1;
-                            margin-right: calc(1rem * 0);
-                            margin-left: calc(1rem * calc(1 - 0));">
-                                <p style="color:#0c84ff;font-size:0.875rem;line-height: 1.5rem;">
-                                    <a title="Episode">Ep.</a> 110
-                                </p>
-                                <h2 style="color:rgb(100 116 139 / 1);font-size:0.875rem;line-height: 1.5rem;    overflow: hidden;
-                                text-overflow: ellipsis;
-                                white-space: nowrap;font-weight: inherit;    margin-top: calc(0.25rem * calc(1 - 0));
-                    margin-bottom: calc(0.25rem * 0);
-                ">
-                                    Son Goku Wakes! New Level of the Awakened!!
-                                </h2>
-                                <p style="color: rgb(15 23 42 / 1);font-size: 1.125rem;
-                               margin-top: calc(0.25rem * calc(1 - 0));
-                    margin-bottom: calc(0.25rem * 0);  line-height: 1.75rem;">
-                                    Toei Animation
-                                </p>
-                            </div>
-                        </div>
-
-
-                        <div class="space-y">
-
-
-                            <div style="position: relative;">
-
-
-                                <div style="background: rgb(241 245 249 / 1);border-radius: 9999px;overflow: hidden;">
-                                    <div style="width: 50%;height: 0.5rem;background: #0c84ff;"></div>
-                                </div>
-                                <div
-                                    style="background: #ffffff;position: absolute;left: 50%;top: 50%;width: 18px;height: 18px;margin-top: -0.5rem;margin-left: -0.5rem;border: 3px solid #0c84ff;border-radius: 1000px;">
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-
-                    <div
-                        style="display: flex;align-items: center;height: 45.3097345px; color: rgb(100 116 139 / 1); background-color: rgb(248 250 252 / 1);border-radius: 0 0 0.75rem 0.75rem;">
-
-
-                        <div style="display: flex; justify-content: space-evenly; align-items: center; flex: auto;">
-
-                            <button type="button">
-                                <svg width="24" height="24">
-                                    <path
-                                        d="M7 6.931C7 5.865 7.853 5 8.905 5h6.19C16.147 5 17 5.865 17 6.931V19l-5-4-5 4V6.931Z"
-                                        fill="currentColor" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                            </button>
-
-                            <button type="button">
-                                <svg width="24" height="24" fill="none">
-                                    <path
-                                        d="M6.492 16.95c2.861 2.733 7.5 2.733 10.362 0 2.861-2.734 2.861-7.166 0-9.9-2.862-2.733-7.501-2.733-10.362 0A7.096 7.096 0 0 0 5.5 8.226"
-                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"></path>
-                                    <path d="M5 5v3.111c0 .491.398.889.889.889H9" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                            </button>
-
-                        </div>
-
-
-                        <button type="button" style="width:4rem;height:4rem;    border-radius: 9999px;
-                    
-                
-                        display: flex;
-                        align-items: center;
-                   
-                    margin: -0.5rem auto;
-                   background: #fff;justify-content: center;
-                
-                        flex: none;">
-                            <svg width="30" height="32" fill="#0f172a">
-                                <rect x="6" y="4" width="4" height="24" rx="2"></rect>
-                                <rect x="20" y="4" width="4" height="24" rx="2"></rect>
-                            </svg>
-                        </button>
-
-
-                        <div style="display: flex; justify-content: space-evenly; align-items: center; flex: auto;">
-
-                            <button type="button">
-                                <svg width="24" height="24" fill="none">
-                                    <path
-                                        d="M17.509 16.95c-2.862 2.733-7.501 2.733-10.363 0-2.861-2.734-2.861-7.166 0-9.9 2.862-2.733 7.501-2.733 10.363 0 .38.365.711.759.991 1.176"
-                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"></path>
-                                    <path d="M19 5v3.111c0 .491-.398.889-.889.889H15" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                            </button>
-
-                            <button type="button" style="border-radius: 0.5rem;padding:0 0.5rem;font-size: 0.75rem;line-height: 1.5rem;color: rgb(100 116 139 / 1);    box-shadow: 0 0 #0000, inset 0 0 0 calc(2px + 0px)  rgb(100 116 139 / 1)
-                        , 0 0 #0000;
-                    
-                            font-weight: 600;">
-                                1x
-                            </button>
-
-                        </div>
-                    </div>
-
-
-                </div>
+               
 
 
 
@@ -1502,7 +1417,7 @@
                 Shared</div>
 
         </div>
-        <div class="dropitem">
+        <div class="dropitem" onclick="openthemes()">
             <div>
 
 
@@ -1515,7 +1430,7 @@
             </div>
 
             <div
-                style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;" >
                 Change Theme</div>
 
         </div>
@@ -1540,12 +1455,10 @@
         </div>
 
 
-        <div style="position: fixed;top:0;right:0;bottom:0;left:0;background:#fff;
-        ">
-            <div class="dropitem" style="border-bottom-width: 1px;
+        <div class="theme-container" id="theme-container">
+            <div class="dropitem exception" style="border-bottom-width: 1px;
         border-bottom-style: solid;
-        border-bottom-color: rgba(0, 0, 0, .12);
-      ">
+        border-bottom-color: rgba(0, 0, 0, .12);" onclick="closethemes()">
                 <div>
 
 
@@ -1572,7 +1485,7 @@
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-sun" style="margin-left: 25px;">
+                        class="feather feather-sun" style="margin-left: 28px;">
                         <circle cx="12" cy="12" r="5" />
                         <line x1="12" y1="1" x2="12" y2="3" />
                         <line x1="12" y1="21" x2="12" y2="23" />
@@ -1598,7 +1511,7 @@
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-moon" style="margin-left: 25px;">
+                        class="feather feather-moon" style="margin-left: 28px;">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                     </svg>
                 </div>
@@ -1616,7 +1529,7 @@
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-monitor" style="margin-left: 25px;">
+                        class="feather feather-monitor" style="margin-left: 28px;">
                         <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
                         <line x1="8" y1="21" x2="16" y2="21" />
                         <line x1="12" y1="17" x2="12" y2="21" />
@@ -1631,7 +1544,29 @@
 
             </div>
 
+          
+            
+            <div class="dropitem exception">
+              
 
+
+                <div
+                    style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;padding-left: 33px;padding-top: 15px;">
+                    Theme Colour
+                </div>
+        </div>
+            <div class="container" style="margin-top: 20px">
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div3"></div></div>
+            <div class="container">
+            <div class="div5"></div>
+            <div class="div6"></div>
+            <div class="div7"></div></div>
+            <div class="container" style="padding-bottom:12px">
+               
+                <div class="div8"></div></div>
+            
 
         </div>
     </div>
@@ -1894,6 +1829,137 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
                 </g>
             </svg>
         </div>
+    </div>
+
+
+    <div class="progress-player-hidden" id="progress-player-id">
+
+
+
+
+
+        <div class="player-top" style="height: 164.955752px; padding-top:1rem;">
+            <div style="align-items: center;display: flex;">
+
+
+                <img src="https://i1.sndcdn.com/artworks-000515401857-zj2fzl-t500x500.jpg"
+                    style="width:88px;background-color: rgb(241 245 249 / 1);    border-radius: 0.5rem;flex: none;max-width: 100%;  height: auto; display: block; aspect-ratio: auto 88 / 88;">
+
+
+                <div style="min-width: 0;font-weight:600;flex:1;
+                margin-right: calc(1rem * 0);
+                margin-left: calc(1rem * calc(1 - 0));">
+                    <p style="color:#0c84ff;font-size:0.875rem;line-height: 1.5rem;">
+                        <a title="Episode">Ep.</a> 110
+                    </p>
+                    <h2 style="color:rgb(100 116 139 / 1);font-size:0.875rem;line-height: 1.5rem;    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;font-weight: inherit;    margin-top: calc(0.25rem * calc(1 - 0));
+        margin-bottom: calc(0.25rem * 0);
+    ">
+                        Son Goku Wakes! New Level of the Awakened!!
+                    </h2>
+                    <p style="color: rgb(15 23 42 / 1);font-size: 1.125rem;
+                   margin-top: calc(0.25rem * calc(1 - 0));
+        margin-bottom: calc(0.25rem * 0);  line-height: 1.75rem;">
+                        Toei Animation
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="space-y">
+
+
+                <div style="position: relative;">
+
+
+                    <div style="background: rgb(241 245 249 / 1);border-radius: 9999px;overflow: hidden;">
+                        <div style="width: 50%;height: 0.5rem;background: #0c84ff;"></div>
+                    </div>
+                    <div
+                        style="background: #ffffff;position: absolute;left: 50%;top: 50%;width: 18px;height: 18px;margin-top: -0.5rem;margin-left: -0.5rem;border: 3px solid #0c84ff;border-radius: 1000px;">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <div
+            style="display: flex;align-items: center;height: 45.3097345px; color: rgb(100 116 139 / 1); background-color: rgb(248 250 252 / 1);border-radius: 0 0 0.75rem 0.75rem;">
+
+
+            <div style="display: flex; justify-content: space-evenly; align-items: center; flex: auto;">
+
+                <button type="button">
+                    <svg width="24" height="24">
+                        <path
+                            d="M7 6.931C7 5.865 7.853 5 8.905 5h6.19C16.147 5 17 5.865 17 6.931V19l-5-4-5 4V6.931Z"
+                            fill="currentColor" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+
+                <button type="button">
+                    <svg width="24" height="24" fill="none">
+                        <path
+                            d="M6.492 16.95c2.861 2.733 7.5 2.733 10.362 0 2.861-2.734 2.861-7.166 0-9.9-2.862-2.733-7.501-2.733-10.362 0A7.096 7.096 0 0 0 5.5 8.226"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M5 5v3.111c0 .491.398.889.889.889H9" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+
+            </div>
+
+
+            <button type="button" style="width:4rem;height:4rem;    border-radius: 9999px;
+        
+    
+            display: flex;
+            align-items: center;
+       
+        margin: -0.5rem auto;
+       background: #fff;justify-content: center;
+    
+            flex: none;">
+                <svg width="30" height="32" fill="#0f172a">
+                    <rect x="6" y="4" width="4" height="24" rx="2"></rect>
+                    <rect x="20" y="4" width="4" height="24" rx="2"></rect>
+                </svg>
+            </button>
+
+
+            <div style="display: flex; justify-content: space-evenly; align-items: center; flex: auto;">
+
+                <button type="button">
+                    <svg width="24" height="24" fill="none">
+                        <path
+                            d="M17.509 16.95c-2.862 2.733-7.501 2.733-10.363 0-2.861-2.734-2.861-7.166 0-9.9 2.862-2.733 7.501-2.733 10.363 0 .38.365.711.759.991 1.176"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M19 5v3.111c0 .491-.398.889-.889.889H15" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+
+                <button type="button" style="border-radius: 0.5rem;padding:0 0.5rem;font-size: 0.75rem;line-height: 1.5rem;color: rgb(100 116 139 / 1);    box-shadow: 0 0 #0000, inset 0 0 0 calc(2px + 0px)  rgb(100 116 139 / 1)
+            , 0 0 #0000;
+        
+                font-weight: 600;">
+                    1x
+                </button>
+
+            </div>
+        </div>
+
+
     </div>
 </body>
 
