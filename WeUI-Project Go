@@ -697,18 +697,26 @@
         }
 
         .uppertabbar .active2 {
-           /* background: #0F0F0F !important;
-*/      position: relative;  }
+            background: transparent !important;
+      position: relative;  }
+      .uppertabbar .active2:hover {
+            background: transparent !important;
+       }
         .uppertabbar .active2::after{
             content: '';
-
+            margin: 0 auto;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            
     height: 3px;
-    width: 22px;
+    width: 22px;max-width: 100%;
     background: #1a73e8;
+    
     z-index: 1000;
     position: absolute;
     
-    margin: 0 auto;bottom: -11px;
+bottom: -11px;
     cursor: default;
     border-radius: 100px;
         }
@@ -822,6 +830,112 @@
             opacity: 1;
         }
        
+        ::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+    /* background-color: #3170f5; */
+  }
+  :hover ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    background-clip: content-box;
+    border: 5px solid transparent;
+    border-radius: 0.625rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    background-clip: content-box;
+    border: 5px solid transparent;
+    border-radius: 0.625rem;
+  }
+
+  :hover ::-webkit-scrollbar-thumb {
+    background-color:red;
+    background-clip: content-box;
+    border: 5px solid transparent;
+    border-radius: 0.625rem;
+  }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, .5);
+  background-clip:content-box;
+  
+  border:4px solid transparent;
+  border-radius:100px;
+}
+
+  
+  
+  html.no-border-radius ::-webkit-scrollbar-thumb {
+    border-radius: 0;
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+  
+  /* Buttons */
+  
+  ::-webkit-scrollbar-button:single-button {
+    display: block;
+    background-repeat: no-repeat;
+    border: 0;
+    width: 14px;
+    height: 14px;
+  }
+  
+  /* Up */
+  
+  ::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
+    background-size: 8px;
+    background-position: 3px bottom;
+  }
+  
+  .dark ::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iI0RERERERCIvPgo8L3N2Zz4K");
+  }
+  
+  /* Down */
+  
+  ::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjODg4Ii8+PC9zdmc+");
+    background-size: 8px;
+    background-position: 3px top;
+  }
+  
+  .dark *::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjREREIi8+PC9zdmc+");
+  }
+  
+  /* Left */
+  
+  ::-webkit-scrollbar-button:single-button:horizontal {
+    background-size: 4.6px;
+  }
+  
+  ::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMTZMMTggMC40MTE1NDVMMTggMzEuNTg4NUwwIDE2WiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
+    background-position: right 3px;
+  }
+  
+  .dark ::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMTZMMTggLjQxMnYzMS4xNzdMMCAxNnoiIGZpbGw9IiNEREQiLz48L3N2Zz4=");
+  }
+  
+  /* Right */
+  
+  ::-webkit-scrollbar-button:single-button:horizontal:increment {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4NUwwIDAuNDExNTQzTDE4IDE2WiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
+    background-position: left 3px;
+  }
+  
+  .dark ::-webkit-scrollbar-button:single-button:horizontal:increment {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4Vi40MTNMMTggMTZ6IiBmaWxsPSIjREREIi8+PC9zdmc+");
+  }
+  
+
         @media only screen and (min-width: 640px) {
             .player-top {
                 padding: 2.5rem;
@@ -1780,8 +1894,8 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
 
     <div class="contentarea2">
         <div style="    z-index: 10;
-    position: relative;">
-
+    position: relative;display: flex;">
+<div style="width: 100%;height:100%;"></div>
 
         </div>
     </div>
@@ -1795,14 +1909,14 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
                 </g>
             </svg>
         </div>
-        <div style="border-radius: 8px;height: 32px;margin: 12px;padding: 0 12px;margin-left: 24px;color: #1a73e8;vertical-align: middle;font-size: 15.2px;display:flex;align-items: center;flex: none;font-weight: 475;letter-spacing: .5px;"
+        <div style="border-radius: 8px;height: 32px;margin: 12px;padding: 0 12px;margin-left: 24px;color: #1a73e8;vertical-align: middle;font-size: 15px;display:flex;align-items: center;flex: none;font-weight: 470;letter-spacing: .9px;"
             class="active2">
             All
         </div>
         <div
-            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
-            Recently Watched
-        </div>
+        style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+        Journeys
+    </div>
         <div
             style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
             Live
