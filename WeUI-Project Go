@@ -387,27 +387,27 @@
         }
 
         .progress-player-hidden {
-            width: 400px;right: 24px;bottom: 24px;max-width: calc(100vw - 48px);
+            width: 400px;right: 0;bottom: 24px;max-width: calc(100vw - 48px);
             z-index: 100000000000;
             display: block;
             position: absolute;
             right: 32px;
             transition: opacity .03s linear, transform .12s cubic-bezier(0, 0, 0.2, 1);
             transform: scale(0, 0);
-            transform-origin: top;
+            transform-origin: right;
             box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
-            transition: opacity .03s linear, transform .12s cubic-bezier(0, 0, 0.2, 1), height 250ms cubic-bezier(0, 0, 0.2, 1);
-            transition-property: opacity, transform, height;
+            transition: opacity .03s linear, transform .12s cubic-bezier(0, 0, 0.2, 1), right 250ms cubic-bezier(0, 0, 0.2, 1);
+            transition-property: opacity, transform, right;
             transition-duration: 0.03s, 0.12s, 250ms;
             transition-timing-function: linear, cubic-bezier(0, 0, 0.2, 1), cubic-bezier(0, 0, 0.2, 1);
             transition-delay: 0s, 0s, 0s;
             opacity: 0;
-            border-radius: 0.75rem;
+            border-radius: 0.75rem;border: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .progress-player-show {
             transform: scale(1, 1);
-            opacity: 1;
+            opacity: 1;right: 24px;
         }
 
 
@@ -696,9 +696,23 @@
             background: rgba(0, 0, 0, 0.1) !important;
         }
 
-        .uppertabbar .active2:hover {
-            background: #0F0F0F !important;
+        .uppertabbar .active2 {
+           /* background: #0F0F0F !important;
+*/      position: relative;  }
+        .uppertabbar .active2::after{
+            content: '';
+
+    height: 3px;
+    width: 22px;
+    background: #1a73e8;
+    z-index: 1000;
+    position: absolute;
+    
+    margin: 0 auto;bottom: -11px;
+    cursor: default;
+    border-radius: 100px;
         }
+        
 
         .tabbar-collapsed {
             left: 220px;
@@ -962,9 +976,12 @@
 
         function darkmode() {
             var element = document.body;
-            element.classList.toggle("dark-mode");
+            element.classList.add("dark-mode");
         }
-
+        function lightmode() {
+            var element = document.body;
+            element.classList.remove("dark-mode");
+        }
 
         function open_notify() {
             document.getElementById('notify-content').classList.toggle('notify-showit');
@@ -1049,6 +1066,9 @@
         <div class="flex_box_list_item" id="logo" style="justify-content: flex-start;cursor: default;">
 
             <div class="menu-icon" id="menu-icon" onclick="sidebar_toggle()">
+
+
+                
                 <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
                     class="style-scope yt-icon"
                     style="pointer-events: none; display: block; width: 24px; height: 24px;">
@@ -1316,8 +1336,15 @@
 
 
                 <div style=" border-radius: 100%;width: 32px;
-                    height: 32px; background-position: center center;background-size: 70px auto;display: inline-block; vertical-align: middle;    background: url(https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp);
-    background-size: 64px auto;" id="login-pic">
+                    height: 32px; background-position: center center;background-size: 70px auto;  background: url(https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp);
+
+
+    background-position: center center;
+    background-size: 64px auto;
+    display: inline-block;
+    vertical-align: middle;
+    
+    " id="login-pic">
                 </div>
 
 
@@ -1480,7 +1507,7 @@
             </div>
 
 
-            <div class="dropitem">
+            <div class="dropitem"  onclick="lightmode()">
                 <div>
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
@@ -1507,7 +1534,7 @@
 
 
             </div>
-            <div class="dropitem">
+            <div class="dropitem" onclick="darkmode()">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -1768,7 +1795,7 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
                 </g>
             </svg>
         </div>
-        <div style="border-radius: 8px;height: 32px;margin: 12px;background: #0f0f0f;padding: 0 12px;margin-left: 24px;color: #fff;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;"
+        <div style="border-radius: 8px;height: 32px;margin: 12px;padding: 0 12px;margin-left: 24px;color: #1a73e8;vertical-align: middle;font-size: 15.2px;display:flex;align-items: center;flex: none;font-weight: 475;letter-spacing: .5px;"
             class="active2">
             All
         </div>
