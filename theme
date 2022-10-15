@@ -1,30 +1,2107 @@
-<!DOCTYPE html>
 <html>
+
 <head>
-<style>
 
-.container{display:flex;justify-content:space-around;width:200px;margin-top:30px;}
-
-.container div{height:35px;width:35px;border-radius:10px;border:solid 2px #fff;}
-.div1{background:#7367f0;outline:1px solid #7367f0;}
-.div2{background:#28c76f;outline:1px solid #28c76f;}
-.div3{background:#82868b;outline:1px solid #82868b;}
-.div5{background:#ea5455;outline:1px solid #ea5455;}
-.div6{background:#ff9f43;outline:1px solid #ff9f43;}
-.div7{background:#4b4b4b;outline:1px solid #4b4b4b;}
-</style></head>
-<body>
-<div class="container">
-<div class="div1"></div>
-<div class="div2"></div>
-<div class="div3"></div></div>
-<div class="container">
-<div class="div5"></div>
-<div class="div6"></div>
-<div class="div7"></div></div>
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://github.com/Lakshay-7134/Go/blob/main/apple-touch-icon.png?raw=true">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://github.com/Lakshay-7134/Go/blob/main/favicon-32x32.png?raw=true">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://github.com/Lakshay-7134/Go/blob/main/favicon-16x16.png?raw=true">
 
 
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WeUI: Towards Project Go</title>
+
+    <style>
+        @import url("https://font.sec.miui.com/font/css?family=MiSans:300,450,500,650:Chinese_Simplify,Latin,Chinese_Traditional&display=swap");
+
+
+        * {
+            font-size: 100%;
+            margin: 0;
+            padding: 0;
+            vertical-align: baseline;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            border: none;
+        }
+
+
+        html {
+            font-size: 16px;
+        }
+
+
+        html,
+        body {
+            color: #000;
+            font-family: MiSans, system-ui, sans-serif;
+            overflow-x: hidden;
+
+        }
+
+
+        body {
+            display: block;
+        }
+
+
+        .flex_menu_container {
+            height: 56px;
+            width: 100%;
+            display: flex;
+            background: rgba(255, 255, 255, 0.98);
+            ;
+            justify-content: space-between;
+            padding: 0 16px;
+            flex-flow: row nowrap;
+            align-items: center;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 1000;
+
+        }
+
+
+        .flex_menu_container .flex_box_list_item {
+
+            font-size: 16px;
+            color: #1D1D1F;
+            letter-spacing: 0;
+            font-weight: 450;
+            transition: color .3s ease-in;
+            background: transparent;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex: 1;
+            flex-basis: 1e-9px;
+            flex-direction: row;
+
+        }
+
+        .flex_menu_container .flex_box_list_item .search_box {
+            height: 40px;
+            width: 100%;
+            border-radius: 4.5px;
+            background: transparent;
+            border: none;
+            outline: 0;
+            font-size: 15px;
+            font-weight: 400;
+            color: #000;
+            padding: 0 10px 0 20.5px;
+            font-family: MiSans, system-ui, sans-serif;
+            letter-spacing: .5px;
+            caret-color: #0c84ff;
+        }
+
+        .search_box::-webkit-input-placeholder {
+            /* Edge */
+            color: #24292f;
+        }
+
+        .search_box:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: #24292f;
+        }
+
+        .search_box::placeholder {
+            color: #24292f;
+        }
+
+        .search-icon {
+            fill: #24292f;
+            margin-left: 26px;
+        }
+
+
+        .search-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            transition: border .3s ease-in;
+            border-radius: 40px;
+            background: #f5f5f5;
+            position: relative;
+        }
+
+        .search-container::after {
+            content: '';
+            margin: 0 auto;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 0;
+            height: 1px;
+            position: absolute;
+            background: transparent;
+            z-index: 3;
+        }
+
+        .search-container::before {
+            content: '';
+            margin: 0 auto;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            background: transparent;
+            z-index: 2;
+        }
+
+        .search-container:hover::before {
+            background: #ccc;
+        }
+
+        .search-container:hover {
+
+            background: #fff;
+        }
+
+        .focused {
+            background: #fff;
+        }
+
+        .focused::after {
+            transition: width .1s ease-in;
+            width: 100%;
+            background: #0c84ff;
+        }
+
+        .focu {
+            fill: #000;
+        }
+
+
+
+        .topnav-hover {
+            border-radius: 100%;
+            padding: 11.5px;
+        }
+
+        .topnav-hover:hover {
+            background: #f5f5f5;
+            color: #000;
+        }
+
+        .topnav-hover-2 {
+            border-radius: 4px;
+            background: transparent;
+            padding: 5px 12px;
+        }
+
+
+        .dropdown-content {
+
+            position: absolute;
+            width: 275px;
+            background: rgba(255, 255, 255, 0.98);
+            ;
+            border-radius: 12px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            color: rgba(29, 29, 31, 1);
+            display: block;
+            z-index: 10000;
+            top: 56px;
+            right: 32px;
+            max-height: calc(100vh - 110px);
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+            transition: opacity .03s linear, transform .12s cubic-bezier(0, 0, 0.2, 1);
+            transform: scale(0, 0);
+            transform-origin: top right;
+
+            transition: opacity .03s linear, transform .12s cubic-bezier(0, 0, 0.2, 1), height 250ms cubic-bezier(0, 0, 0.2, 1);
+            transition-property: opacity, transform, height;
+            transition-duration: 0.03s, 0.12s, 250ms;
+            transition-timing-function: linear, cubic-bezier(0, 0, 0.2, 1), cubic-bezier(0, 0, 0.2, 1);
+            transition-delay: 0s, 0s, 0s;
+            opacity: 0;
+            box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+
+        }
+
+        .dropdown-content::-webkit-scrollbar {
+            display: none;
+        }
+
+        .dropdown-content .dropitem {
+            display: flex;
+            height: 48px;
+            flex: none;
+            align-items: center;
+            margin: 6px 0;
+            padding: 4px 6px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: MiSans, system-ui, sans-serif;
+        }
+
+        .dropdown-content .dropitem:hover {
+            background: #f5f5f5;
+
+        }
+
+        .dropdown-content .drop-profile {
+
+            border-radius: 0;
+            margin: 0;
+            width: 100%;
+            height: auto;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgba(0, 0, 0, .12);
+            padding-bottom: 20px;
+
+        }
+
+        .drop-pic {
+            width: 100%;
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+      
+
+        .dropdown-content2 {
+
+            position: absolute;
+            background: hsla(0, 0%, 100%, .8);
+            backdrop-filter: saturate(200%) blur(30px);
+            background: rgba(255, 255, 255, 0.98);
+            ;
+            border-radius: 0 0 0.5rem 0.5rem;
+            overflow-x: hidden;
+            overflow-y: auto;
+            color: rgba(29, 29, 31, 1);
+            display: none;
+            z-index: 5;
+            left: 0;
+            top: 42px;
+            right: 0;
+            height: auto;
+            box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-top: none;
+            max-height: 80vh;
+        }
+
+        .dropdown-content2 .dropitem2 {
+            display: flex;
+            height: 48px;
+            flex: none;
+            align-items: center;
+            border-radius: 0.375rem;
+            margin: 6px 6px;
+            padding: 4px 12px;
+            font-size: 13.5px;
+            font-weight: 450;
+            font-family: inherit;
+
+        }
+
+        .site-nav-dropdown-arrow {
+            visibility: hidden;
+        }
+
+        .dropitem2:hover .site-nav-dropdown-arrow {
+            visibility: visible;
+        }
+
+        .dropdown-content2 .dropitem2:hover {
+            background: #f5f5f5;
+        }
+
+        .showit2 {
+            display: block;
+        }
+
+        .notify {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 8px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            color: rgba(29, 29, 31, 1);
+            width: 300px;
+            z-index: 5;
+            margin-top: 4px;
+            right: -16px;
+            height: 349.5px;
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: inherit;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transition: opacity .03s linear, transform .12s cubic-bezier(0, 0, 0.2, 1);
+            transform: scale(0, 0);
+            transform-origin: top;
+            box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
+            transition: opacity .03s linear, transform .12s cubic-bezier(0, 0, 0.2, 1), height 250ms cubic-bezier(0, 0, 0.2, 1);
+            transition-property: opacity, transform, height;
+            transition-duration: 0.03s, 0.12s, 250ms;
+            transition-timing-function: linear, cubic-bezier(0, 0, 0.2, 1), cubic-bezier(0, 0, 0.2, 1);
+            transition-delay: 0s, 0s, 0s;
+            opacity: 0;
+        }
+
+        .progress-player-hidden {
+            width: 400px;right: 0;bottom: 24px;max-width: calc(100vw - 48px);
+            z-index: 100000000000;
+            display: block;
+            position: absolute;
+            right: 32px;
+            transition: opacity .03s linear, transform .12s cubic-bezier(0, 0, 0.2, 1);
+            transform: scale(0, 0);
+            transform-origin: right;
+            box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
+            transition: opacity .03s linear, transform .12s cubic-bezier(0, 0, 0.2, 1), right 250ms cubic-bezier(0, 0, 0.2, 1);
+            transition-property: opacity, transform, right;
+            transition-duration: 0.03s, 0.12s, 250ms;
+            transition-timing-function: linear, cubic-bezier(0, 0, 0.2, 1), cubic-bezier(0, 0, 0.2, 1);
+            transition-delay: 0s, 0s, 0s;
+            opacity: 0;
+            border-radius: 0.75rem;border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-player-show {
+            transform: scale(1, 1);
+            opacity: 1;right: 24px;
+        }
+
+
+        .notify-showit {
+            transform: scale(1, 1);
+            opacity: 1;
+        }
+
+        .dark-mode {
+            background: #0d1117;
+
+        }
+
+        .dark-mode .flex_menu_container {
+            background: rgba(33, 33, 33, 0.98);
+        }
+
+        .dark-mode .search-container {
+            background: hsla(0, 0%, 100%, .033);
+
+        }
+
+        .dark-mode .sidebar {
+            background: #212121;
+
+        }
+
+        .menu-icon {
+            background: rgba(255, 255, 255, 0);
+
+            padding: 9px;
+
+
+
+            border-radius: 100px;
+
+            transition: all .2s ease-in;
+        }
+
+        .menu-icon:hover {
+            background: #f5f5f5;
+        }
+
+        .line-1,
+        .line-2,
+        .line-3 {
+            width: 18px;
+            height: 2px;
+            background-color: black;
+            margin: 3px 0;
+            border-radius: 100px;
+            transition: all .2s ease-in;
+        }
+
+        .body-toggle {
+            overflow: hidden;
+        }
+
+        .line-1-toggle {
+            -webkit-transform: rotate(-45deg) translate(-1px, 6px);
+            transform: rotate(-45deg) translate(-1px, 6px);
+            width: 19px;
+            margin-right: 7px;
+        }
+
+        .line-2-toggle {
+            opacity: 0;
+            transform: translate(4px, 0px);
+            margin-right: 7px;
+        }
+
+        .line-3-toggle {
+            -webkit-transform: rotate(45deg) translate(-1px, -6px);
+            transform: rotate(45deg) translate(-1px, -6px);
+            width: 19px;
+            margin-right: 7px;
+        }
+
+        .menu-icon-toggle {
+            padding: 13px 9px;
+        }
+
+        #mobilelogoimage {
+            display: none;
+        }
+
+        #mobilelogotext {
+            display: none;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 56px;
+            bottom: 0;
+            left: 0;
+            width: 72px;
+            letter-spacing: .5px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background: rgba(255, 255, 255, 0.98);
+            ;
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+            color: rgba(29, 29, 31, 1);
+
+        }
+
+
+        .sidebar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hidden {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .scrollbar-hidden::-webkit-scrollbar {
+            display: none;
+        }
+
+        .sidebar .sidebar-item {
+            margin: 9px auto;
+            display: flex;
+            height: 74px;
+            width: 64px;
+            align-items: center;
+            border-radius: 10px;
+            flex: none;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .sidebar .except {
+
+            display: none;
+
+        }
+
+        .sidebar-item div {
+
+            display: flex;
+            font-size: 11px;
+            align-items: center;
+            font-family: MiSans, system-ui, sans-serif;
+            font-weight: 500;
+            flex: none;
+
+            justify-content: center;
+        }
+
+        .sidebar .sidebar-item:hover {
+            color: #030303;
+            background: #f8f9fa;
+        }
+
+
+
+
+        .mini-sidebar {
+            position: fixed;
+            top: 62px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            letter-spacing: .5px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background: #fff;
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+            color: rgba(29, 29, 31, 1);
+            display: none;
+        }
+
+
+        .mini-sidebar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .mini-sidebar-item {
+            margin: 4px auto;
+            display: flex;
+            height: 56px;
+            width: 100%;
+            align-items: center;
+            border-radius: 4px;
+            flex: none;
+            flex-direction: row;
+            position: relative;
+        }
+
+        .sidebar-collapsed {
+            width: 220px;
+            z-index: 1000;
+
+        }
+
+        .sidebar-collapsed .except {
+            display: flex;
+        }
+
+        .sidebar-collapsed .sidebar-item {
+            margin: 8px 8px;
+            display: flex;
+            height: 42px;
+            width: calc(100% - 12px);
+            align-items: center;
+            border-radius: 10px;
+            flex: none;
+            flex-direction: row;
+            justify-content: left;
+
+        }
+
+        .sidebar-collapsed .sidebar-item div {
+
+            display: flex;
+            font-size: 14px;
+            align-items: center;
+            font-family: MiSans, system-ui, sans-serif;
+            font-weight: 500;
+            flex: none;
+            justify-content: left;
+            min-width: 50px;
+            margin-left: 17px;
+        }
+
+        .sidebar-collapsed .sidebar-item .hidden {
+
+            display: flex;
+            font-size: 14px;
+            align-items: center;
+            font-family: MiSans, system-ui, sans-serif;
+            font-weight: 450;
+            flex: none;
+            justify-content: left;
+            margin-left: 0;
+        }
+
+        .sidebar-collapsed .active {
+
+            background: #f5f5f5;
+        }
+
+        .sidebar-collapsed .active:hover {
+
+            background: #f5f5f5 !important;
+        }
+
+
+        .contentarea2 {
+            position: relative;
+            margin-left: 72px;
+            min-height: calc(100% - 56px);
+            margin-top: 112px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            width: 100%;
+            background: #f9f9f9;z-index: 10;
+        }
+
+        .uppertabbar {
+            position: fixed;
+            display: flex;
+            top: 56px;
+            left: 72px;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            height: 56px;
+            right: 0;
+            align-items: center;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            background: rgba(255, 255, 255, 0.98);z-index: 100;
+        }
+
+        .uppertabbar div:hover {
+            background: rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .uppertabbar .active2 {
+            background: transparent !important;
+      position: relative;  }
+      .uppertabbar .active2:hover {
+            background: transparent !important;
+       }
+        .uppertabbar .active2::after{
+            content: '';
+            margin: 0 auto;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            
+    height: 3px;
+    width: 22px;max-width: 100%;
+    background: #1a73e8;
+    
+    z-index: 1000;
+    position: absolute;
+    
+bottom: -11px;
+    cursor: default;
+    border-radius: 100px;
+        }
+        
+
+        .tabbar-collapsed {
+            left: 220px;
+        }
+
+        .tabbar-shadow {
+            background: #fff;
+            height: 56px;
+            width: 56px;
+            position: fixed;
+            margin-left: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tabbar-shadow-right {
+            background: #fff;
+            height: 56px;
+            width: 56px;
+            position: fixed;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .uppertabbar .tabbar-shadow:hover {
+            background: #fff !important;
+        }
+
+        .uppertabbar .tabbar-shadow-right:hover {
+            background: #fff !important;
+        }
+
+        .uppertabbar .tabbar-shadow-right::after {
+            background: linear-gradient(to left, #fff 20%, rgba(255, 255, 255, 0) 80%);
+            content: "";
+            width: 50px;
+            height: 100%;
+            position: absolute;
+            left: -50px;
+        }
+
+        .tabbar-shadow::after {
+            background: linear-gradient(to right, #fff 20%, rgba(255, 255, 255, 0) 80%);
+            content: "";
+            width: 50px;
+            height: 100%;
+            position: absolute;
+            right: -50px;
+        }
+
+        button {
+            background-color: transparent;
+            background-image: none;
+            cursor: pointer;
+            font-family: inherit;
+            line-height: inherit;
+            color: inherit;
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .player-top {
+
+            background: #fff;
+
+            border-color: rgb(241 245 249 / 1);
+            border-bottom-width: 1px;
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+        }
+
+        .container{display:flex;justify-content:space-evenly;width:100%;margin-top:28px;}
+            
+            .container div{height:35px;width:35px;border-radius:1000px;border:solid 2px #fff;}
+            .div1{background:#7367f0;outline:1px solid #7367f0;}
+            .div2{background:#28c76f;outline:1px solid #28c76f;}
+            .div3{background:#82868b;outline:1px solid #82868b;}
+            .div5{background:#ea5455;outline:1px solid #ea5455;}
+            .div6{background:#ff9f43;outline:1px solid #ff9f43;}
+            .div7{background:#4b4b4b;outline:1px solid #4b4b4b;}
+            .div8{background:#0c84ff;outline:1px solid #0c84ff; }
+
+            .theme-container{ position: fixed;background:#fff;right: 0;top: 0;bottom: 0;opacity: 0; height:100%;
+                width: 0;overflow-x: hidden;overflow-y: auto;
+
+            transition: opacity .03s linear, width 250ms cubic-bezier(0, 0, 0.2, 1);
+            transition-property: opacity, width;
+            transition-duration: 0.03s, 0.12s;
+            transition-timing-function: linear, cubic-bezier(0, 0, 0.2, 1);
+            transition-delay: 0s, 0s;
+              
+        }
+.theme-container .exception:hover{background: initial !important;}
+        .showit3 {
+           
+          
+            opacity: 1;
+            width: 100%; 
+        }
+
+        .showit {
+            transform: scale(1, 1);
+            opacity: 1;
+        }
+       
+        ::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+    /* background-color: #3170f5; */
+  }
+  :hover ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    background-clip: content-box;
+    border: 5px solid transparent;
+    border-radius: 0.625rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    background-clip: content-box;
+    border: 5px solid transparent;
+    border-radius: 0.625rem;
+  }
+
+  :hover ::-webkit-scrollbar-thumb {
+    background-color:red;
+    background-clip: content-box;
+    border: 5px solid transparent;
+    border-radius: 0.625rem;
+  }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, .5);
+  background-clip:content-box;
+  
+  border:4px solid transparent;
+  border-radius:100px;
+}
+
+  
+  
+  html.no-border-radius ::-webkit-scrollbar-thumb {
+    border-radius: 0;
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+  
+  /* Buttons */
+  
+  ::-webkit-scrollbar-button:single-button {
+    display: block;
+    background-repeat: no-repeat;
+    border: 0;
+    width: 14px;
+    height: 14px;
+  }
+  
+  /* Up */
+  
+  ::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
+    background-size: 8px;
+    background-position: 3px bottom;
+  }
+  
+  .dark ::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iI0RERERERCIvPgo8L3N2Zz4K");
+  }
+  
+  /* Down */
+  
+  ::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjODg4Ii8+PC9zdmc+");
+    background-size: 8px;
+    background-position: 3px top;
+  }
+  
+  .dark *::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjREREIi8+PC9zdmc+");
+  }
+  
+  /* Left */
+  
+  ::-webkit-scrollbar-button:single-button:horizontal {
+    background-size: 4.6px;
+  }
+  
+  ::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMTZMMTggMC40MTE1NDVMMTggMzEuNTg4NUwwIDE2WiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
+    background-position: right 3px;
+  }
+  
+  .dark ::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMTZMMTggLjQxMnYzMS4xNzdMMCAxNnoiIGZpbGw9IiNEREQiLz48L3N2Zz4=");
+  }
+  
+  /* Right */
+  
+  ::-webkit-scrollbar-button:single-button:horizontal:increment {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4NUwwIDAuNDExNTQzTDE4IDE2WiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
+    background-position: left 3px;
+  }
+  
+  .dark ::-webkit-scrollbar-button:single-button:horizontal:increment {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4Vi40MTNMMTggMTZ6IiBmaWxsPSIjREREIi8+PC9zdmc+");
+  }
+  
+
+        @media only screen and (min-width: 640px) {
+            .player-top {
+                padding: 2.5rem;
+            }
+
+            .space-y {
+                margin-top: calc(2rem * calc(1 - 0));
+                margin-bottom: calc(2rem * 0);
+            }
+
+        }
+
+        @media only screen and (max-width: 859px) {
+            .flex_menu_container::after {
+                left: 0;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            #search_container {
+                display: none;
+            }
+
+            .topnav-hover-container {
+                display: none;
+            }
+
+            #topnav-hover-dark {
+                display: none;
+            }
+
+            #logoimage {
+                display: none;
+            }
+
+            #logotext {
+                display: none;
+            }
+
+            #mobilelogoimage {
+                display: block;
+            }
+
+            #mobilelogotext {
+                display: block;
+            }
+
+            #flex-search {
+                justify-content: center;
+            }
+
+
+            .flex_menu_container {
+
+                background: #fff;
+
+                padding: 0 10px !important;
+
+            }
+
+            .dropdown-content {
+
+
+                right: 10px !important;
+
+            }
+
+        }
+
+        @media only screen and (min-height: 525px) {
+
+
+            .special {
+                display: none !important;
+            }
+        }
+
+        @media only screen and (max-width: 1119px) {
+            #login-name {
+                display: none !important;
+            }
+
+            #login-pic {
+                height: 38px !important;
+                width: 38px !important;
+            }
+
+            .topnav-hover-2 {
+                background: rgba(255, 255, 255, 0);
+                padding: 3px;
+                border-radius: 100%;
+            }
+
+            .topnav-hover-2:hover {
+                background: #f5f5f5;
+            }
+
+            #topnav-hover-dark {
+                margin-right: 12px !important;
+            }
+
+        }
+
+        @media only screen and (max-width: 1011px) {
+            .flex_menu_container {
+
+                padding: 0 24px;
+
+            }
+
+            .dropdown-content {
+
+
+                right: 24px;
+
+            }
+        }
+    </style>
+
+
+    <script>
+        function collapsesidebar() {
+            document.getElementById("menu-icon").click();
+        }
+        function intfocus() {
+            document.getElementById("search_container").classList.add("focused");
+            document.getElementById("search_icon").classList.add("focu");
+            document.getElementById('dropdowncontent2').classList.toggle('showit2');
+            document.getElementById('notify-content').classList.remove('notify-showit');
+            document.getElementById('myDropdown').classList.remove('showit');
+            document.getElementById('progress-player-id').classList.remove('progress-player-show');
+        }
+
+        function intfocusrmv() {
+            document.getElementById("search_container").classList.remove("focused");
+            document.getElementById("search_icon").classList.remove("focu");
+            document.getElementById("dropdowncontent2").classList.remove("showit2");
+        }
+
+        function opendropdown() {
+            document.getElementById("myDropdown").classList.toggle("showit");
+            document.getElementById('notify-content').classList.remove('notify-showit');
+            document.getElementById('progress-player-id').classList.remove('progress-player-show');
+        }
+    
+
+        function darkmode() {
+            var element = document.body;
+            element.classList.add("dark-mode");
+        }
+        function lightmode() {
+            var element = document.body;
+            element.classList.remove("dark-mode");
+        }
+
+        function open_notify() {
+            document.getElementById('notify-content').classList.toggle('notify-showit');
+            document.getElementById('myDropdown').classList.remove('showit');
+            document.getElementById('progress-player-id').classList.remove('progress-player-show');
+        }
+        function open_progress_player() {
+            document.getElementById('progress-player-id').classList.toggle('progress-player-show');
+            document.getElementById('myDropdown').classList.remove('showit');
+            document.getElementById('notify-content').classList.remove('notify-showit');
+        }
+
+        function open_nav() {
+            document.body.classList.toggle('body-toggle');
+            document.getElementById('line-1').classList.toggle('line-1-toggle');
+            document.getElementById('line-2').classList.toggle('line-2-toggle');
+            document.getElementById('line-3').classList.toggle('line-3-toggle');
+            document.getElementById('menu-icon').classList.toggle('menu-icon-toggle');
+        }
+
+        function sidebar_toggle() {
+
+            document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed");
+            document.getElementById("uppertabbar").classList.toggle("tabbar-collapsed");
+
+
+        }
+
+        function openthemes() {
+            document.getElementById("theme-container").classList.add("showit3");
+        
+        }
+        function closethemes() {
+            document.getElementById("theme-container").classList.remove("showit3");
+        
+        }
+
+        function showarrow() {
+
+
+            let x = document.getElementById("uppertabbar").scrollLeft;
+            if (x != 0) {
+                document.getElementById("tabbar-shadow").style.display = "flex";
+            }
+
+            else {
+                document.getElementById("tabbar-shadow").style.display = "none";
+
+            }
+
+        }
+
+        function showarrowright() {
+
+
+            let z = document.getElementById("uppertabbar").scrollLeft;
+            let y = document.getElementById("uppertabbar").scrollWidth - document.getElementById("uppertabbar").clientWidth;
+
+
+            if (z == y) {
+                document.getElementById("tabbar-shadow-right").style.display = "none";
+            }
+
+            else {
+                document.getElementById("tabbar-shadow-right").style.display = "flex";
+
+            }
+
+        }
+
+
+    </script>
+
+</head>
+
+<body onload="collapsesidebar()">
+
+    <div class="flex_menu_container">
+
+
+
+        <div class="flex_box_list_item" id="logo" style="justify-content: flex-start;cursor: default;">
+
+            <div class="menu-icon" id="menu-icon" onclick="sidebar_toggle()">
+
+
+                
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    class="style-scope yt-icon"
+                    style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                    <g class="style-scope yt-icon">
+                        <path d="M21,6H3V5h18V6z M21,11H3v1h18V11z M21,17H3v1h18V17z" class="style-scope yt-icon">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+
+            <div style="width:auto;margin-left:17px" id="logoimage">
+                <img src="https://raw.githubusercontent.com/Lakshay-7134/Go/main/Favicon%20Logo.png"
+                    style="height: 30px;width: auto;">
+            </div>
+
+            <div style="font-size: 17px;
+            font-family: MiSans, system-ui, sans-serif;color: #000;padding-left: 8px;font-weight:500" id="logotext">
+                WeUI
+            </div>
+
+
+        </div>
+
+
+
+        <div class="flex_box_list_item" id="flex-search" style="flex: 1.3">
+
+
+            <div class="search-container" id="search_container" style="position: relative;"
+                onclick="document.getElementById('searchbox').focus;">
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20px" height="20px"
+                    class="search-icon" id="search_icon">
+                    <path
+                        d="M 20.5 6 C 12.509634 6 6 12.50964 6 20.5 C 6 28.49036 12.509634 35 20.5 35 C 23.956359 35 27.133709 33.779044 29.628906 31.75 L 39.439453 41.560547 A 1.50015 1.50015 0 1 0 41.560547 39.439453 L 31.75 29.628906 C 33.779044 27.133709 35 23.956357 35 20.5 C 35 12.50964 28.490366 6 20.5 6 z M 20.5 9 C 26.869047 9 32 14.130957 32 20.5 C 32 23.602612 30.776198 26.405717 28.791016 28.470703 A 1.50015 1.50015 0 0 0 28.470703 28.791016 C 26.405717 30.776199 23.602614 32 20.5 32 C 14.130953 32 9 26.869043 9 20.5 C 9 14.130957 14.130953 9 20.5 9 z" />
+                </svg>
+
+                <input type="text" class="search_box" placeholder="Search or jump to..." onfocus="intfocus()"
+                    onfocusout="intfocusrmv()" id="searchbox">
+
+
+                <div class="dropdown-content2" id="dropdowncontent2">
+
+
+                    <div class="dropitem2">
+
+                        <div
+                            style=" border-radius: 0.375rem;width: 36px;
+                        height: 36px;background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGI_cDvFufG0eFqNUEbOjeP8fJ5qHkiD6Pug&usqp=CAU');  background-position: center center;background-size: cover;">
+
+                        </div>
+
+                        <div
+                            style="padding-left: 12px;flex: 1;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;letter-spacing: .5px;">
+                            Pokémon Journeys: The Series</div>
+                        <div style="padding-left: 12px;padding-right: 5px;"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 12 12" fill="#24292f" class="site-nav-dropdown-arrow icon-12 fill-current"
+                                style="    width: 12px;
+                            height: 12px;">
+                                <path
+                                    d="M11.7803 6.53033C12.0732 6.23744 12.0732 5.76257 11.7803 5.46967L7.18414 0.873479C6.89124 0.580585 6.41637 0.580585 6.12348 0.873478C5.83058 1.16637 5.83058 1.64125 6.12348 1.93414L9.43934 5.25H0.75C0.335787 5.25 0 5.58579 0 6C0 6.41422 0.335787 6.75 0.75 6.75H9.43934L6.12348 10.0659C5.83058 10.3588 5.83058 10.8336 6.12348 11.1265C6.41637 11.4194 6.89124 11.4194 7.18414 11.1265L11.7803 6.53033Z">
+                                </path>
+                            </svg></div>
+                    </div>
+
+
+                    <div class="dropitem2">
+
+                        <div
+                            style=" border-radius: 0.375rem;width: 36px;
+                        height: 36px;background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-mHSLpme6XRAIeQL257O3wiFe13ZR42Bc8g&usqp=CAU');  background-position: center center;background-size: cover;">
+
+                        </div>
+
+                        <div
+                            style="padding-left: 12px;flex: 1;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;letter-spacing: .5px;">
+                            Dragon Ball Super: Super Hero</div>
+                        <div style="padding-left: 12px;padding-right: 5px;"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 12 12" fill="#24292f" class="site-nav-dropdown-arrow icon-12 fill-current"
+                                style="    width: 12px;
+                            height: 12px;">
+                                <path
+                                    d="M11.7803 6.53033C12.0732 6.23744 12.0732 5.76257 11.7803 5.46967L7.18414 0.873479C6.89124 0.580585 6.41637 0.580585 6.12348 0.873478C5.83058 1.16637 5.83058 1.64125 6.12348 1.93414L9.43934 5.25H0.75C0.335787 5.25 0 5.58579 0 6C0 6.41422 0.335787 6.75 0.75 6.75H9.43934L6.12348 10.0659C5.83058 10.3588 5.83058 10.8336 6.12348 11.1265C6.41637 11.4194 6.89124 11.4194 7.18414 11.1265L11.7803 6.53033Z">
+                                </path>
+                            </svg></div>
+                    </div>
+
+                    <div class="dropitem2">
+
+                        <div
+                            style=" border-radius: 0.375rem;width: 36px;
+                        height: 36px;background: url('https://wallpapercave.com/wp/wp10431065.png');  background-position: center center;background-size: cover;">
+
+                        </div>
+
+                        <div
+                            style="padding-left: 12px;flex: 1;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;letter-spacing: .5px;">
+                            Pokémon Master Journeys: The Series</div>
+                        <div style="padding-left: 12px;padding-right: 5px;"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 12 12" fill="#24292f" class="site-nav-dropdown-arrow icon-12 fill-current"
+                                style="    width: 12px;
+                            height: 12px;">
+                                <path
+                                    d="M11.7803 6.53033C12.0732 6.23744 12.0732 5.76257 11.7803 5.46967L7.18414 0.873479C6.89124 0.580585 6.41637 0.580585 6.12348 0.873478C5.83058 1.16637 5.83058 1.64125 6.12348 1.93414L9.43934 5.25H0.75C0.335787 5.25 0 5.58579 0 6C0 6.41422 0.335787 6.75 0.75 6.75H9.43934L6.12348 10.0659C5.83058 10.3588 5.83058 10.8336 6.12348 11.1265C6.41637 11.4194 6.89124 11.4194 7.18414 11.1265L11.7803 6.53033Z">
+                                </path>
+                            </svg></div>
+                    </div>
+
+                    <div class="dropitem2">
+
+                        <div
+                            style=" border-radius: 0.375rem;width: 36px;
+                        height: 36px;background: url('https://upload.wikimedia.org/wikipedia/en/thumb/1/13/DB_THE_MOVIE_NO._20.jpg/220px-DB_THE_MOVIE_NO._20.jpg');  background-position: center center;background-size: cover;">
+
+                        </div>
+
+                        <div
+                            style="padding-left: 12px;flex: 1;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;letter-spacing: .5px;">
+                            Dragon Ball Super: Broly</div>
+                        <div style="padding-left: 12px;padding-right: 5px;"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 12 12" fill="#24292f" class="site-nav-dropdown-arrow icon-12 fill-current"
+                                style="    width: 12px;
+                            height: 12px;">
+                                <path
+                                    d="M11.7803 6.53033C12.0732 6.23744 12.0732 5.76257 11.7803 5.46967L7.18414 0.873479C6.89124 0.580585 6.41637 0.580585 6.12348 0.873478C5.83058 1.16637 5.83058 1.64125 6.12348 1.93414L9.43934 5.25H0.75C0.335787 5.25 0 5.58579 0 6C0 6.41422 0.335787 6.75 0.75 6.75H9.43934L6.12348 10.0659C5.83058 10.3588 5.83058 10.8336 6.12348 11.1265C6.41637 11.4194 6.89124 11.4194 7.18414 11.1265L11.7803 6.53033Z">
+                                </path>
+                            </svg></div>
+                    </div>
+
+                    <div class="dropitem2">
+
+                        <div
+                            style=" border-radius: 0.375rem;width: 36px;
+                        height: 36px;background: url('https://www.whats-on-netflix.com/wp-content/uploads/2022/05/pokemon-ultimate-journeys-coming-to-netflix-in-2022.webp');  background-position: center center;background-size: cover;">
+
+                        </div>
+
+                        <div
+                            style="padding-left: 12px;flex: 1;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;letter-spacing: .5px;">
+                            Pokémon Ultimate Journeys: The Series</div>
+                        <div style="padding-left: 12px;padding-right: 5px;"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 12 12" fill="#24292f" class="site-nav-dropdown-arrow icon-12 fill-current"
+                                style="    width: 12px;
+                            height: 12px;">
+                                <path
+                                    d="M11.7803 6.53033C12.0732 6.23744 12.0732 5.76257 11.7803 5.46967L7.18414 0.873479C6.89124 0.580585 6.41637 0.580585 6.12348 0.873478C5.83058 1.16637 5.83058 1.64125 6.12348 1.93414L9.43934 5.25H0.75C0.335787 5.25 0 5.58579 0 6C0 6.41422 0.335787 6.75 0.75 6.75H9.43934L6.12348 10.0659C5.83058 10.3588 5.83058 10.8336 6.12348 11.1265C6.41637 11.4194 6.89124 11.4194 7.18414 11.1265L11.7803 6.53033Z">
+                                </path>
+                            </svg></div>
+                    </div>
+
+                    <div class="dropitem2">
+
+                        <div
+                            style=" border-radius: 0.375rem;width: 36px;
+                        height: 36px;background: url('https://i.ytimg.com/vi/hCr4XKf3Dsk/maxresdefault.jpg');  background-position: center center;background-size: cover;">
+
+                        </div>
+
+                        <div
+                            style="padding-left: 12px;flex: 1;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;letter-spacing: .5px;">
+                            Super Dragon Ball Heroes</div>
+                        <div style="padding-left: 12px;padding-right: 5px;"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 12 12" fill="#24292f" class="site-nav-dropdown-arrow icon-12 fill-current"
+                                style="    width: 12px;
+                            height: 12px;">
+                                <path
+                                    d="M11.7803 6.53033C12.0732 6.23744 12.0732 5.76257 11.7803 5.46967L7.18414 0.873479C6.89124 0.580585 6.41637 0.580585 6.12348 0.873478C5.83058 1.16637 5.83058 1.64125 6.12348 1.93414L9.43934 5.25H0.75C0.335787 5.25 0 5.58579 0 6C0 6.41422 0.335787 6.75 0.75 6.75H9.43934L6.12348 10.0659C5.83058 10.3588 5.83058 10.8336 6.12348 11.1265C6.41637 11.4194 6.89124 11.4194 7.18414 11.1265L11.7803 6.53033Z">
+                                </path>
+                            </svg></div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <div style="width:auto;" id="mobilelogoimage">
+                <img src="https://raw.githubusercontent.com/Lakshay-7134/Go/main/Favicon%20Logo.png"
+                    style="height: 30px;width: auto;">
+            </div>
+
+            <div style="font-size: 16.5px;
+            font-family: MiSans, system-ui, sans-serif;color: #1D1D1F;padding-left: 10px;letter-spacing: .5px;font-weight: 500"
+                id="mobilelogotext">
+                WeUI
+            </div>
+
+        </div>
+
+
+
+        <div class="flex_box_list_item " style="justify-content: flex-end;">
+            <div style="margin-right: 5px;position: relative;" class="topnav-hover-container">
+
+
+                <div class="topnav-hover" onclick="open_notify()">
+
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                        class="style-scope yt-icon"
+                        style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                        <g class="style-scope yt-icon">
+                            <path
+                                d="M10,20h4c0,1.1-0.9,2-2,2S10,21.1,10,20z M20,17.35V19H4v-1.65l2-1.88v-5.15c0-2.92,1.56-5.22,4-5.98V3.96 c0-1.42,1.49-2.5,2.99-1.76C13.64,2.52,14,3.23,14,3.96l0,0.39c2.44,0.75,4,3.06,4,5.98v5.15L20,17.35z M19,17.77l-2-1.88v-5.47 c0-2.47-1.19-4.36-3.13-5.1c-1.26-0.53-2.64-0.5-3.84,0.03C8.15,6.11,7,7.99,7,10.42v5.47l-2,1.88V18h14V17.77z"
+                                class="style-scope yt-icon"></path>
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="notify" id="notify-content">
+                    <div
+                        style="position: absolute; top:0;left:0;right:0;height:60px;background: #fff;display: flex;align-items: center;">
+                        <div style="flex:1;padding-left: 20px;font-weight: 450;">Notifications</div>
+                        <div style="padding-right: 20px;"> <svg xmlns="http://www.w3.org/2000/svg" width="19"
+                                height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"
+                                style="margin-left: 25px;">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                            </svg></div>
+                    </div>
+                    <div
+                        style="display: flex;align-items: center;width: 100%;height: 100%;flex-direction: column;justify-content: center;">
+                        <div><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                class="style-scope yt-icon"
+                                style="pointer-events: none; display: block; width: 65px; height: 65px;fill:rgba(0,0,0,.4)">
+                                <g class="style-scope yt-icon">
+                                    <path
+                                        d="M10,20h4c0,1.1-0.9,2-2,2S10,21.1,10,20z M20,17.35V19H4v-1.65l2-1.88v-5.15c0-2.92,1.56-5.22,4-5.98V3.96 c0-1.42,1.49-2.5,2.99-1.76C13.64,2.52,14,3.23,14,3.96l0,0.39c2.44,0.75,4,3.06,4,5.98v5.15L20,17.35z M19,17.77l-2-1.88v-5.47 c0-2.47-1.19-4.36-3.13-5.1c-1.26-0.53-2.64-0.5-3.84,0.03C8.15,6.11,7,7.99,7,10.42v5.47l-2,1.88V18h14V17.77z"
+                                        class="style-scope yt-icon"></path>
+                                </g>
+                            </svg></div>
+                        <div
+                            style="text-align: center;height: 60px;display: flex;align-items: center;color: rgba(0,0,0,.9);">
+                            No new notifications<br>yet!</div>
+                    </div>
+                </div>
+
+            </div>
+            <div style="position: relative;">
+                <div class="topnav-hover" style="margin-right: 15px;" id="topnav-hover-dark"
+                    onclick="open_progress_player()">
+
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                        class="style-scope yt-icon"
+                        style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                        <g class="style-scope yt-icon">
+                            <path
+                                d="M10,18v-6l5,3L10,18z M17,3H7v1h10V3z M20,6H4v1h16V6z M22,9H2v12h20V9z M3,10h18v10H3V10z"
+                                class="style-scope yt-icon"></path>
+                        </g>
+                    </svg>
+
+                </div>
+
+               
+
+
+
+            </div>
+            <div style="position: relative;" class="topnav-hover-2 dropdown" onclick="opendropdown()">
+
+
+
+
+                <div style=" border-radius: 100%;width: 32px;
+                    height: 32px; background-position: center center;background-size: 70px auto;  background: url(https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp);
+
+
+    background-position: center center;
+    background-size: 64px auto;
+    display: inline-block;
+    vertical-align: middle;
+    
+    " id="login-pic">
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+    <div class="dropdown-content" id="myDropdown">
+
+        <div class="drop-profile">
+
+            <div class="drop-pic" style="margin-top:25px">
+                <div style="flex: 1;display: flex;align-items: center;justify-content: center;">
+                    <div
+                        style=" border-radius: 100%;width: 65px;
+                height: 65px;    background: url(https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp);background-position: center center;background-size: 136px auto;background-size: 130px auto;">
+                    </div>
+                </div>
+
+                <div
+                    style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 16px;flex: 1;">
+                    Hi, Alec
+                    <div
+                        style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 450;font-size: 14px;margin-top: 3px;">
+                        alec@gmail.com</div>
+                </div>
+
+            </div>
+
+
+            <div class="drop-pic">
+                <div
+                    style="margin-top: 24px;    border: 1px solid #dadce0;    border-radius: 100px;    max-width: 254px ;   padding: 6px 16px;letter-spacing: .25px;font-weight: 500;font-size: 14px;font-family: MiSans, system-ui, sans-serif;">
+                    Manage your account
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="dropitem">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-user" style="margin-left: 25px;">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                </svg>
+            </div>
+
+            <div
+                style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                Profile</div>
+
+        </div>
+
+        <div class="dropitem">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-download" style="margin-left: 25px;">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+            </div>
+
+            <div
+                style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                Downloads</div>
+
+        </div>
+
+
+
+
+        <div class="dropitem">
+            <div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-external-link" style="margin-left: 25px;">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+            </div>
+
+            <div
+                style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                Shared</div>
+
+        </div>
+        <div class="dropitem" onclick="openthemes()">
+            <div>
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-edit-3" style="margin-left: 25px;">
+                    <path d="M12 20h9" />
+                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                </svg>
+            </div>
+
+            <div
+                style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;" >
+                Change Theme</div>
+
+        </div>
+
+        <div class="dropitem" style="margin-bottom:0">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-settings" style="margin-left: 25px;">
+                    <circle cx="12" cy="12" r="3" />
+                    <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                </svg>
+            </div>
+
+            <div
+                style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                Settings</div>
+
+
+
+        </div>
+
+
+        <div class="theme-container" id="theme-container">
+            <div class="dropitem exception" style="border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgba(0, 0, 0, .12);" onclick="closethemes()">
+                <div>
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-chevron-left" style="margin-left: 12px;">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                </div>
+
+
+                <div
+                    style="padding-left: 50px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                    Change Theme
+                </div>
+
+
+
+            </div>
+
+
+            <div class="dropitem"  onclick="lightmode()">
+                <div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-sun" style="margin-left: 28px;">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </div>
+
+
+                <div
+                    style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                    Light Theme
+                </div>
+
+
+
+            </div>
+            <div class="dropitem" onclick="darkmode()">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-moon" style="margin-left: 28px;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </div>
+
+                <div
+                    style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                    Dark Theme</div>
+
+
+
+            </div>
+            <div class="dropitem">
+                <div>
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-monitor" style="margin-left: 28px;">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                        <line x1="8" y1="21" x2="16" y2="21" />
+                        <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg>
+                </div>
+
+                <div
+                    style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                    System Default</div>
+
+
+
+            </div>
+
+          
+            
+            <div class="dropitem exception">
+              
+
+
+                <div
+                    style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;padding-left: 33px;padding-top: 15px;">
+                    Theme Colour
+                </div>
+        </div>
+            <div class="container" style="margin-top: 20px">
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div3"></div></div>
+            <div class="container">
+            <div class="div5"></div>
+            <div class="div6"></div>
+            <div class="div7"></div></div>
+            <div class="container" style="padding-bottom:12px">
+               
+                <div class="div8"></div></div>
+            
+
+        </div>
+    </div>
+
+
+
+    <div class="sidebar" id="sidebar-container">
+
+        <div style="margin-top: 10px;" class="sidebar-item active">
+            <div>
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24px; height: 24px">
+                    <g class="style-scope yt-icon">
+                        <path d="M4,10V21h6V15h4v6h6V10L12,3Z" class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+
+            </div>
+            <div class="hidden" style="padding-top: 5px;">Home</div>
+        </div>
+
+
+        <div class="sidebar-item">
+            <div>
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    class="style-scope yt-icon"
+                    style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                    <g class="style-scope yt-icon">
+                        <path
+                            d="M9.8,9.8l-3.83,8.23l8.23-3.83l3.83-8.23L9.8,9.8z M13.08,12.77c-0.21,0.29-0.51,0.48-0.86,0.54 c-0.07,0.01-0.15,0.02-0.22,0.02c-0.28,0-0.54-0.08-0.77-0.25c-0.29-0.21-0.48-0.51-0.54-0.86c-0.06-0.35,0.02-0.71,0.23-0.99 c0.21-0.29,0.51-0.48,0.86-0.54c0.35-0.06,0.7,0.02,0.99,0.23c0.29,0.21,0.48,0.51,0.54,0.86C13.37,12.13,13.29,12.48,13.08,12.77z M12,3c4.96,0,9,4.04,9,9s-4.04,9-9,9s-9-4.04-9-9S7.04,3,12,3 M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2 L12,2z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="hidden" style="padding-top: 5px;">Explore</div>
+        </div>
+
+        <div class="sidebar-item">
+            <div>
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    class="style-scope yt-icon"
+                    style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                    <g class="style-scope yt-icon">
+                        <path
+                            d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M22,12c0,5.51-4.49,10-10,10S2,17.51,2,12h1c0,4.96,4.04,9,9,9 s9-4.04,9-9s-4.04-9-9-9C8.81,3,5.92,4.64,4.28,7.38C4.17,7.56,4.06,7.75,3.97,7.94C3.96,7.96,3.95,7.98,3.94,8H8v1H1.96V3h1v4.74 C3,7.65,3.03,7.57,3.07,7.49C3.18,7.27,3.3,7.07,3.42,6.86C5.22,3.86,8.51,2,12,2C17.51,2,22,6.49,22,12z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="hidden" style="padding-top: 5px;">History</div>
+        </div>
+        <hr style="    height: 0;
+margin: 15px auto;
+width: 75%;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
+        <div class="sidebar-item">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+                    <path
+                        d="m12 19.65-.75-.675q-2.45-2.25-4.05-3.838-1.6-1.587-2.537-2.8-.938-1.212-1.301-2.2Q3 9.15 3 8.15q0-1.9 1.3-3.2 1.3-1.3 3.2-1.3 1.325 0 2.475.675Q11.125 5 12 6.3q.875-1.3 2.025-1.975T16.5 3.65q1.9 0 3.2 1.3 1.3 1.3 1.3 3.2 0 1-.362 1.987-.363.988-1.3 2.2-.938 1.213-2.526 2.8-1.587 1.588-4.062 3.838Zm0-1.35q2.4-2.175 3.95-3.725 1.55-1.55 2.45-2.688.9-1.137 1.25-2.012T20 8.15q0-1.5-1-2.5t-2.5-1q-1.2 0-2.212.687-1.013.688-1.788 2.038h-1Q10.7 6 9.7 5.325q-1-.675-2.2-.675-1.475 0-2.487 1Q4 6.65 4 8.15q0 .85.35 1.725.35.875 1.25 2.012.9 1.138 2.45 2.675Q9.6 16.1 12 18.3Zm0-6.825Z" />
+                </svg>
+            </div>
+            <div class="hidden" style="padding-top: 5px;">Favourite</div>
+        </div>
+
+        <div class="sidebar-item">
+            <div>
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    class="style-scope yt-icon"
+                    style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                    <g class="style-scope yt-icon">
+                        <path d="M11,7l6,3.5L11,14V7L11,7z M18,20H4V6H3v15h15V20z M21,18H6V3h15V18z M7,17h13V4H7V17z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="hidden" style="padding-top: 5px;">Library</div>
+        </div>
+
+
+        <div class="sidebar-item except">
+            <div>
+
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    class="style-scope yt-icon"
+                    style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                    <g class="style-scope yt-icon">
+                        <path
+                            d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="hidden" style="padding-top: 5px;">Watch Later</div>
+        </div>
+        <div class="sidebar-item">
+            <div>
+
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    class="style-scope yt-icon"
+                    style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                    <g class="style-scope yt-icon">
+                        <path
+                            d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="hidden" style="padding-top: 5px;">Liked</div>
+        </div>
+
+        <hr style="    height: 0;
+margin: 15px auto;
+width: 75%;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
+
+
+        <div class="sidebar-item except">
+            <div>
+
+
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    class="style-scope yt-icon"
+                    style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                    <g class="style-scope yt-icon">
+                        <path
+                            d="M15.36,9.96c0,1.09-0.67,1.67-1.31,2.24c-0.53,0.47-1.03,0.9-1.16,1.6L12.85,14h-1.75l0.03-0.28 c0.14-1.17,0.8-1.76,1.47-2.27c0.52-0.4,1.01-0.77,1.01-1.49c0-0.51-0.23-0.97-0.63-1.29c-0.4-0.31-0.92-0.42-1.42-0.29 c-0.59,0.15-1.05,0.67-1.19,1.34L10.32,10H8.57l0.06-0.42c0.2-1.4,1.15-2.53,2.42-2.87c1.05-0.29,2.14-0.08,2.98,0.57 C14.88,7.92,15.36,8.9,15.36,9.96z M12,18c0.55,0,1-0.45,1-1s-0.45-1-1-1s-1,0.45-1,1S11.45,18,12,18z M12,3c-4.96,0-9,4.04-9,9 s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="hidden" style="padding-top: 5px;">Help</div>
+        </div>
+        <div class="sidebar-item except">
+            <div>
+
+
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    class="style-scope yt-icon"
+                    style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                    <g class="style-scope yt-icon">
+                        <path
+                            d="M13,14h-2v-2h2V14z M13,5h-2v6h2V5z M19,3H5v16.59l3.29-3.29L8.59,16H9h10V3 M20,2v15H9l-5,5V2H20L20,2z"
+                            class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="hidden" style="padding-top: 5px;">Feedback</div>
+        </div>
+
+
+
+
+        <div class="sidebar-item">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+                    <path
+                        d="M6.625 21q-.675 0-1.15-.475Q5 20.05 5 19.375v-8.75q0-.675.475-1.15Q5.95 9 6.625 9H8V7q0-1.675 1.163-2.838Q10.325 3 12 3q1.675 0 2.838 1.162Q16 5.325 16 7v2h1.375q.675 0 1.15.475.475.475.475 1.15v8.75q0 .675-.475 1.15-.475.475-1.15.475Zm0-1h10.75q.275 0 .45-.175t.175-.45v-8.75q0-.275-.175-.45t-.45-.175H6.625q-.275 0-.45.175t-.175.45v8.75q0 .275.175.45t.45.175ZM12 16.5q.625 0 1.062-.438.438-.437.438-1.062t-.438-1.062Q12.625 13.5 12 13.5t-1.062.438Q10.5 14.375 10.5 15t.438 1.062q.437.438 1.062.438ZM9 9h6V7q0-1.25-.875-2.125T12 4q-1.25 0-2.125.875T9 7ZM6 20V10v10Z" />
+                </svg>
+            </div>
+            <div class="hidden" style="padding-top: 5px;">Secure</div>
+        </div>
+
+
+
+    </div>
+
+
+    <div class="mini-sidebar" id="mini-sidebar-container">
+
+
+
+    </div>
+
+
+
+
+
+    <div class="contentarea2">
+        <div style="    z-index: 10;
+    position: relative;display: flex;">
+<div style="width: 100%;height:100%;"></div>
+
+        </div>
+    </div>
+    <div id="uppertabbar" class="uppertabbar scrollbar-hidden" onscroll="showarrow();showarrowright()">
+        <div class="tabbar-shadow" id="tabbar-shadow">
+            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"
+                style="pointer-events: none; display: block; width: 24px; height: 24px">
+                <g mirror-in-rtl="" class="style-scope yt-icon">
+                    <path d="M14.6,18.4L8.3,12l6.4-6.4l0.7,0.7L9.7,12l5.6,5.6L14.6,18.4z" class="style-scope yt-icon">
+                    </path>
+                </g>
+            </svg>
+        </div>
+        <div style="border-radius: 8px;height: 32px;margin: 12px;padding: 0 12px;margin-left: 24px;color: #1a73e8;vertical-align: middle;font-size: 15px;display:flex;align-items: center;flex: none;font-weight: 470;letter-spacing: .9px;"
+            class="active2">
+            All
+        </div>
+        <div
+        style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+        Journeys
+    </div>
+        <div
+            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            Live
+        </div>
+        <div
+            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            Watch Later
+        </div>
+        <div
+            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            Pokemon
+        </div>
+
+        <div
+            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            Suggested For You </div>
+        <div
+            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            Adventure
+        </div>
+        <div
+            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #fff#0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            Goku
+        </div>
+        <div
+            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            Movies
+        </div>
+        <div
+            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            What's New
+        </div>
+        <div
+            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            Ash Ketchum
+        </div>
+        <div
+            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            Ultra Legends
+        </div>
+        <div
+            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;margin-right: 24px;">
+            More
+        </div>
+        <div class="tabbar-shadow-right" id="tabbar-shadow-right">
+            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"
+                style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                <g mirror-in-rtl="" class="style-scope yt-icon">
+                    <path d="M9.4,18.4l-0.7-0.7l5.6-5.6L8.6,6.4l0.7-0.7l6.4,6.4L9.4,18.4z" class="style-scope yt-icon">
+                    </path>
+                </g>
+            </svg>
+        </div>
+    </div>
+
+
+    <div class="progress-player-hidden" id="progress-player-id">
+
+
+
+
+
+        <div class="player-top" style="height: 164.955752px; padding-top:1rem;">
+            <div style="align-items: center;display: flex;">
+
+
+                <img src="https://i1.sndcdn.com/artworks-000515401857-zj2fzl-t500x500.jpg"
+                    style="width:88px;background-color: rgb(241 245 249 / 1);    border-radius: 0.5rem;flex: none;max-width: 100%;  height: auto; display: block; aspect-ratio: auto 88 / 88;">
+
+
+                <div style="min-width: 0;font-weight:600;flex:1;
+                margin-right: calc(1rem * 0);
+                margin-left: calc(1rem * calc(1 - 0));">
+                    <p style="color:#0c84ff;font-size:0.875rem;line-height: 1.5rem;">
+                        <a title="Episode">Ep.</a> 110
+                    </p>
+                    <h2 style="color:rgb(100 116 139 / 1);font-size:0.875rem;line-height: 1.5rem;    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;font-weight: inherit;    margin-top: calc(0.25rem * calc(1 - 0));
+        margin-bottom: calc(0.25rem * 0);
+    ">
+                        Son Goku Wakes! New Level of the Awakened!!
+                    </h2>
+                    <p style="color: rgb(15 23 42 / 1);font-size: 1.125rem;
+                   margin-top: calc(0.25rem * calc(1 - 0));
+        margin-bottom: calc(0.25rem * 0);  line-height: 1.75rem;">
+                        Toei Animation
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="space-y">
+
+
+                <div style="position: relative;">
+
+
+                    <div style="background: rgb(241 245 249 / 1);border-radius: 9999px;overflow: hidden;">
+                        <div style="width: 50%;height: 0.5rem;background: #0c84ff;"></div>
+                    </div>
+                    <div
+                        style="background: #ffffff;position: absolute;left: 50%;top: 50%;width: 18px;height: 18px;margin-top: -0.5rem;margin-left: -0.5rem;border: 3px solid #0c84ff;border-radius: 1000px;">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <div
+            style="display: flex;align-items: center;height: 45.3097345px; color: rgb(100 116 139 / 1); background-color: rgb(248 250 252 / 1);border-radius: 0 0 0.75rem 0.75rem;">
+
+
+            <div style="display: flex; justify-content: space-evenly; align-items: center; flex: auto;">
+
+                <button type="button">
+                    <svg width="24" height="24">
+                        <path
+                            d="M7 6.931C7 5.865 7.853 5 8.905 5h6.19C16.147 5 17 5.865 17 6.931V19l-5-4-5 4V6.931Z"
+                            fill="currentColor" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+
+                <button type="button">
+                    <svg width="24" height="24" fill="none">
+                        <path
+                            d="M6.492 16.95c2.861 2.733 7.5 2.733 10.362 0 2.861-2.734 2.861-7.166 0-9.9-2.862-2.733-7.501-2.733-10.362 0A7.096 7.096 0 0 0 5.5 8.226"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M5 5v3.111c0 .491.398.889.889.889H9" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+
+            </div>
+
+
+            <button type="button" style="width:4rem;height:4rem;    border-radius: 9999px;
+        
+    
+            display: flex;
+            align-items: center;
+       
+        margin: -0.5rem auto;
+       background: #fff;justify-content: center;
+    
+            flex: none;">
+                <svg width="30" height="32" fill="#0f172a">
+                    <rect x="6" y="4" width="4" height="24" rx="2"></rect>
+                    <rect x="20" y="4" width="4" height="24" rx="2"></rect>
+                </svg>
+            </button>
+
+
+            <div style="display: flex; justify-content: space-evenly; align-items: center; flex: auto;">
+
+                <button type="button">
+                    <svg width="24" height="24" fill="none">
+                        <path
+                            d="M17.509 16.95c-2.862 2.733-7.501 2.733-10.363 0-2.861-2.734-2.861-7.166 0-9.9 2.862-2.733 7.501-2.733 10.363 0 .38.365.711.759.991 1.176"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M19 5v3.111c0 .491-.398.889-.889.889H15" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+
+                <button type="button" style="border-radius: 0.5rem;padding:0 0.5rem;font-size: 0.75rem;line-height: 1.5rem;color: rgb(100 116 139 / 1);    box-shadow: 0 0 #0000, inset 0 0 0 calc(2px + 0px)  rgb(100 116 139 / 1)
+            , 0 0 #0000;
+        
+                font-weight: 600;">
+                    1x
+                </button>
+
+            </div>
+        </div>
+
+
+    </div>
 </body>
+
 </html>
-
-
