@@ -676,7 +676,7 @@
             width: 100%;
             background: #f9f9f9;z-index: 10;border-radius:12px 0 0 0 ;
         }
-
+.contentarea2-collapsed{margin-left:220px}
         .uppertabbar {
             position: fixed;
             display: flex;
