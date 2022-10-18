@@ -1138,12 +1138,12 @@ document.getElementById("contentarea2").classList.toggle("contentarea2-collapsed
 
 
             let x = document.getElementById("uppertabbar").scrollLeft;
-            if (x != 0) {
-                document.getElementById("tabbar-shadow").style.display = "flex";
+            if (x == 0) {
+                document.getElementById("tabbar-shadow").style.display = "none";
             }
 
             else {
-                document.getElementById("tabbar-shadow").style.display = "none";
+                document.getElementById("tabbar-shadow").style.display = "flex";
 
             }
 
