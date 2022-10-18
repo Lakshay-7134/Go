@@ -1008,7 +1008,7 @@ bottom: -11px;
                 right: 10px !important;
 
             }
-
+.uppertabbar{left:0}
         }
 
         @media only screen and (min-height: 525px) {
