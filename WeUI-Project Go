@@ -1009,6 +1009,7 @@ bottom: -11px;
 
             }
 .uppertabbar{left:0}
+.contentarea2{border-radius:0;margin-left:0}
         }
 
         @media only screen and (min-height: 525px) {
