@@ -616,7 +616,9 @@
         .sidebar-collapsed .except {
             display: flex;
         }
-
+.sidebar-collapsed .hidden {
+            padding-top: 0 !important;
+        }
         .sidebar-collapsed .sidebar-item {
             margin: 8px 8px;
             display: flex;
