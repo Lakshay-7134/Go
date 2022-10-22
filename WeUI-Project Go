@@ -2,14 +2,11 @@
 
 <head>
 
-    <link rel="apple-touch-icon" sizes="180x180"
-        href="https://github.com/Lakshay-7134/Go/blob/main/apple-touch-icon.png?raw=true">
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="https://github.com/Lakshay-7134/Go/blob/main/favicon-32x32.png?raw=true">
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="https://github.com/Lakshay-7134/Go/blob/main/favicon-16x16.png?raw=true">
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
 
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
@@ -75,6 +72,29 @@
             display: block;
         }
 
+        @font-face {
+            font-family: 'Greycliff';
+            src: url(fonts/acb7ae59aec93313db2762744492895a.woff2) format('woff2'), url(fonts/c6e73bf5f2fdecde347245a58ea39b34.woff) format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Greycliff';
+            src: url(fonts/55ce09f79fd63a05a7fdbbaffceac45f.woff2) format('woff2'), url(fonts/d34adaad177723d92c2c8a62ff152055.woff) format('woff');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Greycliff';
+            src: url(fonts/e3383e5dea76ba279d0459e08f8bd376.woff2) format('woff2'), url(fonts/63daa007f75b21ba9deb98327efe715d.woff) format('woff');
+            font-weight: 800;
+            font-style: normal;
+            font-display: swap;
+        }
 
         .flex_menu_container {
             height: 56px;
@@ -190,11 +210,11 @@
 
         .search-container:hover {
 
-            background: #fff;
+            background: rgba(255, 255, 255, 0);
         }
 
         .focused {
-            background: #fff;
+            background: rgba(255, 255, 255, 0);
         }
 
         .focused::after {
@@ -228,10 +248,10 @@
 
         .dropdown-content {
 
-            position: absolute;
+            position: fixed;
             width: 275px;
             background: rgba(255, 255, 255, 0.98);
-            ;
+
             border-radius: 12px;
             overflow-x: hidden;
             overflow-y: auto;
@@ -302,7 +322,7 @@
             justify-content: center;
         }
 
-      
+
 
         .dropdown-content2 {
 
@@ -318,7 +338,7 @@
             display: none;
             z-index: 5;
             left: 0;
-            top: 42px;
+            top: 40px;
             right: 0;
             height: auto;
             box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
@@ -360,6 +380,7 @@
         .notify {
             position: absolute;
             background: rgba(255, 255, 255, 0.98);
+
             border-radius: 8px;
             overflow-x: hidden;
             overflow-y: auto;
@@ -387,10 +408,13 @@
         }
 
         .progress-player-hidden {
-            width: 400px;right: 0;bottom: 24px;max-width: calc(100vw - 48px);
+            width: 400px;
+            right: 0;
+            bottom: 24px;
+            max-width: calc(100vw - 48px);
             z-index: 100000000000;
             display: block;
-            position: absolute;
+            position: fixed;
             right: 32px;
             transition: opacity .03s linear, transform .12s cubic-bezier(0, 0, 0.2, 1);
             transform: scale(0, 0);
@@ -402,12 +426,14 @@
             transition-timing-function: linear, cubic-bezier(0, 0, 0.2, 1), cubic-bezier(0, 0, 0.2, 1);
             transition-delay: 0s, 0s, 0s;
             opacity: 0;
-            border-radius: 0.75rem;border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 0.75rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .progress-player-show {
             transform: scale(1, 1);
-            opacity: 1;right: 24px;
+            opacity: 1;
+            right: 24px;
         }
 
 
@@ -616,9 +642,11 @@
         .sidebar-collapsed .except {
             display: flex;
         }
-.sidebar-collapsed .hidden {
+
+        .sidebar-collapsed .hidden {
             padding-top: 0 !important;
         }
+
         .sidebar-collapsed .sidebar-item {
             margin: 8px 8px;
             display: flex;
@@ -671,14 +699,20 @@
         .contentarea2 {
             position: relative;
             margin-left: 72px;
-            min-height: calc(100% - 56px);
+            min-height: calc(1000% - 56px);
             margin-top: 112px;
             overflow-x: hidden;
             overflow-y: auto;
             width: 100%;
-            background: #f9f9f9;z-index: 10;border-radius:12px 0 0 0 ;
+            background: #fff;
+            z-index: 10;
+            border-radius: 12px 0 0 0;
         }
-.contentarea2-collapsed{margin-left:220px}
+
+        .contentarea2-collapsed {
+            margin-left: 220px
+        }
+
         .uppertabbar {
             position: fixed;
             display: flex;
@@ -691,7 +725,8 @@
             align-items: center;
             overflow-y: hidden;
             overflow-x: scroll;
-            background: rgba(255, 255, 255, 0.98);z-index: 100;
+            background: rgba(255, 255, 255, 0.98);
+            z-index: 100;
         }
 
         .uppertabbar div:hover {
@@ -700,29 +735,33 @@
 
         .uppertabbar .active2 {
             background: transparent !important;
-      position: relative;  }
-      .uppertabbar .active2:hover {
+            position: relative;
+        }
+
+        .uppertabbar .active2:hover {
             background: transparent !important;
-       }
-        .uppertabbar .active2::after{
+        }
+
+        .uppertabbar .active2::after {
             content: '';
             margin: 0 auto;
             bottom: 0;
             left: 0;
             right: 0;
-            
-    height: 3px;
-    width: 22px;max-width: 100%;
-    background: #1a73e8;
-    
-    z-index: 10;
-    position: absolute;
-    
-bottom: -11px;
-    cursor: default;
-    border-radius: 100px;
+
+            height: 3px;
+            width: 22px;
+            max-width: 100%;
+            background: #1D1D1F;
+
+            z-index: 10;
+            position: absolute;
+
+            bottom: -11px;
+            cursor: default;
+            border-radius: 100px;
         }
-        
+
 
         .tabbar-collapsed {
             left: 220px;
@@ -736,7 +775,8 @@ bottom: -11px;
             margin-left: 0;
             display: none;
             align-items: center;
-            justify-content: center;z-index:1000;
+            justify-content: center;
+            z-index: 1000;
         }
 
         .tabbar-shadow-right {
@@ -747,7 +787,8 @@ bottom: -11px;
             right: 0;
             display: flex;
             align-items: center;
-            justify-content: center;z-index:1000;
+            justify-content: center;
+            z-index: 1000;
         }
 
         .uppertabbar .tabbar-shadow:hover {
@@ -790,7 +831,7 @@ bottom: -11px;
 
         .player-top {
 
-            background: #fff;
+            background: rgba(255, 255, 255, 0.98);
 
             border-color: rgb(241 245 249 / 1);
             border-bottom-width: 1px;
@@ -798,145 +839,241 @@ bottom: -11px;
             border-top-right-radius: 0.75rem;
         }
 
-        .container{display:flex;justify-content:space-evenly;width:100%;margin-top:28px;}
-            
-            .container div{height:35px;width:35px;border-radius:1000px;border:solid 2px #fff;}
-            .div1{background:#7367f0;outline:1px solid #7367f0;}
-            .div2{background:#28c76f;outline:1px solid #28c76f;}
-            .div3{background:#82868b;outline:1px solid #82868b;}
-            .div5{background:#ea5455;outline:1px solid #ea5455;}
-            .div6{background:#ff9f43;outline:1px solid #ff9f43;}
-            .div7{background:#4b4b4b;outline:1px solid #4b4b4b;}
-            .div8{background:#0c84ff;outline:1px solid #0c84ff; }
+        .slideshow {
+            z-index: 10;
+            position: relative;
+            display: flex;
+            height: calc(100vh - 150px);
+            overflow: hidden;
+            width: 100%;
+        }
 
-            .theme-container{ position: fixed;background:#fff;right: 0;top: 0;bottom: 0;opacity: 0; height:100%;
-                width: 0;overflow-x: hidden;overflow-y: auto;
+        .slideshow::after {
+            z-index: 15;
+            content: "";
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.43) 40%, rgba(0, 0, 0, 0) 100%);
+            border-radius: 12px 0 0 0;
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            margin-top: 28px;
+        }
+
+        .container div {
+            height: 35px;
+            width: 35px;
+            border-radius: 1000px;
+            border: solid 2px #fff;
+        }
+
+        .div1 {
+            background: #705df2;
+            outline: 1px solid #705df2;
+        }
+
+        .div2 {
+            background: #ffb905;
+            outline: 1px solid #ffb905;
+        }
+
+        .div3 {
+            background: #4b4b4b;
+            outline: 1px solid #4b4b4b;
+        }
+
+        .div5 {
+            background: #0c84ff;
+            outline: 1px solid #0c84ff;
+        }
+
+        .div6 {
+            background: #ff6651;
+            outline: 1px solid #ff6651;
+        }
+
+        .div7 {
+            display: flex;width: 100%;margin-left: 39px ;margin-right: 39px;
+            justify-content: center;flex: 1;align-items: center;
+            
+            background: #1D1D1F;
+    padding: 8px 22px ;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1.5px solid #1D1D1F !important;
+        }
+.div7:hover{
+    background: transparent;
+    color: #1D1D1F;
+}
+        .div8 {
+            
+            background: #35C78F;
+            outline: 1px solid #35C78F;
+        }
+
+        .theme-container {
+            position: fixed;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: saturate(200%) blur(30px);
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: 0;
+            height: 100%;
+            width: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
 
             transition: opacity .03s linear, width 250ms cubic-bezier(0, 0, 0.2, 1);
             transition-property: opacity, width;
             transition-duration: 0.03s, 0.12s;
             transition-timing-function: linear, cubic-bezier(0, 0, 0.2, 1);
             transition-delay: 0s, 0s;
-              
+
         }
-.theme-container .exception:hover{background: initial !important;}
+
+        .theme-container .exception:hover {
+            background: initial !important;
+        }
+
         .showit3 {
-           
-          
+
+
             opacity: 1;
-            width: 100%; 
+            width: 100%;
         }
 
         .showit {
             transform: scale(1, 1);
             opacity: 1;
         }
-       
+
         ::-webkit-scrollbar {
-    width: 14px;
-    height: 14px;
-    /* background-color: #3170f5; */
-  }
-  :hover ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, .5);
-    background-clip: content-box;
-    border: 5px solid transparent;
-    border-radius: 0.625rem;
-  }
+            width: 14px;
+            height: 14px;
+            /* background-color: #3170f5; */
+        }
 
-  ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, .5);
-    background-clip: content-box;
-    border: 5px solid transparent;
-    border-radius: 0.625rem;
-  }
+        :hover ::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, .5);
+            background-clip: content-box;
+            border: 5px solid transparent;
+            border-radius: 0.625rem;
+        }
 
-  :hover ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, .5);
-    background-clip: content-box;
-    border: 5px solid transparent;
-    border-radius: 0.625rem;
-  }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, .5);
+            background-clip: content-box;
+            border: 5px solid transparent;
+            border-radius: 0.625rem;
+        }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, .5);
-  background-clip:content-box;
-  
-  border:4px solid transparent;
-  border-radius:100px;
-}
+        :hover ::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, .5);
+            background-clip: content-box;
+            border: 5px solid transparent;
+            border-radius: 0.625rem;
+        }
 
-  
-  
-  html.no-border-radius ::-webkit-scrollbar-thumb {
-    border-radius: 0;
-  }
-  
-  ::-webkit-scrollbar-corner {
-    background-color: transparent;
-  }
-  
-  /* Buttons */
-  
-  ::-webkit-scrollbar-button:single-button {
-    display: block;
-    background-repeat: no-repeat;
-    border: 0;
-    width: 14px;
-    height: 14px;
-  }
-  
-  /* Up */
-  
-  ::-webkit-scrollbar-button:single-button:vertical:decrement {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
-    background-size: 8px;
-    background-position: 3px bottom;
-  }
-  
-  .dark ::-webkit-scrollbar-button:single-button:vertical:decrement {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iI0RERERERCIvPgo8L3N2Zz4K");
-  }
-  
-  /* Down */
-  
-  ::-webkit-scrollbar-button:single-button:vertical:increment {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjODg4Ii8+PC9zdmc+");
-    background-size: 8px;
-    background-position: 3px top;
-  }
-  
-  .dark *::-webkit-scrollbar-button:single-button:vertical:increment {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjREREIi8+PC9zdmc+");
-  }
-  
-  /* Left */
-  
-  ::-webkit-scrollbar-button:single-button:horizontal {
-    background-size: 4.6px;
-  }
-  
-  ::-webkit-scrollbar-button:single-button:horizontal:decrement {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMTZMMTggMC40MTE1NDVMMTggMzEuNTg4NUwwIDE2WiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
-    background-position: right 3px;
-  }
-  
-  .dark ::-webkit-scrollbar-button:single-button:horizontal:decrement {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMTZMMTggLjQxMnYzMS4xNzdMMCAxNnoiIGZpbGw9IiNEREQiLz48L3N2Zz4=");
-  }
-  
-  /* Right */
-  
-  ::-webkit-scrollbar-button:single-button:horizontal:increment {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4NUwwIDAuNDExNTQzTDE4IDE2WiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
-    background-position: left 3px;
-  }
-  
-  .dark ::-webkit-scrollbar-button:single-button:horizontal:increment {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4Vi40MTNMMTggMTZ6IiBmaWxsPSIjREREIi8+PC9zdmc+");
-  }
-  
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 0, 0, .5);
+            background-clip: content-box;
+
+            border: 4px solid transparent;
+            border-radius: 100px;
+        }
+
+
+
+        html.no-border-radius ::-webkit-scrollbar-thumb {
+            border-radius: 0;
+        }
+
+        ::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }
+
+        /* Buttons */
+
+        ::-webkit-scrollbar-button:single-button {
+            display: block;
+            background-repeat: no-repeat;
+            border: 0;
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Up */
+
+        ::-webkit-scrollbar-button:single-button:vertical:decrement {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
+            background-size: 8px;
+            background-position: 3px bottom;
+        }
+
+        .dark ::-webkit-scrollbar-button:single-button:vertical:decrement {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iI0RERERERCIvPgo8L3N2Zz4K");
+        }
+
+        /* Down */
+
+        ::-webkit-scrollbar-button:single-button:vertical:increment {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjODg4Ii8+PC9zdmc+");
+            background-size: 8px;
+            background-position: 3px top;
+        }
+
+        .dark *::-webkit-scrollbar-button:single-button:vertical:increment {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjREREIi8+PC9zdmc+");
+        }
+
+        /* Left */
+
+        ::-webkit-scrollbar-button:single-button:horizontal {
+            background-size: 4.6px;
+        }
+
+        ::-webkit-scrollbar-button:single-button:horizontal:decrement {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMTZMMTggMC40MTE1NDVMMTggMzEuNTg4NUwwIDE2WiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
+            background-position: right 3px;
+        }
+
+        .dark ::-webkit-scrollbar-button:single-button:horizontal:decrement {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMTZMMTggLjQxMnYzMS4xNzdMMCAxNnoiIGZpbGw9IiNEREQiLz48L3N2Zz4=");
+        }
+
+        /* Right */
+
+        ::-webkit-scrollbar-button:single-button:horizontal:increment {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4NUwwIDAuNDExNTQzTDE4IDE2WiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
+            background-position: left 3px;
+        }
+
+        .dark ::-webkit-scrollbar-button:single-button:horizontal:increment {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4Vi40MTNMMTggMTZ6IiBmaWxsPSIjREREIi8+PC9zdmc+");
+        }
+
+        .topnav-hover-2 {
+            background: rgba(255, 255, 255, 0);
+            padding: 3px;
+            border-radius: 100%;
+        }
+
+        .topnav-hover-2:hover {
+            background: #f5f5f5;
+        }
 
         @media only screen and (min-width: 640px) {
             .player-top {
@@ -1010,8 +1147,15 @@ bottom: -11px;
                 right: 10px !important;
 
             }
-.uppertabbar{left:0}
-.contentarea2{border-radius:0;margin-left:0}
+
+            .uppertabbar {
+                left: 0
+            }
+
+            .contentarea2 {
+                border-radius: 0;
+                margin-left: 0
+            }
         }
 
         @media only screen and (min-height: 525px) {
@@ -1028,19 +1172,11 @@ bottom: -11px;
             }
 
             #login-pic {
-               /* height: 38px !important;
+                /* height: 38px !important;
                 width: 38px !important;*/
             }
 
-            .topnav-hover-2 {
-                background: rgba(255, 255, 255, 0);
-                padding: 3px;
-                border-radius: 100%;
-            }
 
-            .topnav-hover-2:hover {
-                background: #f5f5f5;
-            }
 
             #topnav-hover-dark {
                 margin-right: 12px !important;
@@ -1051,7 +1187,7 @@ bottom: -11px;
         @media only screen and (max-width: 1011px) {
             .flex_menu_container {
 
-            /*    padding: 0 24px; */
+                /*    padding: 0 24px; */
 
             }
 
@@ -1089,7 +1225,7 @@ bottom: -11px;
             document.getElementById('notify-content').classList.remove('notify-showit');
             document.getElementById('progress-player-id').classList.remove('progress-player-show');
         }
-    
+
 
         function darkmode() {
             var element = document.body;
@@ -1123,17 +1259,17 @@ bottom: -11px;
 
             document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed");
             document.getElementById("uppertabbar").classList.toggle("tabbar-collapsed");
-document.getElementById("contentarea2").classList.toggle("contentarea2-collapsed");
+            document.getElementById("contentarea2").classList.toggle("contentarea2-collapsed");
 
         }
 
         function openthemes() {
             document.getElementById("theme-container").classList.add("showit3");
-        
+
         }
         function closethemes() {
             document.getElementById("theme-container").classList.remove("showit3");
-        
+
         }
 
         function showarrow() {
@@ -1184,25 +1320,90 @@ document.getElementById("contentarea2").classList.toggle("contentarea2-collapsed
 
             <div class="menu-icon" id="menu-icon" onclick="sidebar_toggle()">
 
-
-                
-                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
-                    class="style-scope yt-icon"
-                    style="pointer-events: none; display: block; width: 24px; height: 24px;">
-                    <g class="style-scope yt-icon">
-                        <path d="M21,6H3V5h18V6z M21,11H3v1h18V11z M21,17H3v1h18V17z" class="style-scope yt-icon">
-                        </path>
-                    </g>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6" style="width:24px;height:24px">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
+
+
+
             </div>
 
             <div style="width:auto;margin-left:17px" id="logoimage">
-                <img src="https://raw.githubusercontent.com/Lakshay-7134/Go/main/Favicon%20Logo.png"
-                    style="height: 30px;width: auto;">
+
+                <svg alt="WeUI" width="32" height="32" viewBox="0 0 48 48" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20.0842 3.02588L19.8595 3.16179C19.5021 3.37799 19.1654 3.61972 18.8512 3.88385L19.4993 3.42798H25L26 11L21 16L16 19.4754V23.4829C16 26.2819 17.4629 28.8774 19.8574 30.3268L25.1211 33.5129L14 40.0002H11.8551L7.85737 37.5804C5.46286 36.131 4 33.5355 4 30.7365V17.2606C4 14.4607 5.46379 11.8645 7.85952 10.4154L19.8595 3.15687C19.9339 3.11189 20.0088 3.06823 20.0842 3.02588Z"
+                        fill="url(#paint0_radial_2994_8373)"></path>
+                    <path
+                        d="M20.0842 3.02588L19.8595 3.16179C19.5021 3.37799 19.1654 3.61972 18.8512 3.88385L19.4993 3.42798H25L26 11L21 16L16 19.4754V23.4829C16 26.2819 17.4629 28.8774 19.8574 30.3268L25.1211 33.5129L14 40.0002H11.8551L7.85737 37.5804C5.46286 36.131 4 33.5355 4 30.7365V17.2606C4 14.4607 5.46379 11.8645 7.85952 10.4154L19.8595 3.15687C19.9339 3.11189 20.0088 3.06823 20.0842 3.02588Z"
+                        fill="url(#paint1_linear_2994_8373)"></path>
+                    <path
+                        d="M32 19V23.4803C32 26.2793 30.5371 28.8748 28.1426 30.3242L16.1426 37.5878C13.6878 39.0737 10.6335 39.1273 8.1355 37.7487L19.8573 44.844C22.4039 46.3855 25.5959 46.3855 28.1426 44.844L40.1426 37.5803C42.5371 36.1309 43.9999 33.5354 43.9999 30.7364V27.5L42.9999 26L32 19Z"
+                        fill="url(#paint2_radial_2994_8373)"></path>
+                    <path
+                        d="M32 19V23.4803C32 26.2793 30.5371 28.8748 28.1426 30.3242L16.1426 37.5878C13.6878 39.0737 10.6335 39.1273 8.1355 37.7487L19.8573 44.844C22.4039 46.3855 25.5959 46.3855 28.1426 44.844L40.1426 37.5803C42.5371 36.1309 43.9999 33.5354 43.9999 30.7364V27.5L42.9999 26L32 19Z"
+                        fill="url(#paint3_linear_2994_8373)"></path>
+                    <path
+                        d="M40.1405 10.4153L28.1405 3.15678C25.6738 1.66471 22.6021 1.61849 20.0979 3.01811L19.8595 3.16231C17.4638 4.61143 16 7.20757 16 10.0075V19.4914L19.8595 17.1568C22.4051 15.6171 25.5949 15.6171 28.1405 17.1568L40.1405 24.4153C42.4613 25.8192 43.9076 28.2994 43.9957 30.9985C43.9986 30.9113 44 30.824 44 30.7364V17.2605C44 14.4606 42.5362 11.8644 40.1405 10.4153Z"
+                        fill="url(#paint4_radial_2994_8373)"></path>
+                    <path
+                        d="M40.1405 10.4153L28.1405 3.15678C25.6738 1.66471 22.6021 1.61849 20.0979 3.01811L19.8595 3.16231C17.4638 4.61143 16 7.20757 16 10.0075V19.4914L19.8595 17.1568C22.4051 15.6171 25.5949 15.6171 28.1405 17.1568L40.1405 24.4153C42.4613 25.8192 43.9076 28.2994 43.9957 30.9985C43.9986 30.9113 44 30.824 44 30.7364V17.2605C44 14.4606 42.5362 11.8644 40.1405 10.4153Z"
+                        fill="url(#paint5_linear_2994_8373)"></path>
+                    <path d="M4.00428 30.9984C4.00428 30.9984 4.00428 30.9984 4.00428 30.9984Z"
+                        fill="url(#paint6_radial_2994_8373)"></path>
+                    <path d="M4.00428 30.9984C4.00428 30.9984 4.00428 30.9984 4.00428 30.9984Z"
+                        fill="url(#paint7_linear_2994_8373)"></path>
+                    <defs>
+                        <radialGradient id="paint0_radial_2994_8373" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(17.4186 10.6383) rotate(110.528) scale(33.3657 58.1966)">
+                            <stop offset="0.06441" stop-color="#AE7FE2"></stop>
+                            <stop offset="1" stop-color="#0078D4"></stop>
+                        </radialGradient>
+                        <linearGradient id="paint1_linear_2994_8373" x1="17.5119" y1="37.8685" x2="12.7513" y2="29.6347"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#114A8B"></stop>
+                            <stop offset="1" stop-color="#0078D4" stop-opacity="0"></stop>
+                        </linearGradient>
+                        <radialGradient id="paint2_radial_2994_8373" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(10.4299 36.3511) rotate(-8.36717) scale(31.0503 20.5108)">
+                            <stop offset="0.133928" stop-color="#D59DFF"></stop>
+                            <stop offset="1" stop-color="#5E438F"></stop>
+                        </radialGradient>
+                        <linearGradient id="paint3_linear_2994_8373" x1="40.3566" y1="25.3768" x2="35.2552" y2="32.6916"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#493474"></stop>
+                            <stop offset="1" stop-color="#8C66BA" stop-opacity="0"></stop>
+                        </linearGradient>
+                        <radialGradient id="paint4_radial_2994_8373" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(41.0552 26.504) rotate(-165.772) scale(24.9228 41.9552)">
+                            <stop offset="0.0584996" stop-color="#50E6FF"></stop>
+                            <stop offset="1" stop-color="#436DCD"></stop>
+                        </radialGradient>
+                        <linearGradient id="paint5_linear_2994_8373" x1="16.9758" y1="3.05655" x2="24.4868" y2="3.05655"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#2D3F80"></stop>
+                            <stop offset="1" stop-color="#436DCD" stop-opacity="0"></stop>
+                        </linearGradient>
+                        <radialGradient id="paint6_radial_2994_8373" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(41.0552 26.504) rotate(-165.772) scale(24.9228 41.9552)">
+                            <stop offset="0.0584996" stop-color="#50E6FF"></stop>
+                            <stop offset="1" stop-color="#436DCD"></stop>
+                        </radialGradient>
+                        <linearGradient id="paint7_linear_2994_8373" x1="16.9758" y1="3.05655" x2="24.4868" y2="3.05655"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#2D3F80"></stop>
+                            <stop offset="1" stop-color="#436DCD" stop-opacity="0"></stop>
+                        </linearGradient>
+                    </defs>
+                </svg>
             </div>
 
             <div style="font-size: 17px;
-            font-family: MiSans, system-ui, sans-serif;color: #000;padding-left: 8px;font-weight:500" id="logotext">
+            font-family: MiSans, system-ui, sans-serif;color: #000;padding-left: 10px;font-weight:500;letter-spacing: .6px;"
+                id="logotext">
                 WeUI
             </div>
 
@@ -1364,12 +1565,62 @@ document.getElementById("contentarea2").classList.toggle("contentarea2-collapsed
             </div>
 
             <div style="width:auto;" id="mobilelogoimage">
-                <img src="https://raw.githubusercontent.com/Lakshay-7134/Go/main/Favicon%20Logo.png"
-                    style="height: 30px;width: auto;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path
+                        d="M13.5036 1.55664C13.5232 1.54262 13.5428 1.5287 13.5626 1.51489C13.4214 1.57767 13.2821 1.64616 13.145 1.72036L5.14496 6.04849C3.20732 7.09679 2 9.12264 2 11.3257V20.6739C2 22.8771 3.20754 24.9031 5.14545 25.9513L7.08424 27H9L17.0011 22.5549L14.1058 20.9606C12.19 19.9056 11 17.8918 11 15.7048L11 12.8634C11.3135 12.2511 11.9524 11.0214 12 11C12.0476 10.9786 14.6865 10.3244 16 10V1.55664H13.5036Z"
+                        fill="url(#paint0_radial_2996_8828)" />
+                    <path
+                        d="M13.5036 1.55664C13.5232 1.54262 13.5428 1.5287 13.5626 1.51489C13.4214 1.57767 13.2821 1.64616 13.145 1.72036L5.14496 6.04849C3.20732 7.09679 2 9.12264 2 11.3257V20.6739C2 22.8771 3.20754 24.9031 5.14545 25.9513L7.08424 27H9L17.0011 22.5549L14.1058 20.9606C12.19 19.9056 11 17.8918 11 15.7048L11 12.8634C11.3135 12.2511 11.9524 11.0214 12 11C12.0476 10.9786 14.6865 10.3244 16 10V1.55664H13.5036Z"
+                        fill="url(#paint1_linear_2996_8828)" />
+                    <path
+                        d="M20.9999 11.7144V15.8079C20.9999 18.0111 19.7924 20.0371 17.8545 21.0853L9.8545 25.4125C8.24387 26.2837 6.33414 26.3671 4.66626 25.6626C4.82047 25.7657 4.98028 25.8621 5.14539 25.9514L13.1454 30.2785C14.9265 31.2419 17.0734 31.2419 18.8545 30.2785L26.8545 25.9514C28.7924 24.9032 29.9999 22.8772 29.9999 20.6739V18.1429L23.9999 13.0001L20.9999 11.7144Z"
+                        fill="url(#paint2_radial_2996_8828)" />
+                    <path
+                        d="M20.9999 11.7144V15.8079C20.9999 18.0111 19.7924 20.0371 17.8545 21.0853L9.8545 25.4125C8.24387 26.2837 6.33414 26.3671 4.66626 25.6626C4.82047 25.7657 4.98028 25.8621 5.14539 25.9514L13.1454 30.2785C14.9265 31.2419 17.0734 31.2419 18.8545 30.2785L26.8545 25.9514C28.7924 24.9032 29.9999 22.8772 29.9999 20.6739V18.1429L23.9999 13.0001L20.9999 11.7144Z"
+                        fill="url(#paint3_linear_2996_8828)" />
+                    <path
+                        d="M26.855 6.0485L18.855 1.72037C17.2108 0.830824 15.2548 0.762335 13.5626 1.5149C11.9677 2.62928 11 4.4606 11 6.43276V12.7023L13.294 11.5431C14.9956 10.6833 17.0044 10.6833 18.706 11.5431L26.706 15.5855C28.6864 16.5862 29.9496 18.5961 29.9985 20.8072C29.9995 20.7629 30 20.7184 30 20.6739V11.3257C30 9.12265 28.7927 7.09679 26.855 6.0485Z"
+                        fill="url(#paint4_radial_2996_8828)" />
+                    <path
+                        d="M26.855 6.0485L18.855 1.72037C17.2108 0.830824 15.2548 0.762335 13.5626 1.5149C11.9677 2.62928 11 4.4606 11 6.43276V12.7023L13.294 11.5431C14.9956 10.6833 17.0044 10.6833 18.706 11.5431L26.706 15.5855C28.6864 16.5862 29.9496 18.5961 29.9985 20.8072C29.9995 20.7629 30 20.7184 30 20.6739V11.3257C30 9.12265 28.7927 7.09679 26.855 6.0485Z"
+                        fill="url(#paint5_linear_2996_8828)" />
+                    <defs>
+                        <radialGradient id="paint0_radial_2996_8828" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(14.316 7.42295) rotate(112.787) scale(29.3949 36.8157)">
+                            <stop offset="0.0598494" stop-color="#AE7FE2" />
+                            <stop offset="1" stop-color="#0078D4" />
+                        </radialGradient>
+                        <linearGradient id="paint1_linear_2996_8828" x1="13.2917" y1="24.5789" x2="11.0955" y2="19.3382"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#114A8B" />
+                            <stop offset="1" stop-color="#0078D4" stop-opacity="0" />
+                        </linearGradient>
+                        <radialGradient id="paint2_radial_2996_8828" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(8.57931 25.0399) rotate(-18.7226) scale(20.2985 15.5984)">
+                            <stop offset="0.110651" stop-color="#D59DFF" />
+                            <stop offset="1" stop-color="#5E438F" />
+                        </radialGradient>
+                        <linearGradient id="paint3_linear_2996_8828" x1="27.4264" y1="16.2694" x2="23.7685" y2="21.4561"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#493474" />
+                            <stop offset="1" stop-color="#8C66BA" stop-opacity="0" />
+                        </linearGradient>
+                        <radialGradient id="paint4_radial_2996_8828" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(30.5885 16.39) rotate(-160.555) scale(24.4188 24.2273)">
+                            <stop offset="0.0960063" stop-color="#50E6FF" />
+                            <stop offset="1" stop-color="#436DCD" />
+                        </radialGradient>
+                        <linearGradient id="paint5_linear_2996_8828" x1="11" y1="1.71803" x2="15.9242" y2="1.71803"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#2D3F80" />
+                            <stop offset="1" stop-color="#436DCD" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
             </div>
 
             <div style="font-size: 16.5px;
-            font-family: MiSans, system-ui, sans-serif;color: #1D1D1F;padding-left: 10px;letter-spacing: .5px;font-weight: 500"
+            font-family: MiSans, system-ui, sans-serif;color: #1D1D1F;padding-left: 10px;letter-spacing: .6px;font-weight: 500"
                 id="mobilelogotext">
                 WeUI
             </div>
@@ -1384,26 +1635,32 @@ document.getElementById("contentarea2").classList.toggle("contentarea2-collapsed
 
                 <div class="topnav-hover" onclick="open_notify()">
 
-        
-                    
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"   style="pointer-events: none; display: block; width: 24px; height: 24px;">
-                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-                </svg>
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-bell"
+                        style="pointer-events: none; display: block; width: 21px; height: 21px;">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
                 </div>
 
                 <div class="notify" id="notify-content">
-                    <div
-                        style="position: absolute; top:0;left:0;right:0;height:60px;background: #fff;display: flex;align-items: center;">
+                    <div style="position: absolute; top:0;left:0;right:0;height:60px;backdrop-filter: saturate(200%) blur(30px);
+    background: rgba(255, 255, 255, 0.98);display: flex;align-items: center;">
                         <div style="flex:1;padding-left: 20px;font-weight: 450;">Notifications</div>
-                        <div style="padding-right: 20px;"> <svg xmlns="http://www.w3.org/2000/svg" width="19"
-                                height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"
-                                style="margin-left: 25px;">
-                                <circle cx="12" cy="12" r="3" />
-                                <path
-                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
-                            </svg></div>
+                        <div style="padding-right: 20px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6" style="margin-left: 25px;height: 22px;width: 22px;">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+
+
+                        </div>
                     </div>
                     <div
                         style="display: flex;align-items: center;width: 100%;height: 100%;flex-direction: column;justify-content: center;">
@@ -1427,19 +1684,19 @@ document.getElementById("contentarea2").classList.toggle("contentarea2-collapsed
                 <div class="topnav-hover" style="margin-right: 15px;" id="topnav-hover-dark"
                     onclick="open_progress_player()">
 
-                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
-                        class="style-scope yt-icon"
-                        style="pointer-events: none; display: block; width: 24px; height: 24px;">
-                        <g class="style-scope yt-icon">
-                            <path
-                                d="M10,18v-6l5,3L10,18z M17,3H7v1h10V3z M20,6H4v1h16V6z M22,9H2v12h20V9z M3,10h18v10H3V10z"
-                                class="style-scope yt-icon"></path>
-                        </g>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6"
+                        style="pointer-events: none; display: block; width: 21px; height: 21px;">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 10.5v6m3-3H9m4.06-7.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
                     </svg>
 
                 </div>
 
-               
+
 
 
 
@@ -1571,7 +1828,7 @@ document.getElementById("contentarea2").classList.toggle("contentarea2-collapsed
             </div>
 
             <div
-                style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;" >
+                style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
                 Change Theme</div>
 
         </div>
@@ -1621,7 +1878,7 @@ document.getElementById("contentarea2").classList.toggle("contentarea2-collapsed
             </div>
 
 
-            <div class="dropitem"  onclick="lightmode()">
+            <div class="dropitem" onclick="lightmode()">
                 <div>
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
@@ -1685,29 +1942,34 @@ document.getElementById("contentarea2").classList.toggle("contentarea2-collapsed
 
             </div>
 
-          
-            
+
+
             <div class="dropitem exception">
-              
+
 
 
                 <div
                     style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;padding-left: 33px;padding-top: 15px;">
                     Theme Colour
                 </div>
-        </div>
+            </div>
             <div class="container" style="margin-top: 20px">
-            <div class="div1"></div>
-            <div class="div2"></div>
-            <div class="div3"></div></div>
+                <div class="div1"></div>
+                <div class="div2"></div>
+                <div class="div3"></div>
+            </div>
             <div class="container">
-            <div class="div5"></div>
-            <div class="div6"></div>
-            <div class="div7"></div></div>
+                <div class="div8"></div>
+                
+                <div class="div6"></div>
+                <div class="div5"></div>
+            </div>
             <div class="container" style="padding-bottom:12px">
-               
-                <div class="div8"></div></div>
-            
+
+                <div class="div7">More Colours
+            </div>
+            </div>
+
 
         </div>
     </div>
@@ -1718,13 +1980,14 @@ document.getElementById("contentarea2").classList.toggle("contentarea2-collapsed
 
         <div style="margin-top: 10px;" class="sidebar-item active">
             <div>
+
+
                 <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
                     class="style-scope yt-icon" style="pointer-events: none; display: block; width: 24px; height: 24px">
                     <g class="style-scope yt-icon">
                         <path d="M4,10V21h6V15h4v6h6V10L12,3Z" class="style-scope yt-icon"></path>
                     </g>
                 </svg>
-
             </div>
             <div class="hidden" style="padding-top: 5px;">Home</div>
         </div>
@@ -1893,9 +2156,12 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
 
 
     <div class="contentarea2" id="contentarea2">
-        <div style="    z-index: 10;
-    position: relative;display: flex;">
-<div style="width: 100%;height:100%;"></div>
+        <div class="slideshow">
+
+            <div style="width: 100%;background: url('https://prod-azurecdn-akamai-iris.azureedge.net/assets/74b9efd5-9646-8d11-14dc-01a244302044');flex: 1;background-size: cover;background-position: center;
+                ">
+
+            </div>
 
         </div>
     </div>
@@ -1909,14 +2175,14 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
                 </g>
             </svg>
         </div>
-        <div style="border-radius: 8px;height: 32px;margin: 12px;padding: 0 12px;margin-left: 24px;color: #1a73e8;vertical-align: middle;font-size: 15px;display:flex;align-items: center;flex: none;font-weight: 470;letter-spacing: .9px;"
+        <div style="border-radius: 8px;height: 32px;margin: 12px;padding: 0 12px;margin-left: 24px;color: #1D1D1F;vertical-align: middle;font-size: 15px;display:flex;align-items: center;flex: none;font-weight: 470;letter-spacing: .9px;"
             class="active2">
             All
         </div>
         <div
-        style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
-        Journeys
-    </div>
+            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            Journeys
+        </div>
         <div
             style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
             Live
@@ -2032,17 +2298,16 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
 
 
         <div
-            style="display: flex;align-items: center;height: 45.3097345px; color: rgb(100 116 139 / 1); background-color: rgb(248 250 252 / 1);border-radius: 0 0 0.75rem 0.75rem;">
+            style="display: flex;align-items: center;height: 45.3097345px; color: rgb(100 116 139 / 1); background-color: rgb(248 250 252 / 0.98);border-radius: 0 0 0.75rem 0.75rem;">
 
 
             <div style="display: flex; justify-content: space-evenly; align-items: center; flex: auto;">
 
                 <button type="button">
                     <svg width="24" height="24">
-                        <path
-                            d="M7 6.931C7 5.865 7.853 5 8.905 5h6.19C16.147 5 17 5.865 17 6.931V19l-5-4-5 4V6.931Z"
-                            fill="currentColor" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M7 6.931C7 5.865 7.853 5 8.905 5h6.19C16.147 5 17 5.865 17 6.931V19l-5-4-5 4V6.931Z"
+                            fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
                     </svg>
                 </button>
 
@@ -2050,8 +2315,8 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
                     <svg width="24" height="24" fill="none">
                         <path
                             d="M6.492 16.95c2.861 2.733 7.5 2.733 10.362 0 2.861-2.734 2.861-7.166 0-9.9-2.862-2.733-7.501-2.733-10.362 0A7.096 7.096 0 0 0 5.5 8.226"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"></path>
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
                         <path d="M5 5v3.111c0 .491.398.889.889.889H9" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
@@ -2083,10 +2348,10 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
                     <svg width="24" height="24" fill="none">
                         <path
                             d="M17.509 16.95c-2.862 2.733-7.501 2.733-10.363 0-2.861-2.734-2.861-7.166 0-9.9 2.862-2.733 7.501-2.733 10.363 0 .38.365.711.759.991 1.176"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"></path>
-                        <path d="M19 5v3.111c0 .491-.398.889-.889.889H15" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M19 5v3.111c0 .491-.398.889-.889.889H15" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                 </button>
 
