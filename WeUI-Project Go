@@ -2,9 +2,12 @@
 
 <head>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="">
-    <link rel="icon" type="image/png" sizes="32x32" href="">
-    <link rel="icon" type="image/png" sizes="16x16" href="">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://github.com/Lakshay-7134/Go/blob/main/apple-touch-icon.png?raw=true">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://github.com/Lakshay-7134/Go/blob/main/favicon-32x32.png?raw=true">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://github.com/Lakshay-7134/Go/blob/main/favicon-16x16.png?raw=true">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet"
@@ -72,29 +75,7 @@
             display: block;
         }
 
-        @font-face {
-            font-family: 'Greycliff';
-            src: url(fonts/acb7ae59aec93313db2762744492895a.woff2) format('woff2'), url(fonts/c6e73bf5f2fdecde347245a58ea39b34.woff) format('woff');
-            font-weight: 500;
-            font-style: normal;
-            font-display: swap;
-        }
 
-        @font-face {
-            font-family: 'Greycliff';
-            src: url(fonts/55ce09f79fd63a05a7fdbbaffceac45f.woff2) format('woff2'), url(fonts/d34adaad177723d92c2c8a62ff152055.woff) format('woff');
-            font-weight: 700;
-            font-style: normal;
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'Greycliff';
-            src: url(fonts/e3383e5dea76ba279d0459e08f8bd376.woff2) format('woff2'), url(fonts/63daa007f75b21ba9deb98327efe715d.woff) format('woff');
-            font-weight: 800;
-            font-style: normal;
-            font-display: swap;
-        }
 
         .flex_menu_container {
             height: 56px;
@@ -220,7 +201,7 @@
         .focused::after {
             transition: width .1s ease-in;
             width: 100%;
-            background: #1D1D1F;
+            background: #0c84ff;
         }
 
         .focu {
@@ -458,16 +439,16 @@
         }
 
         .dark-mode .flex_menu_container {
-            background: rgba(33, 33, 33, 0.98);
+            background: rgba(18, 18, 18, 1);
         }
 
         .dark-mode .search-container {
-            background: hsla(0, 0%, 100%, .033);
+            background: rgba(34, 34, 34, 1);
 
         }
 
         .dark-mode .sidebar {
-            background: #212121;
+            background: rgba(18, 18, 18, 1);
 
         }
 
@@ -762,7 +743,7 @@
             height: 3px;
             width: 22px;
             max-width: 100%;
-            background: #1D1D1F;
+            background: #0c84ff;
 
             z-index: 10;
             position: absolute;
@@ -778,54 +759,40 @@
         }
 
         .tabbar-shadow {
-            background: #fff;
-            height: 56px;
-            width: 56px;
+            background: rgb(255 255 252 / 0.98);
+            height: 40px;
+            width: 40px;
             position: fixed;
-            margin-left: 0;
+            margin-left: 16px;
             display: none;
             align-items: center;
             justify-content: center;
             z-index: 1000;
+            border-radius: 1000px;
         }
 
         .tabbar-shadow-right {
-            background: #fff;
-            height: 56px;
-            width: 56px;
+            background: rgb(255 255 252 / 0.98);
+            height: 40px;
+            width: 40px;
             position: fixed;
-            right: 0;
+            right: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 1000;
+            border-radius: 1000px;
         }
 
         .uppertabbar .tabbar-shadow:hover {
-            background: #fff !important;
+            background: rgba(255, 255, 255, 0.98) !important;
         }
 
         .uppertabbar .tabbar-shadow-right:hover {
             background: #fff !important;
         }
 
-        .uppertabbar .tabbar-shadow-right::after {
-            background: linear-gradient(to left, #fff 20%, rgba(255, 255, 255, 0) 80%);
-            content: "";
-            width: 50px;
-            height: 100%;
-            position: absolute;
-            left: -50px;
-        }
 
-        .tabbar-shadow::after {
-            background: linear-gradient(to right, #fff 20%, rgba(255, 255, 255, 0) 80%);
-            content: "";
-            width: 50px;
-            height: 100%;
-            position: absolute;
-            right: -50px;
-        }
 
         button {
             background-color: transparent;
@@ -1230,112 +1197,7 @@
     </style>
 
 
-    <script>
-        function collapsesidebar() {
-            document.getElementById("menu-icon").click();
-        }
-        function intfocus() {
-            document.getElementById("search_container").classList.add("focused");
-            document.getElementById("search_icon").classList.add("focu");
-            document.getElementById('dropdowncontent2').classList.toggle('showit2');
-            document.getElementById('notify-content').classList.remove('notify-showit');
-            document.getElementById('myDropdown').classList.remove('showit');
-            document.getElementById('progress-player-id').classList.remove('progress-player-show');
-        }
 
-        function intfocusrmv() {
-            document.getElementById("search_container").classList.remove("focused");
-            document.getElementById("search_icon").classList.remove("focu");
-            document.getElementById("dropdowncontent2").classList.remove("showit2");
-        }
-
-        function opendropdown() {
-            document.getElementById("myDropdown").classList.toggle("showit");
-            document.getElementById('notify-content').classList.remove('notify-showit');
-            document.getElementById('progress-player-id').classList.remove('progress-player-show');
-        }
-
-
-        function darkmode() {
-            var element = document.body;
-            element.classList.add("dark-mode");
-        }
-        function lightmode() {
-            var element = document.body;
-            element.classList.remove("dark-mode");
-        }
-
-        function open_notify() {
-            document.getElementById('notify-content').classList.toggle('notify-showit');
-            document.getElementById('myDropdown').classList.remove('showit');
-            document.getElementById('progress-player-id').classList.remove('progress-player-show');
-        }
-        function open_progress_player() {
-            document.getElementById('progress-player-id').classList.toggle('progress-player-show');
-            document.getElementById('myDropdown').classList.remove('showit');
-            document.getElementById('notify-content').classList.remove('notify-showit');
-        }
-
-        function open_nav() {
-            document.body.classList.toggle('body-toggle');
-            document.getElementById('line-1').classList.toggle('line-1-toggle');
-            document.getElementById('line-2').classList.toggle('line-2-toggle');
-            document.getElementById('line-3').classList.toggle('line-3-toggle');
-            document.getElementById('menu-icon').classList.toggle('menu-icon-toggle');
-        }
-
-        function sidebar_toggle() {
-
-            document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed");
-            document.getElementById("uppertabbar").classList.toggle("tabbar-collapsed");
-            document.getElementById("contentarea2").classList.toggle("contentarea2-collapsed");
-
-        }
-
-        function openthemes() {
-            document.getElementById("theme-container").classList.add("showit3");
-
-        }
-        function closethemes() {
-            document.getElementById("theme-container").classList.remove("showit3");
-
-        }
-
-        function showarrow() {
-
-
-            let x = document.getElementById("uppertabbar").scrollLeft;
-            if (x == 0) {
-                document.getElementById("tabbar-shadow").style.display = "none";
-            }
-
-            else {
-                document.getElementById("tabbar-shadow").style.display = "flex";
-
-            }
-
-        }
-
-        function showarrowright() {
-
-
-            let z = document.getElementById("uppertabbar").scrollLeft;
-            let y = document.getElementById("uppertabbar").scrollWidth - document.getElementById("uppertabbar").clientWidth;
-
-
-            if (z == y) {
-                document.getElementById("tabbar-shadow-right").style.display = "none";
-            }
-
-            else {
-                document.getElementById("tabbar-shadow-right").style.display = "flex";
-
-            }
-
-        }
-
-
-    </script>
 
 </head>
 
@@ -1361,73 +1223,8 @@
 
             <div style="width:auto;margin-left:17px" id="logoimage">
 
-                <svg alt="WeUI" width="32" height="32" viewBox="0 0 48 48" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M20.0842 3.02588L19.8595 3.16179C19.5021 3.37799 19.1654 3.61972 18.8512 3.88385L19.4993 3.42798H25L26 11L21 16L16 19.4754V23.4829C16 26.2819 17.4629 28.8774 19.8574 30.3268L25.1211 33.5129L14 40.0002H11.8551L7.85737 37.5804C5.46286 36.131 4 33.5355 4 30.7365V17.2606C4 14.4607 5.46379 11.8645 7.85952 10.4154L19.8595 3.15687C19.9339 3.11189 20.0088 3.06823 20.0842 3.02588Z"
-                        fill="url(#paint0_radial_2994_8373)"></path>
-                    <path
-                        d="M20.0842 3.02588L19.8595 3.16179C19.5021 3.37799 19.1654 3.61972 18.8512 3.88385L19.4993 3.42798H25L26 11L21 16L16 19.4754V23.4829C16 26.2819 17.4629 28.8774 19.8574 30.3268L25.1211 33.5129L14 40.0002H11.8551L7.85737 37.5804C5.46286 36.131 4 33.5355 4 30.7365V17.2606C4 14.4607 5.46379 11.8645 7.85952 10.4154L19.8595 3.15687C19.9339 3.11189 20.0088 3.06823 20.0842 3.02588Z"
-                        fill="url(#paint1_linear_2994_8373)"></path>
-                    <path
-                        d="M32 19V23.4803C32 26.2793 30.5371 28.8748 28.1426 30.3242L16.1426 37.5878C13.6878 39.0737 10.6335 39.1273 8.1355 37.7487L19.8573 44.844C22.4039 46.3855 25.5959 46.3855 28.1426 44.844L40.1426 37.5803C42.5371 36.1309 43.9999 33.5354 43.9999 30.7364V27.5L42.9999 26L32 19Z"
-                        fill="url(#paint2_radial_2994_8373)"></path>
-                    <path
-                        d="M32 19V23.4803C32 26.2793 30.5371 28.8748 28.1426 30.3242L16.1426 37.5878C13.6878 39.0737 10.6335 39.1273 8.1355 37.7487L19.8573 44.844C22.4039 46.3855 25.5959 46.3855 28.1426 44.844L40.1426 37.5803C42.5371 36.1309 43.9999 33.5354 43.9999 30.7364V27.5L42.9999 26L32 19Z"
-                        fill="url(#paint3_linear_2994_8373)"></path>
-                    <path
-                        d="M40.1405 10.4153L28.1405 3.15678C25.6738 1.66471 22.6021 1.61849 20.0979 3.01811L19.8595 3.16231C17.4638 4.61143 16 7.20757 16 10.0075V19.4914L19.8595 17.1568C22.4051 15.6171 25.5949 15.6171 28.1405 17.1568L40.1405 24.4153C42.4613 25.8192 43.9076 28.2994 43.9957 30.9985C43.9986 30.9113 44 30.824 44 30.7364V17.2605C44 14.4606 42.5362 11.8644 40.1405 10.4153Z"
-                        fill="url(#paint4_radial_2994_8373)"></path>
-                    <path
-                        d="M40.1405 10.4153L28.1405 3.15678C25.6738 1.66471 22.6021 1.61849 20.0979 3.01811L19.8595 3.16231C17.4638 4.61143 16 7.20757 16 10.0075V19.4914L19.8595 17.1568C22.4051 15.6171 25.5949 15.6171 28.1405 17.1568L40.1405 24.4153C42.4613 25.8192 43.9076 28.2994 43.9957 30.9985C43.9986 30.9113 44 30.824 44 30.7364V17.2605C44 14.4606 42.5362 11.8644 40.1405 10.4153Z"
-                        fill="url(#paint5_linear_2994_8373)"></path>
-                    <path d="M4.00428 30.9984C4.00428 30.9984 4.00428 30.9984 4.00428 30.9984Z"
-                        fill="url(#paint6_radial_2994_8373)"></path>
-                    <path d="M4.00428 30.9984C4.00428 30.9984 4.00428 30.9984 4.00428 30.9984Z"
-                        fill="url(#paint7_linear_2994_8373)"></path>
-                    <defs>
-                        <radialGradient id="paint0_radial_2994_8373" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                            gradientTransform="translate(17.4186 10.6383) rotate(110.528) scale(33.3657 58.1966)">
-                            <stop offset="0.06441" stop-color="#AE7FE2"></stop>
-                            <stop offset="1" stop-color="#0078D4"></stop>
-                        </radialGradient>
-                        <linearGradient id="paint1_linear_2994_8373" x1="17.5119" y1="37.8685" x2="12.7513" y2="29.6347"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#114A8B"></stop>
-                            <stop offset="1" stop-color="#0078D4" stop-opacity="0"></stop>
-                        </linearGradient>
-                        <radialGradient id="paint2_radial_2994_8373" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                            gradientTransform="translate(10.4299 36.3511) rotate(-8.36717) scale(31.0503 20.5108)">
-                            <stop offset="0.133928" stop-color="#D59DFF"></stop>
-                            <stop offset="1" stop-color="#5E438F"></stop>
-                        </radialGradient>
-                        <linearGradient id="paint3_linear_2994_8373" x1="40.3566" y1="25.3768" x2="35.2552" y2="32.6916"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#493474"></stop>
-                            <stop offset="1" stop-color="#8C66BA" stop-opacity="0"></stop>
-                        </linearGradient>
-                        <radialGradient id="paint4_radial_2994_8373" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                            gradientTransform="translate(41.0552 26.504) rotate(-165.772) scale(24.9228 41.9552)">
-                            <stop offset="0.0584996" stop-color="#50E6FF"></stop>
-                            <stop offset="1" stop-color="#436DCD"></stop>
-                        </radialGradient>
-                        <linearGradient id="paint5_linear_2994_8373" x1="16.9758" y1="3.05655" x2="24.4868" y2="3.05655"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#2D3F80"></stop>
-                            <stop offset="1" stop-color="#436DCD" stop-opacity="0"></stop>
-                        </linearGradient>
-                        <radialGradient id="paint6_radial_2994_8373" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                            gradientTransform="translate(41.0552 26.504) rotate(-165.772) scale(24.9228 41.9552)">
-                            <stop offset="0.0584996" stop-color="#50E6FF"></stop>
-                            <stop offset="1" stop-color="#436DCD"></stop>
-                        </radialGradient>
-                        <linearGradient id="paint7_linear_2994_8373" x1="16.9758" y1="3.05655" x2="24.4868" y2="3.05655"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#2D3F80"></stop>
-                            <stop offset="1" stop-color="#436DCD" stop-opacity="0"></stop>
-                        </linearGradient>
-                    </defs>
-                </svg>
+                <img src="https://raw.githubusercontent.com/Lakshay-7134/Go/main/Favicon%20Logo.png"
+                    style="height: 30px;width: auto;">
             </div>
 
             <div style="font-size: 17px;
@@ -1594,58 +1391,8 @@
             </div>
 
             <div style="width:auto;" id="mobilelogoimage">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <path
-                        d="M13.5036 1.55664C13.5232 1.54262 13.5428 1.5287 13.5626 1.51489C13.4214 1.57767 13.2821 1.64616 13.145 1.72036L5.14496 6.04849C3.20732 7.09679 2 9.12264 2 11.3257V20.6739C2 22.8771 3.20754 24.9031 5.14545 25.9513L7.08424 27H9L17.0011 22.5549L14.1058 20.9606C12.19 19.9056 11 17.8918 11 15.7048L11 12.8634C11.3135 12.2511 11.9524 11.0214 12 11C12.0476 10.9786 14.6865 10.3244 16 10V1.55664H13.5036Z"
-                        fill="url(#paint0_radial_2996_8828)" />
-                    <path
-                        d="M13.5036 1.55664C13.5232 1.54262 13.5428 1.5287 13.5626 1.51489C13.4214 1.57767 13.2821 1.64616 13.145 1.72036L5.14496 6.04849C3.20732 7.09679 2 9.12264 2 11.3257V20.6739C2 22.8771 3.20754 24.9031 5.14545 25.9513L7.08424 27H9L17.0011 22.5549L14.1058 20.9606C12.19 19.9056 11 17.8918 11 15.7048L11 12.8634C11.3135 12.2511 11.9524 11.0214 12 11C12.0476 10.9786 14.6865 10.3244 16 10V1.55664H13.5036Z"
-                        fill="url(#paint1_linear_2996_8828)" />
-                    <path
-                        d="M20.9999 11.7144V15.8079C20.9999 18.0111 19.7924 20.0371 17.8545 21.0853L9.8545 25.4125C8.24387 26.2837 6.33414 26.3671 4.66626 25.6626C4.82047 25.7657 4.98028 25.8621 5.14539 25.9514L13.1454 30.2785C14.9265 31.2419 17.0734 31.2419 18.8545 30.2785L26.8545 25.9514C28.7924 24.9032 29.9999 22.8772 29.9999 20.6739V18.1429L23.9999 13.0001L20.9999 11.7144Z"
-                        fill="url(#paint2_radial_2996_8828)" />
-                    <path
-                        d="M20.9999 11.7144V15.8079C20.9999 18.0111 19.7924 20.0371 17.8545 21.0853L9.8545 25.4125C8.24387 26.2837 6.33414 26.3671 4.66626 25.6626C4.82047 25.7657 4.98028 25.8621 5.14539 25.9514L13.1454 30.2785C14.9265 31.2419 17.0734 31.2419 18.8545 30.2785L26.8545 25.9514C28.7924 24.9032 29.9999 22.8772 29.9999 20.6739V18.1429L23.9999 13.0001L20.9999 11.7144Z"
-                        fill="url(#paint3_linear_2996_8828)" />
-                    <path
-                        d="M26.855 6.0485L18.855 1.72037C17.2108 0.830824 15.2548 0.762335 13.5626 1.5149C11.9677 2.62928 11 4.4606 11 6.43276V12.7023L13.294 11.5431C14.9956 10.6833 17.0044 10.6833 18.706 11.5431L26.706 15.5855C28.6864 16.5862 29.9496 18.5961 29.9985 20.8072C29.9995 20.7629 30 20.7184 30 20.6739V11.3257C30 9.12265 28.7927 7.09679 26.855 6.0485Z"
-                        fill="url(#paint4_radial_2996_8828)" />
-                    <path
-                        d="M26.855 6.0485L18.855 1.72037C17.2108 0.830824 15.2548 0.762335 13.5626 1.5149C11.9677 2.62928 11 4.4606 11 6.43276V12.7023L13.294 11.5431C14.9956 10.6833 17.0044 10.6833 18.706 11.5431L26.706 15.5855C28.6864 16.5862 29.9496 18.5961 29.9985 20.8072C29.9995 20.7629 30 20.7184 30 20.6739V11.3257C30 9.12265 28.7927 7.09679 26.855 6.0485Z"
-                        fill="url(#paint5_linear_2996_8828)" />
-                    <defs>
-                        <radialGradient id="paint0_radial_2996_8828" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                            gradientTransform="translate(14.316 7.42295) rotate(112.787) scale(29.3949 36.8157)">
-                            <stop offset="0.0598494" stop-color="#AE7FE2" />
-                            <stop offset="1" stop-color="#0078D4" />
-                        </radialGradient>
-                        <linearGradient id="paint1_linear_2996_8828" x1="13.2917" y1="24.5789" x2="11.0955" y2="19.3382"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#114A8B" />
-                            <stop offset="1" stop-color="#0078D4" stop-opacity="0" />
-                        </linearGradient>
-                        <radialGradient id="paint2_radial_2996_8828" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                            gradientTransform="translate(8.57931 25.0399) rotate(-18.7226) scale(20.2985 15.5984)">
-                            <stop offset="0.110651" stop-color="#D59DFF" />
-                            <stop offset="1" stop-color="#5E438F" />
-                        </radialGradient>
-                        <linearGradient id="paint3_linear_2996_8828" x1="27.4264" y1="16.2694" x2="23.7685" y2="21.4561"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#493474" />
-                            <stop offset="1" stop-color="#8C66BA" stop-opacity="0" />
-                        </linearGradient>
-                        <radialGradient id="paint4_radial_2996_8828" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                            gradientTransform="translate(30.5885 16.39) rotate(-160.555) scale(24.4188 24.2273)">
-                            <stop offset="0.0960063" stop-color="#50E6FF" />
-                            <stop offset="1" stop-color="#436DCD" />
-                        </radialGradient>
-                        <linearGradient id="paint5_linear_2996_8828" x1="11" y1="1.71803" x2="15.9242" y2="1.71803"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#2D3F80" />
-                            <stop offset="1" stop-color="#436DCD" stop-opacity="0" />
-                        </linearGradient>
-                    </defs>
-                </svg>
+                <img src="https://raw.githubusercontent.com/Lakshay-7134/Go/main/Favicon%20Logo.png"
+                    style="height: 30px;width: auto;">
             </div>
 
             <div style="font-size: 16.5px;
@@ -1910,7 +1657,7 @@
             </div>
 
 
-            <div class="dropitem" onclick="lightmode()">
+            <div class="dropitem" id="light-theme">
                 <div>
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
@@ -1937,7 +1684,7 @@
 
 
             </div>
-            <div class="dropitem" onclick="darkmode()">
+            <div class="dropitem" id="dark-theme">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -2237,7 +1984,8 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
                 </g>
             </svg>
         </div>
-        <div style="border-radius: 8px;height: 32px;margin: 12px;padding: 0 12px;margin-left: 24px;color: #1D1D1F;vertical-align: middle;font-size: 15px;display:flex;align-items: center;flex: none;font-weight: 470;letter-spacing: .9px;"
+
+        <div style="border-radius: 8px;height: 32px;margin: 12px;padding: 0 12px;margin-left: 24px;color: #0c84ff;vertical-align: middle;font-size: 15px;display:flex;align-items: center;flex: none;font-weight: 470;letter-spacing: .9px;"
             class="active2">
             All
         </div>
@@ -2318,7 +2066,7 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
                 <div style="min-width: 0;font-weight:600;flex:1;
                 margin-right: calc(1rem * 0);
                 margin-left: calc(1rem * calc(1 - 0));">
-                    <p style="color: #1D1D1F;font-size:0.875rem;line-height: 1.5rem;">
+                    <p style="color: #0c84ff;font-size:0.875rem;line-height: 1.5rem;">
                         <a title="Episode">Ep.</a> 110
                     </p>
                     <h2 style="color:rgb(100 116 139 / 1);font-size:0.875rem;line-height: 1.5rem;    overflow: hidden;
@@ -2344,10 +2092,10 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
 
 
                     <div style="background: rgb(241 245 249 / 1);border-radius: 9999px;overflow: hidden;">
-                        <div style="width: 50%;height: 0.5rem;background: #1D1D1F;"></div>
+                        <div style="width: 50%;height: 0.5rem;background: #0c84ff;"></div>
                     </div>
                     <div
-                        style="background: #ffffff;position: absolute;left: 50%;top: 50%;width: 18px;height: 18px;margin-top: -0.5rem;margin-left: -0.5rem;border: 3px solid #1D1D1F;border-radius: 1000px;">
+                        style="background: #ffffff;position: absolute;left: 50%;top: 50%;width: 18px;height: 18px;margin-top: -0.5rem;margin-left: -0.5rem;border: 3px solid #0c84ff;border-radius: 1000px;">
 
                     </div>
                 </div>
@@ -2429,6 +2177,137 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
 
 
     </div>
+
+
+    <script>
+        function collapsesidebar() {
+            document.getElementById("menu-icon").click();
+        }
+        function intfocus() {
+            document.getElementById("search_container").classList.add("focused");
+            document.getElementById("search_icon").classList.add("focu");
+            document.getElementById('dropdowncontent2').classList.toggle('showit2');
+            document.getElementById('notify-content').classList.remove('notify-showit');
+            document.getElementById('myDropdown').classList.remove('showit');
+            document.getElementById('progress-player-id').classList.remove('progress-player-show');
+        }
+
+        function intfocusrmv() {
+            document.getElementById("search_container").classList.remove("focused");
+            document.getElementById("search_icon").classList.remove("focu");
+            document.getElementById("dropdowncontent2").classList.remove("showit2");
+        }
+
+        function opendropdown() {
+            document.getElementById("myDropdown").classList.toggle("showit");
+            document.getElementById('notify-content').classList.remove('notify-showit');
+            document.getElementById('progress-player-id').classList.remove('progress-player-show');
+        }
+
+        var dark = document.querySelector("#dark-theme");
+        var light = document.querySelector("#light-theme");
+
+
+        function darkmode() {
+            var element = document.body;
+            element.classList.add("dark-mode");
+            localStorage.setItem('WeUI-theme-keycode', 'dark');
+        }
+        function lightmode() {
+            var element = document.body;
+            element.classList.remove("dark-mode");
+            localStorage.setItem('WeUI-theme-keycode', 'light');
+        }
+
+        dark.addEventListener('click', darkmode);
+        light.addEventListener('click', lightmode);
+
+        var themecode = localStorage.getItem('WeUI-theme-keycode');
+
+        if (themecode == 'dark') { darkmode(); }
+        else { lightmode(); }
+
+        //     window.addEventListener('storage', () => {
+        //         if (themecode.key == 'dark'){darkmode()}
+        //       else if (themecode.key == 'light'){lightmode()}
+        //       else{alert(localStorage.getItem('WeUI-theme-keycode').newValue)}
+        //  })
+
+
+
+        function open_notify() {
+            document.getElementById('notify-content').classList.toggle('notify-showit');
+            document.getElementById('myDropdown').classList.remove('showit');
+            document.getElementById('progress-player-id').classList.remove('progress-player-show');
+        }
+        function open_progress_player() {
+            document.getElementById('progress-player-id').classList.toggle('progress-player-show');
+            document.getElementById('myDropdown').classList.remove('showit');
+            document.getElementById('notify-content').classList.remove('notify-showit');
+        }
+
+        function open_nav() {
+            document.body.classList.toggle('body-toggle');
+            document.getElementById('line-1').classList.toggle('line-1-toggle');
+            document.getElementById('line-2').classList.toggle('line-2-toggle');
+            document.getElementById('line-3').classList.toggle('line-3-toggle');
+            document.getElementById('menu-icon').classList.toggle('menu-icon-toggle');
+        }
+
+        function sidebar_toggle() {
+
+            document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed");
+            document.getElementById("uppertabbar").classList.toggle("tabbar-collapsed");
+            document.getElementById("contentarea2").classList.toggle("contentarea2-collapsed");
+
+        }
+
+        function openthemes() {
+            document.getElementById("theme-container").classList.add("showit3");
+
+        }
+        function closethemes() {
+            document.getElementById("theme-container").classList.remove("showit3");
+
+        }
+
+        function showarrow() {
+
+
+            let x = document.getElementById("uppertabbar").scrollLeft;
+            if (x == 0) {
+                document.getElementById("tabbar-shadow").style.display = "none";
+            }
+
+            else {
+                document.getElementById("tabbar-shadow").style.display = "flex";
+
+            }
+
+        }
+
+        function showarrowright() {
+
+
+            let z = document.getElementById("uppertabbar").scrollLeft;
+            let y = document.getElementById("uppertabbar").scrollWidth - document.getElementById("uppertabbar").clientWidth;
+
+
+            if (z == y) {
+                document.getElementById("tabbar-shadow-right").style.display = "none";
+            }
+
+            else {
+                document.getElementById("tabbar-shadow-right").style.display = "flex";
+
+            }
+
+        }
+
+
+    </script>
+
+
 </body>
 
 </html>
