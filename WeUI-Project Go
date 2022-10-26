@@ -1286,12 +1286,12 @@
                 background: initial;
              
             }
-.active3{background: #1a73e8;border:1px solid #1a73e8}
-            .tabbar-shadow-right {display:none;
+.active3{background: #1a73e8 !important;border:1px solid #1a73e8}
+            .tabbar-shadow-right {display:none;visibility:hidden;opacity:0;
               
             }
 
-            .tabbar-shadow {display:none;
+            .tabbar-shadow {display:none;visibility:hidden;opacity:0;
                
             }
 
