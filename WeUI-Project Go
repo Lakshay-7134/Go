@@ -1272,11 +1272,11 @@
                 background: #fff;
             }
 
-            .dot-container {
+            .dot-container {display:none;
                 margin-top: 5px !important;
             }
 
-            .dot {
+            .dot {display:none;
                 background: transparent !important;
                 border-radius: 1000px !important;
                 height: 13.5px !important;
