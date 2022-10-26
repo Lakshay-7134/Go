@@ -1277,18 +1277,22 @@
             }
 
             .dot {
-                background: #000 !important;
+                background: transparent !important;
                 border-radius: 1000px !important;
-                height: 15px !important;
-                width: 15px !important;
+                height: 13.5px !important;
+                width: 13.5px !important;box-shadow:none;border:1px solid #1d1d1f; 
+            }
+            .dot:hover {
+                background: initial;
+             
+            }
+.active3{background: #1a73e8;border:1px solid #1a73e8}
+            .tabbar-shadow-right {display:none;
+              
             }
 
-            .tabbar-shadow-right {
-                background: #fff;
-            }
-
-            .tabbar-shadow {
-                background: #fff;
+            .tabbar-shadow {display:none;
+               
             }
 
             .dropdown-content {
