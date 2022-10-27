@@ -615,8 +615,6 @@
             width: 100%;
             overflow-x: auto;
             overflow-y: hidden;
-
-
             margin-top: -4rem;
             padding: 0 28px;
         }
@@ -2141,10 +2139,25 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
         <div class="slideshow">
 
         
-                <img src="https://sportshub.cbsistatic.com/i/2021/10/08/902896b4-9c86-4bd1-8778-95708022c3e1/pokemon-jungle-netflix.jpg" style="    max-width: 100%;
-                max-height: 100%;pointer-events: none;">
+                <img src="https://images.mubicdn.net/images/film/317201/cache-711447-1631030097/image-w1280.jpg" style="    max-width: 100%;
+                max-height: 100%;pointer-events: none;" class="mySlides">
+<img src="https://www.animegeek.com/wp-content/uploads/2021/04/Pokemon-Journeys-Part-6-release-date-Netflix-US-Pokemon-Journeys-Season-6-ending.jpg" style="    max-width: 100%;
+max-height: 100%;pointer-events: none;" class="mySlides">
+<img src="https://paperwriter.ca/wp-content/uploads/2022/07/Pokemon-Journeys-Episode-119-release-date-and-time-Reddit-spoilers.jpg" style="    max-width: 100%;
+max-height: 100%;pointer-events: none;" class="mySlides">
 
-         
+<img src="https://github.com/Lakshay-7134/Go/blob/main/My%20project.jpg?raw=true" style="    max-width: 100%;
+max-height: 100%;pointer-events: none;" class="mySlides">
+<img src="https://static.wikia.nocookie.net/pokemon/images/a/aa/SM001.png/revision/latest?cb=20170903175713" style="    max-width: 100%;
+max-height: 100%;pointer-events: none;" class="mySlides">
+<img src="https://i.ytimg.com/vi/hCr4XKf3Dsk/maxresdefault.jpg" style="    max-width: 100%;
+max-height: 100%;pointer-events: none;" class="mySlides">
+<img src="https://img1.ak.crunchyroll.com/i/spire3/f1861240668c36c0e75f60f0b7ecd3bf1663878821_main.jpg" style="    max-width: 100%;
+max-height: 100%;pointer-events: none;" class="mySlides">
+<img src="https://i.ytimg.com/vi/8PGsP59Io20/maxresdefault.jpg" style="    max-width: 100%;
+max-height: 100%;pointer-events: none;" class="mySlides">
+<img src="https://thelasttavern.com/wp-content/uploads/2022/07/dragon-ball-super-super-hero_1.jpg" style="    max-width: 100%;
+max-height: 100%;pointer-events: none;" class="mySlides">
             <div class="previousarrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" class="feather feather-chevron-left">
@@ -2159,22 +2172,22 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
             </div>
         </div>
         <div class="dot-container scrollbar-hidden">
-            <div style="width: 177.77px;background: url('https://sportshub.cbsistatic.com/i/2021/10/08/902896b4-9c86-4bd1-8778-95708022c3e1/pokemon-jungle-netflix.jpg');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
+            <div style="width: 177.77px;background: url('https://images.mubicdn.net/images/film/317201/cache-711447-1631030097/image-w1280.jpg');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
             margin-right: 0.30rem;
             " class="dot  active3"></div>
-            <div style="width: 177.77px;background: url('https://media.comicbook.com/2020/06/pokemon-anime-journeys-netflix-1217067-1224386.jpeg?auto=webp');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem ;flex: none;
+            <div style="width: 177.77px;background: url('https://www.animegeek.com/wp-content/uploads/2021/04/Pokemon-Journeys-Part-6-release-date-Netflix-US-Pokemon-Journeys-Season-6-ending.jpg');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem ;flex: none;
             margin-right: 0.30rem;
             " class="dot"></div>
         
 
-            <div style="width: 177.77px;background: url('https://media.comicbook.com/2021/05/pokemon-master-journeys-the-series-1267427.jpeg?auto=webp');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
+            <div style="width: 177.77px;background: url('https://paperwriter.ca/wp-content/uploads/2022/07/Pokemon-Journeys-Episode-119-release-date-and-time-Reddit-spoilers.jpg');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
             margin-right: 0.30rem;
             " class="dot"></div>
-             <div style="width: 177.77px;background: url('https://gameranx.com/wp-content/uploads/2022/05/Pokemon-Journeys-Master-Class.jpeg');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
+             <div style="width: 177.77px;background: url('https://github.com/Lakshay-7134/Go/blob/main/My%20project.jpg?raw=true');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
              margin-right: 0.30rem;
              " class="dot"></div>
              
-            <div style="width: 177.77px;background: url('https://static.wikia.nocookie.net/pokemon/images/d/dd/SM102.png/revision/latest?cb=20181226101124');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
+            <div style="width: 177.77px;background: url('https://static.wikia.nocookie.net/pokemon/images/a/aa/SM001.png/revision/latest?cb=20170903175713');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
             margin-right: 0.30rem;
             " class="dot"></div>
             
@@ -2183,7 +2196,7 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
             " class="dot"></div>
            
 
-           <div style="width: 177.77px;background: url('https://www.animenewsnetwork.com/thumbnails/crop1200x630gJI/cms/news.5/185561/pokemon_ultimate_journeys_the_series_key_art-1-.jpg');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
+           <div style="width: 177.77px;background: url('https://img1.ak.crunchyroll.com/i/spire3/f1861240668c36c0e75f60f0b7ecd3bf1663878821_main.jpg');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
            margin-right: 0.30rem;
            " class="dot"></div>
 
@@ -2192,7 +2205,7 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
            " class="dot"></div>
 
 
-            <div style="width: 177.77px;background: url('https://www.fayerwayer.com/resizer/TJY4bpe5eWlZrM_uZsBWIMrV1pc=/1200x630/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/M4ETI7VWSVALTMTAZH5EBG6JWM.jpg');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
+            <div style="width: 177.77px;background: url('https://thelasttavern.com/wp-content/uploads/2022/07/dragon-ball-super-super-hero_1.jpg');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
                           margin-right: 0.30rem;
                           " class="dot"></div>
                            
@@ -2530,7 +2543,25 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
 
         }
 
+        let slideIndex = 0;
+showSlides();
 
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active3", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active3";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
     </script>
 
 
