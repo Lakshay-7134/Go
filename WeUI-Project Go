@@ -1281,7 +1281,7 @@
             }
 
             .dot {display:block;
-                background: #f9f9f9; !important;
+                background: #f9f9f9 !important;
                 border-radius: 10px !important;
                 height: 11px !important;opacity: 0;
                 width: 11px !important;box-shadow:none; 
