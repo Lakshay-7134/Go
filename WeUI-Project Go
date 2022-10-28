@@ -1245,11 +1245,11 @@ margin-top: 24px;
             }
 
             .previousarrow {
-                display: flex;left: 28px;
+          left: 28px;
             }
 
             .nextarrow {
-                display: flex;right: 28px;
+      right: 28px;
             }
 
             .menu-icon {
