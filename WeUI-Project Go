@@ -888,7 +888,7 @@
         .slideshow {
             z-index: 10;
             position: relative;
-
+margin-top: 24px;
             max-height: calc(100vh - 150px);
 
             overflow: hidden;
@@ -1244,11 +1244,11 @@
             }
 
             .previousarrow {
-                display: flex;
+                display: flex;left: 32px;
             }
 
             .nextarrow {
-                display: flex;
+                display: flex;right: 32px;
             }
 
             .menu-icon {
@@ -1300,13 +1300,14 @@
                 background: #fff;
             }
 
-            /* .slideshow {
-                padding: 6px 18px;
+             .slideshow {
+                padding: 6px 16px;
             }
+            
 
             .mySlides {
-                border-radius: 8px;
-            } */
+                border-radius: 10px;
+            } 
 
             .dot-container {
                 display: flex;
