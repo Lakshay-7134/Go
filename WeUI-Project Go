@@ -924,10 +924,11 @@ margin-top: 24px;
             position: absolute;
             z-index: 50;
 
-            background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%);
+            background: linear-gradient(to top,var(--page-bg) 10%,rgba(135,136,135,.4) 50%,transparent 100%);
+}
 
 
-        }
+        
 
         .previousarrow {
             background: rgb(255 255 255 / 0.98);
@@ -941,7 +942,7 @@ margin-top: 24px;
             justify-content: center;
             z-index: 25;
             border-radius: 1000px;
-            display: none;
+            display: none;border: 1px solid #D9DDE1;
         }
 
         .nextarrow {
@@ -956,7 +957,7 @@ margin-top: 24px;
             justify-content: center;
             z-index: 25;
             border-radius: 1000px;
-            display: none;
+            display: none;border: 1px solid #D9DDE1;
         }
 
         .slideshow:hover .previousarrow {
@@ -1244,11 +1245,11 @@ margin-top: 24px;
             }
 
             .previousarrow {
-                display: flex;left: 32px;
+                display: flex;left: 28px;
             }
 
             .nextarrow {
-                display: flex;right: 32px;
+                display: flex;right: 28px;
             }
 
             .menu-icon {
