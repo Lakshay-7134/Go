@@ -615,7 +615,7 @@
             width: 100%;
             overflow-x: auto;
             overflow-y: hidden;
-            margin-top: -4rem;
+            margin-top: -72px;
             padding: 0 28px;
         }
 
@@ -747,7 +747,7 @@
             overflow-x: hidden;
             overflow-y: auto;
             right: 0;
-          
+            background: #fff;
             z-index: 10;
             border-radius: 0;
         }
@@ -888,18 +888,19 @@
         .slideshow {
             z-index: 10;
             position: relative;
-           
-          max-height: calc(100vh - 150px);
-          
+
+            max-height: calc(100vh - 150px);
+
             overflow: hidden;
             display: grid;
-    place-items: center;
-    width: auto;
-    height: auto;width: 100%;
-    background: transparent;
+            place-items: center;
+            width: auto;
+            height: auto;
+            width: 100%;
+            background: transparent;  
         }
 
-       /* .slideshow::after {
+        .slideshow::after {
             z-index: 15;
             content: "";
             width: 100%;
@@ -907,10 +908,26 @@
             bottom: 0;
             position: absolute;
 
-            background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.43) 40%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.53) 40%, rgba(0, 0, 0, 0) 100%);
 
 
-        } */
+        }
+
+        .slideshow::before {
+            z-index: 15;
+            content: "";
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            z-index: 50;
+
+            background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%);
+
+
+        }
 
         .previousarrow {
             background: rgb(255 255 255 / 0.98);
@@ -1074,17 +1091,16 @@
         }
 
         .dot:hover {
-            border: 3px solid #1a73e8;
+            border: 3.5px solid #1a73e8;
         }
 
         .active3 {
-            border: 3px solid #1a73e8;
+            border: 3.5px solid #1a73e8;
         }
 
-        ::-webkit-scrollbar {
+        /* ::-webkit-scrollbar {
             width: 14px;
             height: 14px;
-            /* background-color: #3170f5; */
         }
 
         :hover ::-webkit-scrollbar-thumb {
@@ -1108,7 +1124,7 @@
             border-radius: 0.625rem;
         }
 
-        /* Handle on hover */
+        Handle on hover
         ::-webkit-scrollbar-thumb:hover {
             background: rgba(0, 0, 0, .5);
             background-clip: content-box;
@@ -1127,7 +1143,7 @@
             background-color: transparent;
         }
 
-        /* Buttons */
+        Buttons
 
         ::-webkit-scrollbar-button:single-button {
             display: block;
@@ -1137,7 +1153,7 @@
             height: 14px;
         }
 
-        /* Up */
+        Up
 
         ::-webkit-scrollbar-button:single-button:vertical:decrement {
             background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
@@ -1149,7 +1165,7 @@
             background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iI0RERERERCIvPgo8L3N2Zz4K");
         }
 
-        /* Down */
+        Down
 
         ::-webkit-scrollbar-button:single-button:vertical:increment {
             background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjODg4Ii8+PC9zdmc+");
@@ -1161,7 +1177,7 @@
             background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjREREIi8+PC9zdmc+");
         }
 
-        /* Left */
+        Left
 
         ::-webkit-scrollbar-button:single-button:horizontal {
             background-size: 4.6px;
@@ -1176,7 +1192,7 @@
             background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMTZMMTggLjQxMnYzMS4xNzdMMCAxNnoiIGZpbGw9IiNEREQiLz48L3N2Zz4=");
         }
 
-        /* Right */
+        Right
 
         ::-webkit-scrollbar-button:single-button:horizontal:increment {
             background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4NUwwIDAuNDExNTQzTDE4IDE2WiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
@@ -1185,7 +1201,7 @@
 
         .dark ::-webkit-scrollbar-button:single-button:horizontal:increment {
             background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4Vi40MTNMMTggMTZ6IiBmaWxsPSIjREREIi8+PC9zdmc+");
-        }
+        } */
 
         .topnav-hover-2 {
             background: rgba(255, 255, 255, 0);
@@ -1210,6 +1226,15 @@
         }
 
         @media only screen and (max-width: 859px) {
+            .slideshow::after {
+                content: none;
+                display: none;
+            }
+            .slideshow::before {
+                content: none;
+                display: none;
+            }
+
             .flex_menu_container::after {
                 left: 0;
             }
@@ -1274,32 +1299,60 @@
             .uppertabbar {
                 background: #fff;
             }
-.slideshow{padding: 6px 18px;}
-.mySlides{border-radius: 8px;}
-            .dot-container {display:flex;
-                margin-top: 20px !important;align-items: center;justify-content: center;
+
+            /* .slideshow {
+                padding: 6px 18px;
             }
 
-            .dot {display:block;
-                background: #f9f9f9 !important;
-                border-radius: 10px !important;
-                height: 11px !important;opacity: 0;
-                width: 11px !important;box-shadow:none; 
-                margin: 0 5px;
-    
-    transition: all 0.3s;
+            .mySlides {
+                border-radius: 8px;
+            } */
+
+            .dot-container {
+                display: flex;
+                margin-top: 15px !important;
+                align-items: center;
+                justify-content: center;
             }
+
+            .dot {
+                display: block;background-image: none !important;
+                background: #D9DDE1 !important;
+                border-radius: 10px !important;
+                height: 8px !important;
+                opacity: 1;
+                width: 8px !important;
+                box-shadow: none !important;
+                margin: 0 5px;
+
+                transition: all 0.3s;
+            }
+
             .dot:hover {
                 background: initial;
-             
-            }
-.active3{background: #1a73e8 !important;border:1px solid #1a73e8;opacity: 1;width: 30px !important;}
-            .tabbar-shadow-right {display:none;visibility:hidden;opacity:0;
-              
+
             }
 
-            .tabbar-shadow {display:none;visibility:hidden;opacity:0;
-               
+            .active3 {
+                background: #1a73e8 !important;
+                border: 1px solid #1a73e8;
+                opacity: 1;
+                width: 24px !important;
+            }
+
+
+            .tabbar-shadow-right {
+                display: none;
+                visibility: hidden;
+                opacity: 0;
+
+            }
+
+            .tabbar-shadow {
+                display: none;
+                visibility: hidden;
+                opacity: 0;
+
             }
 
             .dropdown-content {
@@ -1366,7 +1419,7 @@
 
 </head>
 
-<body onload="collapsesidebar()">
+<body onload="collapsesidebar()" class="scrollbar-hidden">
 
     <div class="flex_menu_container">
 
@@ -1611,7 +1664,7 @@
                                 style="pointer-events: none; display: block; width: 65px; height: 65px;fill:rgba(0,0,0,.4)">
                                 <g class="style-scope yt-icon">
                                     <path
-                                        d="M10,20h4c0,1.1-0.9,2-2,2S10,21.1,10,20z M20,17.35V19H4v-1.65l2-1.88v-5.15c0-2.92,1.56-5.22,4-5.98V3.96 c0-1.42,1.49-2.5,2.99-1.76C13.64,2.52,14,3.23,14,3.96l0,0.39c2.44,0.75,4,3.06,4,5.98v5.15L20,17.35z M19,17.77l-2-1.88v-5.47 c0-2.47-1.19-4.36-3.13-5.1c-1.26-0.53-2.64-0.5-3.84,0.03C8.15,6.11,7,7.99,7,10.42v5.47l-2,1.88V18h14V17.77z"
+                                        d="M10,20h4c0,1.1-0.9,2-2,2S10,21.1,10,20z M20,17.35V19H4v-1.65l2-1.88v-5.15c0-2.92,1.56-5.22,4-5.98V3.96 c0-1.42,1.49-2.5,2.99-1.76C13.64,2.52,14,3.23,14,3.96l0,0.39c2.44,0.75,4,3.06,4,5.98v5.15L20,17.35z M19,17.77l-2-1.88v-5.47 c0-2.47-1.19-4.36-3.13-5.1c-1.26-0.53-2.64-0.5-3.84,0.03C8.15,6.11,7,7.99,7,10.52v5.47l-2,1.88V18h14V17.77z"
                                         class="style-scope yt-icon"></path>
                                 </g>
                             </svg></div>
@@ -1848,8 +1901,12 @@
                 <div style="padding-left:50px;color: #1a73e8" class="light-tick">
 
 
-                 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"/></svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-check">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>
                 </div>
 
 
@@ -1861,7 +1918,7 @@
                         class="feather feather-moon" style="margin-left: 28px;">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                     </svg>
-                   
+
                 </div>
 
                 <div
@@ -1871,7 +1928,11 @@
                 <div style="padding-left: 52.5px;color: #1a73e8;" class="dark-tick">
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-check">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>
                 </div>
 
             </div>
@@ -2142,25 +2203,23 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
     <div class="contentarea2" id="contentarea2">
         <div class="slideshow">
 
-        
-                <img src="https://images.mubicdn.net/images/film/317201/cache-711447-1631030097/image-w1280.jpg" style="    max-width: 100%;
+
+            <img src="https://images.mubicdn.net/images/film/317201/cache-711447-1631030097/image-w1280.jpg" style="    max-width: 100%;
                 max-height: 100%;pointer-events: none;" class="mySlides">
-<img src="https://www.animegeek.com/wp-content/uploads/2021/04/Pokemon-Journeys-Part-6-release-date-Netflix-US-Pokemon-Journeys-Season-6-ending.jpg" style="    max-width: 100%;
-max-height: 100%;pointer-events: none;" class="mySlides">
-<img src="https://paperwriter.ca/wp-content/uploads/2022/07/Pokemon-Journeys-Episode-119-release-date-and-time-Reddit-spoilers.jpg" style="    max-width: 100%;
+            <img src="https://www.animegeek.com/wp-content/uploads/2021/04/Pokemon-Journeys-Part-6-release-date-Netflix-US-Pokemon-Journeys-Season-6-ending.jpg"
+                style="    max-width: 100%;
 max-height: 100%;pointer-events: none;" class="mySlides">
 
-<img src="https://github.com/Lakshay-7134/Go/blob/main/My%20project.jpg?raw=true" style="    max-width: 100%;
+
+           
+            <img src="https://i.ytimg.com/vi/hCr4XKf3Dsk/maxresdefault.jpg" style="    max-width: 100%;
 max-height: 100%;pointer-events: none;" class="mySlides">
-<img src="https://static.wikia.nocookie.net/pokemon/images/a/aa/SM001.png/revision/latest?cb=20170903175713" style="    max-width: 100%;
+            <img src="https://img1.ak.crunchyroll.com/i/spire3/f1861240668c36c0e75f60f0b7ecd3bf1663878821_main.jpg"
+                style="    max-width: 100%;
 max-height: 100%;pointer-events: none;" class="mySlides">
-<img src="https://i.ytimg.com/vi/hCr4XKf3Dsk/maxresdefault.jpg" style="    max-width: 100%;
+            <img src="https://i.ytimg.com/vi/8PGsP59Io20/maxresdefault.jpg" style="    max-width: 100%;
 max-height: 100%;pointer-events: none;" class="mySlides">
-<img src="https://img1.ak.crunchyroll.com/i/spire3/f1861240668c36c0e75f60f0b7ecd3bf1663878821_main.jpg" style="    max-width: 100%;
-max-height: 100%;pointer-events: none;" class="mySlides">
-<img src="https://i.ytimg.com/vi/8PGsP59Io20/maxresdefault.jpg" style="    max-width: 100%;
-max-height: 100%;pointer-events: none;" class="mySlides">
-<img src="https://thelasttavern.com/wp-content/uploads/2022/07/dragon-ball-super-super-hero_1.jpg" style="    max-width: 100%;
+            <img src="https://thelasttavern.com/wp-content/uploads/2022/07/dragon-ball-super-super-hero_1.jpg" style="    max-width: 100%;
 max-height: 100%;pointer-events: none;" class="mySlides">
             <div class="previousarrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -2176,43 +2235,36 @@ max-height: 100%;pointer-events: none;" class="mySlides">
             </div>
         </div>
         <div class="dot-container scrollbar-hidden">
-            <div style="width: 177.77px;background: url('https://images.mubicdn.net/images/film/317201/cache-711447-1631030097/image-w1280.jpg');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
-            margin-right: 0.30rem;
+            <div style="width: 192px;background: url('https://images.mubicdn.net/images/film/317201/cache-711447-1631030097/image-w1280.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
+            margin-right: 0.5rem;
             " class="dot  active3"></div>
-            <div style="width: 177.77px;background: url('https://www.animegeek.com/wp-content/uploads/2021/04/Pokemon-Journeys-Part-6-release-date-Netflix-US-Pokemon-Journeys-Season-6-ending.jpg');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem ;flex: none;
-            margin-right: 0.30rem;
+            <div style="width: 192px;background: url('https://www.animegeek.com/wp-content/uploads/2021/04/Pokemon-Journeys-Part-6-release-date-Netflix-US-Pokemon-Journeys-Season-6-ending.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.5rem ;flex: none;
+            margin-right: 0.5rem;
             " class="dot"></div>
-        
 
-            <div style="width: 177.77px;background: url('https://paperwriter.ca/wp-content/uploads/2022/07/Pokemon-Journeys-Episode-119-release-date-and-time-Reddit-spoilers.jpg');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
-            margin-right: 0.30rem;
-            " class="dot"></div>
-             <div style="width: 177.77px;background: url('https://github.com/Lakshay-7134/Go/blob/main/My%20project.jpg?raw=true');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
-             margin-right: 0.30rem;
-             " class="dot"></div>
-             
-            <div style="width: 177.77px;background: url('https://static.wikia.nocookie.net/pokemon/images/a/aa/SM001.png/revision/latest?cb=20170903175713');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
-            margin-right: 0.30rem;
-            " class="dot"></div>
-            
-            <div style="width: 177.77px;background: url('https://i.ytimg.com/vi/hCr4XKf3Dsk/maxresdefault.jpg');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
-            margin-right: 0.30rem;
-            " class="dot"></div>
-           
 
-           <div style="width: 177.77px;background: url('https://img1.ak.crunchyroll.com/i/spire3/f1861240668c36c0e75f60f0b7ecd3bf1663878821_main.jpg');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
-           margin-right: 0.30rem;
+
+
+
+
+            <div style="width: 192px;background: url('https://i.ytimg.com/vi/hCr4XKf3Dsk/maxresdefault.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.5rem;flex: none;
+            margin-right: 0.5rem;
+            " class="dot"></div>
+
+
+            <div style="width: 192px;background: url('https://img1.ak.crunchyroll.com/i/spire3/f1861240668c36c0e75f60f0b7ecd3bf1663878821_main.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.5rem;flex: none;
+           margin-right: 0.5rem;
            " class="dot"></div>
 
-           <div style="width: 177.77px;background: url('https://i.ytimg.com/vi/8PGsP59Io20/maxresdefault.jpg');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem ;flex: none;
-           margin-right: 0.30rem;
+            <div style="width: 192px;background: url('https://i.ytimg.com/vi/8PGsP59Io20/maxresdefault.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.5rem ;flex: none;
+           margin-right: 0.5rem;
            " class="dot"></div>
 
 
-            <div style="width: 177.77px;background: url('https://thelasttavern.com/wp-content/uploads/2022/07/dragon-ball-super-super-hero_1.jpg');background-size: cover;background-position: center;height: 100px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
+            <div style="width: 192px;background: url('https://thelasttavern.com/wp-content/uploads/2022/07/dragon-ball-super-super-hero_1.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 8px;box-shadow: 0 0 6px #00000040;    margin-left: 0.5rem;flex: none;
                           margin-right: 0.30rem;
                           " class="dot"></div>
-                           
+
 
 
         </div>
@@ -2548,24 +2600,24 @@ max-height: 100%;pointer-events: none;" class="mySlides">
         }
 
         let slideIndex = 0;
-showSlides();
+        showSlides();
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active3", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active3";
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
-}
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active3", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active3";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
     </script>
 
 
