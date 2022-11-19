@@ -1696,20 +1696,26 @@
                         </div>
                     </div>
                     <div class="p-4 sm:p-6 lg:p-4 xl:p-6 space-x-4 items-start sm:space-x-6 lg:space-x-4 xl:space-x-6 flex"
-                        style="margin-top: 60px;">
-
-                        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTK3u-sQWj89K-nm28S_XkACg9z9wXvs8oLy6E13axoO_oK-Q70"
+                        style="margin-top: 60px;"> <img
+                            src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTK3u-sQWj89K-nm28S_XkACg9z9wXvs8oLy6E13axoO_oK-Q70"
                             width="60" height="88" style="width: 60px;
-                            aspect-ratio: auto 60 / 88;flex: none; border-radius: 0.375rem;">
-
-                        <div class="min-w-0 relative flex-auto">
-                            <h2 class="font-semibold text-slate-900 truncate sm:pr-20 dark:text-slate-100">Beyblade
+                        aspect-ratio: auto 60 / 88;flex: none; border-radius: 0.375rem;">
+                        
+                        <div style=" flex: 1 1 auto;
+                            min-width: 0;
+                            position: relative;">
+                            <h2 style="
+                                color: rgb(15 23 42/1);
+                                font-weight: 600;
+                                overflow: hidden;
+    white-space: nowrap;
+    padding-right: 5rem;
+                                text-overflow: ellipsis;">Beyblade
                                 Burst</h2>
                             <dl class="mt-2 flex flex-wrap text-sm leading-6 font-medium">
                                 <div
                                     class="hidden absolute top-0 right-0 sm:flex items-center space-x-1 dark:text-slate-100">
-                                    <dt class="text-sky-500"><span class="sr-only">Star rating</span><svg width="16"
-                                            height="20" fill="currentColor">
+                                    <dt class="text-sky-500"><svg width="16" height="20" fill="currentColor">
                                             <path
                                                 d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
                                             </path>
@@ -1720,33 +1726,47 @@
 
                                     <dd class="px-1.5 ring-1 ring-slate-200 rounded dark:ring-slate-600">EP-12</dd>
                                 </div>
-                                <div class="ml-2">
+                                <div style="    margin-left: 0.5rem;">
 
                                     <dd>2021</dd>
                                 </div>
                                 <div>
 
-                                    <dd class="flex items-center"><svg width="2" height="2" fill="currentColor"
-                                            class="mx-2 text-slate-300" aria-hidden="true">
+                                    <dd style=" display: flex; align-items: center;  "><svg width="2" height="2" fill="currentColor"
+                                        style="    
+                                        color: rgb(203 213 225/1);
+                                        margin-left: 0.5rem;
+                                        margin-right: 0.5rem;">
                                             <circle cx="1" cy="1" r="1"></circle>
                                         </svg></dd>
                                 </div>
                                 <div>
 
-                                    <dd class="flex items-center"><svg width="2" height="2" fill="currentColor"
-                                            class="mx-2 text-slate-300" aria-hidden="true">
+                                    <dd  style=" display: flex; align-items: center;  "><svg width="2" height="2" fill="currentColor"
+                                             style="    
+                                            color: rgb(203 213 225/1);
+                                            margin-left: 0.5rem;
+                                            margin-right: 0.5rem;">
                                             <circle cx="1" cy="1" r="1"></circle>
                                         </svg>1h 46m</dd>
                                 </div>
-                                <div style="flex-none w-full mt-2 font-normal">
+                                <div style="
+                                    font-weight: 400;
+                                    flex: none;
+                                    width: 100%;
+                                    margin-top: 0.5rem;">
 
-                                    <dd class="text-slate-400">Simon Pegg, Zach Galifianakis</dd>
+                                    <dd style="color: rgb(148 163 184/1)">Simon Pegg, Zach Galifianakis</dd>
                                 </div>
                             </dl>
                         </div>
                     </div>
 
-                    <!-- <div
+
+
+                </div>
+
+                <!-- <div
                         style="display: flex;align-items: center;width: 100%;height: 100%;flex-direction: column;justify-content: center;">
                         <div><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
                                 class="style-scope yt-icon"
@@ -1761,37 +1781,37 @@
                             style="text-align: center;height: 60px;display: flex;align-items: center;color: rgba(0,0,0,.9);">
                             No new notifications<br>yet!</div>
                     </div> -->
-                </div>
-
             </div>
-            <div style="position: relative;">
-                <div class="topnav-hover" style="margin-right: 15px;padding: 11.75px;" id="topnav-hover-dark"
-                    onclick="open_progress_player()">
+
+        </div>
+        <div style="position: relative;">
+            <div class="topnav-hover" style="margin-right: 15px;padding: 11.75px;" id="topnav-hover-dark"
+                onclick="open_progress_player()">
 
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20.5" height="20.5" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-folder"
-                        style="pointer-events: none; display: block; width: 20.5px; height: 20.5px;">
-                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-                    </svg>
-
-
-                </div>
-
-
-
+                <svg xmlns="http://www.w3.org/2000/svg" width="20.5" height="20.5" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-folder"
+                    style="pointer-events: none; display: block; width: 20.5px; height: 20.5px;">
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+                </svg>
 
 
             </div>
-            <div style="position: relative;" class="topnav-hover-2 dropdown" onclick="opendropdown()">
 
 
 
 
-                <div style=" border-radius: 100%;width: 32px;
+
+        </div>
+        <div style="position: relative;" class="topnav-hover-2 dropdown" onclick="opendropdown()">
+
+
+
+
+            <div style=" border-radius: 100%;width: 32px;
                     height: 32px; background-position: center center;background-size: 70px auto;  background: url(https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp);
 
 
@@ -1801,14 +1821,14 @@
     vertical-align: middle;
     
     " id="login-pic">
-                </div>
-
-
-
             </div>
 
 
+
         </div>
+
+
+    </div>
 
 
 
@@ -1941,20 +1961,22 @@
         <div class="theme-container" id="theme-container">
             <div class="dropitem exception" style="border-bottom-width: 1px;
         border-bottom-style: solid;
-        border-bottom-color: rgba(0, 0, 0, .12);" onclick="closethemes()">
-                <div>
+        border-bottom-color: rgba(0, 0, 0, .12);">
+                <div class="topnav-hover"
+                    style="padding: 6.5px;display: flex;align-items: center;justify-content: center;margin-left: 5.5px;border-radius: 12px;"
+                    onclick="closethemes()">
 
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-chevron-left" style="margin-left: 12px;">
+                        class="feather feather-chevron-left">
                         <polyline points="15 18 9 12 15 6" />
                     </svg>
                 </div>
 
 
                 <div
-                    style="padding-left: 55px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                    style="padding-left: 48px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
                     Customize
                 </div>
 
