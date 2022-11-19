@@ -1677,7 +1677,7 @@
                     </svg>
                 </div>
 
-                <div class="notify" id="notify-content">
+                <div class="notify scrollbar-hidden" id="notify-content">
                     <div style="position: absolute; top:0;left:0;right:0;height:60px;backdrop-filter: saturate(200%) blur(30px);
     background: rgba(255, 255, 255, 0.98);display: flex;align-items: center;">
                         <div style="flex:1;padding-left: 20px;font-weight: 450;">Notifications</div>
@@ -1695,14 +1695,17 @@
 
                         </div>
                     </div>
-                    <div class="p-4 sm:p-6 lg:p-4 xl:p-6 space-x-4 items-start sm:space-x-6 lg:space-x-4 xl:space-x-6 flex"
-                        style="margin-top: 60px;"> <img
+                    <div 
+                        style="margin-top: 60px;padding: 1.5rem;align-items: flex-start;
+           
+                        display: flex;
+                    "> <img
                             src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTK3u-sQWj89K-nm28S_XkACg9z9wXvs8oLy6E13axoO_oK-Q70"
                             width="60" height="88" style="width: 60px;
                         aspect-ratio: auto 60 / 88;flex: none; border-radius: 0.375rem;">
                         
                         <div style=" flex: 1 1 auto;
-                            min-width: 0;
+                            min-width: 0;margin-left: 1rem;
                             position: relative;">
                             <h2 style="
                                 color: rgb(15 23 42/1);
@@ -1712,19 +1715,47 @@
     padding-right: 5rem;
                                 text-overflow: ellipsis;">Beyblade
                                 Burst</h2>
-                            <dl class="mt-2 flex flex-wrap text-sm leading-6 font-medium">
+                            <dl style="
+                                line-height: 1.5rem;
+                       
+                         
+                                font-weight: 500;
+                       
+                                font-size: .875rem;
+                          
+                       
+                                flex-wrap: wrap;
+                        
+                                display: flex;
+                            
+                        
+                                margin-top: 0.5rem;">
                                 <div
-                                    class="hidden absolute top-0 right-0 sm:flex items-center space-x-1 dark:text-slate-100">
-                                    <dt class="text-sky-500"><svg width="16" height="20" fill="currentColor">
+                                    style="
+                                        display: flex;
+                              
+                                        align-items: center;
+                                  
+                                      
+                                        margin-left: 0.25rem; 
+                                        right: 0;
+                                  
+                                        top: 0;
+                                    
+                                        position: absolute;
+                                    ">
+                                    <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor">
                                             <path
                                                 d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
                                             </path>
                                         </svg></dt>
-                                    <dd>2.66</dd>
+                                    <dd style="margin-left: 0.25rem;">2.66</dd>
                                 </div>
-                                <div class="dark:text-slate-200">
+                                <div>
 
-                                    <dd class="px-1.5 ring-1 ring-slate-200 rounded dark:ring-slate-600">EP-12</dd>
+                                    <dd  style="border: 1px solid #dadce0
+        ;border-radius: 0.25rem;padding-left: 0.375rem;
+    padding-right: 0.375rem;">EP-12</dd>
                                 </div>
                                 <div style="    margin-left: 0.5rem;">
 
@@ -1756,14 +1787,205 @@
                                     width: 100%;
                                     margin-top: 0.5rem;">
 
-                                    <dd style="color: rgb(148 163 184/1)">Simon Pegg, Zach Galifianakis</dd>
+                                    <dd style="color: rgb(148 163 184/1)">Beyblade Burst Official</dd>
                                 </div>
                             </dl>
                         </div>
                     </div>
 
+                   
+                <div 
+                style="padding: 1.5rem;align-items: flex-start;
+   
+                display: flex;
+            "> <img
+                    src="https://m.media-amazon.com/images/M/MV5BY2I2MzI1ODYtMWRlOS00MzdhLWEyOWEtYWJhNmFiZTIxMGJhXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_FMjpg_UX1000_.jpg"
+                    width="60" height="88" style="width: 60px;
+                aspect-ratio: auto 60 / 88;flex: none; border-radius: 0.375rem;">
+                
+                <div style=" flex: 1 1 auto;
+                    min-width: 0;margin-left: 1rem;
+                    position: relative;">
+                    <h2 style="
+                        color: rgb(15 23 42/1);
+                        font-weight: 600;
+                        overflow: hidden;
+white-space: nowrap;
+padding-right: 5rem;
+                        text-overflow: ellipsis;">Dragon Ball Super</h2>
+                    <dl style="
+                        line-height: 1.5rem;
+               
+                 
+                        font-weight: 500;
+               
+                        font-size: .875rem;
+                  
+               
+                        flex-wrap: wrap;
+                
+                        display: flex;
+                    
+                
+                        margin-top: 0.5rem;">
+                        <div
+                            style="
+                                display: flex;
+                      
+                                align-items: center;
+                          
+                              
+                                margin-left: 0.25rem; 
+                                right: 0;
+                          
+                                top: 0;
+                            
+                                position: absolute;
+                            ">
+                            <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor">
+                                    <path
+                                        d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
+                                    </path>
+                                </svg></dt>
+                            <dd style="margin-left: 0.25rem;">2.54</dd>
+                        </div>
+                        <div>
 
+                            <dd  style="border: 1px solid #dadce0
+;border-radius: 0.25rem;padding-left: 0.375rem;
+padding-right: 0.375rem;">EP-12</dd>
+                        </div>
+                        <div style="    margin-left: 0.5rem;">
 
+                            <dd>2020</dd>
+                        </div>
+                        <div>
+
+                            <dd style=" display: flex; align-items: center;  "><svg width="2" height="2" fill="currentColor"
+                                style="    
+                                color: rgb(203 213 225/1);
+                                margin-left: 0.5rem;
+                                margin-right: 0.5rem;">
+                                    <circle cx="1" cy="1" r="1"></circle>
+                                </svg></dd>
+                        </div>
+                        <div>
+
+                            <dd  style=" display: flex; align-items: center;  "><svg width="2" height="2" fill="currentColor"
+                                     style="    
+                                    color: rgb(203 213 225/1);
+                                    margin-left: 0.5rem;
+                                    margin-right: 0.5rem;">
+                                    <circle cx="1" cy="1" r="1"></circle>
+                                </svg>1h 30m</dd>
+                        </div>
+                        <div style="
+                            font-weight: 400;
+                            flex: none;
+                            width: 100%;
+                            margin-top: 0.5rem;">
+
+                            <dd style="color: rgb(148 163 184/1)">Toei Animation</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            <div 
+            style="padding: 1.5rem;align-items: flex-start;
+
+            display: flex;
+        "> <img
+                src="https://upload.wikimedia.org/wikipedia/en/2/2e/Beyblade_Burst_DB.jpg"
+                width="60" height="88" style="width: 60px;
+            aspect-ratio: auto 60 / 88;flex: none; border-radius: 0.375rem;">
+            
+            <div style=" flex: 1 1 auto;
+                min-width: 0;margin-left: 1rem;
+                position: relative;">
+                <h2 style="
+                    color: rgb(15 23 42/1);
+                    font-weight: 600;
+                    overflow: hidden;
+white-space: nowrap;
+padding-right: 5rem;
+                    text-overflow: ellipsis;">Beyblade Burst
+QuadDrive                        <dl style="
+                    line-height: 1.5rem;
+           
+             
+                    font-weight: 500;
+           
+                    font-size: .875rem;
+              
+           
+                    flex-wrap: wrap;
+            
+                    display: flex;
+                
+            
+                    margin-top: 0.5rem;">
+                    <div
+                        style="
+                            display: flex;
+                  
+                            align-items: center;
+                      
+                          
+                            margin-left: 0.25rem; 
+                            right: 0;
+                      
+                            top: 0;
+                        
+                            position: absolute;
+                        ">
+                        <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor">
+                                <path
+                                    d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
+                                </path>
+                            </svg></dt>
+                        <dd style="margin-left: 0.25rem;">2.56</dd>
+                    </div>
+                    <div>
+
+                        <dd  style="border: 1px solid #dadce0
+;border-radius: 0.25rem;padding-left: 0.375rem;
+padding-right: 0.375rem;">EP-12</dd>
+                    </div>
+                    <div style="    margin-left: 0.5rem;">
+
+                        <dd>2021</dd>
+                    </div>
+                    <div>
+
+                        <dd style=" display: flex; align-items: center;  "><svg width="2" height="2" fill="currentColor"
+                            style="    
+                            color: rgb(203 213 225/1);
+                            margin-left: 0.5rem;
+                            margin-right: 0.5rem;">
+                                <circle cx="1" cy="1" r="1"></circle>
+                            </svg></dd>
+                    </div>
+                    <div>
+
+                        <dd  style=" display: flex; align-items: center;  "><svg width="2" height="2" fill="currentColor"
+                                 style="    
+                                color: rgb(203 213 225/1);
+                                margin-left: 0.5rem;
+                                margin-right: 0.5rem;">
+                                <circle cx="1" cy="1" r="1"></circle>
+                            </svg>1h 35m</dd>
+                    </div>
+                    <div style="
+                        font-weight: 400;
+                        flex: none;
+                        width: 100%;
+                        margin-top: 0.5rem;">
+
+                        <dd style="color: rgb(148 163 184/1)">Beyblade Burst Official</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
                 </div>
 
                 <!-- <div
