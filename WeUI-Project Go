@@ -635,41 +635,53 @@
             padding: 0 28px;
         }
 
-        .mini-sidebar {
+        .mini-sidebar {z-index: 1000;
             position: fixed;
             top: 62px;
             bottom: 0;
-            left: 0;
             right: 0;
+            width: 55px;
             letter-spacing: .5px;
             overflow-y: auto;
             overflow-x: hidden;
             background: #fff;
-            -ms-overflow-style: none;
-            /* IE and Edge */
-            scrollbar-width: none;
-            /* Firefox */
+          display: none;
             color: rgba(29, 29, 31, 1);
-            display: none;
+        
         }
 
 
-        .mini-sidebar::-webkit-scrollbar {
-            display: none;
+        .mini-sidebar-item-container {
+        
+            display: flex;
+            height: 100%;
+            width: 100%;
+            align-items: center;justify-content: center;
+    
+            flex: none;
+            flex-direction: column;
+            
         }
 
         .mini-sidebar-item {
-            margin: 4px auto;
-            display: flex;
-            height: 56px;
-            width: 100%;
-            align-items: center;
-            border-radius: 4px;
-            flex: none;
-            flex-direction: row;
-            position: relative;
-        }
+            margin: 12px auto;
 
+            height: 41px;
+            width: auto;
+        
+            
+            transition: all .1s ease;
+        
+        }
+        .mini-sidebar-item:hover {
+            margin: 12px auto;
+
+            height: 48px;
+            width: auto;
+        
+        
+        
+        }
         .sidebar-collapsed {
             width: 220px;
             z-index: 1000;
@@ -2001,7 +2013,7 @@ padding-right: 0.375rem;">EP-12</dd>
                             style="text-align: center;height: 60px;display: flex;align-items: center;color: rgba(0,0,0,.9);">
                             No new notifications<br>yet!</div>
                     </div> -->
-            </div>
+            
 
         </div>
         <div style="position: relative;">
@@ -2296,8 +2308,9 @@ padding-right: 0.375rem;">EP-12</dd>
 
 
                 <div
-                    style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;padding-left: 33px;padding-top: 15px;">
-                    Theme Colour
+                    style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;padding-left: 33px;padding-top: 15px;display: flex;align-items: center;">
+                    Accent Colour
+                    <div style="width: 12.5px;height:12.5px;background:var(--themecolor);border-radius:1000px;margin-left: 70px;"></div>
                 </div>
             </div>
             <div class="container" style="margin-top: 20px">
@@ -2522,9 +2535,15 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
     </div>
 
 
-    <div class="mini-sidebar" id="mini-sidebar-container">
+    <div class="mini-sidebar scrollbar-hidden" id="mini-sidebar-container">
+<div class="mini-sidebar-item-container">
+<img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.gallery.png">
+<img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.notes.png">
+<img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.mi.misupport.png">
+<img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.wali.live.png">
+<img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.securitycenter.png">
 
-
+</div>
 
     </div>
 
