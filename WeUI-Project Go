@@ -765,13 +765,13 @@ border-top: none;
             letter-spacing: .5px;
             overflow-y: auto;
             overflow-x: hidden;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.98);
     
             color: rgba(29, 29, 31, 1);
         
         }
 
-.sidebar-container{ height: calc(100% - 40px);
+.sidebar-container{ height: 100%;
             width: 100%;}
         .mini-sidebar-item-container {
         
@@ -783,11 +783,12 @@ border-top: none;
            
         }
 
+
         .mini-sidebar-item {
             flex: none;
 
             height: auto;
-            width: 50px;margin: 10px 22px;
+            width: 45px;margin: 10px 25px;
         
             
             transition: all .1s ease;
@@ -796,15 +797,7 @@ border-top: none;
 
         .mini-horizontal{
            
-            display: flex;
-            height: 45px;
-            flex: none;
-            align-items: center;
-            margin: 6px 0;
-            padding: 4px 6px;
-            font-size: 14px;
-            font-weight: 500;
-            font-family: MiSans, system-ui, sans-serif;
+            background: transparent;
         }
 
         .mini-horizontal:hover {
@@ -2585,7 +2578,7 @@ padding-right: 0.375rem;">EP-12</dd>
 
                 <div
                     style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;padding-left: 20px;padding-top: 10px;display: flex;align-items: center;">
-                    Change View
+                    Notification View
                   
                 </div>
             </div>
@@ -2602,7 +2595,7 @@ padding-right: 0.375rem;">EP-12</dd>
                     width: 72px;margin-left: 10px">
 </div>
             </div>
-            <div class="dropitem exception view-option">
+            <div class="dropitem exception view-option" onclick="alert('Compact view will be available soon.')">
               
 
                 <div
@@ -3112,69 +3105,54 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
     <div class="mini-sidebar scrollbar-hidden" id="mini-sidebar-container">
         <div class="sidebar-container">
 <div class="mini-sidebar-item-container">
-   
-<div style="display: flex;flex-direction: column;justify-content: center;background: #f9f9f9;border-radius: 12px;margin-top: 12px;"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.gallery.png">
+   <div style="width: 100%;height: 44px;display: flex;align-items: center;justify-content: center;font-size: 16px;font-weight: 400;">More Apps</div>
+<div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.gallery.png">
 <div style="text-align: center;font-size: 15px;">Gallery</div>
 </div>
 
-<div style="display: flex;flex-direction: column;justify-content: center;background: #f9f9f9;;border-radius: 12px;margin-top: 12px;"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.mi.misupport.png">
+<div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.mi.misupport.png">
     <div style="text-align: center;font-size: 15px;">Liked</div>
     </div>
 
-    <div style="display: flex;flex-direction: column;justify-content: center;background: #f9f9f9;border-radius: 12px;margin-top: 12px;"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.wali.live.png">
+    <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.wali.live.png">
         <div style="text-align: center;font-size: 15px;">Collection</div>
         </div>
-        <div style="display: flex;flex-direction: column;justify-content: center;background: #f9f9f9;border-radius: 12px;margin-top: 12px;"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.securitycenter.png">
-            <div style="text-align: center;font-size: 15px;">Hidden</div>
+        <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.securitycenter.png">
+            <div style="text-align: center;font-size: 15px;">Security</div>
             </div>
-            
+
+
+            <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.android.soundrecorder.png">
+                <div style="text-align: center;font-size: 15px;">Audio</div>
+                </div>
+
+
+                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.xiaomi.xmsf.account.ui.MiCloudSettingsActivity.png">
+                    <div style="text-align: center;font-size: 15px;">Cloud</div>
+                    </div>
+                    
+                    <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.xiaomi.xmsf.FindDevice.png">
+                        <div style="text-align: center;font-size: 15px;">Devices</div>
+                        </div>
         
+                        <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.notes.png">
+                            <div style="text-align: center;font-size: 15px;">Notes</div>
+                            </div>
 
+                            <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.xiaomi.smarthome.png">
+                                <div style="text-align: center;font-size: 15px;">Features</div>
+                                </div>
 
-</div>
-<div class="mini-horizontal">sss</div>
-<div class="mini-horizontal">sss</div>
-<div class="mini-horizontal">sss</div>
-<div class="mini-horizontal">sss</div>
+                                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.android.quicksearchbox.png">
+                                    <div style="text-align: center;font-size: 15px;">Search</div>
+                                    </div>
 
-<div class="mini-horizontal">
-   
-
-</div>
-</div>
-<div style="display: flex;align-items:center;width: 100%;justify-content: center;position: sticky;bottom: 0;left: 0;right: 0;">
-<div class="topnav-hover" style="padding: 8.5px; border-radius: 5px;">
-    
-    <div style="
-    
-   
-    color: #24292f;
-    font-size: 15px !important;
-   
-    border: 0;
-    margin-right: 15px !important;
-    font-weight: 600;
-   
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    margin: 8px;
-    letter-spacing: .5px;">
-    <div style=" border-radius: 1000px;width: 32px;
-    height: 32px;background: url('https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp');  background-position: center center;background-size: 64px auto;display: inline-block; vertical-align: middle;" id="profile-id">
-        </div>
-    <div style="padding: 0 0 0 15px;" id="login-name">Hi, Alec</div>
-    
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal" style="height: 22px;width: 22px;">
-        <circle cx="12" cy="12" r="1"></circle>
-        <circle cx="19" cy="12" r="1"></circle>
-        <circle cx="5" cy="12" r="1"></circle>
-    </svg>
 </div>
 
 
-   
-</div></div>
+
+</div>
+
     </div>
 
 
