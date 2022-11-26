@@ -33,11 +33,16 @@
     <style>
         @import url("https://font.sec.miui.com/font/css?family=MiSans:300,450,500,650:Chinese_Simplify,Latin,Chinese_Traditional&display=swap");
 
-        :root {
+    :root {
             --themecolor: #0d84ff;
-
+--color1: #1d1d1f;
+--color2: #f2f2f2;
+--color3: #0f0f0f;
         }
-
+.dark-mode {--color1: #f1f1f1;
+    --color2: rgba(255, 255, 255, 0.1);
+    --color3: #f1f1f1;
+        }
         * {
             font-size: 100%;
             margin: 0;
@@ -117,7 +122,7 @@
         .flex_menu_container .flex_box_list_item {
 
             font-size: 16px;
-            color: #1D1D1F;
+            color: var(--color1);
             letter-spacing: 0;
             font-weight: 450;
             transition: color .3s ease-in;
@@ -144,9 +149,12 @@
             padding: 0 10px 0 20.5px;
             font-family: MiSans, system-ui, sans-serif;
             letter-spacing: .5px;
-            caret-color: #1D1D1F;
+            caret-color: var(--color1);
         }
-
+        .dark-mode .flex_menu_container .flex_box_list_item .search_box {
+            
+            caret-color: var(--themecolor);
+        }
         .search_box::-webkit-input-placeholder {
             /* Edge */
             color: #24292f;
@@ -160,12 +168,28 @@
         .search_box::placeholder {
             color: #24292f;
         }
+      .dark-mode  .search_box::-webkit-input-placeholder {
+            /* Edge */
+            color: #ffffffe0;
+        }
 
+       .dark-mode .search_box:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: #ffffffe0;
+        }
+
+       .dark-mode .search_box::placeholder {
+            color: #ffffffe0;
+        }
+        
         .search-icon {
             fill: #24292f;
             margin-left: 26px;
         }
-
+       .dark-mode .search-icon {
+            fill: #f1f1f1;
+            
+        }
 
         .search-container {
             width: 100%;
@@ -208,6 +232,10 @@
             border: 1px solid #ccc;
         }
 
+        .dark-mode .search-container:hover {
+            border: 1px solid transparent;
+        }
+        
         .search-container:hover {
 
             background: rgba(255, 255, 255, 0);
@@ -216,7 +244,7 @@
         .focused {
             background: rgba(255, 255, 255, 0);
         }
-
+.dark-mode .focused{background: transparent !important;}
         .focused:hover {
             border: 1px solid transparent;
         }
@@ -296,7 +324,9 @@
             border: 1px solid rgba(0, 0, 0, 0.1);
 
         }
-
+.dark-mode .dropdown-content{background: rgba(24,24,24,.98);
+    border: 1px solid #282828;box-shadow: 0px 4px 32px 0px #0000001a;
+color: #f1f1f1;}
         .dropdown-content::-webkit-scrollbar {
             display: none;
         }
@@ -317,7 +347,10 @@
             background: #f5f5f5;
 
         }
+     .dark-mode .dropdown-content .dropitem:hover {
+            background: rgba(255, 255, 255, 0.1);
 
+        }
         .dropdown-content .drop-profile {
 
             border-radius: 0;
@@ -330,6 +363,11 @@
             padding-bottom: 20px;
 
         }
+        .dark-mode .dropdown-content .drop-profile {
+border-bottom-color: #ffffff1a;
+
+
+}
 
         .drop-pic {
             width: 100%;
@@ -364,6 +402,22 @@
             max-height: 80vh;
         }
 
+        .dark-mode .dropdown-content2 {
+
+            top: 50px;
+background: rgba(24,24,24,.8);
+backdrop-filter: blur(40px);
+
+
+border-radius: 0.5rem;
+
+color: #f1f1f1;
+box-shadow: 0px 4px 32px 0px #0000001a;
+border: 1px solid #282828;
+border-top: none;
+}
+.notify-bottom{color: rgb(148 163 184/1) }
+.dark-mode .notify-bottom{color: #AAAAAA }
         .dropdown-content2 .dropitem2 {
             display: flex;
             height: 48px;
@@ -385,11 +439,21 @@
         .dropitem2:hover .site-nav-dropdown-arrow {
             visibility: visible;
         }
-
+        .dark-mode .dropitem2:hover .site-nav-dropdown-arrow {
+            color: #fff;
+        }
         .dropdown-content2 .dropitem2:hover {
             background: #f5f5f5;
         }
 
+        .dark-mode  .dropdown-content2 .dropitem2:hover {
+            background: rgba(255, 255, 255, 0.1) !important;
+
+        }
+ .notify-top{color: rgb(15 23 42/1);} 
+ .dark-mode .notify-top{color: #f1f1f1;}
+ .dark-mode .notify-showit  .svg-exception{stroke: transparent;}
+ 
         .showit2 {
             display: block;
         }
@@ -424,8 +488,22 @@
             opacity: 0;
         }
 
-        .progress-player-hidden {
-            width: 400px;
+
+      .dark-mode  .notify {
+           
+            background: rgba(24, 24, 24, 0.98);
+
+           
+            color: #fff;
+        
+            border: 1px solid #282828;
+            box-shadow: 0px 4px 32px 0px #0000001a;
+           
+        }
+.notify-header{  background: rgba(255, 255, 255, 0.98);}
+.dark-mode .notify-header{  background: rgba(24, 24, 24, 0.98);}
+        .progress-player-hidden {overflow:hidden;
+            width: 364px;
             right: 0;
             bottom: 24px;
             max-width: calc(100vw - 48px);
@@ -444,7 +522,7 @@
             transition-delay: 0s, 0s, 0s;
             opacity: 0;
             border-radius: 0.75rem;
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);       background: rgba(255, 255, 255, 0.98);
         }
 
         .progress-player-show {
@@ -465,8 +543,8 @@
         }
 
         .dark-mode .flex_menu_container {
-            background: rgba(0, 0, 0, .8);
-            backdrop-filter: blur(40px);
+             background: #0f0f0f;
+           color: #fff;
         }
 
         .dark-mode .search-container {
@@ -475,11 +553,53 @@
         }
 
         .dark-mode .sidebar {
-            background: rgba(0, 0, 0, .8);
-            backdrop-filter: blur(40px);
+            background: #0f0f0f;
+
+        }
+        .dark-mode .progress-player-hidden{ border: 1px solid #282828;box-shadow: 0px 4px 32px 0px #0000001a;     background: rgba(24,24,24,.98);}
+
+.dark-mode .uppertabbar{    background: #0f0f0f;}
+.dark-mode .contentarea2{    background: #0f0f0f;}
+.dark-mode .flex_menu_container::after{content: none;}
+
+.dark-mode .sidebar{color: #fff;}
+.dark-mode svg{stroke: #fff;}
+.dark-mode .sidebar-collapsed .active{background: rgba(255, 255, 255, 0.1);color: var(--themecolor);}
+.dark-mode .sidebar-collapsed .active:hover{background: rgba(255, 255, 255, 0.1) !important;color: var(--themecolor) !important;}
+
+.dark-mode .sidebar-collapsed .active svg{stroke: var(--themecolor) !important;}
+.dark-mode .sidebar-item:hover{background: rgba(255, 255, 255, 0.1) !important;color: #f1f1f1 !important;}.dark-mode #logotext{color: #fff !important;}
+.dark-mode .topnav-hover:hover{background: rgba(255, 255, 255, 0.1);  color: #fff;}
+.dark-mode .topnav-hover-2:hover:hover{background: rgba(255, 255, 255, 0.1);}
+
+.dark-mode .tabbar-shadow {
+            background: #0f0f0f;
+           
+
+        }
+.dark-mode  .tabbar-shadow-right {
+            background: #0f0f0f;
+            
 
         }
 
+        .dark-mode    .uppertabbar .tabbar-shadow:hover {
+            background: #0f0f0f !important;
+        }
+
+        .dark-mode    .uppertabbar .tabbar-shadow-right:hover {
+            background: #0f0f0f !important;
+        }
+
+        .dark-mode .uppertabbar .tabbar-shadow-right::after {
+            background: linear-gradient(to left, #0f0f0f 20%, rgba(33,33,33,0) 80%);
+      
+        }
+
+        .dark-mode .tabbar-shadow::after {
+            background: linear-gradient(to right, #0f0f0f 20%, rgba(33,33,33,0) 80%);
+            
+        }
         .menu-icon {
             background: rgba(255, 255, 255, 0);
 
@@ -495,6 +615,7 @@
         .menu-icon:hover {
             background: #f5f5f5;
         }
+        .dark-mode .menu-icon:hover{background:rgba(255, 255, 255, 0.1)}
 
         .line-1,
         .line-2,
@@ -637,47 +758,67 @@
 
         .mini-sidebar {z-index: 1000;
             position: fixed;
-            top: 62px;
+            top: 57px;
             bottom: 0;
             right: 0;
-            width: 55px;
+            width: 235px;
             letter-spacing: .5px;
             overflow-y: auto;
             overflow-x: hidden;
             background: #fff;
-          display: none;
+    
             color: rgba(29, 29, 31, 1);
         
         }
 
-
+.sidebar-container{ height: calc(100% - 40px);
+            width: 100%;}
         .mini-sidebar-item-container {
         
             display: flex;
-            height: 100%;
-            width: 100%;
-            align-items: center;justify-content: center;
-    
-            flex: none;
-            flex-direction: column;
+           
+            align-items: center;justify-content: space-evenly;
             
+            flex-direction: row;flex-wrap: wrap;
+           
         }
 
         .mini-sidebar-item {
-            margin: 12px auto;
+            flex: none;
 
-            height: 41px;
-            width: auto;
+            height: auto;
+            width: 50px;margin: 10px 22px;
         
             
             transition: all .1s ease;
         
         }
-        .mini-sidebar-item:hover {
-            margin: 12px auto;
 
-            height: 48px;
-            width: auto;
+        .mini-horizontal{
+           
+            display: flex;
+            height: 45px;
+            flex: none;
+            align-items: center;
+            margin: 6px 0;
+            padding: 4px 6px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: MiSans, system-ui, sans-serif;
+        }
+
+        .mini-horizontal:hover {
+            background: #f5f5f5;
+
+        }
+        
+
+
+        .mini-sidebar-item:hover {
+
+
+        background: transparent;
+            
         
         
         
@@ -806,15 +947,21 @@
             background: rgba(0, 0, 0, 0.1) !important;
         }
 
-        .uppertabbar .active2 {
-            background: transparent !important;
-            position: relative;
+        .uppertabbar .active2 {letter-spacing: .9px;font-size: 15px;
+            background: transparent !important;color: var(--themecolor);
+            position: relative;font-weight: 470;
+
         }
+        .dark-mode .uppertabbar .active2{letter-spacing: normal;font-size: 14px;
+            background: var(--themecolor) !important;color: #fff;font-weight: normal;}
 
         .uppertabbar .active2:hover {
             background: transparent !important;
         }
-
+       .dark-mode .uppertabbar .active2:hover {
+            background: initial !important;
+        }
+.dark-mode .uppertabbar .active2::after{content:none;}
         .uppertabbar .active2::after {
             content: '';
             margin: 0 auto;
@@ -865,7 +1012,17 @@
             z-index: 1000;
 
         }
+        .player-bottom-1{background: rgb(241 245 249 / 1) }
+        .player-bottom-2{background: #fff }
 
+        .dark-mode .player-bottom-1{
+            background: hsla(0,0%,100%,.3);;
+        }
+        .dark-mode .player-bottom-2{background: hsla(0,0%,100%,.8);;}
+        .episodename{color:rgb(100 116 139 / 1);}
+        .dark-mode .episodename{color: #b3b3b3;}
+.uploader{color: rgb(15 23 42 / 1);}
+.dark-mode .uploader{color: #fff;}
         .uppertabbar .tabbar-shadow:hover {
             background: rgba(255, 255, 255, 0.98) !important;
         }
@@ -905,15 +1062,7 @@
 
         }
 
-        .player-top {
-
-            background: rgba(255, 255, 255, 0.98);
-
-            border-color: rgb(241 245 249 / 1);
-            border-bottom-width: 1px;
-            border-radius: 0.75rem;
-
-        }
+        
 
         .slideshow {
             border-radius: 16px;
@@ -943,23 +1092,39 @@
 
 
         }
-
-        .slideshow::before {
+.slideshow::after {
             z-index: 15;
             content: "";
             width: 100%;
             top: 0;
             bottom: 0;
-            left: 0;
-            right: 0;
             position: absolute;
-            z-index: 50;
 
-            background: linear-gradient(to top, var(--page-bg) 10%, rgba(135, 136, 135, .4) 50%, transparent 100%);
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.53) 40%, rgba(0, 0, 0, 0) 100%);
+
+
+        }.slideshow::after {
+            z-index: 15;
+            content: "";
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.53) 40%, rgba(0, 0, 0, 0) 100%);
+
+
         }
+        .dark-mode .slideshow::after {
+          
+            content: none;
+           
 
 
+        }
+        
 
+        
 
         .previousarrow {
             background: rgb(255 255 255 / 0.98);
@@ -976,7 +1141,7 @@
             display: none;
             border: 1px solid #D9DDE1;
         }
-
+.dark-mode .previousarrow{background: rgb(24 24 24 / 0.98); border: 1px solid #282828;}
         .nextarrow {
             background: rgb(255 255 255 / 0.98);
             height: 40px;
@@ -992,8 +1157,7 @@
             display: none;
             border: 1px solid #D9DDE1;
         }
-
-        .slideshow:hover .previousarrow {
+        .dark-mode .nextarrow{background: rgb(24 24 24 / 0.98); border: 1px solid #282828;}        .slideshow:hover .previousarrow {
             display: flex;
 
         }
@@ -1016,7 +1180,10 @@
             border-radius: 1000px;
             border: solid 2px #fff;
         }
-
+.dark-mode .container div {
+          
+            border: solid 2px #000;
+        }
         .div1 {
             background: #705df2;
             outline: 1px solid #705df2;
@@ -1028,8 +1195,8 @@
         }
 
         .div3 {
-            background: #4b4b4b;
-            outline: 1px solid #4b4b4b;
+            background: #ea4c89;
+            outline: 1px solid #ea4c89;
         }
 
         .div5 {
@@ -1051,26 +1218,55 @@
             flex: 1;
             align-items: center;
 
-            background: #1D1D1F;
+            background: var(--color1);
             padding: 8px 22px;
             border-radius: 40px;
             color: #fff;
             font-size: 14px;
             font-weight: 500;
-            border: 1.5px solid #1D1D1F !important;
+            border: 1.5px solid var(--color1) !important;
         }
-
+.dark-mode .div7{  
+            color: #000;
+            
+            }
+        
         .div7:hover {
             background: transparent;
-            color: #1D1D1F;
+            color: var(--color1);
+        }
+        .sign-out-div {
+            display: flex;
+            width: 100%;
+            margin-left: 39px;
+            margin-right: 39px;
+            justify-content: center;
+            flex: 1;
+            align-items: center;
+
+            background: var(--themecolor);
+            padding: 8px 22px;
+            border-radius: 40px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1.5px solid var(--themecolor) !important;
         }
 
+        
+        .sign-out-div:hover {
+            background: transparent;
+            color: var(--themecolor);
+        }
         .div8 {
 
             background: #35C78F;
             outline: 1px solid #35C78F;
         }
 
+
+        .view-option{border: 1.75px solid #dadce0;border-radius: 12px; margin: 9px 15px !important;}
+        .active4{border-color: var(--themecolor);}
         .theme-container {
             position: fixed;
             background: rgba(255, 255, 255, 0.98);
@@ -1095,8 +1291,16 @@
 
         }
 
+.dark-mode .theme-container {
+           
+            background: rgba(24, 24, 24, 0.98);
+           
 
-
+        }
+.theme-header{border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgba(0, 0, 0, .12);}
+        .dark-mode .theme-header{border-bottom-color: #ffffff1a;}
 
 
 
@@ -1146,13 +1350,10 @@
             width: 14px;
             height: 14px;
         }
+.dark-mode::-webkit-scrollbar{background: #0f0f0f;}
 
-        :hover ::-webkit-scrollbar-thumb {
-            background-color: rgba(0, 0, 0, .5);
-            background-clip: content-box;
-            border: 5px solid transparent;
-            border-radius: 0.625rem;
-        }
+
+       
 
         ::-webkit-scrollbar-thumb {
             background-color: rgba(0, 0, 0, .5);
@@ -1161,12 +1362,7 @@
             border-radius: 0.625rem;
         }
 
-        :hover ::-webkit-scrollbar-thumb {
-            background-color: rgba(0, 0, 0, .5);
-            background-clip: content-box;
-            border: 5px solid transparent;
-            border-radius: 0.625rem;
-        }
+    
 
 
         ::-webkit-scrollbar-thumb:hover {
@@ -1177,7 +1373,23 @@
             border-radius: 100px;
         }
 
+       .dark-mode::-webkit-scrollbar-thumb {
+            background-color: hsl(0,0%,67%);;
+            background-clip: content-box;
+            border: 5px solid transparent;
+            border-radius: 0.625rem;
+        }
 
+    
+
+
+        .dark-mode::-webkit-scrollbar-thumb:hover {
+            background: hsl(0,0%,67%);
+            background-clip: content-box;
+
+            border: 4px solid transparent;
+            border-radius: 100px;
+        }
 
         html.no-border-radius ::-webkit-scrollbar-thumb {
             border-radius: 0;
@@ -1205,7 +1417,7 @@
             background-position: 3px bottom;
         }
 
-        .dark ::-webkit-scrollbar-button:single-button:vertical:decrement {
+        .dark-mode::-webkit-scrollbar-button:single-button:vertical:decrement {
             background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iI0RERERERCIvPgo8L3N2Zz4K");
         }
 
@@ -1216,7 +1428,7 @@
             background-position: 3px top;
         }
 
-        .dark *::-webkit-scrollbar-button:single-button:vertical:increment {
+        .dark-mode::-webkit-scrollbar-button:single-button:vertical:increment {
             background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjREREIi8+PC9zdmc+");
         }
 
@@ -1231,7 +1443,7 @@
             background-position: right 3px;
         }
 
-        .dark ::-webkit-scrollbar-button:single-button:horizontal:decrement {
+        .dark-mode::-webkit-scrollbar-button:single-button:horizontal:decrement {
             background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMTZMMTggLjQxMnYzMS4xNzdMMCAxNnoiIGZpbGw9IiNEREQiLz48L3N2Zz4=");
         }
 
@@ -1242,9 +1454,70 @@
             background-position: left 3px;
         }
 
-        .dark ::-webkit-scrollbar-button:single-button:horizontal:increment {
+        .dark-mode::-webkit-scrollbar-button:single-button:horizontal:increment {
             background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4Vi40MTNMMTggMTZ6IiBmaWxsPSIjREREIi8+PC9zdmc+");
         }
+
+        .switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 19px;
+  
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+input:checked + .slider {
+  background-color: var(--themecolor);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--themecolor);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 11px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 
         .topnav-hover-2 {
             background: rgba(255, 255, 255, 0);
@@ -1258,7 +1531,7 @@
 
         @media only screen and (min-width: 640px) {
             .player-top {
-                padding: 2.5rem;
+                padding: 2rem;
             }
 
             .space-y {
@@ -1656,7 +1929,7 @@
             </div>
 
             <div style="font-size: 16.5px;
-            font-family: MiSans, system-ui, sans-serif;color: #1D1D1F;padding-left: 10px;letter-spacing: .6px;font-weight: 500"
+            font-family: MiSans, system-ui, sans-serif;color: var(--color1);padding-left: 10px;letter-spacing: .6px;font-weight: 500"
                 id="mobilelogotext">
                 WeUI
             </div>
@@ -1669,7 +1942,7 @@
             <div style="margin-right: 5px;position: relative;" class="topnav-hover-container">
 
 
-                <div class="topnav-hover" onclick="open_notify()">
+                <div class="topnav-hover " onclick="open_notify()">
 
 
 
@@ -1684,10 +1957,10 @@
 
                 <div class="notify scrollbar-hidden" id="notify-content">
                     <div style="position: sticky; top:0;left:0;right:0;height:60px;backdrop-filter: saturate(200%) blur(30px);z-index: 10;
-    background: rgba(255, 255, 255, 0.98);display: flex;align-items: center;">
+  display: flex;align-items: center;" class="notify-header">
                         <div style="flex:1;padding-left: 20px;font-weight: 450;">Notifications</div>
                         <div style="padding-right: 12.5px;">
-                            <div class="topnav-hover" style="padding: 8.5px;"> <svg xmlns="http://www.w3.org/2000/svg"
+                            <div class="topnav-hover " style="padding: 8.5px;"> <svg xmlns="http://www.w3.org/2000/svg"
                                     width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                                     class="feather feather-more-horizontal" style="height: 22px;width: 22px;">
@@ -1700,9 +1973,9 @@
 
                         </div>
                     </div>
-                    <div 
+                    <div class="topnav-hover"
                         style="padding: 1.5rem;align-items: flex-start;
-           
+           border-radius: 0;
                         display: flex;
                     "> <img
                             src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTK3u-sQWj89K-nm28S_XkACg9z9wXvs8oLy6E13axoO_oK-Q70"
@@ -1713,12 +1986,12 @@
                             min-width: 0;margin-left: 1rem;
                             position: relative;">
                             <h2 style="
-                                color: rgb(15 23 42/1);
+                                
                                 font-weight: 600;
                                 overflow: hidden;
     white-space: nowrap;
     padding-right: 5rem;
-                                text-overflow: ellipsis;">Beyblade
+                                text-overflow: ellipsis;" class="notify-top">Beyblade
                                 Burst</h2>
                             <dl style="
                                 line-height: 1.5rem;
@@ -1749,7 +2022,7 @@
                                     
                                         position: absolute;
                                     ">
-                                    <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor">
+                                    <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor" class="svg-exception">
                                             <path
                                                 d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
                                             </path>
@@ -1792,7 +2065,7 @@
                                     width: 100%;
                                     margin-top: 0.5rem;">
 
-                                    <dd style="color: rgb(148 163 184/1)">Beyblade Burst Official</dd>
+                                    <dd class="notify-bottom">Beyblade Burst Official</dd>
                                 </div>
                             </dl>
                         </div>
@@ -1800,8 +2073,9 @@
 
                    
                 <div 
+                class="topnav-hover"
                 style="padding: 1.5rem;align-items: flex-start;
-   
+   border-radius: 0;
                 display: flex;
             "> <img
                     src="https://m.media-amazon.com/images/M/MV5BY2I2MzI1ODYtMWRlOS00MzdhLWEyOWEtYWJhNmFiZTIxMGJhXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_FMjpg_UX1000_.jpg"
@@ -1812,12 +2086,12 @@
                     min-width: 0;margin-left: 1rem;
                     position: relative;">
                     <h2 style="
-                        color: rgb(15 23 42/1);
+                        
                         font-weight: 600;
                         overflow: hidden;
 white-space: nowrap;
 padding-right: 5rem;
-                        text-overflow: ellipsis;">Dragon Ball Super</h2>
+                        text-overflow: ellipsis;"  class="notify-top">Dragon Ball Super</h2>
                     <dl style="
                         line-height: 1.5rem;
                
@@ -1847,7 +2121,7 @@ padding-right: 5rem;
                             
                                 position: absolute;
                             ">
-                            <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor">
+                            <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor" class="svg-exception">
                                     <path
                                         d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
                                     </path>
@@ -1890,15 +2164,15 @@ padding-right: 0.375rem;">EP-12</dd>
                             width: 100%;
                             margin-top: 0.5rem;">
 
-                            <dd style="color: rgb(148 163 184/1)">Toei Animation</dd>
+                            <dd class="notify-bottom">Toei Animation</dd>
                         </div>
                     </dl>
                 </div>
             </div>
 
-            <div 
+            <div class="topnav-hover"
             style="padding: 1.5rem;align-items: flex-start;
-
+border-radius: 0;
             display: flex;
         "> <img
                 src="https://upload.wikimedia.org/wikipedia/en/2/2e/Beyblade_Burst_DB.jpg"
@@ -1909,12 +2183,12 @@ padding-right: 0.375rem;">EP-12</dd>
                 min-width: 0;margin-left: 1rem;
                 position: relative;">
                 <h2 style="
-                    color: rgb(15 23 42/1);
+                    
                     font-weight: 600;
                     overflow: hidden;
 white-space: nowrap;
 padding-right: 5rem;
-                    text-overflow: ellipsis;">Beyblade Burst
+                    text-overflow: ellipsis;" class="notify-top">Beyblade Burst
 QuadDrive  </h2>
                 <dl style="
                     line-height: 1.5rem;
@@ -1945,7 +2219,7 @@ QuadDrive  </h2>
                         
                             position: absolute;
                         ">
-                        <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor">
+                        <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor" class="svg-exception">
                                 <path
                                     d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
                                 </path>
@@ -1988,7 +2262,7 @@ padding-right: 0.375rem;">EP-12</dd>
                         width: 100%;
                         margin-top: 0.5rem;">
 
-                        <dd style="color: rgb(148 163 184/1)">Beyblade Burst Official</dd>
+                        <dd class="notify-bottom">Beyblade Burst Official</dd>
                     </div>
                 </dl>
             </div>
@@ -2170,7 +2444,7 @@ padding-right: 0.375rem;">EP-12</dd>
 
         </div>
 
-        <div class="dropitem" style="margin-bottom:0">
+        <div class="dropitem" style="margin-bottom:0"  onclick="opensettings()">
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -2191,9 +2465,7 @@ padding-right: 0.375rem;">EP-12</dd>
 
 
         <div class="theme-container" id="theme-container">
-            <div class="dropitem exception" style="border-bottom-width: 1px;
-        border-bottom-style: solid;
-        border-bottom-color: rgba(0, 0, 0, .12);">
+            <div class="dropitem exception theme-header">
                 <div class="topnav-hover"
                     style="padding: 6.5px;display: flex;align-items: center;justify-content: center;margin-left: 5.5px;border-radius: 12px;"
                     onclick="closethemes()">
@@ -2280,6 +2552,12 @@ padding-right: 0.375rem;">EP-12</dd>
                 </div>
 
             </div>
+         
+
+
+
+
+
             <div class="dropitem">
                 <div>
 
@@ -2301,6 +2579,44 @@ padding-right: 0.375rem;">EP-12</dd>
 
             </div>
 
+            <div class="dropitem exception" style="height: 44px;">
+
+
+
+                <div
+                    style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;padding-left: 20px;padding-top: 10px;display: flex;align-items: center;">
+                    Change View
+                  
+                </div>
+            </div>
+
+            <div class="dropitem exception view-option active4">
+               
+
+                <div
+                    style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;flex:1">
+                    Comfortable</div>
+<div style="flex: 1;justify-content: flex-end;">
+                    <img src="https://ssl.gstatic.com/ui/v1/icons/mail/quicksettings/displaydensity/Comfortable.png"  style="    height: 32px;
+                    
+                    width: 72px;margin-left: 10px">
+</div>
+            </div>
+            <div class="dropitem exception view-option">
+              
+
+                <div
+                    style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;flex: 1;">
+                    Compact</div>
+<div style="flex: 1;justify-content: flex-end;">
+                    <img src="https://ssl.gstatic.com/ui/v1/icons/mail/quicksettings/displaydensity/Compact.png"  style="    height: 32px;
+                    margin-left: 10px;
+                    width: 72px;">
+
+</div>
+            </div>
+
+
 
 
             <div class="dropitem exception">
@@ -2316,7 +2632,7 @@ padding-right: 0.375rem;">EP-12</dd>
             <div class="container" style="margin-top: 20px">
                 <div class="div1" onclick="changethemecolor('#705df2')"></div>
                 <div class="div2" onclick="changethemecolor('#ffb905')"></div>
-                <div class="div3" onclick="changethemecolor('#4b4b4b')"></div>
+                <div class="div3" onclick="changethemecolor('#ea4c89')"></div>
             </div>
             <div class="container">
                 <div class="div8" onclick="changethemecolor('#35C78F')"></div>
@@ -2331,6 +2647,264 @@ padding-right: 0.375rem;">EP-12</dd>
             </div>
 
 
+        </div>
+        
+        <div class="theme-container" id="settings-container">
+            <div class="dropitem exception theme-header">
+                <div class="topnav-hover"
+                    style="padding: 6.5px;display: flex;align-items: center;justify-content: center;margin-left: 5.5px;border-radius: 12px;"
+                    onclick="closesettings()">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-chevron-left">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                </div>
+
+
+                <div
+                    style="padding-left: 52px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                    Settings
+                </div>
+
+
+
+            </div>
+
+            <div class="dropitem" id="light-theme">
+                <div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-sun" style="margin-left: 28px;">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </div>
+
+
+                <div
+                    style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                    Light Theme
+                </div>
+                <div style="padding-left:50px;color: #fff;background: var( --themecolor);border-radius: 1000px;align-items: center;justify-content: center;padding: .75px;margin-left: 52.5px"
+                    class="light-tick">
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-check" style="padding:2px;">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                </div>
+
+
+            </div>
+
+            <div class="dropitem" id="light-theme">
+                <div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-sun" style="margin-left: 28px;">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </div>
+
+
+                <div
+                    style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                    Light Theme
+                </div>
+                <div style="padding-left:50px;color: #fff;background: var( --themecolor);border-radius: 1000px;align-items: center;justify-content: center;padding: .75px;margin-left: 52.5px"
+                    class="light-tick">
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-check" style="padding:2px;">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                </div>
+
+
+            </div>
+
+            <div class="dropitem" id="light-theme">
+                <div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-sun" style="margin-left: 28px;">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </div>
+
+
+                <div
+                    style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                    Light Theme
+                </div>
+                <div style="padding-left:50px;color: #fff;background: var( --themecolor);border-radius: 1000px;align-items: center;justify-content: center;padding: .75px;margin-left: 52.5px"
+                    class="light-tick">
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-check" style="padding:2px;">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                </div>
+
+
+            </div>
+
+            <div class="dropitem" id="light-theme">
+                <div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-sun" style="margin-left: 28px;">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </div>
+
+
+                <div
+                    style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                    Light Theme
+                </div>
+                <div style="padding-left:50px;color: #fff;background: var( --themecolor);border-radius: 1000px;align-items: center;justify-content: center;padding: .75px;margin-left: 52.5px"
+                    class="light-tick">
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-check" style="padding:2px;">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                </div>
+
+
+            </div>
+
+            <div class="dropitem" id="light-theme">
+                <div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-sun" style="margin-left: 28px;">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </div>
+
+
+                <div
+                    style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                    Light Theme
+                </div>
+                <div style="padding-left:50px;color: #fff;background: var( --themecolor);border-radius: 1000px;align-items: center;justify-content: center;padding: .75px;margin-left: 52.5px"
+                    class="light-tick">
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-check" style="padding:2px;">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                </div>
+
+
+            </div>
+
+            <div class="dropitem" id="light-theme">
+                <div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-sun" style="margin-left: 28px;">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </div>
+
+
+                <div
+                    style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                    Show Right Sidebar
+                </div>
+               
+                <div style="padding-left:50px;align-items: center;justify-content: center;padding: .75px;margin-left: 52.5px"
+                    class="light-tick">
+
+
+
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                </div>
+
+
+            </div>
+            <div class="container" style="padding-bottom:12px">
+
+                <div class="sign-out-div">Sign Out
+                </div>
+            </div>
         </div>
     </div>
 
@@ -2536,15 +3110,71 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
 
 
     <div class="mini-sidebar scrollbar-hidden" id="mini-sidebar-container">
+        <div class="sidebar-container">
 <div class="mini-sidebar-item-container">
-<img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.gallery.png">
-<img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.notes.png">
-<img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.mi.misupport.png">
-<img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.wali.live.png">
-<img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.securitycenter.png">
-
+   
+<div style="display: flex;flex-direction: column;justify-content: center;background: #f9f9f9;border-radius: 12px;margin-top: 12px;"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.gallery.png">
+<div style="text-align: center;font-size: 15px;">Gallery</div>
 </div>
 
+<div style="display: flex;flex-direction: column;justify-content: center;background: #f9f9f9;;border-radius: 12px;margin-top: 12px;"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.mi.misupport.png">
+    <div style="text-align: center;font-size: 15px;">Liked</div>
+    </div>
+
+    <div style="display: flex;flex-direction: column;justify-content: center;background: #f9f9f9;border-radius: 12px;margin-top: 12px;"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.wali.live.png">
+        <div style="text-align: center;font-size: 15px;">Collection</div>
+        </div>
+        <div style="display: flex;flex-direction: column;justify-content: center;background: #f9f9f9;border-radius: 12px;margin-top: 12px;"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.securitycenter.png">
+            <div style="text-align: center;font-size: 15px;">Hidden</div>
+            </div>
+            
+        
+
+
+</div>
+<div class="mini-horizontal">sss</div>
+<div class="mini-horizontal">sss</div>
+<div class="mini-horizontal">sss</div>
+<div class="mini-horizontal">sss</div>
+
+<div class="mini-horizontal">
+   
+
+</div>
+</div>
+<div style="display: flex;align-items:center;width: 100%;justify-content: center;position: sticky;bottom: 0;left: 0;right: 0;">
+<div class="topnav-hover" style="padding: 8.5px; border-radius: 5px;">
+    
+    <div style="
+    
+   
+    color: #24292f;
+    font-size: 15px !important;
+   
+    border: 0;
+    margin-right: 15px !important;
+    font-weight: 600;
+   
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 8px;
+    letter-spacing: .5px;">
+    <div style=" border-radius: 1000px;width: 32px;
+    height: 32px;background: url('https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp');  background-position: center center;background-size: 64px auto;display: inline-block; vertical-align: middle;" id="profile-id">
+        </div>
+    <div style="padding: 0 0 0 15px;" id="login-name">Hi, Alec</div>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal" style="height: 22px;width: 22px;">
+        <circle cx="12" cy="12" r="1"></circle>
+        <circle cx="19" cy="12" r="1"></circle>
+        <circle cx="5" cy="12" r="1"></circle>
+    </svg>
+</div>
+
+
+   
+</div></div>
     </div>
 
 
@@ -2636,56 +3266,56 @@ margin-right: 0.5rem;
             </svg>
         </div>
 
-        <div style="border-radius: 8px;height: 32px;margin: 12px;padding: 0 12px;margin-left: 24px;color: var( --themecolor);vertical-align: middle;font-size: 15px;display:flex;align-items: center;flex: none;font-weight: 470;letter-spacing: .9px;"
+        <div style="border-radius: 8px;height: 32px;margin: 12px;padding: 0 12px;margin-left: 24px;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;"
             class="active2">
             All
         </div>
         <div
-            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            style="border-radius: 8px;height: 32px;margin: 12px;background: var(--color2);padding: 0 12px;color: var(--color3);vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
             Journeys
         </div>
         <div
-            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            style="border-radius: 8px;height: 32px;margin: 12px;background: var(--color2);padding: 0 12px;color: var(--color3);vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
             Live
         </div>
         <div
-            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            style="border-radius: 8px;height: 32px;margin: 12px;background: var(--color2);padding: 0 12px;color: var(--color3);vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
             Watch Later
         </div>
         <div
-            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            style="border-radius: 8px;height: 32px;margin: 12px;background: var(--color2);padding: 0 12px;color: var(--color3);vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
             Pokemon
         </div>
 
         <div
-            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            style="border-radius: 8px;height: 32px;margin: 12px;background: var(--color2);padding: 0 12px;color: var(--color3);vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
             Suggested For You </div>
         <div
-            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            style="border-radius: 8px;height: 32px;margin: 12px;background: var(--color2);padding: 0 12px;color: var(--color3);vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
             Adventure
         </div>
         <div
-            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #fff#0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            style="border-radius: 8px;height: 32px;margin: 12px;background: var(--color2);padding: 0 12px;color: var(--color3);vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
             Goku
         </div>
         <div
-            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            style="border-radius: 8px;height: 32px;margin: 12px;background: var(--color2);padding: 0 12px;color: var(--color3);vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
             Movies
         </div>
         <div
-            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            style="border-radius: 8px;height: 32px;margin: 12px;background: var(--color2);padding: 0 12px;color: var(--color3);vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
             What's New
         </div>
         <div
-            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            style="border-radius: 8px;height: 32px;margin: 12px;background: var(--color2);padding: 0 12px;color: var(--color3);vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
             Ash Ketchum
         </div>
         <div
-            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
+            style="border-radius: 8px;height: 32px;margin: 12px;background: var(--color2);padding: 0 12px;color: var(--color3);vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
             Ultra Legends
         </div>
         <div
-            style="border-radius: 8px;height: 32px;margin: 12px;background: #f2f2f2;padding: 0 12px;color: #0f0f0f;vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;margin-right: 24px;">
+            style="border-radius: 8px;height: 32px;margin: 12px;background: var(--color2);padding: 0 12px;color: var(--color3);vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;margin-right: 24px;">
             More
         </div>
         <div class="tabbar-shadow-right" id="tabbar-shadow-right">
@@ -2728,16 +3358,16 @@ margin-right: 0.5rem;
                     <p style="color: var( --themecolor);font-size:0.875rem;line-height: 1.5rem;">
                         <a title="Episode">Ep.</a> 110
                     </p>
-                    <h2 style="color:rgb(100 116 139 / 1);font-size:0.875rem;line-height: 1.5rem;    overflow: hidden;
+                    <h2 style="font-size:0.875rem;line-height: 1.5rem;    overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;font-weight: inherit;    margin-top: calc(0.25rem * calc(1 - 0));
-        margin-bottom: calc(0.25rem * 0);
-    ">
+        margin-bottom: calc(0.25rem * 0);" class="episodename">
+    
                         Son Goku Wakes! New Level of the Awakened!!
                     </h2>
-                    <p style="color: rgb(15 23 42 / 1);font-size: 1.125rem;
+                    <p style="font-size: 1.125rem;
                    margin-top: calc(0.25rem * calc(1 - 0));
-        margin-bottom: calc(0.25rem * 0);  line-height: 1.75rem;">
+        margin-bottom: calc(0.25rem * 0);  line-height: 1.75rem;" class="uploader">
                         Toei Animation
                     </p>
                 </div>
@@ -2750,11 +3380,11 @@ margin-right: 0.5rem;
                 <div style="position: relative;">
 
 
-                    <div style="background: rgb(241 245 249 / 1);border-radius: 9999px;overflow: hidden;">
+                    <div style="border-radius: 9999px;overflow: hidden;" class="player-bottom-1">
                         <div style="width: 50%;height: 0.5rem;background: var( --themecolor);"></div>
                     </div>
                     <div
-                        style="background: #ffffff;position: absolute;left: 50%;top: 50%;width: 18px;height: 18px;margin-top: -0.5rem;margin-left: -0.5rem;border: 3px solid var( --themecolor);border-radius: 1000px;">
+                        style="position: absolute;left: 50%;top: 50%;width: 18px;height: 18px;margin-top: -0.5rem;margin-left: -0.5rem;border: 3px solid var( --themecolor);border-radius: 1000px;" class="player-bottom-2">
 
                     </div>
                 </div>
@@ -2893,6 +3523,14 @@ margin-right: 0.5rem;
         }
         function closethemes() {
             document.getElementById("theme-container").classList.remove("showit3");
+
+        }
+        function opensettings() {
+            document.getElementById("settings-container").classList.add("showit3");
+
+        }
+        function closesettings() {
+            document.getElementById("settings-container").classList.remove("showit3");
 
         }
 
