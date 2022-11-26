@@ -766,7 +766,7 @@ border-top: none;
             overflow-y: auto;
             overflow-x: hidden;
             background: rgba(255, 255, 255, 0.98);
-    
+    display: none;
             color: rgba(29, 29, 31, 1);
         
         }
@@ -1522,6 +1522,12 @@ input:checked + .slider:before {
             background: #f5f5f5;
         }
 
+        
+.compactClass .mini-sidebar{display: initial !important;z-index: 500;}
+.compactClass .notify{position: fixed;right: 0;top:56px;bottom: 0;border: none;box-shadow: none;width: 235px;z-index: 1000;height: 100%;margin-top: 0;border-radius: 0;transform: scale(0, 1);}
+.compactClass .notify-showit{    transform: scale(1, 1);transform-origin: right;}
+.compactClass .heading1{font-size: 16px;}
+.compactClass .contentarea2{right: 235px;}
         @media only screen and (min-width: 640px) {
             .player-top {
                 padding: 2rem;
@@ -1951,7 +1957,7 @@ input:checked + .slider:before {
                 <div class="notify scrollbar-hidden" id="notify-content">
                     <div style="position: sticky; top:0;left:0;right:0;height:60px;backdrop-filter: saturate(200%) blur(30px);z-index: 10;
   display: flex;align-items: center;" class="notify-header">
-                        <div style="flex:1;padding-left: 20px;font-weight: 450;">Notifications</div>
+                        <div style="flex:1;padding-left: 20px;font-weight: 450;" class="heading1">Notifications</div>
                         <div style="padding-right: 12.5px;">
                             <div class="topnav-hover " style="padding: 8.5px;"> <svg xmlns="http://www.w3.org/2000/svg"
                                     width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -2578,12 +2584,12 @@ padding-right: 0.375rem;">EP-12</dd>
 
                 <div
                     style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;padding-left: 20px;padding-top: 10px;display: flex;align-items: center;">
-                    Notification View
+                    Change View
                   
                 </div>
             </div>
 
-            <div class="dropitem exception view-option active4">
+            <div class="dropitem exception view-option" id="comfort" onclick="comfortMode()">
                
 
                 <div
@@ -2595,7 +2601,7 @@ padding-right: 0.375rem;">EP-12</dd>
                     width: 72px;margin-left: 10px">
 </div>
             </div>
-            <div class="dropitem exception view-option" onclick="alert('Compact view will be available soon.')">
+            <div class="dropitem exception view-option" id="compact" onclick="compactMode()">
               
 
                 <div
@@ -3402,6 +3408,24 @@ margin-right: 0.5rem;
         function collapsesidebar() {
             document.getElementById("menu-icon").click();
         }
+
+        function compactMode() {
+            document.body.classList.add('compactClass');
+            document.getElementById('compact').classList.add('active4');
+            document.getElementById('comfort').classList.remove('active4');
+            localStorage.setItem('WeUI-view-keycode', 'compact');
+        }
+        function comfortMode() {
+            document.body.classList.remove('compactClass');
+            document.getElementById('compact').classList.remove('active4');
+            document.getElementById('comfort').classList.add('active4');
+            localStorage.setItem('WeUI-view-keycode', 'comfort');
+        }
+        var viewcode = localStorage.getItem('WeUI-view-keycode');
+
+        if (viewcode == 'compact') { compactMode(); }
+        else { comfortMode(); }
+         
         function intfocus() {
             document.getElementById("search_container").classList.add("focused");
             document.getElementById("search_icon").classList.add("focu");
@@ -3473,6 +3497,8 @@ margin-right: 0.5rem;
             document.getElementById('myDropdown').classList.remove('showit');
             document.getElementById('progress-player-id').classList.remove('progress-player-show');
         }
+
+      
         function open_progress_player() {
             document.getElementById('progress-player-id').classList.toggle('progress-player-show');
             document.getElementById('myDropdown').classList.remove('showit');
