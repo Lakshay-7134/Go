@@ -1521,13 +1521,27 @@ input:checked + .slider:before {
         .topnav-hover-2:hover {
             background: #f5f5f5;
         }
-
-        
+.notify-padding{padding: 1.5rem;border-radius: 0;}
+        .notify-img{border-radius: 0.375rem;width: 60px;
+                        aspect-ratio: auto 60 / 88;flex: none; }
 .compactClass .mini-sidebar{display: initial !important;z-index: 500;}
-.compactClass .notify{position: fixed;right: 0;top:56px;bottom: 0;border: none;box-shadow: none;width: 235px;z-index: 1000;height: 100%;margin-top: 0;border-radius: 0;transform: scale(0, 1);}
-.compactClass .notify-showit{    transform: scale(1, 1);transform-origin: right;}
-.compactClass .heading1{font-size: 16px;}
+.compactClass .notify{position: fixed;right: 0;top:57px;bottom: 0;border: none;box-shadow: none;width: 0;z-index: 1000;height: 100%;margin-top: 0;border-radius: 0;transition: all 200ms cubic-bezier(0.4,0,0.2,1);transform: scale(1,1);}
+.compactClass .notify-showit{    width: 235px;transform-origin: right;}
+.compactClass .heading1{font-size: 16px;font-weight: 400 !important;}
 .compactClass .contentarea2{right: 235px;}
+.compactClass .notify-padding{padding: 1rem 1rem !important;border-radius: 12px;}
+.compactClass .compact-hidden{display: none !important;}
+.compactClass .notify-img{}
+.compactClass .notify-top{padding-right: 0 !important;}
+.compactClass .overflow-ellipse{    
+                                font-weight: 600;
+                                overflow: hidden;
+    white-space: nowrap;
+ 
+                                text-overflow: ellipsis;}
+                                .compactClass .uppertabbar{right: 235px;}
+                                .compactClass .tabbar-shadow-right{position: sticky;padding: 0 13px;}
+                                .compactClass .progress-player-hidden{right: 259px;}
         @media only screen and (min-width: 640px) {
             .player-top {
                 padding: 2rem;
@@ -1972,14 +1986,13 @@ input:checked + .slider:before {
 
                         </div>
                     </div>
-                    <div class="topnav-hover"
-                        style="padding: 1.5rem;align-items: flex-start;
-           border-radius: 0;
+                    <div class="topnav-hover notify-padding"
+                        style="align-items: flex-start;
+           
                         display: flex;
-                    "> <img
+                    " > <img
                             src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTK3u-sQWj89K-nm28S_XkACg9z9wXvs8oLy6E13axoO_oK-Q70"
-                            width="60" height="88" style="width: 60px;
-                        aspect-ratio: auto 60 / 88;flex: none; border-radius: 0.375rem;">
+                            width="60" height="88"  class="notify-img">
                         
                         <div style=" flex: 1 1 auto;
                             min-width: 0;margin-left: 1rem;
@@ -1990,7 +2003,7 @@ input:checked + .slider:before {
                                 overflow: hidden;
     white-space: nowrap;
     padding-right: 5rem;
-                                text-overflow: ellipsis;" class="notify-top">Beyblade
+                                text-overflow: ellipsis;" class="overflow-ellipse notify-top">Beyblade
                                 Burst</h2>
                             <dl style="
                                 line-height: 1.5rem;
@@ -2020,7 +2033,7 @@ input:checked + .slider:before {
                                         top: 0;
                                     
                                         position: absolute;
-                                    ">
+                                    " class="compact-hidden">
                                     <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor" class="svg-exception">
                                             <path
                                                 d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
@@ -2034,7 +2047,7 @@ input:checked + .slider:before {
         ;border-radius: 0.25rem;padding-left: 0.375rem;
     padding-right: 0.375rem;">EP-12</dd>
                                 </div>
-                                <div style="    margin-left: 0.5rem;">
+                                <div style="    margin-left: 0.5rem;" class="compact-hidden">
 
                                     <dd>2021</dd>
                                 </div>
@@ -2048,7 +2061,7 @@ input:checked + .slider:before {
                                             <circle cx="1" cy="1" r="1"></circle>
                                         </svg></dd>
                                 </div>
-                                <div>
+                                <div class="compact-hidden">
 
                                     <dd  style=" display: flex; align-items: center;  "><svg width="2" height="2" fill="currentColor"
                                              style="    
@@ -2064,7 +2077,7 @@ input:checked + .slider:before {
                                     width: 100%;
                                     margin-top: 0.5rem;">
 
-                                    <dd class="notify-bottom">Beyblade Burst Official</dd>
+                                    <dd class="notify-bottom overflow-ellipse">Beyblade Burst Official</dd>
                                 </div>
                             </dl>
                         </div>
@@ -2072,14 +2085,13 @@ input:checked + .slider:before {
 
                    
                 <div 
-                class="topnav-hover"
-                style="padding: 1.5rem;align-items: flex-start;
-   border-radius: 0;
+                class="topnav-hover notify-padding"
+                style="align-items: flex-start;
+   
                 display: flex;
-            "> <img
+            " > <img
                     src="https://m.media-amazon.com/images/M/MV5BY2I2MzI1ODYtMWRlOS00MzdhLWEyOWEtYWJhNmFiZTIxMGJhXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_FMjpg_UX1000_.jpg"
-                    width="60" height="88" style="width: 60px;
-                aspect-ratio: auto 60 / 88;flex: none; border-radius: 0.375rem;">
+                    width="60" height="88" class="notify-img">
                 
                 <div style=" flex: 1 1 auto;
                     min-width: 0;margin-left: 1rem;
@@ -2119,7 +2131,7 @@ padding-right: 5rem;
                                 top: 0;
                             
                                 position: absolute;
-                            ">
+                            "  class="compact-hidden">
                             <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor" class="svg-exception">
                                     <path
                                         d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
@@ -2127,13 +2139,13 @@ padding-right: 5rem;
                                 </svg></dt>
                             <dd style="margin-left: 0.25rem;">2.54</dd>
                         </div>
-                        <div>
+                        <div >
 
                             <dd  style="border: 1px solid #dadce0
 ;border-radius: 0.25rem;padding-left: 0.375rem;
 padding-right: 0.375rem;">EP-12</dd>
                         </div>
-                        <div style="    margin-left: 0.5rem;">
+                        <div style="    margin-left: 0.5rem;" class="compact-hidden">
 
                             <dd>2020</dd>
                         </div>
@@ -2147,7 +2159,7 @@ padding-right: 0.375rem;">EP-12</dd>
                                     <circle cx="1" cy="1" r="1"></circle>
                                 </svg></dd>
                         </div>
-                        <div>
+                        <div class="compact-hidden">
 
                             <dd  style=" display: flex; align-items: center;  "><svg width="2" height="2" fill="currentColor"
                                      style="    
@@ -2163,20 +2175,19 @@ padding-right: 0.375rem;">EP-12</dd>
                             width: 100%;
                             margin-top: 0.5rem;">
 
-                            <dd class="notify-bottom">Toei Animation</dd>
+                            <dd class="notify-bottom overflow-ellipse">Toei Animation</dd>
                         </div>
                     </dl>
                 </div>
             </div>
 
-            <div class="topnav-hover"
-            style="padding: 1.5rem;align-items: flex-start;
-border-radius: 0;
+            <div class="topnav-hover notify-padding"
+            style="align-items: flex-start;
+
             display: flex;
-        "> <img
+        " > <img
                 src="https://upload.wikimedia.org/wikipedia/en/2/2e/Beyblade_Burst_DB.jpg"
-                width="60" height="88" style="width: 60px;
-            aspect-ratio: auto 60 / 88;flex: none; border-radius: 0.375rem;">
+                width="60" height="88" class="notify-img">
             
             <div style=" flex: 1 1 auto;
                 min-width: 0;margin-left: 1rem;
@@ -2217,7 +2228,7 @@ QuadDrive  </h2>
                             top: 0;
                         
                             position: absolute;
-                        ">
+                        "  class="compact-hidden">
                         <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor" class="svg-exception">
                                 <path
                                     d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
@@ -2231,7 +2242,7 @@ QuadDrive  </h2>
 ;border-radius: 0.25rem;padding-left: 0.375rem;
 padding-right: 0.375rem;">EP-12</dd>
                     </div>
-                    <div style="    margin-left: 0.5rem;">
+                    <div style="    margin-left: 0.5rem;" class="compact-hidden">
 
                         <dd>2021</dd>
                     </div>
@@ -2245,7 +2256,7 @@ padding-right: 0.375rem;">EP-12</dd>
                                 <circle cx="1" cy="1" r="1"></circle>
                             </svg></dd>
                     </div>
-                    <div>
+                    <div class="compact-hidden">
 
                         <dd  style=" display: flex; align-items: center;  "><svg width="2" height="2" fill="currentColor"
                                  style="    
@@ -2261,7 +2272,7 @@ padding-right: 0.375rem;">EP-12</dd>
                         width: 100%;
                         margin-top: 0.5rem;">
 
-                        <dd class="notify-bottom">Beyblade Burst Official</dd>
+                        <dd class="notify-bottom overflow-ellipse">Beyblade Burst Official</dd>
                     </div>
                 </dl>
             </div>
