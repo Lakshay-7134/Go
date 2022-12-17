@@ -2,6 +2,10 @@
 
 <head>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@v5.3.2/dist/amplitude.js"></script>
+
+
+    
     <link rel="apple-touch-icon" sizes="180x180"
         href="https://github.com/Lakshay-7134/Go/blob/main/apple-touch-icon.png?raw=true">
     <link rel="icon" type="image/png" sizes="32x32"
@@ -33,16 +37,19 @@
     <style>
         @import url("https://font.sec.miui.com/font/css?family=MiSans:300,450,500,650:Chinese_Simplify,Latin,Chinese_Traditional&display=swap");
 
-    :root {
+        :root {
             --themecolor: #0d84ff;
---color1: #1d1d1f;
---color2: #f2f2f2;
---color3: #0f0f0f;
+            --color1: #1d1d1f;
+            --color2: #f2f2f2;
+            --color3: #0f0f0f;
         }
-.dark-mode {--color1: #f1f1f1;
-    --color2: rgba(255, 255, 255, 0.1);
-    --color3: #f1f1f1;
+
+        .dark-mode {
+            --color1: #f1f1f1;
+            --color2: rgba(255, 255, 255, 0.1);
+            --color3: #f1f1f1;
         }
+
         * {
             font-size: 100%;
             margin: 0;
@@ -151,10 +158,12 @@
             letter-spacing: .5px;
             caret-color: var(--color1);
         }
+
         .dark-mode .flex_menu_container .flex_box_list_item .search_box {
-            
+
             caret-color: var(--themecolor);
         }
+
         .search_box::-webkit-input-placeholder {
             /* Edge */
             color: #24292f;
@@ -168,27 +177,29 @@
         .search_box::placeholder {
             color: #24292f;
         }
-      .dark-mode  .search_box::-webkit-input-placeholder {
+
+        .dark-mode .search_box::-webkit-input-placeholder {
             /* Edge */
             color: #ffffffe0;
         }
 
-       .dark-mode .search_box:-ms-input-placeholder {
+        .dark-mode .search_box:-ms-input-placeholder {
             /* Internet Explorer 10-11 */
             color: #ffffffe0;
         }
 
-       .dark-mode .search_box::placeholder {
+        .dark-mode .search_box::placeholder {
             color: #ffffffe0;
         }
-        
+
         .search-icon {
             fill: #24292f;
             margin-left: 26px;
         }
-       .dark-mode .search-icon {
+
+        .dark-mode .search-icon {
             fill: #f1f1f1;
-            
+
         }
 
         .search-container {
@@ -235,7 +246,7 @@
         .dark-mode .search-container:hover {
             border: 1px solid transparent;
         }
-        
+
         .search-container:hover {
 
             background: rgba(255, 255, 255, 0);
@@ -244,7 +255,11 @@
         .focused {
             background: rgba(255, 255, 255, 0);
         }
-.dark-mode .focused{background: transparent !important;}
+
+        .dark-mode .focused {
+            background: transparent !important;
+        }
+
         .focused:hover {
             border: 1px solid transparent;
         }
@@ -324,9 +339,14 @@
             border: 1px solid rgba(0, 0, 0, 0.1);
 
         }
-.dark-mode .dropdown-content{background: rgba(24,24,24,.98);
-    border: 1px solid #282828;box-shadow: 0px 4px 32px 0px #0000001a;
-color: #f1f1f1;}
+
+        .dark-mode .dropdown-content {
+            background: rgba(24, 24, 24, .98);
+            border: 1px solid #282828;
+            box-shadow: 0px 4px 32px 0px #0000001a;
+            color: #f1f1f1;
+        }
+
         .dropdown-content::-webkit-scrollbar {
             display: none;
         }
@@ -347,10 +367,12 @@ color: #f1f1f1;}
             background: #f5f5f5;
 
         }
-     .dark-mode .dropdown-content .dropitem:hover {
+
+        .dark-mode .dropdown-content .dropitem:hover {
             background: rgba(255, 255, 255, 0.1);
 
         }
+
         .dropdown-content .drop-profile {
 
             border-radius: 0;
@@ -363,11 +385,12 @@ color: #f1f1f1;}
             padding-bottom: 20px;
 
         }
+
         .dark-mode .dropdown-content .drop-profile {
-border-bottom-color: #ffffff1a;
+            border-bottom-color: #ffffff1a;
 
 
-}
+        }
 
         .drop-pic {
             width: 100%;
@@ -383,9 +406,11 @@ border-bottom-color: #ffffff1a;
 
             position: absolute;
             background: hsla(0, 0%, 100%, .8);
-            backdrop-filter: saturate(200%) blur(30px);
+            backdrop-filter: blur(40px);
             background: rgba(255, 255, 255, 0.98);
-            ;
+            
+
+            
             border-radius: 0 0 0.5rem 0.5rem;
             overflow-x: hidden;
             overflow-y: auto;
@@ -405,19 +430,26 @@ border-bottom-color: #ffffff1a;
         .dark-mode .dropdown-content2 {
 
             top: 50px;
-background: rgba(24,24,24,.8);
-backdrop-filter: blur(40px);
+            background: rgba(24, 24, 24, .8);
+            backdrop-filter: blur(40px);
 
 
-border-radius: 0.5rem;
+            border-radius: 0.5rem;
 
-color: #f1f1f1;
-box-shadow: 0px 4px 32px 0px #0000001a;
-border: 1px solid #282828;
-border-top: none;
-}
-.notify-bottom{color: rgb(148 163 184/1) }
-.dark-mode .notify-bottom{color: #AAAAAA }
+            color: #f1f1f1;
+            box-shadow: 0px 4px 32px 0px #0000001a;
+            border: 1px solid #282828;
+            border-top: none;
+        }
+
+        .notify-bottom {
+            color: rgb(148 163 184/1)
+        }
+
+        .dark-mode .notify-bottom {
+            color: #AAAAAA
+        }
+
         .dropdown-content2 .dropitem2 {
             display: flex;
             height: 48px;
@@ -439,21 +471,32 @@ border-top: none;
         .dropitem2:hover .site-nav-dropdown-arrow {
             visibility: visible;
         }
+
         .dark-mode .dropitem2:hover .site-nav-dropdown-arrow {
             color: #fff;
         }
+
         .dropdown-content2 .dropitem2:hover {
             background: #f5f5f5;
         }
 
-        .dark-mode  .dropdown-content2 .dropitem2:hover {
+        .dark-mode .dropdown-content2 .dropitem2:hover {
             background: rgba(255, 255, 255, 0.1) !important;
 
         }
- .notify-top{color: rgb(15 23 42/1);} 
- .dark-mode .notify-top{color: #f1f1f1;}
- .dark-mode .notify-showit  .svg-exception{stroke: transparent;}
- 
+
+        .notify-top {
+            color: rgb(15 23 42/1);
+        }
+
+        .dark-mode .notify-top {
+            color: #f1f1f1;
+        }
+
+        .dark-mode .notify-showit .svg-exception {
+            stroke: transparent;
+        }
+
         .showit2 {
             display: block;
         }
@@ -489,20 +532,28 @@ border-top: none;
         }
 
 
-      .dark-mode  .notify {
-           
+        .dark-mode .notify {
+
             background: rgba(24, 24, 24, 0.98);
 
-           
+
             color: #fff;
-        
+
             border: 1px solid #282828;
             box-shadow: 0px 4px 32px 0px #0000001a;
-           
+
         }
-.notify-header{  background: rgba(255, 255, 255, 0.98);}
-.dark-mode .notify-header{  background: rgba(24, 24, 24, 0.98);}
-        .progress-player-hidden {overflow:hidden;
+
+        .notify-header {
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .dark-mode .notify-header {
+            background: rgba(24, 24, 24, 0.98);
+        }
+
+        .progress-player-hidden {
+            overflow: hidden;
             width: 364px;
             right: 0;
             bottom: 24px;
@@ -522,7 +573,8 @@ border-top: none;
             transition-delay: 0s, 0s, 0s;
             opacity: 0;
             border-radius: 0.75rem;
-            border: 1px solid rgba(0, 0, 0, 0.1);       background: rgba(255, 255, 255, 0.98);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.98);
         }
 
         .progress-player-show {
@@ -543,8 +595,8 @@ border-top: none;
         }
 
         .dark-mode .flex_menu_container {
-             background: #0f0f0f;
-           color: #fff;
+            background: #0f0f0f;
+            color: #fff;
         }
 
         .dark-mode .search-container {
@@ -556,50 +608,95 @@ border-top: none;
             background: #0f0f0f;
 
         }
-        .dark-mode .progress-player-hidden{ border: 1px solid #282828;box-shadow: 0px 4px 32px 0px #0000001a;     background: rgba(24,24,24,.98);}
 
-.dark-mode .uppertabbar{    background: #0f0f0f;}
-.dark-mode .contentarea2{    background: #0f0f0f;}
-.dark-mode .flex_menu_container::after{content: none;}
-
-.dark-mode .sidebar{color: #fff;}
-.dark-mode svg{stroke: #fff;}
-.dark-mode .sidebar-collapsed .active{background: rgba(255, 255, 255, 0.1);color: var(--themecolor);}
-.dark-mode .sidebar-collapsed .active:hover{background: rgba(255, 255, 255, 0.1) !important;color: var(--themecolor) !important;}
-
-.dark-mode .sidebar-collapsed .active svg{stroke: var(--themecolor) !important;}
-.dark-mode .sidebar-item:hover{background: rgba(255, 255, 255, 0.1) !important;color: #f1f1f1 !important;}.dark-mode #logotext{color: #fff !important;}
-.dark-mode .topnav-hover:hover{background: rgba(255, 255, 255, 0.1);  color: #fff;}
-.dark-mode .topnav-hover-2:hover:hover{background: rgba(255, 255, 255, 0.1);}
-
-.dark-mode .tabbar-shadow {
-            background: #0f0f0f;
-           
-
-        }
-.dark-mode  .tabbar-shadow-right {
-            background: #0f0f0f;
-            
-
+        .dark-mode .progress-player-hidden {
+            border: 1px solid #282828;
+            box-shadow: 0px 4px 32px 0px #0000001a;
+            background: rgba(24, 24, 24, .98);
         }
 
-        .dark-mode    .uppertabbar .tabbar-shadow:hover {
+        .dark-mode .uppertabbar {
+            background: #0f0f0f;
+        }
+
+        .dark-mode .contentarea2 {
+            background: #0f0f0f;
+        }
+
+        .dark-mode .flex_menu_container::after {
+            content: none;
+        }
+
+        .dark-mode .sidebar {
+            color: #fff;
+        }
+
+        .dark-mode svg {
+            stroke: #fff;
+        }
+
+        .dark-mode .sidebar-collapsed .active {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--themecolor);
+        }
+
+        .dark-mode .sidebar-collapsed .active:hover {
+            background: rgba(255, 255, 255, 0.1) !important;
+            color: var(--themecolor) !important;
+        }
+
+        .dark-mode .sidebar-collapsed .active svg {
+            stroke: var(--themecolor) !important;
+        }
+
+        .dark-mode .sidebar-item:hover {
+            background: rgba(255, 255, 255, 0.1) !important;
+            color: #f1f1f1 !important;
+        }
+
+        .dark-mode #logotext {
+            color: #fff !important;
+        }
+
+        .dark-mode .topnav-hover:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .dark-mode .topnav-hover-2:hover:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .dark-mode .tabbar-shadow {
+            background: #0f0f0f;
+
+
+        }
+
+        .dark-mode .tabbar-shadow-right {
+            background: #0f0f0f;
+
+
+        }
+
+        .dark-mode .uppertabbar .tabbar-shadow:hover {
             background: #0f0f0f !important;
         }
 
-        .dark-mode    .uppertabbar .tabbar-shadow-right:hover {
+        .dark-mode .uppertabbar .tabbar-shadow-right:hover {
             background: #0f0f0f !important;
         }
 
         .dark-mode .uppertabbar .tabbar-shadow-right::after {
-            background: linear-gradient(to left, #0f0f0f 20%, rgba(33,33,33,0) 80%);
-      
+            background: linear-gradient(to left, #0f0f0f 20%, rgba(33, 33, 33, 0) 80%);
+
         }
 
         .dark-mode .tabbar-shadow::after {
-            background: linear-gradient(to right, #0f0f0f 20%, rgba(33,33,33,0) 80%);
-            
+            background: linear-gradient(to right, #0f0f0f 20%, rgba(33, 33, 33, 0) 80%);
+
         }
+
         .menu-icon {
             background: rgba(255, 255, 255, 0);
 
@@ -615,7 +712,10 @@ border-top: none;
         .menu-icon:hover {
             background: #f5f5f5;
         }
-        .dark-mode .menu-icon:hover{background:rgba(255, 255, 255, 0.1)}
+
+        .dark-mode .menu-icon:hover {
+            background: rgba(255, 255, 255, 0.1)
+        }
 
         .line-1,
         .line-2,
@@ -740,9 +840,14 @@ border-top: none;
             /* background: #f5f5f5;*/
         }
 
+        .sidebar .active svg {
+            stroke: var(--themecolor);
+            /* background: #f5f5f5;*/
+        }
+
         .sidebar .active:hover {
             color: var(--themecolor) !important;
-            background: #f5f5f5 !important;
+
         }
 
         .dot-container {
@@ -756,7 +861,8 @@ border-top: none;
             padding: 0 28px;
         }
 
-        .mini-sidebar {z-index: 1000;
+        .mini-sidebar {
+            z-index: 1000;
             position: fixed;
             top: 57px;
             bottom: 0;
@@ -766,21 +872,26 @@ border-top: none;
             overflow-y: auto;
             overflow-x: hidden;
             background: rgba(255, 255, 255, 0.98);
-    display: none;
+            display: none;
             color: rgba(29, 29, 31, 1);
-        
+
         }
 
-.sidebar-container{ height: 100%;
-            width: 100%;}
+        .sidebar-container {
+            height: 100%;
+            width: 100%;
+        }
+
         .mini-sidebar-item-container {
-        
+
             display: flex;
-           
-            align-items: center;justify-content: space-evenly;
-            
-            flex-direction: row;flex-wrap: wrap;
-           
+
+            align-items: center;
+            justify-content: space-evenly;
+
+            flex-direction: row;
+            flex-wrap: wrap;
+
         }
 
 
@@ -788,15 +899,16 @@ border-top: none;
             flex: none;
 
             height: auto;
-            width: 45px;margin: 10px 25px;
-        
-            
+            width: 45px;
+            margin: 10px 25px;
+
+
             transition: all .1s ease;
-        
+
         }
 
-        .mini-horizontal{
-           
+        .mini-horizontal {
+
             background: transparent;
         }
 
@@ -804,18 +916,19 @@ border-top: none;
             background: #f5f5f5;
 
         }
-        
+
 
 
         .mini-sidebar-item:hover {
 
 
-        background: transparent;
-            
-        
-        
-        
+            background: transparent;
+
+
+
+
         }
+
         .sidebar-collapsed {
             width: 220px;
             z-index: 1000;
@@ -906,7 +1019,7 @@ border-top: none;
             left: 72px;
             padding-left: 16px;
             padding-right: 16px;
-            min-height: calc(1000% - 56px);
+            
             margin-top: 112px;
             overflow-x: hidden;
             overflow-y: auto;
@@ -914,6 +1027,7 @@ border-top: none;
             background: #fff;
             z-index: 10;
             border-radius: 0;
+            display: none;
         }
 
         .contentarea2-collapsed {
@@ -940,21 +1054,41 @@ border-top: none;
             background: rgba(0, 0, 0, 0.1) !important;
         }
 
-        .uppertabbar .active2 {letter-spacing: .9px;font-size: 15px;
-            background: transparent !important;color: var(--themecolor);
-            position: relative;font-weight: 470;
+        .uppertabbar .active2 {
+            letter-spacing: .9px;
+            font-size: 15px;
+            background: transparent !important;
+            color: var(--themecolor);
+            position: relative;
+            font-weight: 470;
 
         }
-        .dark-mode .uppertabbar .active2{letter-spacing: normal;font-size: 14px;
-            background: var(--themecolor) !important;color: #fff;font-weight: normal;}
+
+        .dark-mode .uppertabbar .active2 {
+            letter-spacing: normal;
+            font-size: 14px;
+            background: var(--themecolor) !important;
+            color: #fff;
+            font-weight: normal;
+        }
 
         .uppertabbar .active2:hover {
             background: transparent !important;
         }
-       .dark-mode .uppertabbar .active2:hover {
-            background: initial !important;
+
+        .dark-mode .uppertabbar .active2:hover {
+            background: var(--themecolor) !important;
         }
-.dark-mode .uppertabbar .active2::after{content:none;}
+
+        .dark-mode .uppertabbar .active2::after {
+            content: none;
+        }
+
+        .dark-mode .uppertabbar div:hover {
+            background: rgba(255, 255, 255, 0.2) !important;
+        }
+
+
         .uppertabbar .active2::after {
             content: '';
             margin: 0 auto;
@@ -1005,17 +1139,52 @@ border-top: none;
             z-index: 1000;
 
         }
-        .player-bottom-1{background: rgb(241 245 249 / 1) }
-        .player-bottom-2{background: #fff }
 
-        .dark-mode .player-bottom-1{
-            background: hsla(0,0%,100%,.3);;
+        .player-bottom-1 {
+            background: rgb(241 245 249 / 1);
         }
-        .dark-mode .player-bottom-2{background: hsla(0,0%,100%,.8);;}
-        .episodename{color:rgb(100 116 139 / 1);}
-        .dark-mode .episodename{color: #b3b3b3;}
-.uploader{color: rgb(15 23 42 / 1);}
-.dark-mode .uploader{color: #fff;}
+
+        .song-percent {
+            width: 0;
+            height: 0.5rem;
+            background: var(--themecolor);
+            border-radius: 9999px;
+            transition-duration: 0.1s;
+            transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+            transition-delay: 0s;
+            transition-property: all;
+        }
+
+        .player-bottom-2 {
+            background: #fff;
+        }
+
+        .dark-mode .player-bottom-1 {
+            background: hsla(0, 0%, 100%, .3);
+            ;
+        }
+
+        .dark-mode .player-bottom-2 {
+            background: hsla(0, 0%, 100%, .8);
+            ;
+        }
+
+        .episodename {
+            color: rgb(100 116 139 / 1);
+        }
+
+        .dark-mode .episodename {
+            color: #b3b3b3;
+        }
+
+        .uploader {
+            color: rgb(15 23 42 / 1);
+        }
+
+        .dark-mode .uploader {
+            color: #fff;
+        }
+
         .uppertabbar .tabbar-shadow:hover {
             background: rgba(255, 255, 255, 0.98) !important;
         }
@@ -1055,7 +1224,7 @@ border-top: none;
 
         }
 
-        
+
 
         .slideshow {
             border-radius: 16px;
@@ -1085,18 +1254,8 @@ border-top: none;
 
 
         }
-.slideshow::after {
-            z-index: 15;
-            content: "";
-            width: 100%;
-            top: 0;
-            bottom: 0;
-            position: absolute;
 
-            background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.53) 40%, rgba(0, 0, 0, 0) 100%);
-
-
-        }.slideshow::after {
+        .slideshow::after {
             z-index: 15;
             content: "";
             width: 100%;
@@ -1108,16 +1267,30 @@ border-top: none;
 
 
         }
+
+        .slideshow::after {
+            z-index: 15;
+            content: "";
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.53) 40%, rgba(0, 0, 0, 0) 100%);
+
+
+        }
+
         .dark-mode .slideshow::after {
-          
+
             content: none;
-           
+
 
 
         }
-        
 
-        
+
+
 
         .previousarrow {
             background: rgb(255 255 255 / 0.98);
@@ -1134,7 +1307,12 @@ border-top: none;
             display: none;
             border: 1px solid #D9DDE1;
         }
-.dark-mode .previousarrow{background: rgb(24 24 24 / 0.98); border: 1px solid #282828;}
+
+        .dark-mode .previousarrow {
+            background: rgb(24 24 24 / 0.98);
+            border: 1px solid #282828;
+        }
+
         .nextarrow {
             background: rgb(255 255 255 / 0.98);
             height: 40px;
@@ -1150,7 +1328,13 @@ border-top: none;
             display: none;
             border: 1px solid #D9DDE1;
         }
-        .dark-mode .nextarrow{background: rgb(24 24 24 / 0.98); border: 1px solid #282828;}        .slideshow:hover .previousarrow {
+
+        .dark-mode .nextarrow {
+            background: rgb(24 24 24 / 0.98);
+            border: 1px solid #282828;
+        }
+
+        .slideshow:hover .previousarrow {
             display: flex;
 
         }
@@ -1173,10 +1357,30 @@ border-top: none;
             border-radius: 1000px;
             border: solid 2px #fff;
         }
-.dark-mode .container div {
-          
+
+        .play-button-1 {
+            display: initial;
+        }
+
+        .pause-button-1 {
+            display: none;
+        }
+
+        .visible-1 {
+            display: none;
+        }
+
+        .visible-2 {
+            display: initial;
+        }
+
+
+
+        .dark-mode .container div {
+
             border: solid 2px #000;
         }
+
         .div1 {
             background: #705df2;
             outline: 1px solid #705df2;
@@ -1219,15 +1423,17 @@ border-top: none;
             font-weight: 500;
             border: 1.5px solid var(--color1) !important;
         }
-.dark-mode .div7{  
+
+        .dark-mode .div7 {
             color: #000;
-            
-            }
-        
+
+        }
+
         .div7:hover {
             background: transparent;
             color: var(--color1);
         }
+
         .sign-out-div {
             display: flex;
             width: 100%;
@@ -1246,11 +1452,12 @@ border-top: none;
             border: 1.5px solid var(--themecolor) !important;
         }
 
-        
+
         .sign-out-div:hover {
             background: transparent;
             color: var(--themecolor);
         }
+
         .div8 {
 
             background: #35C78F;
@@ -1258,8 +1465,16 @@ border-top: none;
         }
 
 
-        .view-option{border: 1.75px solid #dadce0;border-radius: 12px; margin: 9px 15px !important;}
-        .active4{border-color: var(--themecolor);}
+        .view-option {
+            border: 1.75px solid #dadce0;
+            border-radius: 12px;
+            margin: 9px 15px !important;
+        }
+
+        .active4 {
+            border-color: var(--themecolor);
+        }
+
         .theme-container {
             position: fixed;
             background: rgba(255, 255, 255, 0.98);
@@ -1284,16 +1499,30 @@ border-top: none;
 
         }
 
-.dark-mode .theme-container {
-           
+        .play-area .play-button {
+            display: none !important;
+        }
+
+        .play-area:hover .play-button {
+            display: flex !important;
+        }
+
+        .dark-mode .theme-container {
+
             background: rgba(24, 24, 24, 0.98);
-           
+
 
         }
-.theme-header{border-bottom-width: 1px;
-        border-bottom-style: solid;
-        border-bottom-color: rgba(0, 0, 0, .12);}
-        .dark-mode .theme-header{border-bottom-color: #ffffff1a;}
+
+        .theme-header {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgba(0, 0, 0, .12);
+        }
+
+        .dark-mode .theme-header {
+            border-bottom-color: #ffffff1a;
+        }
 
 
 
@@ -1304,7 +1533,20 @@ border-top: none;
         .theme-container .exception:hover {
             background: initial !important;
         }
+.img-add{z-index: 500;}
+    .img-add::after{  box-shadow: 0 5px 15px var(--themecolor);opacity: 0.4;content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: currentColor;
+    border-radius: 50%;transition: all 0.55s cubic-bezier(0.71, 0.03, 0.23, 0.95);}
 
+     .dark-mode .img-add::after{  content: none;
+   display: none;}
+     .dark-mode .contentarea2 img{border-color: transparent !important;} 
+   .dark-mode .contentarea2{color: #fff;}
         .showit3 {
 
 
@@ -1339,14 +1581,30 @@ border-top: none;
             visibility: visible;
         }
 
+
+        .amplitude-play-pause.amplitude-playing #play-id {
+    display: none;
+}
+.amplitude-play-pause.amplitude-playing #pause-id {
+    display: block;
+}
+.amplitude-play-pause.amplitude-paused #pause-id {
+    display: none;
+}
+.amplitude-play-pause.amplitude-paused #play-id {
+    display: block;
+}
         ::-webkit-scrollbar {
             width: 14px;
             height: 14px;
         }
-.dark-mode::-webkit-scrollbar{background: #0f0f0f;}
+
+        .dark-mode::-webkit-scrollbar {
+            background: #0f0f0f;
+        }
 
 
-       
+
 
         ::-webkit-scrollbar-thumb {
             background-color: rgba(0, 0, 0, .5);
@@ -1355,7 +1613,7 @@ border-top: none;
             border-radius: 0.625rem;
         }
 
-    
+
 
 
         ::-webkit-scrollbar-thumb:hover {
@@ -1366,18 +1624,19 @@ border-top: none;
             border-radius: 100px;
         }
 
-       .dark-mode::-webkit-scrollbar-thumb {
-            background-color: hsl(0,0%,67%);;
+        .dark-mode::-webkit-scrollbar-thumb {
+            background-color: hsl(0, 0%, 67%);
+            ;
             background-clip: content-box;
             border: 5px solid transparent;
             border-radius: 0.625rem;
         }
 
-    
+
 
 
         .dark-mode::-webkit-scrollbar-thumb:hover {
-            background: hsl(0,0%,67%);
+            background: hsl(0, 0%, 67%);
             background-clip: content-box;
 
             border: 4px solid transparent;
@@ -1452,65 +1711,65 @@ border-top: none;
         }
 
         .switch {
-  position: relative;
-  display: inline-block;
-  width: 36px;
-  height: 19px;
-  
-}
+            position: relative;
+            display: inline-block;
+            width: 36px;
+            height: 19px;
 
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+        }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 15px;
-  width: 15px;
-  left: 2px;
-  bottom: 2px;
-  background-color: #fff;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
 
-input:checked + .slider {
-  background-color: var(--themecolor);
-}
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 15px;
+            width: 15px;
+            left: 2px;
+            bottom: 2px;
+            background-color: #fff;
+            -webkit-transition: .3s;
+            transition: .3s;
+        }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--themecolor);
-}
+        input:checked+.slider {
+            background-color: var(--themecolor);
+        }
 
-input:checked + .slider:before {
-  -webkit-transform: translateX(17px);
-  -ms-transform: translateX(17px);
-  transform: translateX(17px);
-}
+        input:focus+.slider {
+            box-shadow: 0 0 1px var(--themecolor);
+        }
 
-/* Rounded sliders */
-.slider.round {
-  border-radius: 11px;
-}
+        input:checked+.slider:before {
+            -webkit-transform: translateX(17px);
+            -ms-transform: translateX(17px);
+            transform: translateX(17px);
+        }
 
-.slider.round:before {
-  border-radius: 50%;
-}
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 11px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
 
         .topnav-hover-2 {
             background: rgba(255, 255, 255, 0);
@@ -1521,10 +1780,20 @@ input:checked + .slider:before {
         .topnav-hover-2:hover {
             background: #f5f5f5;
         }
-.notify-padding{padding: 1.5rem;border-radius: 0;}
-        .notify-img{border-radius: 0.375rem;width: 60px;
-                        aspect-ratio: auto 60 / 88;flex: none; }
-.compactClass .mini-sidebar{display: initial !important;z-index: 500;}
+
+        .notify-padding {
+            padding: 1.5rem;
+            border-radius: 0;
+        }
+
+        .notify-img {
+            border-radius: 0.375rem;
+            width: 60px;
+            aspect-ratio: auto 60 / 88;
+            flex: none;
+        }
+
+        /* .compactClass .mini-sidebar{display: initial !important;z-index: 500;}
 .compactClass .notify{position: fixed;right: 0;top:57px;bottom: 0;border: none;box-shadow: none;width: 0;z-index: 1000;height: 100%;margin-top: 0;border-radius: 0;transition: all 200ms cubic-bezier(0.4,0,0.2,1);transform: scale(1,1);}
 .compactClass .notify-showit{    width: 235px;transform-origin: right;}
 .compactClass .heading1{font-size: 16px;font-weight: 400 !important;}
@@ -1541,7 +1810,7 @@ input:checked + .slider:before {
                                 text-overflow: ellipsis;}
                                 .compactClass .uppertabbar{right: 235px;}
                                 .compactClass .tabbar-shadow-right{position: sticky;padding: 0 13px;}
-                                .compactClass .progress-player-hidden{right: 259px;}
+                                .compactClass .progress-player-hidden{right: 259px;} */
         @media only screen and (min-width: 640px) {
             .player-top {
                 padding: 2rem;
@@ -1720,7 +1989,7 @@ input:checked + .slider:before {
                 display: none !important;
             }
 
-          
+
 
 
 
@@ -1731,7 +2000,7 @@ input:checked + .slider:before {
         }
 
         @media only screen and (max-width: 1011px) {
-           
+
 
             .dropdown-content {
 
@@ -1747,7 +2016,7 @@ input:checked + .slider:before {
 
 </head>
 
-<body onload="collapsesidebar()">
+<body onclick="collapsesidebar()">
 
     <div class="flex_menu_container">
 
@@ -1814,14 +2083,29 @@ input:checked + .slider:before {
                         <div
                             style="padding-left: 12px;flex: 1;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;letter-spacing: .5px;">
                             Pokémon Journeys: The Series</div>
-                        <div style="padding-left: 12px;padding-right: 5px;"><svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 12 12" fill="#24292f" class="site-nav-dropdown-arrow icon-12 fill-current"
-                                style="    width: 12px;
-                            height: 12px;">
+                        <div style="padding-left: 12px;padding-right: 5px;">
+
+
+
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"
+                                class="site-nav-dropdown-arrow icon-12 fill-current" style="
+                            width: 12px;
+                            height: 12px;
+                       
+                            fill: currentColor;
+                      
+                            -webkit-box-sizing: border-box;
+                            box-sizing: border-box;transform: translateX(4px);
+                            opacity: 1;
+                        
+                        ">
                                 <path
                                     d="M11.7803 6.53033C12.0732 6.23744 12.0732 5.76257 11.7803 5.46967L7.18414 0.873479C6.89124 0.580585 6.41637 0.580585 6.12348 0.873478C5.83058 1.16637 5.83058 1.64125 6.12348 1.93414L9.43934 5.25H0.75C0.335787 5.25 0 5.58579 0 6C0 6.41422 0.335787 6.75 0.75 6.75H9.43934L6.12348 10.0659C5.83058 10.3588 5.83058 10.8336 6.12348 11.1265C6.41637 11.4194 6.89124 11.4194 7.18414 11.1265L11.7803 6.53033Z">
                                 </path>
-                            </svg></div>
+                            </svg>
+
+                        </div>
                     </div>
 
 
@@ -1986,14 +2270,12 @@ input:checked + .slider:before {
 
                         </div>
                     </div>
-                    <div class="topnav-hover notify-padding"
-                        style="align-items: flex-start;
+                    <div class="topnav-hover notify-padding" style="align-items: flex-start;
            
                         display: flex;
-                    " > <img
-                            src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTK3u-sQWj89K-nm28S_XkACg9z9wXvs8oLy6E13axoO_oK-Q70"
-                            width="60" height="88"  class="notify-img">
-                        
+                    "> <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTK3u-sQWj89K-nm28S_XkACg9z9wXvs8oLy6E13axoO_oK-Q70"
+                            width="60" height="88" class="notify-img">
+
                         <div style=" flex: 1 1 auto;
                             min-width: 0;margin-left: 1rem;
                             position: relative;">
@@ -2020,8 +2302,7 @@ input:checked + .slider:before {
                             
                         
                                 margin-top: 0.5rem;">
-                                <div
-                                    style="
+                                <div style="
                                         display: flex;
                               
                                         align-items: center;
@@ -2034,7 +2315,8 @@ input:checked + .slider:before {
                                     
                                         position: absolute;
                                     " class="compact-hidden">
-                                    <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor" class="svg-exception">
+                                    <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor"
+                                            class="svg-exception">
                                             <path
                                                 d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
                                             </path>
@@ -2043,7 +2325,7 @@ input:checked + .slider:before {
                                 </div>
                                 <div>
 
-                                    <dd  style="border: 1px solid #dadce0
+                                    <dd style="border: 1px solid #dadce0
         ;border-radius: 0.25rem;padding-left: 0.375rem;
     padding-right: 0.375rem;">EP-12</dd>
                                 </div>
@@ -2053,8 +2335,8 @@ input:checked + .slider:before {
                                 </div>
                                 <div>
 
-                                    <dd style=" display: flex; align-items: center;  "><svg width="2" height="2" fill="currentColor"
-                                        style="    
+                                    <dd style=" display: flex; align-items: center;  "><svg width="2" height="2"
+                                            fill="currentColor" style="    
                                         color: rgb(203 213 225/1);
                                         margin-left: 0.5rem;
                                         margin-right: 0.5rem;">
@@ -2063,8 +2345,8 @@ input:checked + .slider:before {
                                 </div>
                                 <div class="compact-hidden">
 
-                                    <dd  style=" display: flex; align-items: center;  "><svg width="2" height="2" fill="currentColor"
-                                             style="    
+                                    <dd style=" display: flex; align-items: center;  "><svg width="2" height="2"
+                                            fill="currentColor" style="    
                                             color: rgb(203 213 225/1);
                                             margin-left: 0.5rem;
                                             margin-right: 0.5rem;">
@@ -2083,27 +2365,24 @@ input:checked + .slider:before {
                         </div>
                     </div>
 
-                   
-                <div 
-                class="topnav-hover notify-padding"
-                style="align-items: flex-start;
+
+                    <div class="topnav-hover notify-padding" style="align-items: flex-start;
    
                 display: flex;
-            " > <img
-                    src="https://m.media-amazon.com/images/M/MV5BY2I2MzI1ODYtMWRlOS00MzdhLWEyOWEtYWJhNmFiZTIxMGJhXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_FMjpg_UX1000_.jpg"
-                    width="60" height="88" class="notify-img">
-                
-                <div style=" flex: 1 1 auto;
+            "> <img src="https://m.media-amazon.com/images/M/MV5BY2I2MzI1ODYtMWRlOS00MzdhLWEyOWEtYWJhNmFiZTIxMGJhXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_FMjpg_UX1000_.jpg"
+                            width="60" height="88" class="notify-img">
+
+                        <div style=" flex: 1 1 auto;
                     min-width: 0;margin-left: 1rem;
                     position: relative;">
-                    <h2 style="
+                            <h2 style="
                         
                         font-weight: 600;
                         overflow: hidden;
 white-space: nowrap;
 padding-right: 5rem;
-                        text-overflow: ellipsis;"  class="notify-top">Dragon Ball Super</h2>
-                    <dl style="
+                        text-overflow: ellipsis;" class="notify-top">Dragon Ball Super</h2>
+                            <dl style="
                         line-height: 1.5rem;
                
                  
@@ -2118,8 +2397,7 @@ padding-right: 5rem;
                     
                 
                         margin-top: 0.5rem;">
-                        <div
-                            style="
+                                <div style="
                                 display: flex;
                       
                                 align-items: center;
@@ -2131,76 +2409,75 @@ padding-right: 5rem;
                                 top: 0;
                             
                                 position: absolute;
-                            "  class="compact-hidden">
-                            <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor" class="svg-exception">
-                                    <path
-                                        d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
-                                    </path>
-                                </svg></dt>
-                            <dd style="margin-left: 0.25rem;">2.54</dd>
-                        </div>
-                        <div >
+                            " class="compact-hidden">
+                                    <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor"
+                                            class="svg-exception">
+                                            <path
+                                                d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
+                                            </path>
+                                        </svg></dt>
+                                    <dd style="margin-left: 0.25rem;">2.54</dd>
+                                </div>
+                                <div>
 
-                            <dd  style="border: 1px solid #dadce0
+                                    <dd style="border: 1px solid #dadce0
 ;border-radius: 0.25rem;padding-left: 0.375rem;
 padding-right: 0.375rem;">EP-12</dd>
-                        </div>
-                        <div style="    margin-left: 0.5rem;" class="compact-hidden">
+                                </div>
+                                <div style="    margin-left: 0.5rem;" class="compact-hidden">
 
-                            <dd>2020</dd>
-                        </div>
-                        <div>
+                                    <dd>2020</dd>
+                                </div>
+                                <div>
 
-                            <dd style=" display: flex; align-items: center;  "><svg width="2" height="2" fill="currentColor"
-                                style="    
+                                    <dd style=" display: flex; align-items: center;  "><svg width="2" height="2"
+                                            fill="currentColor" style="    
                                 color: rgb(203 213 225/1);
                                 margin-left: 0.5rem;
                                 margin-right: 0.5rem;">
-                                    <circle cx="1" cy="1" r="1"></circle>
-                                </svg></dd>
-                        </div>
-                        <div class="compact-hidden">
+                                            <circle cx="1" cy="1" r="1"></circle>
+                                        </svg></dd>
+                                </div>
+                                <div class="compact-hidden">
 
-                            <dd  style=" display: flex; align-items: center;  "><svg width="2" height="2" fill="currentColor"
-                                     style="    
+                                    <dd style=" display: flex; align-items: center;  "><svg width="2" height="2"
+                                            fill="currentColor" style="    
                                     color: rgb(203 213 225/1);
                                     margin-left: 0.5rem;
                                     margin-right: 0.5rem;">
-                                    <circle cx="1" cy="1" r="1"></circle>
-                                </svg>1h 30m</dd>
-                        </div>
-                        <div style="
+                                            <circle cx="1" cy="1" r="1"></circle>
+                                        </svg>1h 30m</dd>
+                                </div>
+                                <div style="
                             font-weight: 400;
                             flex: none;
                             width: 100%;
                             margin-top: 0.5rem;">
 
-                            <dd class="notify-bottom overflow-ellipse">Toei Animation</dd>
+                                    <dd class="notify-bottom overflow-ellipse">Toei Animation</dd>
+                                </div>
+                            </dl>
                         </div>
-                    </dl>
-                </div>
-            </div>
+                    </div>
 
-            <div class="topnav-hover notify-padding"
-            style="align-items: flex-start;
+                    <div class="topnav-hover notify-padding" style="align-items: flex-start;
 
             display: flex;
-        " > <img
-                src="https://upload.wikimedia.org/wikipedia/en/2/2e/Beyblade_Burst_DB.jpg"
-                width="60" height="88" class="notify-img">
-            
-            <div style=" flex: 1 1 auto;
+        "> <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Beyblade_Burst_DB.jpg" width="60" height="88"
+                            class="notify-img">
+
+                        <div style=" flex: 1 1 auto;
                 min-width: 0;margin-left: 1rem;
                 position: relative;">
-                <h2 style="
+                            <h2 style="
                     
                     font-weight: 600;
                     overflow: hidden;
 white-space: nowrap;
 padding-right: 5rem;
                     text-overflow: ellipsis;" class="notify-top">Beyblade Burst
-QuadDrive  </h2>
-                <dl style="
+                                QuadDrive </h2>
+                            <dl style="
                     line-height: 1.5rem;
            
              
@@ -2215,8 +2492,7 @@ QuadDrive  </h2>
                 
             
                     margin-top: 0.5rem;">
-                    <div
-                        style="
+                                <div style="
                             display: flex;
                   
                             align-items: center;
@@ -2228,58 +2504,59 @@ QuadDrive  </h2>
                             top: 0;
                         
                             position: absolute;
-                        "  class="compact-hidden">
-                        <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor" class="svg-exception">
-                                <path
-                                    d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
-                                </path>
-                            </svg></dt>
-                        <dd style="margin-left: 0.25rem;">2.56</dd>
-                    </div>
-                    <div>
+                        " class="compact-hidden">
+                                    <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor"
+                                            class="svg-exception">
+                                            <path
+                                                d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
+                                            </path>
+                                        </svg></dt>
+                                    <dd style="margin-left: 0.25rem;">2.56</dd>
+                                </div>
+                                <div>
 
-                        <dd  style="border: 1px solid #dadce0
+                                    <dd style="border: 1px solid #dadce0
 ;border-radius: 0.25rem;padding-left: 0.375rem;
 padding-right: 0.375rem;">EP-12</dd>
-                    </div>
-                    <div style="    margin-left: 0.5rem;" class="compact-hidden">
+                                </div>
+                                <div style="    margin-left: 0.5rem;" class="compact-hidden">
 
-                        <dd>2021</dd>
-                    </div>
-                    <div>
+                                    <dd>2021</dd>
+                                </div>
+                                <div>
 
-                        <dd style=" display: flex; align-items: center;  "><svg width="2" height="2" fill="currentColor"
-                            style="    
+                                    <dd style=" display: flex; align-items: center;  "><svg width="2" height="2"
+                                            fill="currentColor" style="    
                             color: rgb(203 213 225/1);
                             margin-left: 0.5rem;
                             margin-right: 0.5rem;">
-                                <circle cx="1" cy="1" r="1"></circle>
-                            </svg></dd>
-                    </div>
-                    <div class="compact-hidden">
+                                            <circle cx="1" cy="1" r="1"></circle>
+                                        </svg></dd>
+                                </div>
+                                <div class="compact-hidden">
 
-                        <dd  style=" display: flex; align-items: center;  "><svg width="2" height="2" fill="currentColor"
-                                 style="    
+                                    <dd style=" display: flex; align-items: center;  "><svg width="2" height="2"
+                                            fill="currentColor" style="    
                                 color: rgb(203 213 225/1);
                                 margin-left: 0.5rem;
                                 margin-right: 0.5rem;">
-                                <circle cx="1" cy="1" r="1"></circle>
-                            </svg>1h 35m</dd>
-                    </div>
-                    <div style="
+                                            <circle cx="1" cy="1" r="1"></circle>
+                                        </svg>1h 35m</dd>
+                                </div>
+                                <div style="
                         font-weight: 400;
                         flex: none;
                         width: 100%;
                         margin-top: 0.5rem;">
 
-                        <dd class="notify-bottom overflow-ellipse">Beyblade Burst Official</dd>
+                                    <dd class="notify-bottom overflow-ellipse">Beyblade Burst Official</dd>
+                                </div>
+                            </dl>
+                        </div>
                     </div>
-                </dl>
-            </div>
-        </div>
 
 
-         
+
                 </div>
 
                 <!-- <div
@@ -2297,37 +2574,37 @@ padding-right: 0.375rem;">EP-12</dd>
                             style="text-align: center;height: 60px;display: flex;align-items: center;color: rgba(0,0,0,.9);">
                             No new notifications<br>yet!</div>
                     </div> -->
-            
-
-        </div>
-        <div style="position: relative;">
-            <div class="topnav-hover" style="margin-right: 15px;padding: 11.75px;" id="topnav-hover-dark"
-                onclick="open_progress_player()">
-
-
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="20.5" height="20.5" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                    class="feather feather-folder"
-                    style="pointer-events: none; display: block; width: 20.5px; height: 20.5px;">
-                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-                </svg>
 
 
             </div>
+            <div style="position: relative;">
+                <div class="topnav-hover" style="margin-right: 15px;padding: 11.75px;" id="topnav-hover-dark"
+                    onclick="open_progress_player()">
+
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20.5" height="20.5" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-folder"
+                        style="pointer-events: none; display: block; width: 20.5px; height: 20.5px;">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+                    </svg>
+
+
+                </div>
 
 
 
 
 
-        </div>
-        <div style="position: relative;" class="topnav-hover-2 dropdown" onclick="opendropdown()">
+            </div>
+            <div style="position: relative;" class="topnav-hover-2 dropdown" onclick="opendropdown()">
 
 
 
 
-            <div style=" border-radius: 100%;width: 32px;
+                <div style=" border-radius: 100%;width: 32px;
                     height: 32px; background-position: center center;background-size: 70px auto;  background: url(https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp);
 
 
@@ -2337,14 +2614,14 @@ padding-right: 0.375rem;">EP-12</dd>
     vertical-align: middle;
     
     " id="login-pic">
+                </div>
+
+
+
             </div>
 
 
-
         </div>
-
-
-    </div>
 
 
 
@@ -2454,7 +2731,7 @@ padding-right: 0.375rem;">EP-12</dd>
 
         </div>
 
-        <div class="dropitem" style="margin-bottom:0"  onclick="opensettings()">
+        <div class="dropitem" style="margin-bottom:0" onclick="opensettings()">
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -2562,7 +2839,7 @@ padding-right: 0.375rem;">EP-12</dd>
                 </div>
 
             </div>
-         
+
 
 
 
@@ -2596,34 +2873,35 @@ padding-right: 0.375rem;">EP-12</dd>
                 <div
                     style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;padding-left: 20px;padding-top: 10px;display: flex;align-items: center;">
                     Change View
-                  
+
                 </div>
             </div>
 
             <div class="dropitem exception view-option" id="comfort" onclick="comfortMode()">
-               
+
 
                 <div
                     style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;flex:1">
                     Comfortable</div>
-<div style="flex: 1;justify-content: flex-end;">
-                    <img src="https://ssl.gstatic.com/ui/v1/icons/mail/quicksettings/displaydensity/Comfortable.png"  style="    height: 32px;
+                <div style="flex: 1;justify-content: flex-end;">
+                    <img src="https://ssl.gstatic.com/ui/v1/icons/mail/quicksettings/displaydensity/Comfortable.png"
+                        style="    height: 32px;
                     
                     width: 72px;margin-left: 10px">
-</div>
+                </div>
             </div>
             <div class="dropitem exception view-option" id="compact" onclick="compactMode()">
-              
+
 
                 <div
                     style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;flex: 1;">
                     Compact</div>
-<div style="flex: 1;justify-content: flex-end;">
-                    <img src="https://ssl.gstatic.com/ui/v1/icons/mail/quicksettings/displaydensity/Compact.png"  style="    height: 32px;
+                <div style="flex: 1;justify-content: flex-end;">
+                    <img src="https://ssl.gstatic.com/ui/v1/icons/mail/quicksettings/displaydensity/Compact.png" style="    height: 32px;
                     margin-left: 10px;
                     width: 72px;">
 
-</div>
+                </div>
             </div>
 
 
@@ -2636,7 +2914,9 @@ padding-right: 0.375rem;">EP-12</dd>
                 <div
                     style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;padding-left: 33px;padding-top: 15px;display: flex;align-items: center;">
                     Accent Colour
-                    <div style="width: 12.5px;height:12.5px;background:var(--themecolor);border-radius:1000px;margin-left: 70px;"></div>
+                    <div
+                        style="width: 12.5px;height:12.5px;background:var(--themecolor);border-radius:1000px;margin-left: 70px;">
+                    </div>
                 </div>
             </div>
             <div class="container" style="margin-top: 20px">
@@ -2658,7 +2938,7 @@ padding-right: 0.375rem;">EP-12</dd>
 
 
         </div>
-        
+
         <div class="theme-container" id="settings-container">
             <div class="dropitem exception theme-header">
                 <div class="topnav-hover"
@@ -2896,7 +3176,7 @@ padding-right: 0.375rem;">EP-12</dd>
                     style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
                     Show Right Sidebar
                 </div>
-               
+
                 <div style="padding-left:50px;align-items: center;justify-content: center;padding: .75px;margin-left: 52.5px"
                     class="light-tick">
 
@@ -2905,7 +3185,7 @@ padding-right: 0.375rem;">EP-12</dd>
                     <label class="switch">
                         <input type="checkbox">
                         <span class="slider round"></span>
-                      </label>
+                    </label>
                 </div>
 
 
@@ -2922,7 +3202,7 @@ padding-right: 0.375rem;">EP-12</dd>
 
     <div class="sidebar" id="sidebar-container">
 
-        <div style="margin-top: 10px;" class="sidebar-item active">
+        <div style="margin-top: 10px;" class="sidebar-item tablink" onclick="openPage('Home', this)" id="defaultOpen">
             <div>
 
 
@@ -2994,7 +3274,7 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
             <div class="hidden" style="padding-top: 5px;">Favourite</div>
         </div>
 
-        <div class="sidebar-item">
+        <div class="sidebar-item tablink" onclick="openPage('Library', this)">
             <div>
 
 
@@ -3029,7 +3309,7 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
             </div>
             <div class="hidden" style="padding-top: 5px;">Watch Later</div>
         </div>
-        <div class="sidebar-item">
+        <div class="sidebar-item tablink" >
             <div>
 
 
@@ -3074,7 +3354,7 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
             </div>
             <div class="hidden" style="padding-top: 5px;">Help</div>
         </div>
-        <div class="sidebar-item">
+        <div class="sidebar-item tablink" onclick="openPage('Deleted', this)">
             <div>
 
 
@@ -3100,7 +3380,7 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
 
 
 
-        <div class="sidebar-item">
+        <div class="sidebar-item tablink" onclick="openPage('Secure', this)">
             <div>
 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -3121,62 +3401,191 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
 
     <div class="mini-sidebar scrollbar-hidden" id="mini-sidebar-container">
         <div class="sidebar-container">
-<div class="mini-sidebar-item-container">
-   <div style="width: 100%;height: 44px;display: flex;align-items: center;justify-content: center;font-size: 16px;font-weight: 400;">More Apps</div>
-<div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.gallery.png">
-<div style="text-align: center;font-size: 15px;">Gallery</div>
-</div>
+            <div class="mini-sidebar-item-container">
+                <div
+                    style="width: 100%;height: 44px;display: flex;align-items: center;justify-content: center;font-size: 16px;font-weight: 400;">
+                    More Apps</div>
+                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
+                    class="mini-horizontal"><img class="mini-sidebar-item"
+                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.gallery.png">
+                    <div style="text-align: center;font-size: 15px;">Gallery</div>
+                </div>
 
-<div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.mi.misupport.png">
-    <div style="text-align: center;font-size: 15px;">Liked</div>
-    </div>
+                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
+                    class="mini-horizontal"><img class="mini-sidebar-item"
+                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.mi.misupport.png">
+                    <div style="text-align: center;font-size: 15px;">Liked</div>
+                </div>
 
-    <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.wali.live.png">
-        <div style="text-align: center;font-size: 15px;">Collection</div>
-        </div>
-        <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.securitycenter.png">
-            <div style="text-align: center;font-size: 15px;">Security</div>
-            </div>
-
-
-            <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.android.soundrecorder.png">
-                <div style="text-align: center;font-size: 15px;">Audio</div>
+                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
+                    class="mini-horizontal"><img class="mini-sidebar-item"
+                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.wali.live.png">
+                    <div style="text-align: center;font-size: 15px;">Collection</div>
+                </div>
+                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
+                    class="mini-horizontal"><img class="mini-sidebar-item"
+                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.securitycenter.png">
+                    <div style="text-align: center;font-size: 15px;">Security</div>
                 </div>
 
 
-                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.xiaomi.xmsf.account.ui.MiCloudSettingsActivity.png">
+                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
+                    class="mini-horizontal"><img class="mini-sidebar-item"
+                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.android.soundrecorder.png">
+                    <div style="text-align: center;font-size: 15px;">Audio</div>
+                </div>
+
+
+                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
+                    class="mini-horizontal"><img class="mini-sidebar-item"
+                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.xiaomi.xmsf.account.ui.MiCloudSettingsActivity.png">
                     <div style="text-align: center;font-size: 15px;">Cloud</div>
-                    </div>
-                    
-                    <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.xiaomi.xmsf.FindDevice.png">
-                        <div style="text-align: center;font-size: 15px;">Devices</div>
-                        </div>
+                </div>
+
+                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
+                    class="mini-horizontal"><img class="mini-sidebar-item"
+                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.xiaomi.xmsf.FindDevice.png">
+                    <div style="text-align: center;font-size: 15px;">Devices</div>
+                </div>
+
+                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
+                    class="mini-horizontal"><img class="mini-sidebar-item"
+                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.notes.png">
+                    <div style="text-align: center;font-size: 15px;">Notes</div>
+                </div>
+
+                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
+                    class="mini-horizontal"><img class="mini-sidebar-item"
+                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.xiaomi.smarthome.png">
+                    <div style="text-align: center;font-size: 15px;">Features</div>
+                </div>
+
+                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
+                    class="mini-horizontal"><img class="mini-sidebar-item"
+                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.android.quicksearchbox.png">
+                    <div style="text-align: center;font-size: 15px;">Search</div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+   <div id="Secure" class="contentarea2" style="display: flex;justify-content: center;margin-top: 56px;z-index: 200;text-align: center;">
+        <input type="password" style="padding: 30px 20px 10px;height: 60px;
+box-sizing: border-box;
+-webkit-appearance: none;
+appearance: none;
+font-size: 17px;
+color: #333;
+line-height: 20px;background: #f9f9f9;border-radius: 12px;width: 35%;margin-top: 50px;"/>
+    
+
+
+</div>
+
+
+    <div id="Deleted" class="contentarea2" style="display: flex;justify-content: center;margin-top: 56px;z-index: 200;">
         
-                        <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.notes.png">
-                            <div style="text-align: center;font-size: 15px;">Notes</div>
-                            </div>
+         
+        
+      
+        <img src="https://ssl.gstatic.com/social/photosui/images/null_sharing_view_460x218dp.svg" style="width: 50%;margin: auto;margin-top: 10%;">
+        <div style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 22px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-top: 36px;display: flex;align-items: center;justify-content: center;text-align: center;">
+                <span style="text-decoration: underline;text-underline-offset: 2.5px;">Nothin</span>g in the Bin yet.
 
-                            <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.xiaomi.smarthome.png">
-                                <div style="text-align: center;font-size: 15px;">Features</div>
-                                </div>
+        </div>
+    </div>
 
-                                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;" class="mini-horizontal"><img class="mini-sidebar-item" src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.android.quicksearchbox.png">
-                                    <div style="text-align: center;font-size: 15px;">Search</div>
-                                    </div>
+    <div id="Library" class="contentarea2" style="margin-top:56px;z-index: 200;">
 
-</div>
+        <div style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 25px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Thursday, <span style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 20px;font-family: MiSans, system-ui, sans-serif;">8 Dec 2022</span> 
+
+        </div>
+        
+
+ <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
 
 
 
-</div>
+
+        
+<img src="	https://i.pinimg.com/originals/20/3b/ef/203bef4b39bd430556e4e764e6160f78.jpg" style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+        <img src="https://i0.wp.com/wikitechlibrary.com/hub/wp-content/uploads/2022/11/Pokemon-Has-Already-Revealed-Ashs-Perfect-Place.jpg?fit=1400%2C700&ssl=1" style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+        
+        <img src="https://i.pinimg.com/originals/c4/fc/7b/c4fc7b8fe91f983430dfb0c6a962886f.jpg
+" style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+
+
+
+       </div>
+       
+       <div style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 25px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+        Thursday, <span style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 20px;font-family: MiSans, system-ui, sans-serif;">8 Dec 2022</span> 
+
+    </div>
+              <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+<img src="https://shonakid.de/wp-content/uploads/2022/11/FSxrqrwaUAA_ZjF.jpg" style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+        <img src="https://m.media-amazon.com/images/M/MV5BOTNlMzJhYjQtZTMyMS00NzZjLWE2ZWMtNjdhYmFkMmI3ODkzXkEyXkFqcGdeQXVyMTEzMzE3OTIy._V1_.jpg" style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+        
+        <img src="https://yt3.ggpht.com/CxayksKddZH0_CXzOJIS8MGPposS4S8BL5PLip3akcuZzFm7gkvr0VQt_1cOdbdurQXM2kmN-MEwzO0=s612-c-fcrop64=1,37770000c888ffff-nd-v1-rwa" style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+      
+
+       </div>
+        
+
+
+       <div style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 25px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+        Thursday, <span style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 20px;font-family: MiSans, system-ui, sans-serif;">8 Dec 2022</span> 
+
+    </div>
+             
+        
+       <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+
+
+        <img src="http://animexscoop.com/wp-content/uploads/2018/11/Screenshot_131.png" style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+        <img src="https://lh3.googleusercontent.com/CqVh3LcHoSVxoVn1GWNK4u6lL-EqGgRpujWH8O9XhBQyHMwfosBhb39SuXecfdkxLN_o8GiMKQNZrXQYK5EMYMcfeYTxF2dFOXC43wglye9vm9GCcuii-w6FTofe1k2a1wHGxwS8tly9PM6vP54vxFsXu6kFA9pKho-U3uwpXjup3lme97Bv6k4XiTe-PCTUTOjM3y2JazZyKItXi-9ra2nk0hl-4CXJp8SncMvILAaL9ZPDY7-Xu4Akyq5oTppODb1W_pkWrs9tklHOeHo94cVsCN5ptCuC4dAQBNVP3sxVAPB7EQHdxBknzjZXJPfQuYTdDIzgN4Ti-O-9PLAMkm2FqkneN-RDTML5LennhU7QUPaS9ghu593tqQkjenVAOHv_rkX21ChmQzv7Vlvbong9yI1xvz-Mwt3xlSHK7wwKEx8F5kxBp1bRZ6FsfsHaENFSmVsEHONWF0U2x9lLayjZmrS4bkg-yFQcvjSbxOLNKx2uGyfuDCMHTTsjCBAvh3VJxPe2XHnDYFBQMPryszgcTcIe6AMibC_Nx6jbmm2WTxwBkEVy-tTnxergYb4EYWdhYA2B3RBw5hul4vSjf8w1FXCyk0P0rvP2BG2LC9C0Fyx693gQ2A_qqRnVFClht-WIb9y1t02bs9kBfsq-HOGY29kQuWwwGB-jGTVoVDAdZuupDET7YpWVpUjV9OobSAyzAUGzwTpgVhDytug00HZ21qak-hO-t6opTYLVOpAu92aafuZ_y6eHMAbSj5TS_fPyu3zaRuuKPu2vStANAL0cUmHhe5R_3LVO7E67FcqUrAxSzVgArHTLkdJTiIk9Z_EZXx3Ng5-mgMLb_9NYdvVrQMCqtidndDE5-0plfKCylIeFxI8KC6RpfYEutcgppJIFgfdU91U43SwtCvMEgAkDcLqX_5rEfppIj_qtaPQELdM=w1366-h547-no?authuser=0" style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+
+
+
+       </div>
+       <span class="topnav-hover img-add" style="position: fixed;right: 30px;bottom: 30px;background: var(--themecolor);padding: 10px;width: 60px;height: 60px;color: #fff; display: flex;align-items: center;justify-content: center; "> 
+        
+
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"  style="
+          width: 30px;
+          height: 30px;
+          
+          "><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    </span>
+      
 
     </div>
 
-
-
-
-
-    <div class="contentarea2" id="contentarea2">
+    <div id="Home" class="contentarea2" >
         <div class="slideshow">
 
 
@@ -3333,7 +3742,8 @@ margin-right: 0.5rem;
 
         <div class="player-top" style="height: 170.955752px; padding-top:1rem;">
             <div style="align-items: center;display: flex;">
-                <div class="topnav-hover cross-hidden" style="position: fixed;right: 10px;top:10px;padding: 8px;">
+                <div class="topnav-hover cross-hidden" style="position: fixed;right: 10px;top:10px;padding: 8px;"
+                    onclick="document.getElementById('progress-player-id').classList.remove('progress-player-show')">
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-x">
@@ -3342,28 +3752,47 @@ margin-right: 0.5rem;
                     </svg>
 
                 </div>
+                <div style="position: relative;" class="play-area">
+                    <img data-amplitude-song-info="cover_art_url"
+                        style="width:88px;background-color: rgb(241 245 249 / 1);    border-radius: 0.5rem;flex: none;max-width: 100%;  height: auto; display: block; aspect-ratio: auto 88 / 88;position: relative;">
+                    <span style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;display: flex;align-items: center;justify-content: center;backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.1);border-radius: 0.5rem;"
+                        class="play-button cursor-pointer  button amplitude-play-pause amplitude-paused">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="#fff" style="width: 2rem;height:2rem" id="play-id">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                        </svg>
 
-                <img src="https://i1.sndcdn.com/artworks-000515401857-zj2fzl-t500x500.jpg"
-                    style="width:88px;background-color: rgb(241 245 249 / 1);    border-radius: 0.5rem;flex: none;max-width: 100%;  height: auto; display: block; aspect-ratio: auto 88 / 88;">
 
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" stroke-width="3.5"
+                            stroke="#fff" style="width: 2rem;height:2rem" id="pause-id">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+                        </svg>
+
+                    </span>
+                </div>
 
                 <div style="min-width: 0;font-weight:600;flex:1;
                 margin-right: calc(1rem * 0);
                 margin-left: calc(1rem * calc(1 - 0));">
-                    <p style="color: var( --themecolor);font-size:0.875rem;line-height: 1.5rem;">
-                        <a title="Episode">Ep.</a> 110
+                    <p style="color: var( --themecolor);font-size:0.875rem;line-height: 1.5rem;"
+                        data-amplitude-song-info="name">
+
                     </p>
                     <h2 style="font-size:0.875rem;line-height: 1.5rem;    overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;font-weight: inherit;    margin-top: calc(0.25rem * calc(1 - 0));
-        margin-bottom: calc(0.25rem * 0);" class="episodename">
-    
-                        Son Goku Wakes! New Level of the Awakened!!
+        margin-bottom: calc(0.25rem * 0);" class="episodename" data-amplitude-song-info="album">
+
+
                     </h2>
                     <p style="font-size: 1.125rem;
                    margin-top: calc(0.25rem * calc(1 - 0));
-        margin-bottom: calc(0.25rem * 0);  line-height: 1.75rem;" class="uploader">
-                        Toei Animation
+        margin-bottom: calc(0.25rem * 0);  line-height: 1.75rem; overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;" class="uploader" data-amplitude-song-info="artist">
+
                     </p>
                 </div>
             </div>
@@ -3376,12 +3805,12 @@ margin-right: 0.5rem;
 
 
                     <div style="border-radius: 9999px;overflow: hidden;" class="player-bottom-1">
-                        <div style="width: 50%;height: 0.5rem;background: var( --themecolor);"></div>
+                        <div class="song-percent" id="song-percentage-played"></div>
                     </div>
-                    <div
-                        style="position: absolute;left: 50%;top: 50%;width: 18px;height: 18px;margin-top: -0.5rem;margin-left: -0.5rem;border: 3px solid var( --themecolor);border-radius: 1000px;" class="player-bottom-2">
+                    <!-- <div style="position: absolute;left: 50%;top: 50%;width: 18px;height: 18px;margin-top: -0.5rem;margin-left: -0.5rem;border: 3px solid var( --themecolor);border-radius: 1000px;"
+                        class="player-bottom-2">
 
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
@@ -3398,10 +3827,10 @@ margin-right: 0.5rem;
        ">
                 <div style="transition-property: all;
                 transition-timing-function: cubic-bezier(.4,0,.2,1);
-                transition-duration: .5s;color: var( --themecolor)">24:16</div>
+                transition-duration: .5s;color: var( --themecolor)" class="amplitude-current-time"></div>
                 <div style="transition-property: all;
                 transition-timing-function: cubic-bezier(.4,0,.2,1);
-                transition-duration: .5s;color: rgb(100 116 139/1)">75:50</div>
+                transition-duration: .5s;color: rgb(100 116 139/1)" class="amplitude-duration-time "></div>
             </div>
         </div>
 
@@ -3416,27 +3845,56 @@ margin-right: 0.5rem;
 
 
     <script>
-        function collapsesidebar() {
-            document.getElementById("menu-icon").click();
-        }
+
+
 
         function compactMode() {
-            document.body.classList.add('compactClass');
+
+
             document.getElementById('compact').classList.add('active4');
             document.getElementById('comfort').classList.remove('active4');
             localStorage.setItem('WeUI-view-keycode', 'compact');
+
+
+            document.getElementById("sidebar-container").classList.add("sidebar-collapsed");
+            document.getElementById("uppertabbar").classList.add("tabbar-collapsed");
+            var ib, tabcontentb;
+  tabcontentb = document.getElementsByClassName("contentarea2");
+  for (ib = 0; ib < tabcontentb.length; ib++) {
+    tabcontentb[ib].classList.add("contentarea2-collapsed");
+  }
         }
         function comfortMode() {
-            document.body.classList.remove('compactClass');
             document.getElementById('compact').classList.remove('active4');
             document.getElementById('comfort').classList.add('active4');
             localStorage.setItem('WeUI-view-keycode', 'comfort');
+
+            document.getElementById("sidebar-container").classList.remove("sidebar-collapsed");
+            document.getElementById("uppertabbar").classList.remove("tabbar-collapsed");
+            var ib, tabcontentb;
+  tabcontentb = document.getElementsByClassName("contentarea2");
+  for (ib = 0; ib < tabcontentb.length; ib++) {
+    tabcontentb[ib].classList.remove("contentarea2-collapsed");
+  }
+        
         }
         var viewcode = localStorage.getItem('WeUI-view-keycode');
 
+
+
         if (viewcode == 'compact') { compactMode(); }
         else { comfortMode(); }
-         
+
+
+
+
+        function sidebar_toggle() {
+
+            if (localStorage.getItem('WeUI-view-keycode') == 'compact') { comfortMode(); }
+
+            else { compactMode(); }
+        }
+
         function intfocus() {
             document.getElementById("search_container").classList.add("focused");
             document.getElementById("search_icon").classList.add("focu");
@@ -3509,7 +3967,7 @@ margin-right: 0.5rem;
             document.getElementById('progress-player-id').classList.remove('progress-player-show');
         }
 
-      
+
         function open_progress_player() {
             document.getElementById('progress-player-id').classList.toggle('progress-player-show');
             document.getElementById('myDropdown').classList.remove('showit');
@@ -3524,12 +3982,10 @@ margin-right: 0.5rem;
             document.getElementById('menu-icon').classList.toggle('menu-icon-toggle');
         }
 
-        function sidebar_toggle() {
+        function playaudio() {
 
-            document.getElementById("sidebar-container").classList.toggle("sidebar-collapsed");
-            document.getElementById("uppertabbar").classList.toggle("tabbar-collapsed");
-            document.getElementById("contentarea2").classList.toggle("contentarea2-collapsed");
-
+            document.getElementById('play-id').classList.toggle('visible-1');
+            document.getElementById('pause-id').classList.toggle('visible-2');
         }
 
         function openthemes() {
@@ -3601,6 +4057,83 @@ margin-right: 0.5rem;
             dots[slideIndex - 1].className += " active3";
             setTimeout(showSlides, 5000); // Change image every 2 seconds
         }
+
+
+
+
+
+        Amplitude.init({
+  "bindings": {
+        37: 'prev',
+        39: 'next',
+        32: 'play_pause'
+    },
+
+            "callbacks": {
+                timeupdate: function () {
+                    let percentage = Amplitude.getSongPlayedPercentage();
+
+                    if (isNaN(percentage)) {
+                        percentage = 0;
+                    }
+
+                    let slider = document.getElementById('song-percentage-played');
+                    slider.style.width = percentage + '%';
+                }
+            },
+
+
+
+
+
+            "songs": [
+                {
+                    "name": "Ep. 110",
+                    "artist": "Toei Animation",
+                    "album": "Son Goku Wakes! New Level of the Awakened!!",
+                    "url": " https://drive.google.com/uc?export=download&id=1_C8qndpDYfD7HX6_73hK6LPVZ39hahR7",
+                    "cover_art_url": "https://i1.sndcdn.com/artworks-000515401857-zj2fzl-t500x500.jpg"
+
+
+                },
+
+                {
+                    "name": "1.2.3",
+                    "artist": "The Pokemon Company",
+                    "album": "Pokemon journeys",
+                    "url": "https://drive.google.com/uc?export=download&id=1O68MfpzL5ugAcd20NnSMcRT4IWPTBvLl",
+                    "cover_art_url": "https://github.com/Lakshay-7134/Go/blob/main/203bef4b39bd430556e4e764e6160f78.jpg?raw=true"
+                }
+            ]
+        });
+
+        window.onkeydown = function (e) {
+            return !(e.keyCode == 32);
+        };
+
+
+
+
+
+        function openPage(pageName, elmnt) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("contentarea2");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active");
+  }
+
+  document.getElementById(pageName).style.display = "initial";
+  elmnt.classList.add("active");
+ 
+}
+
+
+document.getElementById("defaultOpen").click();
+
     </script>
 
 
