@@ -1193,6 +1193,9 @@
             background: #fff !important;
         }
 
+
+
+
         .uppertabbar .tabbar-shadow-right::after {
             background: linear-gradient(to left, rgba(255, 255, 255, 0.98) 20%, rgba(255, 255, 255, 0) 80%);
             content: "";
@@ -3220,7 +3223,7 @@ padding-right: 0.375rem;">EP-12</dd>
         </div>
 
 
-        <div class="sidebar-item">
+        <div class="sidebar-item tablink" onclick="openPage('Explore', this)">
             <div>
 
 
@@ -3473,19 +3476,94 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
         </div>
 
     </div>
-   <div id="Secure" class="contentarea2" style="display: flex;justify-content: center;margin-top: 56px;z-index: 200;text-align: center;">
-        <input type="password" style="padding: 30px 20px 10px;height: 60px;
-box-sizing: border-box;
--webkit-appearance: none;
-appearance: none;
-font-size: 17px;
-color: #333;
-line-height: 20px;background: #f9f9f9;border-radius: 12px;width: 35%;margin-top: 50px;"/>
-    
+   <div id="Secure" class="contentarea2" style="margin-top: 0;z-index: 2000;text-align: center;min-height: 100%;overflow: hidden;">
+<img src="https://github.com/Lakshay-7134/Go/blob/main/IDR_THEME_NTP_BACKGROUND.png?raw=true" style="position: absolute;right: 0;top: 0;bottom: 0;margin-left: 16px;left: 16px;">
 
+    <div style="position: absolute;top: 0;left: 16px;right: 0;bottom: 0;background: hsla(0, 0%, 100%, .8);backdrop-filter: blur(40px);z-index: 250;">
+        <div style=" border-radius: 100%;width: 150px;
+                height: 150px;    background: url(https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp);background-position: center center;background-size: 136px auto;background-size: 300px auto;margin: auto;margin-top: 150px;">
+                    </div>
+                    <div style=" border-radius: 12px;padding: 0 1.36rem;border: 1px solid #1d1d1f;position: absolute;right: 32px;top: 32px;overflow: hidden;font-size: 15px;color: #fff;background: #1d1d1f;height: 39px;font-weight: 500;line-height: 39px;">Welcome, Alec
+                        </div>
+
+                        <div style=" border-radius: 23px;padding: 0 1.36rem;border:none;position: absolute;left: 32px;top: 32px;overflow: hidden;font-size: 28px;color: var(--themecolor);height: 60px;font-weight: 600;letter-spacing: .25px;font-weight: 600;font-size: 25px; font-family: MiSans, system-ui, sans-serif;">16:30 PM
+                            
+                        </div>
+                        <div style=" border-radius: 23px;padding: 0 1.36rem;border:none;overflow: hidden;font-size: 28px;color: #1d1d1f;height: 60px;font-weight: 600;letter-spacing: .25px;font-weight: 600;font-size: 25px; font-family: MiSans, system-ui, sans-serif;margin-top: 15px;visibility: hidden;">Alec
+                            
+                        </div>
+
+        <input type="password" style="height: 3.5rem;
+        -webkit-appearance: none;
+        appearance: none;
+        z-index: 500;
+        
+        line-height: 20px;background: #f9f9f9;border-radius: 12px;width: 35%;margin-top: calc(50% - 17.75rem - 168px -60px);
+        
+        
+        
+            border: none;
+            outline: 0;
+            font-size: 15px;
+            font-weight: 400;
+            color: #000;
+            padding: 0 22px;
+            font-family: MiSans, system-ui, sans-serif;
+            letter-spacing: .5px;
+            caret-color: var(--themecolor);
+            
+            " placeholder="Type your password here..."/>
+
+<div style="position: absolute;left: 0;right: 0;bottom: 0;">
+
+
+    <div style="border-radius:  9999px;overflow: hidden;background: transparent;" class="player-bottom-1">
+        <div class="song-percent" style="width: 0%;border-radius:  9999px;"></div>
+    </div>
+  
+</div>
+            </div>
+     
 
 </div>
 
+
+<div id="Explore" class="contentarea2" style="margin-top: 56px;z-index: 200;">
+
+    <div style="display: flex;justify-content: center;text-align: center;flex-direction: column">
+<div style="display: flex;justify-content: center;text-align: center;;margin-top: 12px;">
+<iframe style="border-radius:12px;margin-right: 12px;" src="https://open.spotify.com/embed/track/4ral5tdFbO6WUBAtoIasbX?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+
+<iframe style="border-radius:12px;margin-left: 12px;" src="https://open.spotify.com/embed/track/30kEWNQGAxzrkxIZsCUsE3?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
+
+<div style="display: flex;justify-content: center;text-align: center;margin-top: 24px;">
+    <iframe style="border-radius:12px;margin-right: 12px;" src="https://open.spotify.com/embed/track/7AXZaAsdIYaiTaFMwRq7Mq?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <iframe style="border-radius:12px;margin-left: 12px;" src="https://open.spotify.com/embed/track/5eOz8xzZX9J5oSGTdifRgz?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    
+    </div>
+
+
+
+    <iframe style="border-radius:12px;margin: 12px 0;margin-top: 24px;" src="https://open.spotify.com/embed/track/1bEnIDpwKsyhDauHVoMz6t?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<iframe style="border-radius:12px;margin: 12px 0;" src="https://open.spotify.com/embed/track/7cAexYA1vH6srKeIuKySud?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+
+
+
+<iframe style="border-radius:12px;margin: 12px 0;" id="frame1" src="https://open.spotify.com/embed/track/4dx26v9rnnmqDIS3RqMc7e?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<iframe style="border-radius:12px;margin: 12px 0;" src="https://open.spotify.com/embed/track/2lEG37msChkUl9v2tLrFGc?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<iframe style="border-radius:12px;margin: 12px 0;" src="https://open.spotify.com/embed/track/5Y8ME8ljCPyb9AP4JGAidT?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+
+
+</div>
+</div>
 
     <div id="Deleted" class="contentarea2" style="display: flex;justify-content: center;margin-top: 56px;z-index: 200;min-height: calc(100% - 56px);">
         
@@ -3658,6 +3736,17 @@ margin-right: 0.5rem;
 
 
         </div>
+
+
+
+
+
+<div>
+
+
+</div>
+        
+
     </div>
     <div id="uppertabbar" class="uppertabbar scrollbar-hidden" onscroll="showarrow();showarrowright()">
         <div class="tabbar-shadow" id="tabbar-shadow">
@@ -4133,6 +4222,8 @@ margin-right: 0.5rem;
 
 
 document.getElementById("defaultOpen").click();
+
+
 
     </script>
 
