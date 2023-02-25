@@ -879,7 +879,7 @@
         .mini-sidebar {
             z-index: 1000;
             position: fixed;
-            top: 56px;
+            top: 0;
             bottom: 0;
             right: 0;
             width: 0;
@@ -2632,16 +2632,13 @@ padding-right: 0.375rem;">EP-12</dd>
 
 
                 <div style=" border-radius: 100%;width: 32px;
-                    height: 32px; background-position: center center;background-size: 70px auto;  background: url(https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp);
+                height: 32px; background-position: center center;  background: var(--themecolor);
+background-position: center center;
 
-
-    background-position: center center;
-    background-size: 64px auto;
-    display: inline-block;
-    vertical-align: middle;
-    
-    " id="login-pic">
-                </div>
+display: flex;align-items: center;justify-content: center;
+vertical-align: middle;color: #fff;font-size: 16px;font-weight: 500;
+" id="login-pic">A
+            </div>
 
 
 
@@ -2659,6 +2656,9 @@ padding-right: 0.375rem;">EP-12</dd>
         <div class="drop-profile">
 
             <div class="drop-pic" style="margin-top:25px">
+
+
+
                 <div style="flex: 1;display: flex;align-items: center;justify-content: center;">
                     <div
                         style=" border-radius: 100%;width: 65px;
@@ -2666,6 +2666,9 @@ padding-right: 0.375rem;">EP-12</dd>
                     </div>
                 </div>
 
+
+
+                
                 <div
                     style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 16px;flex: 1;">
                     Hi, Alec
@@ -3486,7 +3489,65 @@ margin-left: 25px !important;
       
 
         <div class="sidebar mini-sidebar sidebar-collapsed" id="mini-sidebar-container">
+ <div style="
+  margin: 0 auto;margin-left: 0 !important;
+            display: flex;
+            height: 56px;
+            width: 235px;
+            align-items: center;
+            border-radius: 0 !important;
+            flex: none;
+            flex-direction: row;
+            justify-content: center;
+            ">
+                <div style=" display: flex;
+            font-size: 11px;
+            align-items: center;
+            font-family: MiSans, system-ui, sans-serif;
+            font-weight: 500;
+            flex: none;
+justify-content: left;margin-left: 10px;">
+    
+    
+    <div class="menu-icon" id="menu-icon" onclick="sidebar_toggle()">
 
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="width:24px;height:24px">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+
+
+
+    </div>
+    
+                    
+    
+                </div>
+
+                <div class="hidden" style="padding-top: 5px; display: flex;
+            font-size: 11px;
+            align-items: center;
+            font-family: MiSans, system-ui, sans-serif;
+            font-weight: 500;
+            flex: 1;
+            justify-content: left;">
+
+<div style="width:auto;margin-left: 17px;" id="mobilelogoimage">
+    <img src="https://raw.githubusercontent.com/Lakshay-7134/Go/main/Favicon%20Logo.png" style="height: 30px;width: auto;">
+    
+</div>
+<div style="font-size: 16.5px;
+            font-family: MiSans, system-ui, sans-serif;color: var(--color1);padding-left: 10px;letter-spacing: .6px;font-weight: 500" id="mobilelogotext">
+                WeUI
+            </div>
+
+                
+                
+                
+                
+                </div>
+            </div>
+
+            
             <div style="margin-top: 10px;" class="sidebar-item tablink" onclick="openPage('Home', this)" id="defaultOpen">
                 <div>
     
@@ -3539,7 +3600,7 @@ margin-left: 25px !important;
                 <div class="hidden" style="padding-top: 5px;">History</div>
             </div>
             <hr style="    height: 0;
-    margin: 15px auto;
+    margin: 15px auto;margin-left: 19px;
     width: 75%;
     overflow: hidden;
     background: transparent;
@@ -3614,7 +3675,7 @@ margin-left: 25px !important;
             </div>
     
             <hr style="    height: 0;
-    margin: 15px auto;
+    margin: 15px auto;margin-left: 19px;
     width: 75%;
     overflow: hidden;
     background: transparent;
@@ -3681,7 +3742,7 @@ margin-left: 25px !important;
     
 
    <hr style="    height: 0;
-    margin: 15px auto;
+    margin: 15px auto;margin-left: 19px;
     width: 75%;
     overflow: hidden;
     background: transparent;
