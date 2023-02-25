@@ -812,6 +812,21 @@
 
         }
 
+        .mini-sidebar .sidebar-item {
+            margin: 9px auto;margin-left: 0 !important;
+            display: flex;
+            height: 74px;
+            width: 64px;
+            align-items: center;
+            border-radius: 0 50px 50px 0 !important;
+            flex: none;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+
+
         .sidebar .except {
 
             display: none;
@@ -867,40 +882,42 @@
             top: 57px;
             bottom: 0;
             right: 0;
-            width: 235px;
+            width: 0;
             letter-spacing: .5px;
             overflow-y: auto;
             overflow-x: hidden;
-            background: rgba(255, 255, 255, 0.98);
-            display: none;
+            background: #fff;
+            display: none !important;
             color: rgba(29, 29, 31, 1);
+            
 
         }
+        .mini-sidebar-open {
+           
+            width: 235px !important;
+         
+            
+
+        }
+        .mini-sidebar .sidebar-item div {
+
+margin-left: 19px !important;
+}
+.mini-sidebar .sidebar-item .hidden {
+
+margin-left: 0 !important;
+}
 
         .sidebar-container {
             height: 100%;
             width: 100%;
         }
 
-        .mini-sidebar-item-container {
-
-            display: flex;
-
-            align-items: center;
-            justify-content: space-evenly;
-
-            flex-direction: row;
-            flex-wrap: wrap;
-
-        }
+        
 
 
         .mini-sidebar-item {
-            flex: none;
-
-            height: auto;
-            width: 45px;
-            margin: 10px 25px;
+            
 
 
             transition: all .1s ease;
@@ -1844,6 +1861,13 @@
             .sidebar {
                 display: none;
             }
+            .mini-sidebar-open {
+           
+           display: block !important;
+        
+           
+
+       }
 
             .previousarrow {
                 left: 28px;
@@ -3402,80 +3426,208 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
     </div>
 
 
-    <div class="mini-sidebar scrollbar-hidden" id="mini-sidebar-container">
-        <div class="sidebar-container">
-            <div class="mini-sidebar-item-container">
-                <div
-                    style="width: 100%;height: 44px;display: flex;align-items: center;justify-content: center;font-size: 16px;font-weight: 400;">
-                    More Apps</div>
-                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
-                    class="mini-horizontal"><img class="mini-sidebar-item"
-                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.gallery.png">
-                    <div style="text-align: center;font-size: 15px;">Gallery</div>
+   
+      
+
+        <div class="sidebar mini-sidebar sidebar-collapsed" id="mini-sidebar-container">
+
+            <div style="margin-top: 10px;" class="sidebar-item tablink" onclick="openPage('Home', this)" id="defaultOpen">
+                <div>
+    
+    
+    
+    
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6"
+                        style="pointer-events: none; display: block; width: 24px; height: 24px">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+    
                 </div>
-
-                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
-                    class="mini-horizontal"><img class="mini-sidebar-item"
-                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.mi.misupport.png">
-                    <div style="text-align: center;font-size: 15px;">Liked</div>
-                </div>
-
-                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
-                    class="mini-horizontal"><img class="mini-sidebar-item"
-                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.wali.live.png">
-                    <div style="text-align: center;font-size: 15px;">Collection</div>
-                </div>
-                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
-                    class="mini-horizontal"><img class="mini-sidebar-item"
-                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.securitycenter.png">
-                    <div style="text-align: center;font-size: 15px;">Security</div>
-                </div>
-
-
-                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
-                    class="mini-horizontal"><img class="mini-sidebar-item"
-                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.android.soundrecorder.png">
-                    <div style="text-align: center;font-size: 15px;">Audio</div>
-                </div>
-
-
-                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
-                    class="mini-horizontal"><img class="mini-sidebar-item"
-                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.xiaomi.xmsf.account.ui.MiCloudSettingsActivity.png">
-                    <div style="text-align: center;font-size: 15px;">Cloud</div>
-                </div>
-
-                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
-                    class="mini-horizontal"><img class="mini-sidebar-item"
-                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.xiaomi.xmsf.FindDevice.png">
-                    <div style="text-align: center;font-size: 15px;">Devices</div>
-                </div>
-
-                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
-                    class="mini-horizontal"><img class="mini-sidebar-item"
-                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.miui.notes.png">
-                    <div style="text-align: center;font-size: 15px;">Notes</div>
-                </div>
-
-                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
-                    class="mini-horizontal"><img class="mini-sidebar-item"
-                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.xiaomi.smarthome.png">
-                    <div style="text-align: center;font-size: 15px;">Features</div>
-                </div>
-
-                <div style="display: flex;flex-direction: column;justify-content: center;border-radius: 12px;margin-top: 12px;"
-                    class="mini-horizontal"><img class="mini-sidebar-item"
-                        src="C:\Users\Mr. Lokender ji\Desktop\Themes & Wallpapers\system\media\theme\miui_mod_icons\com.android.quicksearchbox.png">
-                    <div style="text-align: center;font-size: 15px;">Search</div>
-                </div>
-
+                <div class="hidden" style="padding-top: 5px;">Home</div>
             </div>
-
-
-
+    
+    
+            <div class="sidebar-item tablink" onclick="openPage('Explore', this)">
+                <div>
+    
+    
+    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-compass"
+                        style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                        <circle cx="12" cy="12" r="10" />
+                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                    </svg>
+                </div>
+                <div class="hidden" style="padding-top: 5px;">Explore</div>
+            </div>
+    
+            <div class="sidebar-item">
+                <div>
+    
+    
+    
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="none"
+                        stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        style="pointer-events: none; display: block; width: 24px; height: 24px;">&lt;!--! Atomicons Free
+                        1.00 by @atisalab License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021
+                        Atomicons --&gt;<path d="M5,9A8,8,0,1,0,12,5H9"></path>
+                        <polyline points="12 2 9 5 12 8"></polyline>
+                    </svg>
+    
+    
+                </div>
+                <div class="hidden" style="padding-top: 5px;">History</div>
+            </div>
+            <hr style="    height: 0;
+    margin: 15px auto;
+    width: 75%;
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
+            <div class="sidebar-item">
+                <div>
+    
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6"
+                        style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                    </svg>
+    
+                </div>
+                <div class="hidden" style="padding-top: 5px;">Favourite</div>
+            </div>
+    
+            <div class="sidebar-item tablink" onclick="openPage('Library', this)">
+                <div>
+    
+    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-instagram"
+                        style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+    
+                </div>
+                <div class="hidden" style="padding-top: 5px;">Library</div>
+            </div>
+    
+    
+            <div class="sidebar-item except">
+                <div>
+    
+    
+    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-clock"
+                        style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+    
+    
+                </div>
+                <div class="hidden" style="padding-top: 5px;">Watch Later</div>
+            </div>
+            <div class="sidebar-item tablink" >
+                <div>
+    
+    
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="none"
+                        stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        style="pointer-events: none; display: block; width: 24px; height: 24px;">&lt;!--! Atomicons Free
+                        1.00 by @atisalab License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021
+                        Atomicons --&gt;<path
+                            d="M5,5.74V18.26a2,2,0,0,0,3.11,1.67l9.39-6.27a2,2,0,0,0,0-3.32L8.11,4.07A2,2,0,0,0,5,5.74Z">
+                        </path></svg>
+    
+    
+    
+                </div>
+                <div class="hidden" style="padding-top: 5px;">Your Files</div>
+    
+            </div>
+    
+            <hr style="    height: 0;
+    margin: 15px auto;
+    width: 75%;
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
+    
+    
+            <div class="sidebar-item except">
+                <div>
+    
+    
+    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-help-circle"
+                        style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                    </svg>
+    
+                </div>
+                <div class="hidden" style="padding-top: 5px;">Help</div>
+            </div>
+            <div class="sidebar-item tablink" onclick="openPage('Deleted', this)">
+                <div>
+    
+    
+    
+    
+    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-trash-2"
+                        style="pointer-events: none; display: block; width: 24px; height: 24px;">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                        <line x1="10" y1="11" x2="10" y2="17" />
+                        <line x1="14" y1="11" x2="14" y2="17" />
+                    </svg>
+    
+    
+    
+                </div>
+                <div class="hidden" style="padding-top: 5px;">Deleted</div>
+            </div>
+    
+    
+    
+    
+            <div class="sidebar-item tablink" onclick="openPage('Secure', this)">
+                <div>
+    
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6"
+                        style="pointer-events: none; display: block; width: 24px; height: 24px">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                    </svg>
+    
+                </div>
+                <div class="hidden" style="padding-top: 5px;">Secure</div>
+            </div>
+    
+    
+    
         </div>
 
-    </div>
+    
    <div id="Secure" class="contentarea2" style="margin-top: 0;z-index: 2000;text-align: center;min-height: 100%;overflow: hidden;" onload="startTime()">
 <img src="https://github.com/Lakshay-7134/Go/blob/main/IDR_THEME_NTP_BACKGROUND.png?raw=true" style="position: absolute;right: 0;top: 0;bottom: 0;margin-left: 16px;left: 16px;">
 
@@ -3978,7 +4130,7 @@ margin-right: 0.5rem;
 
 
         function sidebar_toggle() {
-
+document.getElementById("mini-sidebar-container").classList.toggle("mini-sidebar-open");
             if (localStorage.getItem('WeUI-view-keycode') == 'compact') { comfortMode(); }
 
             else { compactMode(); }
