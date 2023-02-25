@@ -31,7 +31,7 @@
         rel="stylesheet">
 
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-
+   
     <title>WeUI: Towards Project Go</title>
 
     <style>
@@ -889,7 +889,7 @@
             background: #fff;
             display: none !important;
             color: rgba(29, 29, 31, 1);
-            
+            transition: all .1s ease !important;
 
         }
         .mini-sidebar-open {
