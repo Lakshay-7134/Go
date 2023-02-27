@@ -112,6 +112,8 @@
 
 
         
+
+    
             :root {
                 --themecolor: #0d84ff;
                 --color1: #1d1d1f;
@@ -914,7 +916,7 @@
                 display: flex;
                 font-size: 11px;
                 align-items: center;
-                font-family: CamphorPro,Arial,sans-serif;
+                font-family: MiSans, system-ui, sans-serif;
                 font-weight: 500;
                 flex: none;
 
@@ -1057,7 +1059,7 @@
                 display: flex;
                 font-size: 14px;
                 align-items: center;
-                font-family: CamphorPro,Arial,sans-serif;
+                font-family: MiSans, system-ui, sans-serif;
                 font-weight: 500;
                 flex: none;
                 justify-content: left;
@@ -1070,7 +1072,7 @@
                 display: flex;
                 font-size: 14px;
                 align-items: center;
-                font-family: CamphorPro,Arial,sans-serif;
+                font-family: MiSans, system-ui, sans-serif;
                 font-weight: 450;
                 flex: none;
                 justify-content: left;
@@ -3030,7 +3032,7 @@ vertical-align: middle;color: #fff;font-size: 16px;font-weight: 500;
 
                 <div
                     style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;padding-left: 20px;padding-top: 10px;display: flex;align-items: center;">
-                    Change Viewa
+                    Change View
 
                 </div>
             </div>
@@ -4100,9 +4102,9 @@ margin-left: 19px !important;
     <div id="Library" class="contentarea2" style="margin-top:56px;z-index: 200;">
 
         <div
-            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 25px;font-family: CamphorPro,Arial,sans-serif;margin: 15px;margin-bottom: 5px;">
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 25px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
             Thursday, <span
-                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 20px;font-family: CamphorPro,Arial,sans-serif;">8
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 20px;font-family: MiSans, system-ui, sans-serif;">8
                 Dec 2022</span>
 
         </div>
@@ -4134,9 +4136,9 @@ margin-left: 19px !important;
         </div>
 
         <div
-            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 25px;font-family:  CamphorPro,Arial,sans-serif;margin: 15px;margin-bottom: 5px;">
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 25px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
             Thursday, <span
-                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 20px;font-family: CamphorPro,Arial,sans-serif;">8
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 20px;font-family: MiSans, system-ui, sans-serif;">8
                 Dec 2022</span>
 
         </div>
@@ -4160,9 +4162,9 @@ margin-left: 19px !important;
 
 
         <div
-            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 25px;font-family: CamphorPro,Arial,sans-serif;margin: 15px;margin-bottom: 5px;">
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 25px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
             Thursday, <span
-                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 20px;font-family: CamphorPro,Arial,sans-serif;">8
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 20px;font-family: MiSans, system-ui, sans-serif;">8
                 Dec 2022</span>
 
         </div>
