@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Timetable</title>
+<style type="text/css">
+	button{text-align: center;
+		border: none;
+		color: white;
+		font-family:Times New Roman; 
+		cursor: pointer;
+		font-size: 16px;}
+button:hover {
+  
+  color: black;
+  opacity: 0.8;
+}
+.a{font-family:Lucida Console;
+color: white;
+background-color: black;
+font-weight: bold;
+font-family:Lucida Console;
+}
+.b{background:  linear-gradient(to right, #FF4500, #FF7F50 );
+
+}
+.c{background: linear-gradient(to right, indianred, lightcoral);
+}
+.d{background:  linear-gradient(to right, #F2994A, #F2C94C);
+}
+.e{background:  linear-gradient(to right, purple, violet);
+}
+.f{background:  linear-gradient(to right, #36D1DC, #5B86E5);
+}
+.g{background:  linear-gradient(to right, #00b09b, #96c93d);
+}
+.h{background:  linear-gradient(to right, tomato, crimson);
+}
+.i{text-align: center;
+color:MediumSeaGreen;
+font-family:Harrington;
+font-size:60px;
+font-weight: bold;
+text-decoration: underline;
+background:  linear-gradient(to right, black, grey);
+}
+tr{text-align: center;}
+.b:hover {
+  
+  color: black;
+  opacity: 0.8;
+}
+.c:hover {
+  
+  color: black;
+  opacity: 0.8;
+}
+.d:hover {
+  
+  color: black;
+  opacity: 0.8;
+}
+.e:hover {
+  
+  color: black;
+  opacity: 0.8;
+}
+.f:hover {
+  
+  color: black;
+  opacity: 0.8;
+}
+.g:hover {
+  
+  color: black;
+  opacity: 0.8;
+}
+.h:hover {
+  
+  color: black;
+  opacity: 0.8;
+}
+
+</style>
+</head>
+
+<body>
+<table cellpadding="25" cellspacing="2" width="100%">
+<caption class="i">Weekly Schedule</caption>
+<tr class="a">
+<th>Time</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th>Saturday</th>
+<th>Sunday</th>
+</tr>
+
+<tr>
+<td class="a">8:05-8:45</td>
+<td class="b"><button type="button" onclick="maths1()" class="b">Mathematics</button></td>
+<td class="g"><button type="button" onclick="maths2()" class="g">Mathematics</button></td>
+<td class="h"><button type="button" onclick="maths3()" class="h">Mathematics</button></td>
+<td class="d"><button type="button" onclick="maths4()" class="d">Mathematics</button></td>
+<td class="f"><button type="button" onclick="maths5()" class="f">Computer</button></td>
+<td class="c"><button type="button" onclick="maths6()" class="c">Mathematics</button></td>
+<td></td>
+
+</tr>
+<tr>
+<td class="a">8:55-9:35</td>
+<td class="f">  <button type="button" onclick="eng1()" class="f">English</button></td>
+<td class="d">  <button type="button" onclick="eng2()" class="d">English</button></td>
+<td class="c">  <button type="button" onclick="eng3()" class="c">English</button></td>
+<td class="h">  <button type="button" onclick="check(this.form)" class="h">Hindi</button></td>
+<td class="e">  <button type="button" onclick="check(this.form)" class="e">Hindi</button></td>
+<td class="b">  <button type="button" onclick="check(this.form)" class="b">Hindi</button></td>
+<td></td>	
+</tr>
+
+<tr>
+<td class="a">9:45-10:25</td>
+<td class="c">  <button type="button" onclick="check(this.form)" class="c">Physics</button></td>
+<td class="e">  <button type="button" onclick="check(this.form)" class="e">Physics</button></td>
+<td class="g">  <button type="button" onclick="check(this.form)" class="g">Biology</button></td>
+<td class="f">  <button type="button" onclick="check(this.form)" class="f">Biology</button></td>
+<td class="b">  <button type="button" onclick="check(this.form)" class="b">Chemistry</button></td>
+<td class="f">  <button type="button" onclick="check(this.form)" class="f">Chemistry</button></td>
+<td></td>	
+</tr>
+
+<tr>
+<td class="a">10:35-11:15</td>
+<td class="h">  <button type="button" onclick="check(this.form)" class="h">Computer</button></td>
+<td class="f">  <button type="button" onclick="check(this.form)" class="f">Social Science</button></td>
+<td class="c">  <button type="button" onclick="check(this.form)" class="c">Social Science</button></td>
+<td class="g">  <button type="button" onclick="check(this.form)" class="g">Social Science</button></td>
+<td class="d">  <button type="button" onclick="check(this.form)" class="d">Social Science</button></td>
+<td class="e">  <button type="button" onclick="check(this.form)" class="e">Social Science</button></td>
+<td></td>	
+</tr>
+
+<tr>
+<td class="a">18:30-19:30</td>
+<td class="g">  <button type="button" onclick="check(this.form)" class="g">Tuition</button></td>
+<td class="c">  <button type="button" onclick="check(this.form)" class="c">Tuition</button></td>
+<td class="e">  <button type="button" onclick="check(this.form)" class="e">Tuition</button></td>
+<td class="b">  <button type="button" onclick="check(this.form)" class="b">Tuition</button></td>
+<td class="f">  <button type="button" onclick="check(this.form)" class="f">Tuition</button></td>
+<td class="h">  <button type="button" onclick="check(this.form)" class="h">Tuition</button></td>
+<td></td>	
+</tr>
+
+</table>
+<script type="text/javascript">
+  
+  
+            var d = new Date();
+  var weekday = new Array(7);
+  weekday[0] = "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+
+  var n = weekday[d.getDay()];
+  var m = d.getHours();
+  var o = d.getMinutes();
+ function maths1() { 
+               if(n == "Monday" && m == 8 && o >4  && o < 46) {
+                    window.open('') 
+                }
+ 
+else {
+                    alert("Wrong Meeting Time")
+                }
+            }
+function maths2() { 
+               if(n == "Tuesday" && m == 8 && o >4  && o < 46) {
+                    window.open('') 
+                }
+ 
+else {
+                    alert("Wrong Meeting Time")
+                }
+            }
+function maths3() { 
+               if(n == "Wednesday" && m == 8 && o >4  && o < 46) {
+                    window.open('') 
+                }
+ 
+else {
+                    alert("Wrong Meeting Time")
+                }
+            }
+function maths4() { 
+               if(n == "Thursday" && m == 8 && o >4  && o < 46) {
+                    window.open('') 
+                }
+ 
+else {
+                    alert("Wrong Meeting Time")
+                }
+            }
+ function maths5() { 
+               if(n == "Friday" && m == 8 && o >4  && o < 46) {
+                    window.open('') 
+                }
+ 
+else {
+                    alert("Wrong Meeting Time")
+                }
+            }
+function maths6() { 
+               if(n == "Saturday" && m == 9 && o >26  && o < 35) {
+                    window.open('') 
+                }
+ 
+else {
+                    alert("Wrong Meeting Time")
+                }
+            }
+            
+
+
+
+
+ function eng1() { 
+               if(n == "Monday" && m ==8 && o >44) {
+                    window.open('') 
+                }
+ 
+else {
+                    alert("Wrong Meeting Time")
+                }
+            }
+function eng2() { 
+               if(n == "Tuesday" && m > 7 && m < 10 && o >44  && o < 26 ) {
+                    window.open('') 
+                }
+ 
+else {
+                    alert("Wrong Meeting Time")
+                }
+            }
+function eng3() { 
+               if(n == "Wednesday" && m > 7 && m < 10 && o >44  && o < 26) {
+                    window.open('') 
+                }
+ 
+else {
+                    alert("Wrong Meeting Time")
+                }
+            }
+function maths4() { 
+               if(n == "Thursday" && m == 8 && o >4  && o < 46) {
+                    window.open('') 
+                }
+ 
+else {
+                    alert("Wrong Meeting Time")
+                }
+            }
+ function maths5() { 
+               if(n == "Friday" && m == 8 && o >4  && o < 46) {
+                    window.open('') 
+                }
+ 
+else {
+                    alert("Wrong Meeting Time")
+                }
+            }
+function maths6() { 
+               if(n == "Saturday" && m == 9 && o >26  && o < 35) {
+                    window.open('') 
+                }
+ 
+else {
+                    alert("Wrong Meeting Time")
+                }
+            }
+
+</script>
+</body>
+
+</html> 
