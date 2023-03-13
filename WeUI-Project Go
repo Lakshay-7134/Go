@@ -189,7 +189,7 @@
 
                     background: rgba(0, 0, 0, 0.1);
 
-display:none;visible:none;
+
                     position: absolute;
                     left: 0;
                     right: 0;
