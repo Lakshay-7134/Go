@@ -195,7 +195,7 @@
                     right: 0;
                     bottom: -1px;
                     z-index: 30;
-
+content:none;
                 }
 
                 .flex_menu_container .flex_box_list_item {
@@ -837,7 +837,7 @@
                 }
 
                 .sidebar {
-                    position: fixed;
+                    position: fixed;padding-right: 8px;
                     top: 56px;
                     bottom: 0;
                     left: 0;
@@ -872,7 +872,7 @@
                 }
 
                 .sidebar .sidebar-item {
-                    margin: 9px auto;
+                    margin: 7px auto;
                     display: flex;
                     height: 74px;
                     width: 64px;
@@ -1117,10 +1117,11 @@ height: calc(100% - 56px);
                     overflow-x: hidden;
                     overflow-y: auto;
                     right: 0;
-                    background: #fff;
+                    background: #f9f9f9;
                     z-index: 10;
                     border-radius: 0;
                     display: none;
+                    border-radius: 12px 0 0 0;
                 }
 
                 .contentarea2-collapsed {
@@ -1327,12 +1328,11 @@ height: calc(100% - 56px);
                     z-index: 10;
                     position: relative;
                     margin-top: 5px;
-                    max-height: calc(100vh - 184px);
+                    max-height: auto;
 
                     overflow: hidden;
-                    display: grid;
-                    place-items: center;
-                    width: auto;
+                 
+                    
                     height: auto;
                     width: 100%;
                     background: transparent;
@@ -1347,35 +1347,11 @@ height: calc(100% - 56px);
                     position: absolute;
 
                     background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.53) 40%, rgba(0, 0, 0, 0) 100%);
-
-
+content:none;
                 }
 
-                .slideshow::after {
-                    z-index: 15;
-                    content: "";
-                    width: 100%;
-                    top: 0;
-                    bottom: 0;
-                    position: absolute;
-
-                    background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.53) 40%, rgba(0, 0, 0, 0) 100%);
-
-
-                }
-
-                .slideshow::after {
-                    z-index: 15;
-                    content: "";
-                    width: 100%;
-                    top: 0;
-                    bottom: 0;
-                    position: absolute;
-
-                    background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.53) 40%, rgba(0, 0, 0, 0) 100%);
-
-
-                }
+               
+              
 
                 .dark-mode .slideshow::after {
 
@@ -3947,7 +3923,7 @@ margin-left: 19px !important;
 
 
     <div id="Secure" class="contentarea2"
-        style="top: 0;z-index: 2000;text-align: center;height: 100%;overflow: hidden;" onload="startTime()">
+        style="top: 0;z-index: 2000;text-align: center;height: 100%;overflow: hidden;background:#fff;border-radius: none;" onload="startTime()">
         <img src="https://img.wallscloud.net/uploads/thumb/526185173/Windows_11_SE-1024x576-MM-80.webp"
             style="position: absolute;right: 0;top: 0;bottom: 0;margin-left: 16px;left: 16px;">
 
@@ -4009,7 +3985,7 @@ margin-left: 19px !important;
          
             color: #000;
             overflow:hidden;
-            font-family: MiSans, system-ui, sans-serif;display;inline-block;
+            font-family: MiSans, system-ui, sans-serif;
            
             
             
@@ -4135,7 +4111,7 @@ margin-left: 19px !important;
         <img src="https://ssl.gstatic.com/social/photosui/images/null_sharing_view_460x218dp.svg"
             style="width: 50%;margin: auto;margin-top: 10%;">
         <div
-            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 22px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-top: 36px;display: flex;align-items: center;justify-content: center;text-align: center;">
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 20px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-top: 40px;display: flex;align-items: center;justify-content: center;text-align: center;">
             <span style="text-decoration: underline;text-underline-offset: 2.5px;">Nothin</span>g in the Bin yet.
 
         </div>
@@ -4144,9 +4120,9 @@ margin-left: 19px !important;
     <div id="Library" class="contentarea2" style="z-index: 200;">
 
         <div
-            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 25px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
             Thursday, <span
-                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 20px;font-family: MiSans, system-ui, sans-serif;">8
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">8
                 Dec 2022</span>
 
         </div>
@@ -4178,9 +4154,9 @@ margin-left: 19px !important;
         </div>
 
         <div
-            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 25px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
             Thursday, <span
-                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 20px;font-family: MiSans, system-ui, sans-serif;">8
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">8
                 Dec 2022</span>
 
         </div>
@@ -4204,9 +4180,9 @@ margin-left: 19px !important;
 
 
         <div
-            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 25px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
             Thursday, <span
-                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 20px;font-family: MiSans, system-ui, sans-serif;">8
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">8
                 Dec 2022</span>
 
         </div>
@@ -4252,7 +4228,7 @@ margin-left: 19px !important;
         <div class="slideshow">
 
 
-            <img src="https://editors.dexerto.com/wp-content/uploads/2021/09/07/Pokemon-Secrets-of-the-Jungle-release-date.jpg"
+            <img src="https://imageio.forbes.com/specials-images/imageserve/613b0034632b12f8d637aa28/Pok-mon-The-Movie--Secrets-Of-The-Jungle/0x0.jpg?format=jpg&crop=1920,1080,x0,y0,safe&width=960"
                 style="    max-width: 100%;
                 max-height: 100%;pointer-events: none;" class="mySlides">
 
