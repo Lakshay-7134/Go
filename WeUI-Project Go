@@ -1108,12 +1108,12 @@
                 }
 
                 .contentarea2 {
-                    position: absolute;
+                    position: fixed;
                     left: 72px;
                     padding-left: 16px;
                     padding-right: 16px;
-
-                    margin-top: 112px;
+height: calc(100% - 56px);
+                    top: 56px;
                     overflow-x: hidden;
                     overflow-y: auto;
                     right: 0;
@@ -3947,18 +3947,20 @@ margin-left: 19px !important;
 
 
     <div id="Secure" class="contentarea2"
-        style="margin-top: 0;z-index: 2000;text-align: center;min-height: 100%;overflow: hidden;" onload="startTime()">
+        style="top: 0;z-index: 2000;text-align: center;height: 100%;overflow: hidden;" onload="startTime()">
         <img src="https://github.com/Lakshay-7134/Go/blob/main/IDR_THEME_NTP_BACKGROUND.png?raw=true"
             style="position: absolute;right: 0;top: 0;bottom: 0;margin-left: 16px;left: 16px;">
 
         <div
             style="position: absolute;top: 0;left: 16px;right: 0;bottom: 0;background: hsla(0, 0%, 100%, .8);backdrop-filter: blur(40px);z-index: 250;">
             <div
-                style=" border-radius: 100%;width: 150px;
-                height: 150px;    background: url(https://media.comicbook.com/2021/07/dragon-ball-super-new-super-hero-movie-goku-toei-animation-1276890.jpeg?auto=webp);background-position: center center;background-size: 136px auto;background-size: 300px auto;margin: auto;margin-top: 150px;">
-            </div>
+            style=" border-radius: 100%;width: 150px;
+            height: 150px;    background: url(https://rare-gallery.com/mocahbig/1356617-Goku-Super-Saiyan-BlueDragon-Ball-Super-HD-Wallpaper.jpg);background-position: left center;background-size: 300px auto;margin: auto;margin-top: 150px;">
+        </div>
+
+            
             <div
-                style=" border-radius: 12px;padding: 0 1.36rem;border: 1px solid #1d1d1f;position: absolute;right: 32px;top: 32px;overflow: hidden;font-size: 15px;color: #fff;background: #1d1d1f;height: 39px;font-weight: 500;line-height: 39px;">
+                style=" border-radius: 50px;padding: 0 1.36rem;border: 1px solid #1d1d1f;position: absolute;right: 32px;top: 32px;overflow: hidden;font-size: 15px;color: #fff;background: #1d1d1f;height: 40px;font-weight: 500;line-height: 40px;">
                 Welcome, Alec
             </div>
 
@@ -3967,7 +3969,7 @@ margin-left: 19px !important;
 
             </div>
             <div
-                style=" border-radius: 23px;padding: 0 1.36rem;border:none;overflow: hidden;font-size: 28px;color: #1d1d1f;height: 60px;font-weight: 600;letter-spacing: .25px;font-weight: 600;font-size: 25px; font-family: MiSans, system-ui, sans-serif;margin-top: 15px;visibility: hidden;">
+                style=" border-radius: 50px;padding: 0 1.36rem;border:none;overflow: hidden;font-size: 28px;color: #1d1d1f;height: 66px;font-weight: 600;letter-spacing: .25px;font-weight: 600;font-size: 25px; font-family: MiSans, system-ui, sans-serif;margin-top: 15px;visibility: hidden;">
                 Alec
 
             </div>
@@ -3993,7 +3995,7 @@ margin-left: 19px !important;
             
             " placeholder="Type your password here..." />
 
-            <div style="position: absolute;left: 0;right: 0;bottom: 0;">
+            <div style="position: absolute;left: 0;right: 0;bottom: 0;display: none;">
 
 
                 <div style="border-radius:  9999px;overflow: hidden;background: transparent;" class="player-bottom-1">
@@ -4007,7 +4009,7 @@ margin-left: 19px !important;
     </div>
 
 
-    <div id="Explore" class="contentarea2" style="margin-top: 56px;z-index: 200;">
+    <div id="Explore" class="contentarea2" style="z-index: 200;">
 
         <div style="display: flex;justify-content: center;text-align: center;flex-direction: column">
             <div style="display: flex;justify-content: center;text-align: center;;margin-top: 12px;">
@@ -4081,7 +4083,7 @@ margin-left: 19px !important;
     </div>
 
     <div id="Deleted" class="contentarea2"
-        style="display: flex;justify-content: center;margin-top: 56px;z-index: 200;min-height: calc(100% - 56px);">
+        style="display: flex;justify-content: center;z-index: 200;min-height: calc(100% - 56px);">
 
 
 
@@ -4095,7 +4097,7 @@ margin-left: 19px !important;
         </div>
     </div>
 
-    <div id="Library" class="contentarea2" style="margin-top:56px;z-index: 200;">
+    <div id="Library" class="contentarea2" style="z-index: 200;">
 
         <div
             style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 25px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
@@ -4202,7 +4204,7 @@ margin-left: 19px !important;
 
     </div>
 
-    <div id="Home" class="contentarea2">
+    <div id="Home" class="contentarea2" style="margin-top: 56px;">
         <div class="slideshow">
 
 
@@ -4762,27 +4764,25 @@ margin-right: 0.5rem;
 
         document.getElementById("defaultOpen").click();
 
-        var day;
+
+
         function startTime() {
-            const today = new Date();
-            let h = today.getHours();
-            let m = today.getMinutes();
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('time').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
 
-            m = check(m);
-            h = checkTime(h);
-            document.getElementById('time').innerHTML = h + ":" + m + " " + day;
-            setTimeout(startTime, 1000);
-        }
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
 
-        function checkTime(i) {
-            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
-            return i;
-        }
-        function check(j) {
-            if (j < 12) { day = "AM" }
-            else { day = "PM" }; // add zero in front of numbers < 10
-            return j;
-        }
+
 
     </script>
 
