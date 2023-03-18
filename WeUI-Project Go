@@ -2,7 +2,7 @@
 
 <head>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@v5.3.2/dist/amplitude.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/amplitudejs/5.3.2/amplitude.min.js"></script>
 
 
 
@@ -38,6 +38,7 @@
     <title>WeUI: Towards Project Go</title>
 
     <style>
+       
         @import url("https://i02.appmifile.com/i18n/fonts/CamphorPro/vf/index.css");
         @import url("https://i02.appmifile.com/i18n/fonts/CamphorPro/woff2/index.css");
 
