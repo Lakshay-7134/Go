@@ -170,7 +170,7 @@
                     width: 100%;
                     display: flex;
                     background: rgba(255, 255, 255, 0.98);
-                    ;
+                    background: #fff;
                     justify-content: space-between;
                     padding: 0 16px;
                     flex-flow: row nowrap;
