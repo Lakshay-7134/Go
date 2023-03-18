@@ -3948,15 +3948,15 @@ margin-left: 19px !important;
 
     <div id="Secure" class="contentarea2"
         style="top: 0;z-index: 2000;text-align: center;height: 100%;overflow: hidden;" onload="startTime()">
-        <img src="https://github.com/Lakshay-7134/Go/blob/main/IDR_THEME_NTP_BACKGROUND.png?raw=true"
+        <img src="https://img.wallscloud.net/uploads/thumb/526185173/Windows_11_SE-1024x576-MM-80.webp"
             style="position: absolute;right: 0;top: 0;bottom: 0;margin-left: 16px;left: 16px;">
 
         <div
-            style="position: absolute;top: 0;left: 16px;right: 0;bottom: 0;background: hsla(0, 0%, 100%, .8);backdrop-filter: blur(40px);z-index: 250;">
+            style="position: absolute;top: 0;left: 16px;right: 0;bottom: 0; background: hsla(0, 0%, 100%, .8);backdrop-filter: blur(40px);z-index: 250;">
             <div
-            style=" border-radius: 100%;width: 150px;
-            height: 150px;    background: url(https://rare-gallery.com/mocahbig/1356617-Goku-Super-Saiyan-BlueDragon-Ball-Super-HD-Wallpaper.jpg);background-position: left center;background-size: 300px auto;margin: auto;margin-top: 150px;">
-        </div>
+                style=" border-radius: 100%;width: 150px;box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
+                height: 150px;    background: url(https://rare-gallery.com/mocahbig/1356617-Goku-Super-Saiyan-BlueDragon-Ball-Super-HD-Wallpaper.jpg);background-position: left center;background-size: 300px auto;margin: auto;margin-top: 150px;">
+            </div>
 
             
             <div
@@ -3974,10 +3974,10 @@ margin-left: 19px !important;
 
             </div>
 
-            <input type="password" style="height: 3.5rem;
+            <input type="password" maxlength="20" style="height: 3.5rem;
         -webkit-appearance: none;
         appearance: none;
-        z-index: 500;
+        z-index: 500;min-width:278px;
         
         line-height: 20px;background: #f9f9f9;border-radius: 12px;width: 35%;margin-top: calc(50% - 17.75rem - 168px -60px);
         
@@ -3993,7 +3993,32 @@ margin-left: 19px !important;
             letter-spacing: .5px;
             caret-color: var(--themecolor);
             
-            " placeholder="Type your password here..." />
+            " placeholder="Type your password here..." id="securepassword-holder" />
+
+
+ <span style="height: 3.5rem;
+        -webkit-appearance: none;
+        appearance: none;
+        z-index: 500;
+        position:absolute;vertical-align:middle;
+        line-height: 20px;background: #f9f9f9;border-radius: 50px;width: 3.5rem;margin-top: calc(50% - 17.75rem - 168px -60px);
+        
+        margin-left:16px;
+        
+            border: none;
+            outline: 0;
+            font-size: 15px;
+            font-weight: 400;
+            color: #000;
+            padding: 0 22px;
+            font-family: MiSans, system-ui, sans-serif;
+            letter-spacing: .5px;
+            caret-color: var(--themecolor);display:inline-block;
+            
+            " placeholder="Type your password here..."  ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+</svg>
+</span>
 
             <div style="position: absolute;left: 0;right: 0;bottom: 0;display: none;">
 
