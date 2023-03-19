@@ -1804,6 +1804,41 @@ content:none;
                     background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4Vi40MTNMMTggMTZ6IiBmaWxsPSIjREREIi8+PC9zdmc+");
                 }
 
+
+                #arrow-holder{color: #1d1d1f;}
+
+                .arrow-holder-2{color: var(--themecolor) !important;}
+                .arrow-holder-2:hover{background: var(--themecolor) !important;color: #fff !important}
+                .arrow-holder-3{color: #f63e54 !important;}
+                .arrow-holder-3:hover{background: #f63e54 !important;color: #fff !important}
+
+                .arrow-holder-3:hover::after {
+                    box-shadow: 0 5px 15px #f63e54;
+                    opacity: 0.4;
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: currentColor;
+                    border-radius: 50%;
+                    transition: all 0.55s cubic-bezier(0.71, 0.03, 0.23, 0.95);
+                }
+
+                .arrow-holder-2:hover::after {
+                    box-shadow: 0 5px 15px var(--themecolor);
+                    opacity: 0.4;
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: currentColor;
+                    border-radius: 50%;
+                    transition: all 0.55s cubic-bezier(0.71, 0.03, 0.23, 0.95);
+                }
                 .switch {
                     position: relative;
                     display: inline-block;
@@ -3950,7 +3985,7 @@ margin-left: 19px !important;
 
             </div>
 
-            <input type="password" maxlength="20" style="height: 3.5rem;
+            <input type="password" maxlength="20" onkeyup="checkpassword()" style="height: 3.5rem;
         -webkit-appearance: none;
         appearance: none;
         z-index: 500;min-width:278px;
@@ -3983,7 +4018,7 @@ margin-left: 19px !important;
             outline: 0;
             
          
-            color: #000;
+        
             overflow:hidden;
             font-family: MiSans, system-ui, sans-serif;
            
@@ -4003,24 +4038,22 @@ margin-left: 19px !important;
             outline: 0;
             
          
-            color: #000;
+        
             
             font-family: MiSans, system-ui, sans-serif;
            
             caret-color: var(--themecolor);display:flex;align-items:center;justify-content:center;flex:none;
             
-            " ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="pointer-events: none; width: 24px; height: 24px;">
+            "  id="arrow-holder" onclick="checkpassword()"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="pointer-events: none; width: 24px; height: 24px;">
   <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
 </svg>
 </div>
 </span>
 
-            <div style="position: absolute;left: 0;right: 0;bottom: 0;display: none;">
+            <div style="position: absolute;left: 0;right: 0;bottom: 10px;text-align: center;font-size:15px" id="pass-recognizer">
 
 
-                <div style="border-radius:  9999px;overflow: hidden;background: transparent;" class="player-bottom-1">
-                    <div class="song-percent" style="width: 100%;border-radius:  9999px;"></div>
-                </div>
+                
 
             </div>
         </div>
@@ -4535,8 +4568,37 @@ margin-right: 0.5rem;
         if (viewcode == 'compact') { compactMode(); }
         else { comfortMode(); }
 
+        function checkpassword() {
+          
+            if (document.getElementById("securepassword-holder").value == '1331') { opensecure(); }
+
+else if (document.getElementById("securepassword-holder").value == '') { typepasswordfirst();}
+     else { alertsecure(); }
+        }
 
 
+
+     function opensecure() {
+document.getElementById("arrow-holder").classList.add("arrow-holder-2");
+document.getElementById("arrow-holder").classList.remove("arrow-holder-3");
+document.getElementById("pass-recognizer").innerHTML ="Password verified";
+     }
+     
+
+     function typepasswordfirst() {
+       
+
+document.getElementById("arrow-holder").classList.remove("arrow-holder-2");
+document.getElementById("pass-recognizer").innerHTML ="Type your password first";
+
+     }
+
+function alertsecure(){
+    
+    document.getElementById("arrow-holder").classList.remove("arrow-holder-2");
+    document.getElementById("arrow-holder").classList.add("arrow-holder-3");
+    document.getElementById("pass-recognizer").innerHTML ="Invalid password";
+    }
 
         function sidebar_toggle() {
             document.getElementById("mini-sidebar-container").classList.toggle("mini-sidebar-open");
