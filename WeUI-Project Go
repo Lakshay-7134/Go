@@ -17,7 +17,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="path/to/plyr.css" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.7/plyr.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -587,7 +587,7 @@
             z-index: 35;
             margin-top: 12px;
             right: -16px;
-            
+
             max-height: 80vh;
             display: block;
             font-size: 14px;
@@ -605,8 +605,15 @@
             transition-delay: 0s, 0s, 0s;
             opacity: 0;
         }
-.notification-play{display: none;}
-.notification-container:hover .notification-play{display: flex;}
+
+        .notification-play {
+            display: none;
+        }
+
+        .notification-container:hover .notification-play {
+            display: flex;
+        }
+
         .dark-mode .notify {
 
             background: rgba(24, 24, 24, 0.98);
@@ -1152,13 +1159,22 @@
             background: rgba(0, 0, 0, 0.1) !important;
         }
 
-        .uppertabbar .active2 {
+        .active2 {
             letter-spacing: .9px;
             font-size: 15px;
             background: transparent !important;
             color: var(--themecolor);
             position: relative;
             font-weight: 470;
+
+        }
+
+        .active5{
+            
+            background: transparent !important;
+            color: #1d1d1f;
+            position: relative;
+            
 
         }
 
@@ -1187,7 +1203,7 @@
         }
 
 
-        .uppertabbar .active2::after {
+        .active2::after {
             content: '';
             margin: 0 auto;
             bottom: 0;
@@ -1207,6 +1223,25 @@
             border-radius: 100px;
         }
 
+        .active5::after {
+            content: '';
+            margin: 0 auto;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            height: 3px;
+            width: 100%;
+            max-width: 100%;
+            background: #1d1d1f;
+
+            z-index: 10;
+            position: absolute;
+
+            bottom: -19.5px;
+            cursor: default;
+            border-radius: 0;
+        }
 
         .tabbar-collapsed {
             left: 220px;
@@ -1849,7 +1884,7 @@
             top: 0;
             left: 0;
             background-color: currentColor;
-            border-radius: 50%;
+            border-radius: 0 12px 12px 0;
             transition: all 0.55s cubic-bezier(0.71, 0.03, 0.23, 0.95);
         }
 
@@ -1863,7 +1898,7 @@
             top: 0;
             left: 0;
             background-color: currentColor;
-            border-radius: 50%;
+            border-radius: 0 12px 12px 0;
             transition: all 0.55s cubic-bezier(0.71, 0.03, 0.23, 0.95);
         }
 
@@ -2425,182 +2460,250 @@
                 <div class="notify scrollbar-hidden" id="notify-content">
                     <div style="position: sticky; top:0;left:0;right:0;height:60px;backdrop-filter: saturate(200%) blur(30px);z-index: 10;
   display: flex;align-items: center;border-bottom: 1px solid rgba(0, 0, 0, .12);" class="notify-header">
-                        <div style="flex:1;padding-left: 20px;font-weight: 450;letter-spacing: .5px;" class="heading1">Notifications</div>
-                        <div style="padding-right: 12.5px;">
-                            <div class="topnav-hover " style="padding: 8.5px;"> <svg xmlns="http://www.w3.org/2000/svg"
-                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                    class="feather feather-more-horizontal" style="height: 22px;width: 22px;">
-                                    <circle cx="12" cy="12" r="1" />
-                                    <circle cx="19" cy="12" r="1" />
-                                    <circle cx="5" cy="12" r="1" />
+                        <div style="flex:1;font-weight: 450;letter-spacing: .5px;display: flex;justify-content: center;" class="heading1 active5">
+                        Recents</div>
+                            <div style="flex:1;font-weight: 450;letter-spacing: .5px;display: flex;justify-content: center;" class="heading1">
+                                Deleted</div>
+                    </div>
+
+
+                    <div class="topnav-hover notify-padding notification-container" style="align-items: flex-start;display: flex;border-radius: 0.375rem;
+                    margin: 6px 6px;">
+
+
+
+                        <div style=" border-radius: 0.375rem;position: relative;overflow:hidden">
+
+
+                            <img src="https://m.media-amazon.com/images/M/MV5BMDgwMDg1NWItMzljNC00NGRkLWI1ODctMGEwYjExYzE3ODllL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjMyNTYyNTY@._V1_QL75_UY281_CR4,0,190,281_.jpg"
+                                width="51" height="auto" class="notify-img">
+
+                            <span style="border-radius: 0.375rem;position: absolute;top: 0;left: 0;right: 0;bottom: 0;align-items: center;justify-content: center;backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.1);" class="cursor-pointer button notification-play">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="#fff" style="width: 1.8rem;height:1.8rem">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z">
+                                    </path>
                                 </svg>
-                            </div>
 
-
+                            </span>
                         </div>
-                    </div>
 
-                    
-                    <div class="topnav-hover notify-padding notification-container" style="align-items: flex-start;display: flex;border-radius: 0.375rem;
-                    margin: 6px 6px;">
-                        
-                      
+                        <div style="padding-left: 15px;flex: 1;letter-spacing: .5px;overflow: hidden;">
+                            <div style="display: flex;flex-direction: column;">
+                                <div style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;">Beyblade
+                                    Burst</div>
 
-                            <div style=" border-radius: 0.375rem;position: relative;">
-   
-   
-   <img src="https://m.media-amazon.com/images/M/MV5BMDgwMDg1NWItMzljNC00NGRkLWI1ODctMGEwYjExYzE3ODllL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjMyNTYyNTY@._V1_QL75_UY281_CR4,0,190,281_.jpg" width="51" height="auto" class="notify-img">
-
-   <span style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;align-items: center;justify-content: center;backdrop-filter: blur(2px);
-    background: rgba(255, 255, 255, 0.1);border-radius: 0.5rem;" class="cursor-pointer button notification-play">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" style="width: 1.8rem;height:1.8rem" >
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"></path>
-                        </svg>
-
-                    </span>
-                            </div>
-    
-                            <div style="padding-left: 15px;flex: 1;letter-spacing: .5px;overflow: hidden;">
-                                <div style="display: flex;flex-direction: column;">
-                               <div style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;">Beyblade Burst</div> 
-                        
                                 <div style="display: flex;margin-top: 4px;">
                                     <div style="flex:1">
-                            <div style="border: 1px solid #dadce0
+                                        <div style="border: 1px solid #dadce0
                             ;border-radius: 0.25rem;padding-left: 0.375rem;font-size: 13px;
                         padding-right: 0.375rem;width: fit-content;">
-                            EP-12</div>
-                        </div>
-                            
-                            <div style=" display: flex;align-items: center; margin-left: 0.25rem;flex: 1;justify-content: center;
-                                    " class="compact-hidden">
-                                    <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor" class="svg-exception">
-                                            <path d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
-                                            </path>
-                                        </svg></dt>
-                                    <dd style="margin-left: 0.25rem;font-size: 13px;">2.66</dd>
-                                </div>
-                        
-                        </div>
+                                            EP-12</div>
+                                    </div>
 
-                        <div style="
+                                    <div style=" display: flex;align-items: center; margin-left: 0.25rem;flex: 1;justify-content: center;
+                                    " class="compact-hidden">
+                                        <dt style="color:var(--themecolor)"><svg width="16" height="20"
+                                                fill="currentColor" class="svg-exception">
+                                                <path
+                                                    d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
+                                                </path>
+                                            </svg></dt>
+                                        <dd style="margin-left: 0.25rem;font-size: 13px;">2.66</dd>
+                                    </div>
+
+                                </div>
+
+                                <div style="
 border-radius: 0.25rem;padding-left: 0.375rem;font-size: 13px;
                     padding-right: 0.375rem;width: fit-content;margin-top:6px">
-                        Beyblade Burst Official</div>
+                                    Beyblade Burst Official</div>
 
-</div>
-</div>
+                            </div>
+                        </div>
                     </div>
 
 
 
-                
-                    
+
+
                     <div class="topnav-hover notify-padding notification-container" style="align-items: flex-start;display: flex;border-radius: 0.375rem;
                     margin: 6px 6px;">
-                        
-                      
 
-                            <div style=" border-radius: 0.375rem;position: relative;">
-   
-   
-   <img src="https://m.media-amazon.com/images/M/MV5BMDgwMDg1NWItMzljNC00NGRkLWI1ODctMGEwYjExYzE3ODllL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjMyNTYyNTY@._V1_QL75_UY281_CR4,0,190,281_.jpg" width="51" height="auto" class="notify-img">
 
-   <span style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;align-items: center;justify-content: center;backdrop-filter: blur(2px);
-    background: rgba(255, 255, 255, 0.1);border-radius: 0.5rem;" class="cursor-pointer button notification-play">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" style="width: 1.8rem;height:1.8rem" >
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"></path>
-                        </svg>
 
-                    </span>
-                            </div>
-    
-                            <div style="padding-left: 15px;flex: 1;letter-spacing: .5px;overflow: hidden;">
-                                <div style="display: flex;flex-direction: column;">
-                               <div style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;">Beyblade Burst</div> 
-                        
+                        <div style=" border-radius: 0.375rem;position: relative;overflow: hidden;">
+
+
+                            <img src="https://m.media-amazon.com/images/M/MV5BY2I2MzI1ODYtMWRlOS00MzdhLWEyOWEtYWJhNmFiZTIxMGJhXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_FMjpg_UX1000_.jpg"
+                                width="51" height="auto" class="notify-img">
+
+                            <span style="border-radius: 0.375rem;position: absolute;top: 0;left: 0;right: 0;bottom: 0;align-items: center;justify-content: center;backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.1);" class="cursor-pointer button notification-play">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="#fff" style="width: 1.8rem;height:1.8rem">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z">
+                                    </path>
+                                </svg>
+
+                            </span>
+                        </div>
+
+                        <div style="padding-left: 15px;flex: 1;letter-spacing: .5px;overflow: hidden;">
+                            <div style="display: flex;flex-direction: column;">
+                                <div style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;">Dragon Ball
+                                    Super</div>
+
                                 <div style="display: flex;margin-top: 4px;">
                                     <div style="flex:1">
-                            <div style="border: 1px solid #dadce0
+                                        <div style="border: 1px solid #dadce0
                             ;border-radius: 0.25rem;padding-left: 0.375rem;font-size: 13px;
                         padding-right: 0.375rem;width: fit-content;">
-                            EP-12</div>
-                        </div>
-                            
-                            <div style=" display: flex;align-items: center; margin-left: 0.25rem;flex: 1;justify-content: center;
-                                    " class="compact-hidden">
-                                    <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor" class="svg-exception">
-                                            <path d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
-                                            </path>
-                                        </svg></dt>
-                                    <dd style="margin-left: 0.25rem;font-size: 13px;">2.66</dd>
-                                </div>
-                        
-                        </div>
+                                            EP-12</div>
+                                    </div>
 
-                        <div style="
+                                    <div style=" display: flex;align-items: center; margin-left: 0.25rem;flex: 1;justify-content: center;
+                                    " class="compact-hidden">
+                                        <dt style="color:var(--themecolor)"><svg width="16" height="20"
+                                                fill="currentColor" class="svg-exception">
+                                                <path
+                                                    d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
+                                                </path>
+                                            </svg></dt>
+                                        <dd style="margin-left: 0.25rem;font-size: 13px;">2.66</dd>
+                                    </div>
+
+                                </div>
+
+                                <div style="
 border-radius: 0.25rem;padding-left: 0.375rem;font-size: 13px;
                     padding-right: 0.375rem;width: fit-content;margin-top:6px">
-                        Beyblade Burst Official</div>
+                                    Toei Animation</div>
 
-</div>
-</div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    
+
+
                     <div class="topnav-hover notify-padding notification-container" style="align-items: flex-start;display: flex;border-radius: 0.375rem;
                     margin: 6px 6px;">
-                        
-                      
 
-                            <div style=" border-radius: 0.375rem;position: relative;">
-   
-   
-   <img src="https://m.media-amazon.com/images/M/MV5BMDgwMDg1NWItMzljNC00NGRkLWI1ODctMGEwYjExYzE3ODllL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjMyNTYyNTY@._V1_QL75_UY281_CR4,0,190,281_.jpg" width="51" height="auto" class="notify-img">
 
-   <span style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;align-items: center;justify-content: center;backdrop-filter: blur(2px);
-    background: rgba(255, 255, 255, 0.1);border-radius: 0.5rem;" class="cursor-pointer button notification-play">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" style="width: 1.8rem;height:1.8rem" >
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"></path>
-                        </svg>
 
-                    </span>
-                            </div>
-    
-                            <div style="padding-left: 15px;flex: 1;letter-spacing: .5px;overflow: hidden;">
-                                <div style="display: flex;flex-direction: column;">
-                               <div style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;">Beyblade Burst</div> 
-                        
+                        <div style=" border-radius: 0.375rem;position: relative;overflow: hidden;">
+
+
+                            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/de238aff-175a-419c-8169-8d0ffe67cf11/dfmtw5d-b496f04e-f31c-4995-af1b-5e1a3b33e4b3.jpg/v1/fill/w_720,h_974,q_75,strp/beyblade_burst_quadstrike_by_ninjasharkv_dfmtw5d-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTc0IiwicGF0aCI6IlwvZlwvZGUyMzhhZmYtMTc1YS00MTljLTgxNjktOGQwZmZlNjdjZjExXC9kZm10dzVkLWI0OTZmMDRlLWYzMWMtNDk5NS1hZjFiLTVlMWEzYjMzZTRiMy5qcGciLCJ3aWR0aCI6Ijw9NzIwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.a1acXYVAQ1QYQLU1O_JMOvaqQnqVIPy04lFDxFOy-kg"
+                                width="51" height="auto" class="notify-img">
+
+                            <span style="border-radius: 0.375rem;position: absolute;top: 0;left: 0;right: 0;bottom: 0;align-items: center;justify-content: center;backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.1);" class="cursor-pointer button notification-play">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="#fff" style="width: 1.8rem;height:1.8rem">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z">
+                                    </path>
+                                </svg>
+
+                            </span>
+                        </div>
+
+                        <div style="padding-left: 15px;flex: 1;letter-spacing: .5px;overflow: hidden;">
+                            <div style="display: flex;flex-direction: column;">
+                                <div style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;">Beyblade
+                                    Burst Quadstrike</div>
+
                                 <div style="display: flex;margin-top: 4px;">
                                     <div style="flex:1">
-                            <div style="border: 1px solid #dadce0
+                                        <div style="border: 1px solid #dadce0
                             ;border-radius: 0.25rem;padding-left: 0.375rem;font-size: 13px;
                         padding-right: 0.375rem;width: fit-content;">
-                            EP-12</div>
-                        </div>
-                            
-                            <div style=" display: flex;align-items: center; margin-left: 0.25rem;flex: 1;justify-content: center;
-                                    " class="compact-hidden">
-                                    <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor" class="svg-exception">
-                                            <path d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
-                                            </path>
-                                        </svg></dt>
-                                    <dd style="margin-left: 0.25rem;font-size: 13px;">2.66</dd>
-                                </div>
-                        
-                        </div>
+                                            EP-12</div>
+                                    </div>
 
-                        <div style="
+                                    <div style=" display: flex;align-items: center; margin-left: 0.25rem;flex: 1;justify-content: center;
+                                    " class="compact-hidden">
+                                        <dt style="color:var(--themecolor)"><svg width="16" height="20"
+                                                fill="currentColor" class="svg-exception">
+                                                <path
+                                                    d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
+                                                </path>
+                                            </svg></dt>
+                                        <dd style="margin-left: 0.25rem;font-size: 13px;">2.66</dd>
+                                    </div>
+
+                                </div>
+
+                                <div style="
 border-radius: 0.25rem;padding-left: 0.375rem;font-size: 13px;
                     padding-right: 0.375rem;width: fit-content;margin-top:6px">
-                        Beyblade Burst Official</div>
+                                    Beyblade Burst Official</div>
 
-</div>
-</div>
+                            </div>
+                        </div>
                     </div>
 
-                    
+                    <div class="topnav-hover notify-padding notification-container" style="align-items: flex-start;display: flex;border-radius: 0.375rem;
+                    margin: 6px 6px;">
+
+
+
+                        <div style=" border-radius: 0.375rem;position: relative;overflow: hidden;">
+
+
+                            <img src="https://upload.wikimedia.org/wikipedia/en/b/be/Aim_to_be_a_Pok%C3%A9mon_Master_poster.jpg"
+                                width="51" height="auto" class="notify-img">
+
+                            <span style="border-radius: 0.375rem;position: absolute;top: 0;left: 0;right: 0;bottom: 0;align-items: center;justify-content: center;backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.1);" class="cursor-pointer button notification-play">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="#fff" style="width: 1.8rem;height:1.8rem">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z">
+                                    </path>
+                                </svg>
+
+                            </span>
+                        </div>
+
+                        <div style="padding-left: 15px;flex: 1;letter-spacing: .5px;overflow: hidden;">
+                            <div style="display: flex;flex-direction: column;">
+                                <div style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;">Pokémon: Aim
+                                    to be a Pokémon Master </div>
+
+                                <div style="display: flex;margin-top: 4px;">
+                                    <div style="flex:1">
+                                        <div style="border: 1px solid #dadce0
+                            ;border-radius: 0.25rem;padding-left: 0.375rem;font-size: 13px;
+                        padding-right: 0.375rem;width: fit-content;">
+                                            EP-12</div>
+                                    </div>
+
+                                    <div style=" display: flex;align-items: center; margin-left: 0.25rem;flex: 1;justify-content: center;
+                                    " class="compact-hidden">
+                                        <dt style="color:var(--themecolor)"><svg width="16" height="20"
+                                                fill="currentColor" class="svg-exception">
+                                                <path
+                                                    d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
+                                                </path>
+                                            </svg></dt>
+                                        <dd style="margin-left: 0.25rem;font-size: 13px;">2.66</dd>
+                                    </div>
+
+                                </div>
+
+                                <div style="
+border-radius: 0.25rem;padding-left: 0.375rem;font-size: 13px;
+                    padding-right: 0.375rem;width: fit-content;margin-top:6px">
+                                    The Pokemon Company</div>
+
+                            </div>
+                        </div>
+                    </div>
+
 
 
 
@@ -3863,21 +3966,24 @@ margin-left: 19px !important;
 
 
     <div id="Secure" class="contentarea2"
-        style="top: 0;z-index: 2000;text-align: center;height: 100%;overflow: hidden;background:#fff;border-radius: 0;"
+        style="top: 0;z-index: 2000;text-align: center;height: 100%;overflow: hidden;background:#fff;border-radius: 0;letter-spacing: .5px;"
         onload="startTime()">
+        
         <img src="https://img.wallscloud.net/uploads/thumb/526185173/Windows_11_SE-1024x576-MM-80.webp"
-            style="position: absolute;right: 0;top: 0;bottom: 0;margin-left: 16px;left: 16px;max-width: none;">
+            style="position: absolute;right: 0;top: 0;bottom: 0;left: 16px;max-width: none;">
+
 
         <div
             style="position: absolute;top: 0;left: 0;right: 0;bottom: 0; background: hsla(0, 0%, 100%, .8);backdrop-filter: blur(40px);z-index: 250;">
             <div
                 style=" border-radius: 100%;width: 150px;box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
-                height: 150px;    background: url(https://rare-gallery.com/mocahbig/1356617-Goku-Super-Saiyan-BlueDragon-Ball-Super-HD-Wallpaper.jpg);background-position: left center;background-size: 300px auto;margin: auto;margin-top: 150px;">
+                height: 150px;    background: url(https://i.pinimg.com/474x/c6/46/2c/c6462c7ef1c65c2972aee6cbc5b31057.jpg);background-position: center center;background-size: 150px auto;margin: auto;margin-top: 138px;">
+
             </div>
 
 
             <div class="div7"
-                style=" border-radius: 50px;padding: 0 1.36rem;border: 1px solid #1d1d1f;position: absolute;right: 32px;top: 32px;overflow: hidden;font-size: 15px;height: 40px;font-weight: 500;line-height: 40px;display: inline-block;width: auto;margin: 0;">
+                style=" border-radius: 50px;padding: 0 1.36rem;border: 1px solid #1d1d1f;position: absolute;right: 32px;top: 32px;overflow: hidden;font-size: 15px;height: 42px;font-weight: 500;line-height: 42px;display: inline-block;width: auto;margin: 0;">
                 Welcome, Alec
             </div>
 
@@ -3890,13 +3996,13 @@ margin-left: 19px !important;
                 Alec
 
             </div>
-
+<div style="display: flex;justify-content: center;align-items: center;margin-top: calc(50% - 17.75rem - 168px -60px);">
             <input type="password" maxlength="20" onkeyup="checkpassword()" style="height: 3.5rem;
         -webkit-appearance: none;
         appearance: none;
         z-index: 500;min-width:278px;
-        
-        line-height: 20px;background: #f9f9f9;border-radius: 12px;width: 35%;margin-top: calc(50% - 17.75rem - 168px -60px);
+       
+        line-height: 3.5rem;background: #f9f9f9;border-radius: 12px 0 0 12px;width: 35%;
         
         
         
@@ -3916,9 +4022,9 @@ margin-left: 19px !important;
         -webkit-appearance: none;
         appearance: none;
         z-index: 500;
-        position:absolute;background: #f9f9f9;border-radius: 50px;width: 3.5rem;margin-top: calc(50% - 17.75rem - 168px -60px);
+        background: #f9f9f9;border-radius: 0 12px 12px 0;width: 3.5rem;
         
-        margin-left:16px;
+        margin-left: 0;
         
             border: none;
             outline: 0;
@@ -3936,7 +4042,7 @@ margin-left: 19px !important;
         -webkit-appearance: none;
         appearance: none;
         z-index: 500;
-        position:absolute;background: #f9f9f9;border-radius: 50px;width: 3.5rem;
+        position:absolute;background: #f9f9f9;border-radius: 0 12px 12px 0;width: 3.5rem;
         
       
         
@@ -3958,7 +4064,7 @@ margin-left: 19px !important;
                     </svg>
                 </div>
             </span>
-
+        </div>
             <div style="position: absolute;left: 0;right: 0;bottom: 10px;text-align: center;font-size:15px"
                 id="pass-recognizer">
 
@@ -3974,20 +4080,28 @@ margin-left: 19px !important;
 
     <div id="Explore" class="contentarea2" style="z-index: 200;">
 
-      
+
     </div>
 
     <div id="Deleted" class="contentarea2"
-        style="display: flex;justify-content: center;z-index: 200;min-height: calc(100% - 56px);">
+        style="display: flex;justify-content: center;z-index: 200;min-height: calc(100% - 56px);letter-spacing: .5px;">
 
+<div style="background: #fff;height: 48px;margin: 20px 12px;border-radius: 12px;line-height: 48px;display: flex;align-items: center;">
+<div style="flex: 1;justify-content: left;display: flex;margin-left: 12px;font-size: 15px;">Files Selected: 0/0</div>
+<div style="flex: 1;justify-content: center;display: flex;font-size:15px;">
+Filter By:<span style="font-size: 13px;font-weight: 500;padding: 0 10px;background: #f5f5f5;height: 34px;margin: auto 5px;line-height: 34px;border-radius: 12px;">Date Modified</span>
+</div>
+<div style="flex: 1;justify-content: right;display: flex;"><span style="background: var(--themecolor);border-radius: 1000px;margin-right: 12px;height: 34px;line-height:34px;padding: 0 18px;color: #fff;font-size: 14px;font-weight: 400;">Empty Bin</span></div>
+</div>
 
+        <img src="https://ssl.gstatic.com/social/photosui/images/null_sharing_view_460x218dp.svg" style="    height: 218px;
+            width: 460px;margin: auto;margin-top: 10%;">
 
-
-        <img src="https://ssl.gstatic.com/social/photosui/images/null_sharing_view_460x218dp.svg"
-            style="width: 50%;margin: auto;margin-top: 10%;">
-        <div
-            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 20px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-top: 40px;display: flex;align-items: center;justify-content: center;text-align: center;">
-            <span style="text-decoration: underline;text-underline-offset: 2.5px;">Nothin</span>g in the Bin yet.
+        <div style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 16px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-top: 45px;display: flex;align-items: center;justify-content: center;text-align: center;line-height: 1.25rem;
+            
+            letter-spacing: .0142857143em;
+            font-weight: 400;">
+            Deleted Files will appear here
 
         </div>
     </div>
@@ -3996,488 +4110,488 @@ margin-left: 19px !important;
 
 
         <div
-        style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-        Friday, <span
-            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-            Dec 2022</span>
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Thursday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">23
+                Mar 2023</span>
 
-    </div>
-    <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
 
-        <img src="https://i.pinimg.com/474x/34/78/b4/3478b4351a160a51a4c497d3b48c1373.jpg"
-        style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-        <img src="https://i.pinimg.com/474x/b4/70/90/b47090c1494ebcf6fce4e0f37d607cbc.jpg"
-        style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+            <img src="https://i.pinimg.com/474x/34/78/b4/3478b4351a160a51a4c497d3b48c1373.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+            <img src="https://i.pinimg.com/474x/b4/70/90/b47090c1494ebcf6fce4e0f37d607cbc.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-       
-        <img src="https://i.pinimg.com/474x/f7/5b/70/f75b70103158a8ac19aff1db53897719.jpg"
-            style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-        
-        <img src="https://i.pinimg.com/474x/1b/03/07/1b0307ec4c6f348d163c0268297bd77d.jpg"
-            style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+            <img src="https://i.pinimg.com/474x/f7/5b/70/f75b70103158a8ac19aff1db53897719.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
 
+            <img src="https://i.pinimg.com/474x/1b/03/07/1b0307ec4c6f348d163c0268297bd77d.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
 
-    </div>
 
 
+        </div>
 
-    <div
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-    Friday, <span
-        style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-        Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-    <img src="https://cdn.shopify.com/s/files/1/0238/7617/articles/e33c2fa94c03efa06678116f80d62d0d_708x.jpg?v=1590599656"
-        style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-    <img src="https://i.pinimg.com/474x/3e/38/b2/3e38b22dbe7fbd9063f9b7514e41fb45.jpg"
-        style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-    <img src="https://i.pinimg.com/564x/f8/51/f1/f851f123fb0bac358e5eb0b6b3052010.jpg"
-        style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-
-
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/de238aff-175a-419c-8169-8d0ffe67cf11/dfmtw5d-b496f04e-f31c-4995-af1b-5e1a3b33e4b3.jpg/v1/fill/w_720,h_974,q_75,strp/beyblade_burst_quadstrike_by_ninjasharkv_dfmtw5d-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTc0IiwicGF0aCI6IlwvZlwvZGUyMzhhZmYtMTc1YS00MTljLTgxNjktOGQwZmZlNjdjZjExXC9kZm10dzVkLWI0OTZmMDRlLWYzMWMtNDk5NS1hZjFiLTVlMWEzYjMzZTRiMy5qcGciLCJ3aWR0aCI6Ijw9NzIwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.a1acXYVAQ1QYQLU1O_JMOvaqQnqVIPy04lFDxFOy-kg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFPcg7i9rdL8oG9y36eFl9hAKC-N_25zqvJoyHkFSl67J9TsRphRu5K_lvo7wZe0C_uPw&usqp=CAU"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/originals/14/8c/15/148c157801cb9e27fc284037c41c1fbd.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://i.pinimg.com/474x/c6/79/9c/c6799cc7fc09b67c901c0fbe6d225905.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/f9/94/dc/f994dc3703f3730659258dd2989c6358.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/ee/5e/c2/ee5ec269a544d94a58c1c7e2bee37265.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://i.pinimg.com/564x/f6/6e/23/f66e235c3522b780fcc0b66331376e1d.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/98/bb/5e/98bb5e85530f0780c7744aa2c205213e.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/a2/15/3c/a2153ce1a98233b8047613edc2bb6add.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://yt3.ggpht.com/REJXQuLnW5uv1GzTMvjFFN3JVCKsEfPCu8XOTOxcjHuGPWdKwJOr3elswYk5CBItEPUmZq_SOMMioA=s1024-c-fcrop64=1,00001062ffffef9d-nd-v1"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://yt3.ggpht.com/nnRJmndl4hMEdeb4R__-gLBADW48FHZK9rCGJ5aiERuWJQ6XqHdtid1p6eq11EXHgV_7dtVxgJvd=s1024-c-fcrop64=1,00001062ffffef9d-nd-v1"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://yt3.ggpht.com/eoXWg6S2SKafr6hGjeIZpVNnYrxhvbQlivDVC9BIl23WJQ5rVfneCz4-MQGIxRzDqKjGcz4_cdYM7sk=s1024-c-fcrop64=1,00001062ffffef9d-nd-v1"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-
-
-
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://yt3.ggpht.com/D_7Ti11tZFMSfF_xDqAdKK7nvRcrZH273_tsS_5V2heJ80ARnN0BGLyQnHvYOO_NhJzHeDYq3hc9=s1024-c-fcrop64=1,00001062ffffef9d-nd-v1"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://yt3.ggpht.com/1fmlHwBMCaB4rr67u9fGTt--6uEN-Vw11ELpJLe0ZVWUClo3E64kqtJewFPQuOexSt_59bpDWtqt=s1024-c-fcrop64=1,00001062ffffef9d-nd-v1"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-    <img src="https://i.pinimg.com/474x/3e/54/05/3e54059c3258188b36db316fe396127c.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-</div>
-
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-    
-<img src="https://yt3.ggpht.com/4SwJ__o2gQd2bbMWY_EWNGnZ6g9m4ZRc0yperQJQChJZ2hUTcaWErznVYw60mJQ-zSObmrgNiPnCug=s1024-c-fcrop64=1,00001062ffffef9d-nd-v1"
-style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-<img src="https://i.pinimg.com/474x/db/ae/ca/dbaeca6dc1008dc2c17b2453031de522.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/36/a0/99/36a0994c65e3243f792a8833db506be6.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://i.pinimg.com/474x/51/96/bd/5196bd58f8ffe0cb7e8c23eea16df51f.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/b3/49/c7/b349c7d834c99d2ee0e6f942c7231534.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/0e/cb/1f/0ecb1ffba20c724147d4c070b88420aa.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://i.pinimg.com/474x/10/f6/80/10f6805fa2cebdcf746c7075fb94384d.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/43/3f/e0/433fe01a33b75cfade8f90817f4f342e.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/7e/65/c1/7e65c101fbf5c5449b33acff1d0c7bdb.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://i.pinimg.com/474x/9e/c0/b7/9ec0b7bdee92e4fb4d36b297605f4701.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/3c/06/7b/3c067b42ecc4d8dd696391b66e5e0c34.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/b4/36/a6/b436a60eaba6c18af60c119b46955b00.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-
-
-<img src="https://i.pinimg.com/736x/d5/33/c2/d533c208bdb86fa7b075d66b7c4e92bd.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/736x/68/58/e2/6858e287f0e51d3829aa0dbe6301a424.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://i.pinimg.com/474x/c8/bc/64/c8bc6450cd3c4cda9f065faf1d4ba31f.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/66/e7/bc/66e7bc32923f995a61d71020dc4bf432.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/d7/f5/b0/d7f5b0123ee61f746523fb7027424893.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://i.pinimg.com/736x/17/9a/dc/179adc988576e12a157f5f1496d51340.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/26/8e/b3/268eb31912eef9ed7faa03ad86e82d9e.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/5f/1d/ab/5f1daba963c058fa87845fadcc2d6c3c.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://i.pinimg.com/474x/1b/5a/52/1b5a52f06da3e72e94fc3109407bbb55.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/bc/51/06/bc510657a4e988136175f15d916071ec.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/5e/b1/73/5eb1737830857af4c34c8e0efd53fa6b.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://i.pinimg.com/474x/dc/e0/95/dce0953178f40ba5c43cc06bb6377d81.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/0f/1f/cf/0f1fcf4cbd7b67bb9ebd2a687968520e.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/e6/9d/70/e69d708489ff528ac3a0629c18b39be0.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://i.pinimg.com/474x/9b/3a/8a/9b3a8a1b26c9222423a9c2e57d567feb.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/16/68/3a/16683a4f4bb2715d0ae37082d9470d83.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/e3/4a/a1/e34aa18188dae5eddc78f7b1ec99aed3.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://i.pinimg.com/474x/57/18/3c/57183c58a5ea6adf0637e36ab63e6f06.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/72/1a/ef/721aef904eac8a8b758de0d51eab7b5e.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/83/15/a1/8315a191655ffb30d9986bcb346af0c3.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://i.pinimg.com/474x/91/e3/65/91e365bb509f990f5dd71df3014a80de.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/63/77/ca/6377ca2e90f0c5e07f4e18074db9a1d3.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/24/7d/3a/247d3ae8f0e6b42c9267cfc1e96aa449.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://i.pinimg.com/474x/3b/a7/92/3ba792a60cd621301eb4a7fc6afbbacf.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/fe/44/b9/fe44b990d983526e084d38c28589ebe7.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://i.pinimg.com/474x/49/b7/cc/49b7cc2341beeccff8a6fdf0ecbbf876.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
 
 
         <div
             style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Wednesday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">22
+                Mar 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://cdn.shopify.com/s/files/1/0238/7617/articles/e33c2fa94c03efa06678116f80d62d0d_708x.jpg?v=1590599656"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/3e/38/b2/3e38b22dbe7fbd9063f9b7514e41fb45.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/564x/f8/51/f1/f851f123fb0bac358e5eb0b6b3052010.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+
+
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Tuesday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">21
+                Mar 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/de238aff-175a-419c-8169-8d0ffe67cf11/dfmtw5d-b496f04e-f31c-4995-af1b-5e1a3b33e4b3.jpg/v1/fill/w_720,h_974,q_75,strp/beyblade_burst_quadstrike_by_ninjasharkv_dfmtw5d-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTc0IiwicGF0aCI6IlwvZlwvZGUyMzhhZmYtMTc1YS00MTljLTgxNjktOGQwZmZlNjdjZjExXC9kZm10dzVkLWI0OTZmMDRlLWYzMWMtNDk5NS1hZjFiLTVlMWEzYjMzZTRiMy5qcGciLCJ3aWR0aCI6Ijw9NzIwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.a1acXYVAQ1QYQLU1O_JMOvaqQnqVIPy04lFDxFOy-kg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFPcg7i9rdL8oG9y36eFl9hAKC-N_25zqvJoyHkFSl67J9TsRphRu5K_lvo7wZe0C_uPw&usqp=CAU"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/originals/14/8c/15/148c157801cb9e27fc284037c41c1fbd.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Monday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">20
+                Mar 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://i.pinimg.com/474x/c6/79/9c/c6799cc7fc09b67c901c0fbe6d225905.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/f9/94/dc/f994dc3703f3730659258dd2989c6358.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/ee/5e/c2/ee5ec269a544d94a58c1c7e2bee37265.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
             Saturday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">18
+                Mar 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://i.pinimg.com/564x/f6/6e/23/f66e235c3522b780fcc0b66331376e1d.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/98/bb/5e/98bb5e85530f0780c7744aa2c205213e.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/a2/15/3c/a2153ce1a98233b8047613edc2bb6add.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Friday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">17
+                Mar 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://yt3.ggpht.com/REJXQuLnW5uv1GzTMvjFFN3JVCKsEfPCu8XOTOxcjHuGPWdKwJOr3elswYk5CBItEPUmZq_SOMMioA=s1024-c-fcrop64=1,00001062ffffef9d-nd-v1"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://yt3.ggpht.com/nnRJmndl4hMEdeb4R__-gLBADW48FHZK9rCGJ5aiERuWJQ6XqHdtid1p6eq11EXHgV_7dtVxgJvd=s1024-c-fcrop64=1,00001062ffffef9d-nd-v1"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://yt3.ggpht.com/eoXWg6S2SKafr6hGjeIZpVNnYrxhvbQlivDVC9BIl23WJQ5rVfneCz4-MQGIxRzDqKjGcz4_cdYM7sk=s1024-c-fcrop64=1,00001062ffffef9d-nd-v1"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+
+
+
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Thursday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">16
+                Mar 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://yt3.ggpht.com/D_7Ti11tZFMSfF_xDqAdKK7nvRcrZH273_tsS_5V2heJ80ARnN0BGLyQnHvYOO_NhJzHeDYq3hc9=s1024-c-fcrop64=1,00001062ffffef9d-nd-v1"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://yt3.ggpht.com/1fmlHwBMCaB4rr67u9fGTt--6uEN-Vw11ELpJLe0ZVWUClo3E64kqtJewFPQuOexSt_59bpDWtqt=s1024-c-fcrop64=1,00001062ffffef9d-nd-v1"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+            <img src="https://i.pinimg.com/474x/3e/54/05/3e54059c3258188b36db316fe396127c.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+        </div>
+
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Monday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">13
+                Mar 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://yt3.ggpht.com/4SwJ__o2gQd2bbMWY_EWNGnZ6g9m4ZRc0yperQJQChJZ2hUTcaWErznVYw60mJQ-zSObmrgNiPnCug=s1024-c-fcrop64=1,00001062ffffef9d-nd-v1"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+            <img src="https://i.pinimg.com/474x/db/ae/ca/dbaeca6dc1008dc2c17b2453031de522.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/36/a0/99/36a0994c65e3243f792a8833db506be6.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Friday, <span
                 style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">10
-                Dec 2022</span>
+                March 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://i.pinimg.com/474x/51/96/bd/5196bd58f8ffe0cb7e8c23eea16df51f.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/b3/49/c7/b349c7d834c99d2ee0e6f942c7231534.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/0e/cb/1f/0ecb1ffba20c724147d4c070b88420aa.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Thursday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
+                Mar 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://i.pinimg.com/474x/10/f6/80/10f6805fa2cebdcf746c7075fb94384d.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/43/3f/e0/433fe01a33b75cfade8f90817f4f342e.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/7e/65/c1/7e65c101fbf5c5449b33acff1d0c7bdb.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Wednesday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">8
+                Mar 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://i.pinimg.com/474x/9e/c0/b7/9ec0b7bdee92e4fb4d36b297605f4701.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/3c/06/7b/3c067b42ecc4d8dd696391b66e5e0c34.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/b4/36/a6/b436a60eaba6c18af60c119b46955b00.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Tuesday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">7
+                Mar 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+
+
+            <img src="https://i.pinimg.com/474x/eb/80/32/eb80327fa00fcae99aa442b01d7fcf12.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/15/7b/45/157b45250230562dd515760b2b49f6e4.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Monday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">6
+                Mar 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://i.pinimg.com/474x/c8/bc/64/c8bc6450cd3c4cda9f065faf1d4ba31f.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/66/e7/bc/66e7bc32923f995a61d71020dc4bf432.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/d7/f5/b0/d7f5b0123ee61f746523fb7027424893.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Saturday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">4
+                Mar 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://i.pinimg.com/736x/17/9a/dc/179adc988576e12a157f5f1496d51340.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/26/8e/b3/268eb31912eef9ed7faa03ad86e82d9e.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/5f/1d/ab/5f1daba963c058fa87845fadcc2d6c3c.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Friday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">3
+                Mar 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://i.pinimg.com/474x/1b/5a/52/1b5a52f06da3e72e94fc3109407bbb55.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/bc/51/06/bc510657a4e988136175f15d916071ec.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/5e/b1/73/5eb1737830857af4c34c8e0efd53fa6b.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Thursday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">2
+                Mar 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://i.pinimg.com/474x/dc/e0/95/dce0953178f40ba5c43cc06bb6377d81.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/0f/1f/cf/0f1fcf4cbd7b67bb9ebd2a687968520e.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/e6/9d/70/e69d708489ff528ac3a0629c18b39be0.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Friday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">24
+                Feb 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://i.pinimg.com/474x/9b/3a/8a/9b3a8a1b26c9222423a9c2e57d567feb.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/16/68/3a/16683a4f4bb2715d0ae37082d9470d83.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/e3/4a/a1/e34aa18188dae5eddc78f7b1ec99aed3.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Thursday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">23
+                Feb 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://i.pinimg.com/474x/57/18/3c/57183c58a5ea6adf0637e36ab63e6f06.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/72/1a/ef/721aef904eac8a8b758de0d51eab7b5e.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/83/15/a1/8315a191655ffb30d9986bcb346af0c3.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Wednesday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">22
+                Feb 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://i.pinimg.com/474x/d0/ef/a0/d0efa0eb8c5cd9c8ece991f6fa6fcc48.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/63/77/ca/6377ca2e90f0c5e07f4e18074db9a1d3.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/24/7d/3a/247d3ae8f0e6b42c9267cfc1e96aa449.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Tuesday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">21
+                Feb 2023</span>
+
+        </div>
+        <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+            <img src="https://i.pinimg.com/474x/3b/a7/92/3ba792a60cd621301eb4a7fc6afbbacf.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/fe/44/b9/fe44b990d983526e084d38c28589ebe7.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+            <img src="https://i.pinimg.com/474x/49/b7/cc/49b7cc2341beeccff8a6fdf0ecbbf876.jpg"
+                style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+        </div>
+
+
+        <div
+            style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+            Monday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">20
+                Feb 2023</span>
 
         </div>
 
@@ -4509,9 +4623,9 @@ Friday, <span
 
         <div
             style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-            Friday, <span
-                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-                Dec 2022</span>
+            Saturday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">18
+                Feb 2023</span>
 
         </div>
         <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
@@ -4535,9 +4649,9 @@ Friday, <span
 
         <div
             style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-            Thursday, <span
-                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">8
-                Dec 2022</span>
+            Friday, <span
+                style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">17
+                Feb 2023</span>
 
         </div>
 
@@ -4628,12 +4742,16 @@ white-space: nowrap;margin-left: 36px;">
                 <div style="flex:1">
                     <div style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;">
 
-                        <video
-                             playsinline controls poster="https://images6.alphacoders.com/117/1175176.jpg">
-                            <source src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/mp4" />
-                            <source src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/webm" />
+                        <video id="player" playsinline controls
+                            poster="https://images6.alphacoders.com/117/1175176.jpg">
+                            <source
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                type="video/mp4" />
+                            <source
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                type="video/webm" />
 
-                           
+
                         </video>
 
 
@@ -4648,7 +4766,7 @@ white-space: nowrap;margin-left: 36px;">
 
 
 
-            
+
             <div class="mySlides" style="display: flex;height: 315px;overflow: hidden;">
 
 
@@ -4695,12 +4813,15 @@ white-space: nowrap;margin-left: 36px;">
                 <div style="flex:1">
                     <div style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;">
 
-                        <video
-                             playsinline controls poster="https://i.ytimg.com/vi/9GOxIUrdqhk/maxresdefault.jpg">
-                            <source src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/mp4" />
-                            <source src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/webm" />
+                        <video playsinline controls poster="https://i.ytimg.com/vi/9GOxIUrdqhk/maxresdefault.jpg">
+                            <source
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                type="video/mp4" />
+                            <source
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                type="video/webm" />
 
-                           
+
                         </video>
 
 
@@ -4716,8 +4837,8 @@ white-space: nowrap;margin-left: 36px;">
 
 
 
-            
-            
+
+
             <div class="mySlides" style="display: flex;height: 315px;overflow: hidden;">
 
 
@@ -4764,12 +4885,15 @@ white-space: nowrap;margin-left: 36px;">
                 <div style="flex:1">
                     <div style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;">
 
-                        <video
-                             playsinline controls poster="https://i.ytimg.com/vi/1JaGOn3Emyo/maxresdefault.jpg">
-                            <source src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/mp4" />
-                            <source src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/webm" />
+                        <video playsinline controls poster="https://i.ytimg.com/vi/1JaGOn3Emyo/maxresdefault.jpg">
+                            <source
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                type="video/mp4" />
+                            <source
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                type="video/webm" />
 
-                           
+
                         </video>
 
 
@@ -4780,7 +4904,7 @@ white-space: nowrap;margin-left: 36px;">
 
 
 
-            
+
             <div class="mySlides" style="display: flex;height: 315px;overflow: hidden;">
 
 
@@ -4827,12 +4951,16 @@ white-space: nowrap;margin-left: 36px;">
                 <div style="flex:1">
                     <div style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;">
 
-                        <video
-                             playsinline controls poster="https://occ-0-1068-1723.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABfhWmBsWYCQSNQK6pUjeCCAqJM2eIPu-hue31EFfYlCmlpM7maaMwDkbdKinMwMr21b-jwQwWvHykLcgX8SVwpnoZRpu.jpg">
-                            <source src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/mp4" />
-                            <source src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/webm" />
+                        <video playsinline controls
+                            poster="https://occ-0-1068-1723.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABfhWmBsWYCQSNQK6pUjeCCAqJM2eIPu-hue31EFfYlCmlpM7maaMwDkbdKinMwMr21b-jwQwWvHykLcgX8SVwpnoZRpu.jpg">
+                            <source
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                type="video/mp4" />
+                            <source
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                type="video/webm" />
 
-                           
+
                         </video>
 
 
@@ -4887,12 +5015,16 @@ white-space: nowrap;margin-left: 36px;">
                 <div style="flex:1">
                     <div style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;">
 
-                        <video
-                             playsinline controls poster="https://sm.ign.com/ign_in/gallery/d/dragon-bal/dragon-ball-super-super-hero-images_ruwb.jpg">
-                            <source src="https://imdb-video.media-imdb.com/vi1867563801/1434659607842-pgv4ql-1646245838173.mp4?Expires=1679340082&Signature=pABGSCi-o~WD~5aq2xyqWwteSXU0hy1d0iVAuT~pSx~41cq6KwYSTFGOakOhQ9pa-n5cPgspaxHa-ZVUcdwwgx~inEYeCnj~nj3sbDt-8DQW1eVgGNjgmJMLGskFBDuLyZeb2HtTsHtamjgmkjH6rCcT8dLgd3HRHotJUUe9Jw~FrOw2AdxP7Wp~QbhyVbB6Z3byOiz3TpkglbYWEPHQnuClzoJ1bvpXhQjWM2WS8zP4tuXfftHfoGZcrwWc8xLWfk36nMt57XtJAgFxX8cokIY2HfefnghCKAGLpLz1TXTlFUfImr40lLoPffJYiRhnwizNKE4xIOVxxVXkD~Lw9A__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/mp4" />
-                            <source src="https://imdb-video.media-imdb.com/vi1867563801/1434659607842-pgv4ql-1646245838173.mp4?Expires=1679340082&Signature=pABGSCi-o~WD~5aq2xyqWwteSXU0hy1d0iVAuT~pSx~41cq6KwYSTFGOakOhQ9pa-n5cPgspaxHa-ZVUcdwwgx~inEYeCnj~nj3sbDt-8DQW1eVgGNjgmJMLGskFBDuLyZeb2HtTsHtamjgmkjH6rCcT8dLgd3HRHotJUUe9Jw~FrOw2AdxP7Wp~QbhyVbB6Z3byOiz3TpkglbYWEPHQnuClzoJ1bvpXhQjWM2WS8zP4tuXfftHfoGZcrwWc8xLWfk36nMt57XtJAgFxX8cokIY2HfefnghCKAGLpLz1TXTlFUfImr40lLoPffJYiRhnwizNKE4xIOVxxVXkD~Lw9A__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/webm" />
+                        <video playsinline controls
+                            poster="https://sm.ign.com/ign_in/gallery/d/dragon-bal/dragon-ball-super-super-hero-images_ruwb.jpg">
+                            <source
+                                src="https://imdb-video.media-imdb.com/vi1867563801/1434659607842-pgv4ql-1646245838173.mp4?Expires=1679340082&Signature=pABGSCi-o~WD~5aq2xyqWwteSXU0hy1d0iVAuT~pSx~41cq6KwYSTFGOakOhQ9pa-n5cPgspaxHa-ZVUcdwwgx~inEYeCnj~nj3sbDt-8DQW1eVgGNjgmJMLGskFBDuLyZeb2HtTsHtamjgmkjH6rCcT8dLgd3HRHotJUUe9Jw~FrOw2AdxP7Wp~QbhyVbB6Z3byOiz3TpkglbYWEPHQnuClzoJ1bvpXhQjWM2WS8zP4tuXfftHfoGZcrwWc8xLWfk36nMt57XtJAgFxX8cokIY2HfefnghCKAGLpLz1TXTlFUfImr40lLoPffJYiRhnwizNKE4xIOVxxVXkD~Lw9A__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                type="video/mp4" />
+                            <source
+                                src="https://imdb-video.media-imdb.com/vi1867563801/1434659607842-pgv4ql-1646245838173.mp4?Expires=1679340082&Signature=pABGSCi-o~WD~5aq2xyqWwteSXU0hy1d0iVAuT~pSx~41cq6KwYSTFGOakOhQ9pa-n5cPgspaxHa-ZVUcdwwgx~inEYeCnj~nj3sbDt-8DQW1eVgGNjgmJMLGskFBDuLyZeb2HtTsHtamjgmkjH6rCcT8dLgd3HRHotJUUe9Jw~FrOw2AdxP7Wp~QbhyVbB6Z3byOiz3TpkglbYWEPHQnuClzoJ1bvpXhQjWM2WS8zP4tuXfftHfoGZcrwWc8xLWfk36nMt57XtJAgFxX8cokIY2HfefnghCKAGLpLz1TXTlFUfImr40lLoPffJYiRhnwizNKE4xIOVxxVXkD~Lw9A__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                type="video/webm" />
 
-                           
+
                         </video>
 
 
@@ -4900,7 +5032,7 @@ white-space: nowrap;margin-left: 36px;">
                     </div>
                 </div>
             </div>
-            
+
 
 
 
@@ -5372,29 +5504,29 @@ margin-right: 0.5rem;
             }
 
         }
-        
-                let slideIndex = 0;
-                showSlides();
-        
-                function showSlides() {
-                    let i;
-                    let slides = document.getElementsByClassName("mySlides");
-                    let dots = document.getElementsByClassName("dot");
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    slideIndex++;
-                    if (slideIndex > slides.length) { slideIndex = 1 }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active3", "");
-                    }
-                    slides[slideIndex - 1].style.display = "flex";
-                    dots[slideIndex - 1].className += " active3";
-                    setTimeout(showSlides, 5000); // Change image every 2 seconds
-                }
-        
-        
-        
+
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active3", "");
+            }
+            slides[slideIndex - 1].style.display = "flex";
+            dots[slideIndex - 1].className += " active3";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+
+
+
 
 
         Amplitude.init({
@@ -5490,7 +5622,7 @@ margin-right: 0.5rem;
 
 
     </script>
-    <script src="https://cdn.plyr.io/3.7.7/plyr.js"></script>
+    <script src="https://cdn.plyr.io/3.7.7/plyr.polyfilled.js"></script>
 
 </body>
 
