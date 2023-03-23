@@ -587,7 +587,8 @@
             z-index: 35;
             margin-top: 12px;
             right: -16px;
-            height: 349.5px;
+            
+            max-height: 80vh;
             display: block;
             font-size: 14px;
             font-weight: 500;
@@ -604,8 +605,8 @@
             transition-delay: 0s, 0s, 0s;
             opacity: 0;
         }
-
-
+.notification-play{display: none;}
+.notification-container:hover .notification-play{display: flex;}
         .dark-mode .notify {
 
             background: rgba(24, 24, 24, 0.98);
@@ -1938,7 +1939,7 @@
         }
 
         .notify-padding {
-            padding: 1.5rem;
+            padding: 1rem;
             border-radius: 0;
         }
 
@@ -2423,8 +2424,8 @@
 
                 <div class="notify scrollbar-hidden" id="notify-content">
                     <div style="position: sticky; top:0;left:0;right:0;height:60px;backdrop-filter: saturate(200%) blur(30px);z-index: 10;
-  display: flex;align-items: center;" class="notify-header">
-                        <div style="flex:1;padding-left: 20px;font-weight: 450;" class="heading1">Notifications</div>
+  display: flex;align-items: center;border-bottom: 1px solid rgba(0, 0, 0, .12);" class="notify-header">
+                        <div style="flex:1;padding-left: 20px;font-weight: 450;letter-spacing: .5px;" class="heading1">Notifications</div>
                         <div style="padding-right: 12.5px;">
                             <div class="topnav-hover " style="padding: 8.5px;"> <svg xmlns="http://www.w3.org/2000/svg"
                                     width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -2439,290 +2440,167 @@
 
                         </div>
                     </div>
-                    <div class="topnav-hover notify-padding" style="align-items: flex-start;
-           
-                        display: flex;
-                    "> <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTK3u-sQWj89K-nm28S_XkACg9z9wXvs8oLy6E13axoO_oK-Q70"
-                            width="60" height="88" class="notify-img">
 
-                        <div style=" flex: 1 1 auto;
-                            min-width: 0;margin-left: 1rem;
-                            position: relative;">
-                            <h2 style="
-                                
-                                font-weight: 600;
-                                overflow: hidden;
-    white-space: nowrap;
-    padding-right: 5rem;
-                                text-overflow: ellipsis;" class="overflow-ellipse notify-top">Beyblade
-                                Burst</h2>
-                            <dl style="
-                                line-height: 1.5rem;
-                       
-                         
-                                font-weight: 500;
-                       
-                                font-size: .875rem;
-                          
-                       
-                                flex-wrap: wrap;
+                    
+                    <div class="topnav-hover notify-padding notification-container" style="align-items: flex-start;display: flex;border-radius: 0.375rem;
+                    margin: 6px 6px;">
                         
-                                display: flex;
-                            
-                        
-                                margin-top: 0.5rem;">
-                                <div style="
-                                        display: flex;
-                              
-                                        align-items: center;
-                                  
-                                      
-                                        margin-left: 0.25rem; 
-                                        right: 0;
-                                  
-                                        top: 0;
-                                    
-                                        position: absolute;
-                                    " class="compact-hidden">
-                                    <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor"
-                                            class="svg-exception">
-                                            <path
-                                                d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
-                                            </path>
-                                        </svg></dt>
-                                    <dd style="margin-left: 0.25rem;">2.66</dd>
-                                </div>
-                                <div>
+                      
 
-                                    <dd style="border: 1px solid #dadce0
-        ;border-radius: 0.25rem;padding-left: 0.375rem;
-    padding-right: 0.375rem;">EP-12</dd>
-                                </div>
-                                <div style="    margin-left: 0.5rem;" class="compact-hidden">
-
-                                    <dd>2021</dd>
-                                </div>
-                                <div>
-
-                                    <dd style=" display: flex; align-items: center;  "><svg width="2" height="2"
-                                            fill="currentColor" style="    
-                                        color: rgb(203 213 225/1);
-                                        margin-left: 0.5rem;
-                                        margin-right: 0.5rem;">
-                                            <circle cx="1" cy="1" r="1"></circle>
-                                        </svg></dd>
-                                </div>
-                                <div class="compact-hidden">
-
-                                    <dd style=" display: flex; align-items: center;  "><svg width="2" height="2"
-                                            fill="currentColor" style="    
-                                            color: rgb(203 213 225/1);
-                                            margin-left: 0.5rem;
-                                            margin-right: 0.5rem;">
-                                            <circle cx="1" cy="1" r="1"></circle>
-                                        </svg>1h 46m</dd>
-                                </div>
-                                <div style="
-                                    font-weight: 400;
-                                    flex: none;
-                                    width: 100%;
-                                    margin-top: 0.5rem;">
-
-                                    <dd class="notify-bottom overflow-ellipse">Beyblade Burst Official</dd>
-                                </div>
-                            </dl>
-                        </div>
-                    </div>
-
-
-                    <div class="topnav-hover notify-padding" style="align-items: flex-start;
+                            <div style=" border-radius: 0.375rem;position: relative;">
    
-                display: flex;
-            "> <img src="https://m.media-amazon.com/images/M/MV5BY2I2MzI1ODYtMWRlOS00MzdhLWEyOWEtYWJhNmFiZTIxMGJhXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_FMjpg_UX1000_.jpg"
-                            width="60" height="88" class="notify-img">
+   
+   <img src="https://m.media-amazon.com/images/M/MV5BMDgwMDg1NWItMzljNC00NGRkLWI1ODctMGEwYjExYzE3ODllL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjMyNTYyNTY@._V1_QL75_UY281_CR4,0,190,281_.jpg" width="51" height="auto" class="notify-img">
 
-                        <div style=" flex: 1 1 auto;
-                    min-width: 0;margin-left: 1rem;
-                    position: relative;">
-                            <h2 style="
+   <span style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;align-items: center;justify-content: center;backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.1);border-radius: 0.5rem;" class="cursor-pointer button notification-play">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" style="width: 1.8rem;height:1.8rem" >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"></path>
+                        </svg>
+
+                    </span>
+                            </div>
+    
+                            <div style="padding-left: 15px;flex: 1;letter-spacing: .5px;overflow: hidden;">
+                                <div style="display: flex;flex-direction: column;">
+                               <div style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;">Beyblade Burst</div> 
                         
-                        font-weight: 600;
-                        overflow: hidden;
-white-space: nowrap;
-padding-right: 5rem;
-                        text-overflow: ellipsis;" class="notify-top">Dragon Ball Super</h2>
-                            <dl style="
-                        line-height: 1.5rem;
-               
-                 
-                        font-weight: 500;
-               
-                        font-size: .875rem;
-                  
-               
-                        flex-wrap: wrap;
-                
-                        display: flex;
-                    
-                
-                        margin-top: 0.5rem;">
-                                <div style="
-                                display: flex;
-                      
-                                align-items: center;
-                          
-                              
-                                margin-left: 0.25rem; 
-                                right: 0;
-                          
-                                top: 0;
+                                <div style="display: flex;margin-top: 4px;">
+                                    <div style="flex:1">
+                            <div style="border: 1px solid #dadce0
+                            ;border-radius: 0.25rem;padding-left: 0.375rem;font-size: 13px;
+                        padding-right: 0.375rem;width: fit-content;">
+                            EP-12</div>
+                        </div>
                             
-                                position: absolute;
-                            " class="compact-hidden">
-                                    <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor"
-                                            class="svg-exception">
-                                            <path
-                                                d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
+                            <div style=" display: flex;align-items: center; margin-left: 0.25rem;flex: 1;justify-content: center;
+                                    " class="compact-hidden">
+                                    <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor" class="svg-exception">
+                                            <path d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
                                             </path>
                                         </svg></dt>
-                                    <dd style="margin-left: 0.25rem;">2.54</dd>
+                                    <dd style="margin-left: 0.25rem;font-size: 13px;">2.66</dd>
                                 </div>
-                                <div>
-
-                                    <dd style="border: 1px solid #dadce0
-;border-radius: 0.25rem;padding-left: 0.375rem;
-padding-right: 0.375rem;">EP-12</dd>
-                                </div>
-                                <div style="    margin-left: 0.5rem;" class="compact-hidden">
-
-                                    <dd>2020</dd>
-                                </div>
-                                <div>
-
-                                    <dd style=" display: flex; align-items: center;  "><svg width="2" height="2"
-                                            fill="currentColor" style="    
-                                color: rgb(203 213 225/1);
-                                margin-left: 0.5rem;
-                                margin-right: 0.5rem;">
-                                            <circle cx="1" cy="1" r="1"></circle>
-                                        </svg></dd>
-                                </div>
-                                <div class="compact-hidden">
-
-                                    <dd style=" display: flex; align-items: center;  "><svg width="2" height="2"
-                                            fill="currentColor" style="    
-                                    color: rgb(203 213 225/1);
-                                    margin-left: 0.5rem;
-                                    margin-right: 0.5rem;">
-                                            <circle cx="1" cy="1" r="1"></circle>
-                                        </svg>1h 30m</dd>
-                                </div>
-                                <div style="
-                            font-weight: 400;
-                            flex: none;
-                            width: 100%;
-                            margin-top: 0.5rem;">
-
-                                    <dd class="notify-bottom overflow-ellipse">Toei Animation</dd>
-                                </div>
-                            </dl>
-                        </div>
-                    </div>
-
-                    <div class="topnav-hover notify-padding" style="align-items: flex-start;
-
-            display: flex;
-        "> <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Beyblade_Burst_DB.jpg" width="60" height="88"
-                            class="notify-img">
-
-                        <div style=" flex: 1 1 auto;
-                min-width: 0;margin-left: 1rem;
-                position: relative;">
-                            <h2 style="
-                    
-                    font-weight: 600;
-                    overflow: hidden;
-white-space: nowrap;
-padding-right: 5rem;
-                    text-overflow: ellipsis;" class="notify-top">Beyblade Burst
-                                QuadDrive </h2>
-                            <dl style="
-                    line-height: 1.5rem;
-           
-             
-                    font-weight: 500;
-           
-                    font-size: .875rem;
-              
-           
-                    flex-wrap: wrap;
-            
-                    display: flex;
-                
-            
-                    margin-top: 0.5rem;">
-                                <div style="
-                            display: flex;
-                  
-                            align-items: center;
-                      
-                          
-                            margin-left: 0.25rem; 
-                            right: 0;
-                      
-                            top: 0;
                         
-                            position: absolute;
-                        " class="compact-hidden">
-                                    <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor"
-                                            class="svg-exception">
-                                            <path
-                                                d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
+                        </div>
+
+                        <div style="
+border-radius: 0.25rem;padding-left: 0.375rem;font-size: 13px;
+                    padding-right: 0.375rem;width: fit-content;margin-top:6px">
+                        Beyblade Burst Official</div>
+
+</div>
+</div>
+                    </div>
+
+
+
+                
+                    
+                    <div class="topnav-hover notify-padding notification-container" style="align-items: flex-start;display: flex;border-radius: 0.375rem;
+                    margin: 6px 6px;">
+                        
+                      
+
+                            <div style=" border-radius: 0.375rem;position: relative;">
+   
+   
+   <img src="https://m.media-amazon.com/images/M/MV5BMDgwMDg1NWItMzljNC00NGRkLWI1ODctMGEwYjExYzE3ODllL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjMyNTYyNTY@._V1_QL75_UY281_CR4,0,190,281_.jpg" width="51" height="auto" class="notify-img">
+
+   <span style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;align-items: center;justify-content: center;backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.1);border-radius: 0.5rem;" class="cursor-pointer button notification-play">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" style="width: 1.8rem;height:1.8rem" >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"></path>
+                        </svg>
+
+                    </span>
+                            </div>
+    
+                            <div style="padding-left: 15px;flex: 1;letter-spacing: .5px;overflow: hidden;">
+                                <div style="display: flex;flex-direction: column;">
+                               <div style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;">Beyblade Burst</div> 
+                        
+                                <div style="display: flex;margin-top: 4px;">
+                                    <div style="flex:1">
+                            <div style="border: 1px solid #dadce0
+                            ;border-radius: 0.25rem;padding-left: 0.375rem;font-size: 13px;
+                        padding-right: 0.375rem;width: fit-content;">
+                            EP-12</div>
+                        </div>
+                            
+                            <div style=" display: flex;align-items: center; margin-left: 0.25rem;flex: 1;justify-content: center;
+                                    " class="compact-hidden">
+                                    <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor" class="svg-exception">
+                                            <path d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
                                             </path>
                                         </svg></dt>
-                                    <dd style="margin-left: 0.25rem;">2.56</dd>
+                                    <dd style="margin-left: 0.25rem;font-size: 13px;">2.66</dd>
                                 </div>
-                                <div>
-
-                                    <dd style="border: 1px solid #dadce0
-;border-radius: 0.25rem;padding-left: 0.375rem;
-padding-right: 0.375rem;">EP-12</dd>
-                                </div>
-                                <div style="    margin-left: 0.5rem;" class="compact-hidden">
-
-                                    <dd>2021</dd>
-                                </div>
-                                <div>
-
-                                    <dd style=" display: flex; align-items: center;  "><svg width="2" height="2"
-                                            fill="currentColor" style="    
-                            color: rgb(203 213 225/1);
-                            margin-left: 0.5rem;
-                            margin-right: 0.5rem;">
-                                            <circle cx="1" cy="1" r="1"></circle>
-                                        </svg></dd>
-                                </div>
-                                <div class="compact-hidden">
-
-                                    <dd style=" display: flex; align-items: center;  "><svg width="2" height="2"
-                                            fill="currentColor" style="    
-                                color: rgb(203 213 225/1);
-                                margin-left: 0.5rem;
-                                margin-right: 0.5rem;">
-                                            <circle cx="1" cy="1" r="1"></circle>
-                                        </svg>1h 35m</dd>
-                                </div>
-                                <div style="
-                        font-weight: 400;
-                        flex: none;
-                        width: 100%;
-                        margin-top: 0.5rem;">
-
-                                    <dd class="notify-bottom overflow-ellipse">Beyblade Burst Official</dd>
-                                </div>
-                            </dl>
+                        
                         </div>
+
+                        <div style="
+border-radius: 0.25rem;padding-left: 0.375rem;font-size: 13px;
+                    padding-right: 0.375rem;width: fit-content;margin-top:6px">
+                        Beyblade Burst Official</div>
+
+</div>
+</div>
                     </div>
+                    
+                    
+                    <div class="topnav-hover notify-padding notification-container" style="align-items: flex-start;display: flex;border-radius: 0.375rem;
+                    margin: 6px 6px;">
+                        
+                      
+
+                            <div style=" border-radius: 0.375rem;position: relative;">
+   
+   
+   <img src="https://m.media-amazon.com/images/M/MV5BMDgwMDg1NWItMzljNC00NGRkLWI1ODctMGEwYjExYzE3ODllL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjMyNTYyNTY@._V1_QL75_UY281_CR4,0,190,281_.jpg" width="51" height="auto" class="notify-img">
+
+   <span style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;align-items: center;justify-content: center;backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.1);border-radius: 0.5rem;" class="cursor-pointer button notification-play">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" style="width: 1.8rem;height:1.8rem" >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"></path>
+                        </svg>
+
+                    </span>
+                            </div>
+    
+                            <div style="padding-left: 15px;flex: 1;letter-spacing: .5px;overflow: hidden;">
+                                <div style="display: flex;flex-direction: column;">
+                               <div style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;">Beyblade Burst</div> 
+                        
+                                <div style="display: flex;margin-top: 4px;">
+                                    <div style="flex:1">
+                            <div style="border: 1px solid #dadce0
+                            ;border-radius: 0.25rem;padding-left: 0.375rem;font-size: 13px;
+                        padding-right: 0.375rem;width: fit-content;">
+                            EP-12</div>
+                        </div>
+                            
+                            <div style=" display: flex;align-items: center; margin-left: 0.25rem;flex: 1;justify-content: center;
+                                    " class="compact-hidden">
+                                    <dt style="color:var(--themecolor)"><svg width="16" height="20" fill="currentColor" class="svg-exception">
+                                            <path d="M7.05 3.691c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.372 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.539 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.783.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.363-1.118L.98 9.483c-.784-.57-.381-1.81.587-1.81H5.03a1 1 0 00.95-.69L7.05 3.69z">
+                                            </path>
+                                        </svg></dt>
+                                    <dd style="margin-left: 0.25rem;font-size: 13px;">2.66</dd>
+                                </div>
+                        
+                        </div>
+
+                        <div style="
+border-radius: 0.25rem;padding-left: 0.375rem;font-size: 13px;
+                    padding-right: 0.375rem;width: fit-content;margin-top:6px">
+                        Beyblade Burst Official</div>
+
+</div>
+</div>
+                    </div>
+
+                    
 
 
 
@@ -2834,10 +2712,10 @@ vertical-align: middle;color: #fff;font-size: 16px;font-weight: 500;
 
 
                 <div
-                    style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 16px;flex: 1;">
-                    Hi, Alec
+                    style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .4px;font-weight: 500;font-size: 16px;flex: 1;">
+                    Hi Alec,
                     <div
-                        style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 450;font-size: 14px;margin-top: 3px;">
+                        style="font-family: MiSans, system-ui, sans-serif;letter-spacing: .4px;font-weight: 450;font-size: 14px;margin-top: 3px;">
                         alec@gmail.com</div>
                 </div>
 
@@ -4096,75 +3974,7 @@ margin-left: 19px !important;
 
     <div id="Explore" class="contentarea2" style="z-index: 200;">
 
-        <div style="display: flex;justify-content: center;text-align: center;flex-direction: column">
-            <div style="display: flex;justify-content: center;text-align: center;;margin-top: 12px;">
-                <iframe style="border-radius:12px;margin-right: 12px;"
-                    src="https://open.spotify.com/embed/track/4ral5tdFbO6WUBAtoIasbX?utm_source=generator" width="100%"
-                    height="152" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
-
-
-                <iframe style="border-radius:12px;margin-left: 12px;"
-                    src="https://open.spotify.com/embed/track/30kEWNQGAxzrkxIZsCUsE3?utm_source=generator" width="100%"
-                    height="152" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
-            </div>
-
-            <div style="display: flex;justify-content: center;text-align: center;margin-top: 24px;">
-                <iframe style="border-radius:12px;margin-right: 12px;"
-                    src="https://open.spotify.com/embed/track/7AXZaAsdIYaiTaFMwRq7Mq?utm_source=generator" width="100%"
-                    height="152" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
-
-                <iframe style="border-radius:12px;margin-left: 12px;"
-                    src="https://open.spotify.com/embed/track/5eOz8xzZX9J5oSGTdifRgz?utm_source=generator" width="100%"
-                    height="152" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
-
-            </div>
-
-
-
-            <iframe style="border-radius:12px;margin: 12px 0;margin-top: 24px;"
-                src="https://open.spotify.com/embed/track/1bEnIDpwKsyhDauHVoMz6t?utm_source=generator" width="100%"
-                height="152" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe>
-
-            <iframe style="border-radius:12px;margin: 12px 0;"
-                src="https://open.spotify.com/embed/track/7cAexYA1vH6srKeIuKySud?utm_source=generator" width="100%"
-                height="152" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe>
-
-
-
-
-            <iframe style="border-radius:12px;margin: 12px 0;" id="frame1"
-                src="https://open.spotify.com/embed/track/4dx26v9rnnmqDIS3RqMc7e?utm_source=generator" width="100%"
-                height="152" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe>
-
-            <iframe style="border-radius:12px;margin: 12px 0;"
-                src="https://open.spotify.com/embed/track/2lEG37msChkUl9v2tLrFGc?utm_source=generator" width="100%"
-                height="152" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe>
-
-            <iframe style="border-radius:12px;margin: 12px 0;"
-                src="https://open.spotify.com/embed/track/5Y8ME8ljCPyb9AP4JGAidT?utm_source=generator" width="100%"
-                height="152" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe>
-
-
-
-        </div>
+      
     </div>
 
     <div id="Deleted" class="contentarea2"
@@ -4194,14 +4004,17 @@ margin-left: 19px !important;
     </div>
     <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
 
+        <img src="https://i.pinimg.com/474x/34/78/b4/3478b4351a160a51a4c497d3b48c1373.jpg"
+        style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+        <img src="https://i.pinimg.com/474x/b4/70/90/b47090c1494ebcf6fce4e0f37d607cbc.jpg"
+        style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-        <img src="https://shonakid.de/wp-content/uploads/2022/11/FSxrqrwaUAA_ZjF.jpg"
+       
+        <img src="https://i.pinimg.com/474x/f7/5b/70/f75b70103158a8ac19aff1db53897719.jpg"
             style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-        <img src="https://m.media-amazon.com/images/M/MV5BOTNlMzJhYjQtZTMyMS00NzZjLWE2ZWMtNjdhYmFkMmI3ODkzXkEyXkFqcGdeQXVyMTEzMzE3OTIy._V1_.jpg"
-            style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-        <img src="https://yt3.ggpht.com/CxayksKddZH0_CXzOJIS8MGPposS4S8BL5PLip3akcuZzFm7gkvr0VQt_1cOdbdurQXM2kmN-MEwzO0=s612-c-fcrop64=1,37770000c888ffff-nd-v1-rwa"
+        
+        <img src="https://i.pinimg.com/474x/1b/03/07/1b0307ec4c6f348d163c0268297bd77d.jpg"
             style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
 
@@ -4224,10 +4037,10 @@ margin-left: 19px !important;
     <img src="https://cdn.shopify.com/s/files/1/0238/7617/articles/e33c2fa94c03efa06678116f80d62d0d_708x.jpg?v=1590599656"
         style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPcPCvxGNtxjeSJdB8Md4WKBPTg-EhnxNe6g&usqp=CAU"
+    <img src="https://i.pinimg.com/474x/3e/38/b2/3e38b22dbe7fbd9063f9b7514e41fb45.jpg"
         style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-    <img src="https://imageresizer.static9.net.au/Ou2qREliHtiJFiGzmZ0QlaUuo88=/1280x0/vms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2021%2F08%2F376089%2Fbeybladeburstsurge_ctv_standardcard.jpg"
+    <img src="https://i.pinimg.com/564x/f8/51/f1/f851f123fb0bac358e5eb0b6b3052010.jpg"
         style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
 
@@ -4296,10 +4109,10 @@ Friday, <span
 <img src="https://i.pinimg.com/564x/f6/6e/23/f66e235c3522b780fcc0b66331376e1d.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-<img src="https://m.media-amazon.com/images/M/MV5BOTNlMzJhYjQtZTMyMS00NzZjLWE2ZWMtNjdhYmFkMmI3ODkzXkEyXkFqcGdeQXVyMTEzMzE3OTIy._V1_.jpg"
+<img src="https://i.pinimg.com/474x/98/bb/5e/98bb5e85530f0780c7744aa2c205213e.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-<img src="https://yt3.ggpht.com/CxayksKddZH0_CXzOJIS8MGPposS4S8BL5PLip3akcuZzFm7gkvr0VQt_1cOdbdurQXM2kmN-MEwzO0=s612-c-fcrop64=1,37770000c888ffff-nd-v1-rwa"
+<img src="https://i.pinimg.com/474x/a2/15/3c/a2153ce1a98233b8047613edc2bb6add.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
 
@@ -4331,29 +4144,7 @@ Friday, <span
 
 </div>
 
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
 
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://shonakid.de/wp-content/uploads/2022/11/FSxrqrwaUAA_ZjF.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://m.media-amazon.com/images/M/MV5BOTNlMzJhYjQtZTMyMS00NzZjLWE2ZWMtNjdhYmFkMmI3ODkzXkEyXkFqcGdeQXVyMTEzMzE3OTIy._V1_.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://yt3.ggpht.com/CxayksKddZH0_CXzOJIS8MGPposS4S8BL5PLip3akcuZzFm7gkvr0VQt_1cOdbdurQXM2kmN-MEwzO0=s612-c-fcrop64=1,37770000c888ffff-nd-v1-rwa"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
 
 <div
 style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
@@ -4371,9 +4162,9 @@ Friday, <span
 <img src="https://yt3.ggpht.com/1fmlHwBMCaB4rr67u9fGTt--6uEN-Vw11ELpJLe0ZVWUClo3E64kqtJewFPQuOexSt_59bpDWtqt=s1024-c-fcrop64=1,00001062ffffef9d-nd-v1"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-<img src="https://yt3.ggpht.com/4SwJ__o2gQd2bbMWY_EWNGnZ6g9m4ZRc0yperQJQChJZ2hUTcaWErznVYw60mJQ-zSObmrgNiPnCug=s1024-c-fcrop64=1,00001062ffffef9d-nd-v1"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
+    <img src="https://i.pinimg.com/474x/3e/54/05/3e54059c3258188b36db316fe396127c.jpg"
+    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
 
 
@@ -4388,9 +4179,10 @@ Friday, <span
 </div>
 <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
 
+    
+<img src="https://yt3.ggpht.com/4SwJ__o2gQd2bbMWY_EWNGnZ6g9m4ZRc0yperQJQChJZ2hUTcaWErznVYw60mJQ-zSObmrgNiPnCug=s1024-c-fcrop64=1,00001062ffffef9d-nd-v1"
+style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-<img src="https://i.pinimg.com/474x/3e/54/05/3e54059c3258188b36db316fe396127c.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
 <img src="https://i.pinimg.com/474x/db/ae/ca/dbaeca6dc1008dc2c17b2453031de522.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
@@ -4463,7 +4255,7 @@ Friday, <span
 <img src="https://i.pinimg.com/474x/9e/c0/b7/9ec0b7bdee92e4fb4d36b297605f4701.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-<img src="https://i.pinimg.com/474x/98/c3/1e/98c31eea40a5edd6297e21c66cc3ab4e.jpg"
+<img src="https://i.pinimg.com/474x/3c/06/7b/3c067b42ecc4d8dd696391b66e5e0c34.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
 <img src="https://i.pinimg.com/474x/b4/36/a6/b436a60eaba6c18af60c119b46955b00.jpg"
@@ -4483,36 +4275,12 @@ Friday, <span
 <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
 
 
-<img src="https://shonakid.de/wp-content/uploads/2022/11/FSxrqrwaUAA_ZjF.jpg"
+
+
+<img src="https://i.pinimg.com/736x/d5/33/c2/d533c208bdb86fa7b075d66b7c4e92bd.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-<img src="https://m.media-amazon.com/images/M/MV5BOTNlMzJhYjQtZTMyMS00NzZjLWE2ZWMtNjdhYmFkMmI3ODkzXkEyXkFqcGdeQXVyMTEzMzE3OTIy._V1_.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://yt3.ggpht.com/CxayksKddZH0_CXzOJIS8MGPposS4S8BL5PLip3akcuZzFm7gkvr0VQt_1cOdbdurQXM2kmN-MEwzO0=s612-c-fcrop64=1,37770000c888ffff-nd-v1-rwa"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://shonakid.de/wp-content/uploads/2022/11/FSxrqrwaUAA_ZjF.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://m.media-amazon.com/images/M/MV5BOTNlMzJhYjQtZTMyMS00NzZjLWE2ZWMtNjdhYmFkMmI3ODkzXkEyXkFqcGdeQXVyMTEzMzE3OTIy._V1_.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://yt3.ggpht.com/CxayksKddZH0_CXzOJIS8MGPposS4S8BL5PLip3akcuZzFm7gkvr0VQt_1cOdbdurQXM2kmN-MEwzO0=s612-c-fcrop64=1,37770000c888ffff-nd-v1-rwa"
+<img src="https://i.pinimg.com/736x/68/58/e2/6858e287f0e51d3829aa0dbe6301a424.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
 
@@ -4529,36 +4297,13 @@ Friday, <span
 <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
 
 
-<img src="https://shonakid.de/wp-content/uploads/2022/11/FSxrqrwaUAA_ZjF.jpg"
+<img src="https://i.pinimg.com/474x/c8/bc/64/c8bc6450cd3c4cda9f065faf1d4ba31f.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-<img src="https://m.media-amazon.com/images/M/MV5BOTNlMzJhYjQtZTMyMS00NzZjLWE2ZWMtNjdhYmFkMmI3ODkzXkEyXkFqcGdeQXVyMTEzMzE3OTIy._V1_.jpg"
+<img src="https://i.pinimg.com/474x/66/e7/bc/66e7bc32923f995a61d71020dc4bf432.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-<img src="https://yt3.ggpht.com/CxayksKddZH0_CXzOJIS8MGPposS4S8BL5PLip3akcuZzFm7gkvr0VQt_1cOdbdurQXM2kmN-MEwzO0=s612-c-fcrop64=1,37770000c888ffff-nd-v1-rwa"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://shonakid.de/wp-content/uploads/2022/11/FSxrqrwaUAA_ZjF.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://m.media-amazon.com/images/M/MV5BOTNlMzJhYjQtZTMyMS00NzZjLWE2ZWMtNjdhYmFkMmI3ODkzXkEyXkFqcGdeQXVyMTEzMzE3OTIy._V1_.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://yt3.ggpht.com/CxayksKddZH0_CXzOJIS8MGPposS4S8BL5PLip3akcuZzFm7gkvr0VQt_1cOdbdurQXM2kmN-MEwzO0=s612-c-fcrop64=1,37770000c888ffff-nd-v1-rwa"
+<img src="https://i.pinimg.com/474x/d7/f5/b0/d7f5b0123ee61f746523fb7027424893.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
 
@@ -4575,36 +4320,13 @@ Friday, <span
 <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
 
 
-<img src="https://shonakid.de/wp-content/uploads/2022/11/FSxrqrwaUAA_ZjF.jpg"
+<img src="https://i.pinimg.com/736x/17/9a/dc/179adc988576e12a157f5f1496d51340.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-<img src="https://m.media-amazon.com/images/M/MV5BOTNlMzJhYjQtZTMyMS00NzZjLWE2ZWMtNjdhYmFkMmI3ODkzXkEyXkFqcGdeQXVyMTEzMzE3OTIy._V1_.jpg"
+<img src="https://i.pinimg.com/474x/26/8e/b3/268eb31912eef9ed7faa03ad86e82d9e.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-<img src="https://yt3.ggpht.com/CxayksKddZH0_CXzOJIS8MGPposS4S8BL5PLip3akcuZzFm7gkvr0VQt_1cOdbdurQXM2kmN-MEwzO0=s612-c-fcrop64=1,37770000c888ffff-nd-v1-rwa"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://shonakid.de/wp-content/uploads/2022/11/FSxrqrwaUAA_ZjF.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://m.media-amazon.com/images/M/MV5BOTNlMzJhYjQtZTMyMS00NzZjLWE2ZWMtNjdhYmFkMmI3ODkzXkEyXkFqcGdeQXVyMTEzMzE3OTIy._V1_.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://yt3.ggpht.com/CxayksKddZH0_CXzOJIS8MGPposS4S8BL5PLip3akcuZzFm7gkvr0VQt_1cOdbdurQXM2kmN-MEwzO0=s612-c-fcrop64=1,37770000c888ffff-nd-v1-rwa"
+<img src="https://i.pinimg.com/474x/5f/1d/ab/5f1daba963c058fa87845fadcc2d6c3c.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
 
@@ -4621,36 +4343,13 @@ Friday, <span
 <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
 
 
-<img src="https://shonakid.de/wp-content/uploads/2022/11/FSxrqrwaUAA_ZjF.jpg"
+<img src="https://i.pinimg.com/474x/1b/5a/52/1b5a52f06da3e72e94fc3109407bbb55.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-<img src="https://m.media-amazon.com/images/M/MV5BOTNlMzJhYjQtZTMyMS00NzZjLWE2ZWMtNjdhYmFkMmI3ODkzXkEyXkFqcGdeQXVyMTEzMzE3OTIy._V1_.jpg"
+<img src="https://i.pinimg.com/474x/bc/51/06/bc510657a4e988136175f15d916071ec.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-<img src="https://yt3.ggpht.com/CxayksKddZH0_CXzOJIS8MGPposS4S8BL5PLip3akcuZzFm7gkvr0VQt_1cOdbdurQXM2kmN-MEwzO0=s612-c-fcrop64=1,37770000c888ffff-nd-v1-rwa"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-
-
-
-</div>
-<div
-style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
-Friday, <span
-    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
-    Dec 2022</span>
-
-</div>
-<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
-
-
-<img src="https://shonakid.de/wp-content/uploads/2022/11/FSxrqrwaUAA_ZjF.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://m.media-amazon.com/images/M/MV5BOTNlMzJhYjQtZTMyMS00NzZjLWE2ZWMtNjdhYmFkMmI3ODkzXkEyXkFqcGdeQXVyMTEzMzE3OTIy._V1_.jpg"
-    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-
-<img src="https://yt3.ggpht.com/CxayksKddZH0_CXzOJIS8MGPposS4S8BL5PLip3akcuZzFm7gkvr0VQt_1cOdbdurQXM2kmN-MEwzO0=s612-c-fcrop64=1,37770000c888ffff-nd-v1-rwa"
+<img src="https://i.pinimg.com/474x/5e/b1/73/5eb1737830857af4c34c8e0efd53fa6b.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
 
@@ -4667,13 +4366,105 @@ Friday, <span
 <div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
 
 
-<img src="https://shonakid.de/wp-content/uploads/2022/11/FSxrqrwaUAA_ZjF.jpg"
+<img src="https://i.pinimg.com/474x/dc/e0/95/dce0953178f40ba5c43cc06bb6377d81.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-<img src="https://m.media-amazon.com/images/M/MV5BOTNlMzJhYjQtZTMyMS00NzZjLWE2ZWMtNjdhYmFkMmI3ODkzXkEyXkFqcGdeQXVyMTEzMzE3OTIy._V1_.jpg"
+<img src="https://i.pinimg.com/474x/0f/1f/cf/0f1fcf4cbd7b67bb9ebd2a687968520e.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-<img src="https://yt3.ggpht.com/CxayksKddZH0_CXzOJIS8MGPposS4S8BL5PLip3akcuZzFm7gkvr0VQt_1cOdbdurQXM2kmN-MEwzO0=s612-c-fcrop64=1,37770000c888ffff-nd-v1-rwa"
+<img src="https://i.pinimg.com/474x/e6/9d/70/e69d708489ff528ac3a0629c18b39be0.jpg"
+    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+</div>
+<div
+style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+Friday, <span
+    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
+    Dec 2022</span>
+
+</div>
+<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+<img src="https://i.pinimg.com/474x/9b/3a/8a/9b3a8a1b26c9222423a9c2e57d567feb.jpg"
+    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+<img src="https://i.pinimg.com/474x/16/68/3a/16683a4f4bb2715d0ae37082d9470d83.jpg"
+    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+<img src="https://i.pinimg.com/474x/e3/4a/a1/e34aa18188dae5eddc78f7b1ec99aed3.jpg"
+    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+</div>
+<div
+style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+Friday, <span
+    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
+    Dec 2022</span>
+
+</div>
+<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+<img src="https://i.pinimg.com/474x/57/18/3c/57183c58a5ea6adf0637e36ab63e6f06.jpg"
+    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+<img src="https://i.pinimg.com/474x/72/1a/ef/721aef904eac8a8b758de0d51eab7b5e.jpg"
+    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+<img src="https://i.pinimg.com/474x/83/15/a1/8315a191655ffb30d9986bcb346af0c3.jpg"
+    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+</div>
+<div
+style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+Friday, <span
+    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
+    Dec 2022</span>
+
+</div>
+<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+<img src="https://i.pinimg.com/474x/91/e3/65/91e365bb509f990f5dd71df3014a80de.jpg"
+    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+<img src="https://i.pinimg.com/474x/63/77/ca/6377ca2e90f0c5e07f4e18074db9a1d3.jpg"
+    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+<img src="https://i.pinimg.com/474x/24/7d/3a/247d3ae8f0e6b42c9267cfc1e96aa449.jpg"
+    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+
+
+
+</div>
+<div
+style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 24px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-bottom: 5px;">
+Friday, <span
+    style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 19px;font-family: MiSans, system-ui, sans-serif;">9
+    Dec 2022</span>
+
+</div>
+<div style="display: flex;justify-content: flex-start;flex-wrap: wrap;align-items: center;">
+
+
+<img src="https://i.pinimg.com/474x/3b/a7/92/3ba792a60cd621301eb4a7fc6afbbacf.jpg"
+    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+<img src="https://i.pinimg.com/474x/fe/44/b9/fe44b990d983526e084d38c28589ebe7.jpg"
+    style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
+
+<img src="https://i.pinimg.com/474x/49/b7/cc/49b7cc2341beeccff8a6fdf0ecbbf876.jpg"
     style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
 
@@ -4729,7 +4520,7 @@ Friday, <span
             <img src="https://shonakid.de/wp-content/uploads/2022/11/FSxrqrwaUAA_ZjF.jpg"
                 style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
-            <img src="https://m.media-amazon.com/images/M/MV5BOTNlMzJhYjQtZTMyMS00NzZjLWE2ZWMtNjdhYmFkMmI3ODkzXkEyXkFqcGdeQXVyMTEzMzE3OTIy._V1_.jpg"
+            <img src="https://i.pinimg.com/564x/de/60/0d/de600d9c5e98ae4d7582e6d37ff16c41.jpg"
                 style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
             <img src="https://yt3.ggpht.com/CxayksKddZH0_CXzOJIS8MGPposS4S8BL5PLip3akcuZzFm7gkvr0VQt_1cOdbdurQXM2kmN-MEwzO0=s612-c-fcrop64=1,37770000c888ffff-nd-v1-rwa"
@@ -4758,7 +4549,7 @@ Friday, <span
 
             <img src="http://animexscoop.com/wp-content/uploads/2018/11/Screenshot_131.png"
                 style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
-            <img src="https://lh3.googleusercontent.com/CqVh3LcHoSVxoVn1GWNK4u6lL-EqGgRpujWH8O9XhBQyHMwfosBhb39SuXecfdkxLN_o8GiMKQNZrXQYK5EMYMcfeYTxF2dFOXC43wglye9vm9GCcuii-w6FTofe1k2a1wHGxwS8tly9PM6vP54vxFsXu6kFA9pKho-U3uwpXjup3lme97Bv6k4XiTe-PCTUTOjM3y2JazZyKItXi-9ra2nk0hl-4CXJp8SncMvILAaL9ZPDY7-Xu4Akyq5oTppODb1W_pkWrs9tklHOeHo94cVsCN5ptCuC4dAQBNVP3sxVAPB7EQHdxBknzjZXJPfQuYTdDIzgN4Ti-O-9PLAMkm2FqkneN-RDTML5LennhU7QUPaS9ghu593tqQkjenVAOHv_rkX21ChmQzv7Vlvbong9yI1xvz-Mwt3xlSHK7wwKEx8F5kxBp1bRZ6FsfsHaENFSmVsEHONWF0U2x9lLayjZmrS4bkg-yFQcvjSbxOLNKx2uGyfuDCMHTTsjCBAvh3VJxPe2XHnDYFBQMPryszgcTcIe6AMibC_Nx6jbmm2WTxwBkEVy-tTnxergYb4EYWdhYA2B3RBw5hul4vSjf8w1FXCyk0P0rvP2BG2LC9C0Fyx693gQ2A_qqRnVFClht-WIb9y1t02bs9kBfsq-HOGY29kQuWwwGB-jGTVoVDAdZuupDET7YpWVpUjV9OobSAyzAUGzwTpgVhDytug00HZ21qak-hO-t6opTYLVOpAu92aafuZ_y6eHMAbSj5TS_fPyu3zaRuuKPu2vStANAL0cUmHhe5R_3LVO7E67FcqUrAxSzVgArHTLkdJTiIk9Z_EZXx3Ng5-mgMLb_9NYdvVrQMCqtidndDE5-0plfKCylIeFxI8KC6RpfYEutcgppJIFgfdU91U43SwtCvMEgAkDcLqX_5rEfppIj_qtaPQELdM=w1366-h547-no?authuser=0"
+            <img src="https://i.pinimg.com/474x/59/65/bf/5965bfa91c6b42a6528f0f64badbdc5c.jpg"
                 style="max-height: 195px;border-radius: 12px;border: 1px solid #ccc;margin: 15px;width: auto;aspect-ratio: auto;flex: none;">
 
 
@@ -5288,7 +5079,7 @@ margin-right: 0.5rem;
                     </span>
                 </div>
 
-                <div style="min-width: 0;font-weight:600;flex:1;
+                <div style="min-width: 0;font-weight:525;flex:1;
                 margin-right: calc(1rem * 0);
                 margin-left: calc(1rem * calc(1 - 0));">
                     <p style="color: var( --themecolor);font-size:0.875rem;line-height: 1.5rem;"
@@ -5298,7 +5089,7 @@ margin-right: 0.5rem;
                     <h2 style="font-size:0.875rem;line-height: 1.5rem;    overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;font-weight: inherit;    margin-top: calc(0.25rem * calc(1 - 0));
-        margin-bottom: calc(0.25rem * 0);" class="episodename" data-amplitude-song-info="album">
+        margin-bottom: calc(0.25rem * 0);letter-spacing: .2px;" class="episodename" data-amplitude-song-info="album">
 
 
                     </h2>
@@ -5306,7 +5097,7 @@ margin-right: 0.5rem;
                    margin-top: calc(0.25rem * calc(1 - 0));
         margin-bottom: calc(0.25rem * 0);  line-height: 1.75rem; overflow: hidden;
                     text-overflow: ellipsis;
-                    white-space: nowrap;" class="uploader" data-amplitude-song-info="artist">
+                    white-space: nowrap;letter-spacing: .2px;" class="uploader" data-amplitude-song-info="artist">
 
                     </p>
                 </div>
