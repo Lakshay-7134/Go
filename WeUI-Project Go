@@ -4737,7 +4737,8 @@ margin-bottom: calc(0.28rem * 0);
 line-height: 1.95rem;
 overflow: hidden;
 text-overflow: ellipsis;
-margin-left: 22px;margin-bottom: 36px;padding-right: 15px;">
+margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display: -webkit-box;-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;">
                             The story of Koko, a young boy raised by Pokémon, and the creation of a new bond between humans and Pokémon.</div>
 
 
@@ -4837,8 +4838,10 @@ margin-bottom: calc(0.28rem * 0);
 line-height: 1.95rem;
 overflow: hidden;
 text-overflow: ellipsis;
-margin-left: 22px;margin-bottom: 36px;padding-right: 15px;">
-                            The story of Koko, a young boy raised by Pokémon, and the creation of a new bond between humans and Pokémon.</div>
+margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display: -webkit-box;-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;">
+                            As Ash battles his way through the World Coronation Series, Goh continues his quest to catch every Pokémon. Together, they're on a journey to adventure.
+                        </div>
 
 
 
@@ -4902,27 +4905,58 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;">
 
 
 
-
+            
             <div class="mySlides" style="display: flex;height: 315px;overflow: hidden;">
 
 
-                <div style="flex: 1;">
+                <div style="flex: 1;overflow: hidden;">
                     <div
                         style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;">
-                        <div style="    color: var(--themecolor);
+                        <div style="   
        font-size: 1.075rem;
-       line-height: 1.7rem;margin-left: 36px;">
+       line-height: 1.7rem;margin-left: 22px;display: flex;align-items: center;margin-bottom: 16px;">
+       <div style="display: flex;align-items: center;font-size: 15px;font-weight: 450px;letter-spacing: .5px;">
+        <img src="https://yt3.googleusercontent.com/pK5_z_dptxyLuGllTGH4voHjz6WNTv0vgysrHQtmK6X45fl8g_h1ytu1H-ir1ExvY8uph0MbQA=s176-c-k-c0x00ffffff-no-rj" style="border-radius: 100%;width: 35px;height: 35px;margin-right: 10px;">
+                            Beyblade Official</div>
+
+                        <div style="display: flex;align-items: center;justify-content: right;flex: 1;padding-right: 12px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="pointer-events: none; width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                              </svg>
+                            </div>
+                        </div>
+                        <div style="font-size: 1rem;
+                        line-height: 1.7rem;margin-left: 22px; color: var(--themecolor); ">
                             Beyblade Burst:</div>
-                        <div style="    font-size: 1.325rem;
+
+                        <div style="    font-size: 18px;
+margin-top: calc(0.28rem * calc(1 - 0));
+margin-bottom: calc(0.2rem);
+line-height: 1.9rem;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;margin-left: 22px;margin-bottom: 19px;letter-spacing: .5px;color: #000;">
+                            Quadstrike</div>
+
+                            <div style="    font-size: 14px;
 margin-top: calc(0.28rem * calc(1 - 0));
 margin-bottom: calc(0.28rem * 0);
 line-height: 1.95rem;
 overflow: hidden;
 text-overflow: ellipsis;
-white-space: nowrap;margin-left: 36px;">
-                            Quadstrike</div>
+margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display: -webkit-box;-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;">
+                            
+
+Prepare to let 'em rip again as the Beyblade animated saga continues with the latest entry in the Beyblade Burst anime titled QuadStrike.</div>
+
+
+
                         <div class="div7"
-                            style="width:150px;height: 40px;flex: none;    margin-top: calc(0.6rem * calc(1 - 0));">
+                            style="width:150px;height: 40px;flex: none;    margin-top: calc(0.6rem * calc(1 - 0));margin-left: 22px;">
                             Watch Now</div>
                         <div class="previousarrow">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="26" height="26"
@@ -4949,12 +4983,13 @@ white-space: nowrap;margin-left: 36px;">
                 <div style="flex:1">
                     <div style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;">
 
-                        <video playsinline controls poster="https://i.ytimg.com/vi/1JaGOn3Emyo/maxresdefault.jpg">
+                        <video id="player" playsinline controls
+                            poster="https://i.ytimg.com/vi/1JaGOn3Emyo/maxresdefault.jpg" style="border-radius: 6px;">
                             <source
-                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
                                 type="video/mp4" />
                             <source
-                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
                                 type="video/webm" />
 
 
@@ -4965,6 +5000,7 @@ white-space: nowrap;margin-left: 36px;">
                     </div>
                 </div>
             </div>
+
 
 
 
@@ -5012,8 +5048,10 @@ margin-bottom: calc(0.28rem * 0);
 line-height: 1.95rem;
 overflow: hidden;
 text-overflow: ellipsis;
-margin-left: 22px;margin-bottom: 36px;padding-right: 15px;">
-                            The story of Koko, a young boy raised by Pokémon, and the creation of a new bond between humans and Pokémon.</div>
+margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display: -webkit-box;-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+  ">
+                          Ash meets five residents who come together to save the day when a series of threats endanger the annual Wind Festival and the entire population of their home, Fula City.</div>
 
 
 
@@ -5067,26 +5105,60 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;">
 
 
 
+
+
+
+            
+
             <div class="mySlides" style="display: flex;height: 315px;overflow: hidden;">
 
 
-                <div style="flex: 1;">
+                <div style="flex: 1;overflow: hidden;">
                     <div
                         style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;">
-                        <div style="    color: var(--themecolor);
+                        <div style="   
        font-size: 1.075rem;
-       line-height: 1.7rem;margin-left: 36px;">
-                            Dragon Ball Super:</div>
-                        <div style="    font-size: 1.325rem;
+       line-height: 1.7rem;margin-left: 22px;display: flex;align-items: center;margin-bottom: 16px;">
+       <div style="display: flex;align-items: center;font-size: 15px;font-weight: 450px;letter-spacing: .5px;">
+        <img src="https://yt3.googleusercontent.com/pK5_z_dptxyLuGllTGH4voHjz6WNTv0vgysrHQtmK6X45fl8g_h1ytu1H-ir1ExvY8uph0MbQA=s176-c-k-c0x00ffffff-no-rj" style="border-radius: 100%;width: 35px;height: 35px;margin-right: 10px;">
+                            Toei Animation </div>
+
+                        <div style="display: flex;align-items: center;justify-content: right;flex: 1;padding-right: 12px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="pointer-events: none; width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                              </svg>
+                            </div>
+                        </div>
+                        <div style="font-size: 1rem;
+                        line-height: 1.7rem;margin-left: 22px; color: var(--themecolor); ">
+                             Dragon Ball Super:</div>
+
+                        <div style="    font-size: 18px;
+margin-top: calc(0.28rem * calc(1 - 0));
+margin-bottom: calc(0.2rem);
+line-height: 1.9rem;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;margin-left: 22px;margin-bottom: 19px;letter-spacing: .5px;color: #000;">
+                            Super Hero</div>
+
+                            <div style="    font-size: 14px;
 margin-top: calc(0.28rem * calc(1 - 0));
 margin-bottom: calc(0.28rem * 0);
 line-height: 1.95rem;
 overflow: hidden;
 text-overflow: ellipsis;
-white-space: nowrap;margin-left: 36px;">
-                            Super Hero</div>
+margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display: -webkit-box;-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;">
+                           The Red Ribbon Army from Goku's past has returned with two new androids to challenge him and his friends.</div>
+
+
+
                         <div class="div7"
-                            style="width:150px;height: 40px;flex: none;    margin-top: calc(0.6rem * calc(1 - 0));">
+                            style="width:150px;height: 40px;flex: none;    margin-top: calc(0.6rem * calc(1 - 0));margin-left: 22px;">
                             Watch Now</div>
                         <div class="previousarrow">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="26" height="26"
@@ -5113,13 +5185,13 @@ white-space: nowrap;margin-left: 36px;">
                 <div style="flex:1">
                     <div style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;">
 
-                        <video playsinline controls
-                            poster="https://sm.ign.com/ign_in/gallery/d/dragon-bal/dragon-ball-super-super-hero-images_ruwb.jpg">
+                        <video id="player" playsinline controls
+                            poster="https://sm.ign.com/ign_in/gallery/d/dragon-bal/dragon-ball-super-super-hero-images_ruwb.jpg" style="border-radius: 6px;">
                             <source
-                                src="https://imdb-video.media-imdb.com/vi1867563801/1434659607842-pgv4ql-1646245838173.mp4?Expires=1679340082&Signature=pABGSCi-o~WD~5aq2xyqWwteSXU0hy1d0iVAuT~pSx~41cq6KwYSTFGOakOhQ9pa-n5cPgspaxHa-ZVUcdwwgx~inEYeCnj~nj3sbDt-8DQW1eVgGNjgmJMLGskFBDuLyZeb2HtTsHtamjgmkjH6rCcT8dLgd3HRHotJUUe9Jw~FrOw2AdxP7Wp~QbhyVbB6Z3byOiz3TpkglbYWEPHQnuClzoJ1bvpXhQjWM2WS8zP4tuXfftHfoGZcrwWc8xLWfk36nMt57XtJAgFxX8cokIY2HfefnghCKAGLpLz1TXTlFUfImr40lLoPffJYiRhnwizNKE4xIOVxxVXkD~Lw9A__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
                                 type="video/mp4" />
                             <source
-                                src="https://imdb-video.media-imdb.com/vi1867563801/1434659607842-pgv4ql-1646245838173.mp4?Expires=1679340082&Signature=pABGSCi-o~WD~5aq2xyqWwteSXU0hy1d0iVAuT~pSx~41cq6KwYSTFGOakOhQ9pa-n5cPgspaxHa-ZVUcdwwgx~inEYeCnj~nj3sbDt-8DQW1eVgGNjgmJMLGskFBDuLyZeb2HtTsHtamjgmkjH6rCcT8dLgd3HRHotJUUe9Jw~FrOw2AdxP7Wp~QbhyVbB6Z3byOiz3TpkglbYWEPHQnuClzoJ1bvpXhQjWM2WS8zP4tuXfftHfoGZcrwWc8xLWfk36nMt57XtJAgFxX8cokIY2HfefnghCKAGLpLz1TXTlFUfImr40lLoPffJYiRhnwizNKE4xIOVxxVXkD~Lw9A__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
                                 type="video/webm" />
 
 
@@ -5130,6 +5202,10 @@ white-space: nowrap;margin-left: 36px;">
                     </div>
                 </div>
             </div>
+
+
+            
+
 
 
 
