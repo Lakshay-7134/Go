@@ -5050,16 +5050,16 @@ white-space: nowrap;margin-left: 36px;">
 
         </div>
         <div class="dot-container scrollbar-hidden">
-            <div style="width: 192px;background: url('https://images6.alphacoders.com/117/1175176.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 12px;box-shadow: 0 0 6px #00000040;    margin-left: 0.30rem;flex: none;
+            <div style="width: 192px;background: url('https://images6.alphacoders.com/117/1175176.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 12px;  margin-left: 0.30rem;flex: none;
             margin-right: 0.5rem;
             " class="dot  active3"></div>
 
-            <div style="width: 192px;background: url('https://i.ytimg.com/vi/9GOxIUrdqhk/maxresdefault.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 12px;box-shadow: 0 0 6px #00000040;    margin-left: 0.5rem;flex: none;
+            <div style="width: 192px;background: url('https://i.ytimg.com/vi/9GOxIUrdqhk/maxresdefault.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 12px;margin-left: 0.5rem;flex: none;
 margin-right: 0.5rem;
 " class="dot"></div>
 
 
-            <div style="width: 192px;background: url('https://i.ytimg.com/vi/1JaGOn3Emyo/maxresdefault.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 12px;box-shadow: 0 0 6px #00000040;    margin-left: 0.5rem ;flex: none;
+            <div style="width: 192px;background: url('https://i.ytimg.com/vi/1JaGOn3Emyo/maxresdefault.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 12px;  margin-left: 0.5rem ;flex: none;
             margin-right: 0.5rem;
             " class="dot"></div>
 
@@ -5073,12 +5073,12 @@ margin-right: 0.5rem;
 
 
 
-            <div style="width: 192px;background: url('https://occ-0-1068-1723.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABfhWmBsWYCQSNQK6pUjeCCAqJM2eIPu-hue31EFfYlCmlpM7maaMwDkbdKinMwMr21b-jwQwWvHykLcgX8SVwpnoZRpu.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 12px;box-shadow: 0 0 6px #00000040;    margin-left: 0.5rem ;flex: none;
+            <div style="width: 192px;background: url('https://occ-0-1068-1723.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABfhWmBsWYCQSNQK6pUjeCCAqJM2eIPu-hue31EFfYlCmlpM7maaMwDkbdKinMwMr21b-jwQwWvHykLcgX8SVwpnoZRpu.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 12px;  margin-left: 0.5rem ;flex: none;
            margin-right: 0.5rem;
            " class="dot"></div>
 
 
-            <div style="width: 192px;background: url('https://sm.ign.com/ign_in/gallery/d/dragon-bal/dragon-ball-super-super-hero-images_ruwb.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 12px;box-shadow: 0 0 6px #00000040;    margin-left: 0.5rem;flex: none;
+            <div style="width: 192px;background: url('https://sm.ign.com/ign_in/gallery/d/dragon-bal/dragon-ball-super-super-hero-images_ruwb.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 12px;   margin-left: 0.5rem;flex: none;
                           margin-right: 0.30rem;
                           " class="dot"></div>
 
@@ -5529,6 +5529,47 @@ margin-right: 0.5rem;
 
 
 
+
+        function openPage(pageName, elmnt) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("contentarea2");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            document.getElementById(pageName).style.display = "initial";
+            elmnt.classList.add("active");
+
+        }
+
+
+        document.getElementById("defaultOpen").click();
+
+
+
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+            setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+
+
+
+
         Amplitude.init({
             "bindings": {
                 37: 'prev',
@@ -5577,47 +5618,6 @@ margin-right: 0.5rem;
         window.onkeydown = function (e) {
             return !(e.keyCode == 32);
         };
-
-
-
-
-
-        function openPage(pageName, elmnt) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("contentarea2");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-
-            document.getElementById(pageName).style.display = "initial";
-            elmnt.classList.add("active");
-
-        }
-
-
-        document.getElementById("defaultOpen").click();
-
-
-
-        function startTime() {
-            const today = new Date();
-            let h = today.getHours();
-            let m = today.getMinutes();
-            let s = today.getSeconds();
-            m = checkTime(m);
-            s = checkTime(s);
-            document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
-            setTimeout(startTime, 1000);
-        }
-
-        function checkTime(i) {
-            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
-            return i;
-        }
 
 
 
