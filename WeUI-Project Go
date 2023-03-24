@@ -956,8 +956,8 @@
             width: 100%;
             overflow-x: auto;
             overflow-y: hidden;
-            margin-top: 10px;
-            padding: 0 28px;
+            margin-top: 12px;
+            padding: 0 12px;
         }
 
         .mini-sidebar {
@@ -1409,7 +1409,7 @@
             width: 44px;
             position: absolute;
             right: 70px;
-            top: 86%;
+            top: 84%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1434,7 +1434,7 @@
             width: 44px;
             position: absolute;
             right: 16px;
-            top: 86%;
+            top: 84%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -4699,23 +4699,51 @@ Filter By:<span style="font-size: 13px;font-weight: 500;padding: 0 10px;backgrou
             <div class="mySlides" style="display: flex;height: 315px;overflow: hidden;">
 
 
-                <div style="flex: 1;">
+                <div style="flex: 1;overflow: hidden;">
                     <div
                         style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;">
-                        <div style="    color: var(--themecolor);
+                        <div style="   
        font-size: 1.075rem;
-       line-height: 1.7rem;margin-left: 36px;">
-                            Pokemon Movie:</div>
-                        <div style="    font-size: 1.325rem;
+       line-height: 1.7rem;margin-left: 22px;display: flex;align-items: center;margin-bottom: 16px;">
+       <div style="display: flex;align-items: center;font-size: 15px;font-weight: 450px;letter-spacing: .5px;">
+        <img src="https://yt3.googleusercontent.com/pK5_z_dptxyLuGllTGH4voHjz6WNTv0vgysrHQtmK6X45fl8g_h1ytu1H-ir1ExvY8uph0MbQA=s176-c-k-c0x00ffffff-no-rj" style="border-radius: 100%;width: 35px;height: 35px;margin-right: 10px;">
+                            The Pokemon Company </div>
+
+                        <div style="display: flex;align-items: center;justify-content: right;flex: 1;padding-right: 12px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="pointer-events: none; width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                              </svg>
+                            </div>
+                        </div>
+                        <div style="font-size: 1rem;
+                        line-height: 1.7rem;margin-left: 22px; color: var(--themecolor); ">
+                             Pokemon Movie:</div>
+
+                        <div style="    font-size: 18px;
+margin-top: calc(0.28rem * calc(1 - 0));
+margin-bottom: calc(0.2rem);
+line-height: 1.9rem;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;margin-left: 22px;margin-bottom: 19px;letter-spacing: .5px;color: #000;">
+                            Secrets of the Jungle</div>
+
+                            <div style="    font-size: 14px;
 margin-top: calc(0.28rem * calc(1 - 0));
 margin-bottom: calc(0.28rem * 0);
 line-height: 1.95rem;
 overflow: hidden;
 text-overflow: ellipsis;
-white-space: nowrap;margin-left: 36px;">
-                            Secrets of the Jungle</div>
+margin-left: 22px;margin-bottom: 36px;padding-right: 15px;">
+                            The story of Koko, a young boy raised by Pokémon, and the creation of a new bond between humans and Pokémon.</div>
+
+
+
                         <div class="div7"
-                            style="width:150px;height: 40px;flex: none;    margin-top: calc(0.6rem * calc(1 - 0));">
+                            style="width:150px;height: 40px;flex: none;    margin-top: calc(0.6rem * calc(1 - 0));margin-left: 22px;">
                             Watch Now</div>
                         <div class="previousarrow">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="26" height="26"
@@ -4743,7 +4771,7 @@ white-space: nowrap;margin-left: 36px;">
                     <div style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;">
 
                         <video id="player" playsinline controls
-                            poster="https://images6.alphacoders.com/117/1175176.jpg">
+                            poster="https://images6.alphacoders.com/117/1175176.jpg" style="border-radius: 6px;">
                             <source
                                 src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
                                 type="video/mp4" />
@@ -4767,26 +4795,55 @@ white-space: nowrap;margin-left: 36px;">
 
 
 
+
             <div class="mySlides" style="display: flex;height: 315px;overflow: hidden;">
 
 
-                <div style="flex: 1;">
+                <div style="flex: 1;overflow: hidden;">
                     <div
                         style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;">
-                        <div style="    color: var(--themecolor);
+                        <div style="   
        font-size: 1.075rem;
-       line-height: 1.7rem;margin-left: 36px;">
-                            Pokemon Master Journeys:</div>
-                        <div style="    font-size: 1.325rem;
+       line-height: 1.7rem;margin-left: 22px;display: flex;align-items: center;margin-bottom: 16px;">
+       <div style="display: flex;align-items: center;font-size: 15px;font-weight: 450px;letter-spacing: .5px;">
+        <img src="https://yt3.googleusercontent.com/pK5_z_dptxyLuGllTGH4voHjz6WNTv0vgysrHQtmK6X45fl8g_h1ytu1H-ir1ExvY8uph0MbQA=s176-c-k-c0x00ffffff-no-rj" style="border-radius: 100%;width: 35px;height: 35px;margin-right: 10px;">
+                            The Pokemon Company </div>
+
+                        <div style="display: flex;align-items: center;justify-content: right;flex: 1;padding-right: 12px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="pointer-events: none; width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                              </svg>
+                            </div>
+                        </div>
+                        <div style="font-size: 1rem;
+                        line-height: 1.7rem;margin-left: 22px; color: var(--themecolor); ">
+                             Pokemon Master Journeys:</div>
+
+                        <div style="    font-size: 18px;
+margin-top: calc(0.28rem * calc(1 - 0));
+margin-bottom: calc(0.2rem);
+line-height: 1.9rem;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;margin-left: 22px;margin-bottom: 19px;letter-spacing: .5px;color: #000;">
+                            The Series</div>
+
+                            <div style="    font-size: 14px;
 margin-top: calc(0.28rem * calc(1 - 0));
 margin-bottom: calc(0.28rem * 0);
 line-height: 1.95rem;
 overflow: hidden;
 text-overflow: ellipsis;
-white-space: nowrap;margin-left: 36px;">
-                            The Series</div>
+margin-left: 22px;margin-bottom: 36px;padding-right: 15px;">
+                            The story of Koko, a young boy raised by Pokémon, and the creation of a new bond between humans and Pokémon.</div>
+
+
+
                         <div class="div7"
-                            style="width:150px;height: 40px;flex: none;    margin-top: calc(0.6rem * calc(1 - 0));">
+                            style="width:150px;height: 40px;flex: none;    margin-top: calc(0.6rem * calc(1 - 0));margin-left: 22px;">
                             Watch Now</div>
                         <div class="previousarrow">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="26" height="26"
@@ -4813,12 +4870,13 @@ white-space: nowrap;margin-left: 36px;">
                 <div style="flex:1">
                     <div style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;">
 
-                        <video playsinline controls poster="https://i.ytimg.com/vi/9GOxIUrdqhk/maxresdefault.jpg">
+                        <video id="player" playsinline controls
+                            poster="https://i.ytimg.com/vi/9GOxIUrdqhk/maxresdefault.jpg" style="border-radius: 6px;">
                             <source
-                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
                                 type="video/mp4" />
                             <source
-                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
                                 type="video/webm" />
 
 
@@ -4829,6 +4887,12 @@ white-space: nowrap;margin-left: 36px;">
                     </div>
                 </div>
             </div>
+
+
+
+
+
+
 
 
 
@@ -4905,26 +4969,56 @@ white-space: nowrap;margin-left: 36px;">
 
 
 
+
+
             <div class="mySlides" style="display: flex;height: 315px;overflow: hidden;">
 
 
-                <div style="flex: 1;">
+                <div style="flex: 1;overflow: hidden;">
                     <div
                         style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;">
-                        <div style="    color: var(--themecolor);
+                        <div style="   
        font-size: 1.075rem;
-       line-height: 1.7rem;margin-left: 36px;">
-                            Pokemon Movie:</div>
-                        <div style="    font-size: 1.325rem;
+       line-height: 1.7rem;margin-left: 22px;display: flex;align-items: center;margin-bottom: 16px;">
+       <div style="display: flex;align-items: center;font-size: 15px;font-weight: 450px;letter-spacing: .5px;">
+        <img src="https://yt3.googleusercontent.com/pK5_z_dptxyLuGllTGH4voHjz6WNTv0vgysrHQtmK6X45fl8g_h1ytu1H-ir1ExvY8uph0MbQA=s176-c-k-c0x00ffffff-no-rj" style="border-radius: 100%;width: 35px;height: 35px;margin-right: 10px;">
+                            The Pokemon Company </div>
+
+                        <div style="display: flex;align-items: center;justify-content: right;flex: 1;padding-right: 12px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="pointer-events: none; width: 24px; height: 24px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                              </svg>
+                            </div>
+                        </div>
+                        <div style="font-size: 1rem;
+                        line-height: 1.7rem;margin-left: 22px; color: var(--themecolor); ">
+                             Pokemon Movie:</div>
+
+                        <div style="    font-size: 18px;
+margin-top: calc(0.28rem * calc(1 - 0));
+margin-bottom: calc(0.2rem);
+line-height: 1.9rem;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;margin-left: 22px;margin-bottom: 19px;letter-spacing: .5px;color: #000;">
+                            The Power of Us</div>
+
+                            <div style="    font-size: 14px;
 margin-top: calc(0.28rem * calc(1 - 0));
 margin-bottom: calc(0.28rem * 0);
 line-height: 1.95rem;
 overflow: hidden;
 text-overflow: ellipsis;
-white-space: nowrap;margin-left: 36px;">
-                            The Power of Us</div>
+margin-left: 22px;margin-bottom: 36px;padding-right: 15px;">
+                            The story of Koko, a young boy raised by Pokémon, and the creation of a new bond between humans and Pokémon.</div>
+
+
+
                         <div class="div7"
-                            style="width:150px;height: 40px;flex: none;    margin-top: calc(0.6rem * calc(1 - 0));">
+                            style="width:150px;height: 40px;flex: none;    margin-top: calc(0.6rem * calc(1 - 0));margin-left: 22px;">
                             Watch Now</div>
                         <div class="previousarrow">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="26" height="26"
@@ -4951,13 +5045,13 @@ white-space: nowrap;margin-left: 36px;">
                 <div style="flex:1">
                     <div style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;">
 
-                        <video playsinline controls
-                            poster="https://occ-0-1068-1723.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABfhWmBsWYCQSNQK6pUjeCCAqJM2eIPu-hue31EFfYlCmlpM7maaMwDkbdKinMwMr21b-jwQwWvHykLcgX8SVwpnoZRpu.jpg">
+                        <video id="player" playsinline controls
+                            poster="https://occ-0-1068-1723.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABfhWmBsWYCQSNQK6pUjeCCAqJM2eIPu-hue31EFfYlCmlpM7maaMwDkbdKinMwMr21b-jwQwWvHykLcgX8SVwpnoZRpu.jpg" style="border-radius: 6px;">
                             <source
-                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
                                 type="video/mp4" />
                             <source
-                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679336744&Signature=gMkF9iIvPByv~J9DNqDLByzsLm9Fvv71HdJLby7r-a70gWHmnrtEHRk1edTnIQqXspLTvWcKQF-4tsWDt22qAJ-US5wPIai0VpenIUMVSICMZqlC8i5fXrvcpfEQOF0DYBFH0xYB6NM2luEnwbAxmq53A8NVWpGDgW6S5H9jTHIwf~HSDAijq8PpzpY7e~DbNUG6sYwiFHCzji8LKjnlPJNte5xD2tTCAA7mO1OhMsmTnZ~oVQuYhGLXGly50s1JGQkgeHwkWDZz5E3ep6-PFe~mpNA-VBkPZw7h~F28kUnyguzuskFeVyQPlTT9Mwyk4LVcaS-OyDw1ymeTpIniRA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
                                 type="video/webm" />
 
 
@@ -4968,6 +5062,10 @@ white-space: nowrap;margin-left: 36px;">
                     </div>
                 </div>
             </div>
+
+
+
+
 
             <div class="mySlides" style="display: flex;height: 315px;overflow: hidden;">
 
@@ -5050,16 +5148,16 @@ white-space: nowrap;margin-left: 36px;">
 
         </div>
         <div class="dot-container scrollbar-hidden">
-            <div style="width: 192px;background: url('https://images6.alphacoders.com/117/1175176.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 12px;  margin-left: 0.30rem;flex: none;
+            <div style="width: 187px;background: url('https://images6.alphacoders.com/117/1175176.jpg');background-size: cover;background-position: center;height: 106px;z-index: 15;border-radius: 12px;  margin-left: 0.30rem;flex: none;
             margin-right: 0.5rem;
             " class="dot  active3"></div>
 
-            <div style="width: 192px;background: url('https://i.ytimg.com/vi/9GOxIUrdqhk/maxresdefault.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 12px;margin-left: 0.5rem;flex: none;
+            <div style="width: 187px;background: url('https://i.ytimg.com/vi/9GOxIUrdqhk/maxresdefault.jpg');background-size: cover;background-position: center;height: 106px;z-index: 15;border-radius: 12px;margin-left: 0.5rem;flex: none;
 margin-right: 0.5rem;
 " class="dot"></div>
 
 
-            <div style="width: 192px;background: url('https://i.ytimg.com/vi/1JaGOn3Emyo/maxresdefault.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 12px;  margin-left: 0.5rem ;flex: none;
+            <div style="width: 187px;background: url('https://i.ytimg.com/vi/1JaGOn3Emyo/maxresdefault.jpg');background-size: cover;background-position: center;height: 106px;z-index: 15;border-radius: 12px;  margin-left: 0.5rem ;flex: none;
             margin-right: 0.5rem;
             " class="dot"></div>
 
@@ -5073,12 +5171,12 @@ margin-right: 0.5rem;
 
 
 
-            <div style="width: 192px;background: url('https://occ-0-1068-1723.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABfhWmBsWYCQSNQK6pUjeCCAqJM2eIPu-hue31EFfYlCmlpM7maaMwDkbdKinMwMr21b-jwQwWvHykLcgX8SVwpnoZRpu.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 12px;  margin-left: 0.5rem ;flex: none;
+            <div style="width: 187px;background: url('https://occ-0-1068-1723.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABfhWmBsWYCQSNQK6pUjeCCAqJM2eIPu-hue31EFfYlCmlpM7maaMwDkbdKinMwMr21b-jwQwWvHykLcgX8SVwpnoZRpu.jpg');background-size: cover;background-position: center;height: 106px;z-index: 15;border-radius: 12px;  margin-left: 0.5rem ;flex: none;
            margin-right: 0.5rem;
            " class="dot"></div>
 
 
-            <div style="width: 192px;background: url('https://sm.ign.com/ign_in/gallery/d/dragon-bal/dragon-ball-super-super-hero-images_ruwb.jpg');background-size: cover;background-position: center;height: 108px;z-index: 15;border-radius: 12px;   margin-left: 0.5rem;flex: none;
+            <div style="width: 187px;background: url('https://sm.ign.com/ign_in/gallery/d/dragon-bal/dragon-ball-super-super-hero-images_ruwb.jpg');background-size: cover;background-position: center;height: 106px;z-index: 15;border-radius: 12px;   margin-left: 0.5rem;flex: none;
                           margin-right: 0.30rem;
                           " class="dot"></div>
 
