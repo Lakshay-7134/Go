@@ -1111,6 +1111,12 @@
 
         }
 
+
+
+        .add-favourite:hover svg{fill: #f63e54 !important;color:  #f63e54 !important;}
+
+
+        
         .light-tick {
             display: initial;
         }
@@ -4730,9 +4736,10 @@ padding-bottom: 12px;
                             The Pokemon Company </div>
 
                         <div style="display: flex;align-items: center;justify-content: right;flex: 1;padding-right: 12px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px">
+                            <span class="add-favourite"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px;fill:none">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
                             </svg>
+                        </span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="pointer-events: none; width: 24px; height: 24px;">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
                               </svg>
@@ -4842,9 +4849,10 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
                             The Pokemon Company </div>
 
                         <div style="display: flex;align-items: center;justify-content: right;flex: 1;padding-right: 12px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px">
+                            <span class="add-favourite"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px;fill:none">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
                             </svg>
+                        </span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="pointer-events: none; width: 24px; height: 24px;">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
                               </svg>
@@ -4962,9 +4970,10 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
                             Beyblade Official</div>
 
                         <div style="display: flex;align-items: center;justify-content: right;flex: 1;padding-right: 12px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px">
+                            <span class="add-favourite"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px;fill:none">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
                             </svg>
+                        </span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="pointer-events: none; width: 24px; height: 24px;">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
                               </svg>
@@ -5074,9 +5083,10 @@ Prepare to let 'em rip again as the Beyblade animated saga continues with the la
                             The Pokemon Company </div>
 
                         <div style="display: flex;align-items: center;justify-content: right;flex: 1;padding-right: 12px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px">
+                            <span class="add-favourite"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px;fill:none">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
                             </svg>
+                        </span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="pointer-events: none; width: 24px; height: 24px;">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
                               </svg>
@@ -5188,9 +5198,10 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
                             Toei Animation </div>
 
                         <div style="display: flex;align-items: center;justify-content: right;flex: 1;padding-right: 12px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px">
+                            <span class="add-favourite"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px;fill:none">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
                             </svg>
+                        </span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="pointer-events: none; width: 24px; height: 24px;">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
                               </svg>
@@ -5298,9 +5309,10 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
                             The Pokemon Company </div>
 
                         <div style="display: flex;align-items: center;justify-content: right;flex: 1;padding-right: 12px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px">
+                            <span class="add-favourite"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px;fill:none">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
                             </svg>
+                        </span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="pointer-events: none; width: 24px; height: 24px;">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
                               </svg>
