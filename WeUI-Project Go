@@ -924,7 +924,7 @@ width: 275px;
 
         .sidebar {
             position: fixed;
-            padding-right: 8px;
+            
             top: 56px;
             bottom: 0;
             left: 0;
@@ -1110,6 +1110,7 @@ width: 275px;
         }
 
         .sidebar-collapsed {
+            padding-right: 8px;
             width: 220px;
             z-index: 1000;
 
@@ -5753,6 +5754,8 @@ margin-right: 0.5rem;
         </div>
 
 </div>
+
+
     </div>
 
 
