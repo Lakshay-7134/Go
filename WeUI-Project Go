@@ -425,6 +425,7 @@
             display: none;
         }
 
+        .file-share:hover{background: rgba(60,64,67,.06);}
         .dropdown-content .dropitem {
             display: flex;
             height: 48px;
@@ -604,6 +605,26 @@ width: 275px;
             font-family: inherit;
 
         }
+
+        .contentarea2 .dropitem2 {
+            display: flex;
+            height: 294px;width: 200px;
+    flex: none;
+            align-items: center;flex-direction: column;
+            border-radius: 12px;
+            margin: 6px 12px;
+            padding: 16px ;
+            font-size: 13.5px;
+            font-weight: 400;
+            font-family: inherit;
+overflow: hidden;background: #fff;
+        }
+
+        .contentarea2 .dropitem2:hover {
+            box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
+
+        }
+        
 
         .site-nav-dropdown-arrow {
             visibility: hidden;
@@ -2800,7 +2821,7 @@ border-radius: 0.25rem;padding-left: 0.375rem;font-size: 13px;
                                 <div style="
 border-radius: 0.25rem;padding-left: 0.375rem;font-size: 13px;
                     padding-right: 0.375rem;width: fit-content;margin-top:6px">
-                                    The Pokemon Company</div>
+                                    The Pokémon Company</div>
 
                             </div>
                         </div>
@@ -3513,7 +3534,7 @@ vertical-align: middle;color: #fff;font-size: 16px;font-weight: 500;
             <div class="hidden" style="padding-top: 5px;">Explore</div>
         </div>
 
-        <div class="sidebar-item">
+        <div class="sidebar-item except">
             <div>
 
 
@@ -3530,14 +3551,14 @@ vertical-align: middle;color: #fff;font-size: 16px;font-weight: 500;
             </div>
             <div class="hidden" style="padding-top: 5px;">History</div>
         </div>
-        <hr style="    height: 0;
+        <hr class="except" style="    height: 0;
 margin: 15px auto;
 width: 75%;
 overflow: hidden;
 background: transparent;
 border: 0;
 border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
-        <div class="sidebar-item">
+        <div class="sidebar-item except">
             <div>
 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -3586,7 +3607,7 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
             </div>
             <div class="hidden" style="padding-top: 5px;">Watch Later</div>
         </div>
-        <div class="sidebar-item tablink">
+        <div class="sidebar-item tablink except">
             <div>
 
 
@@ -3671,14 +3692,14 @@ border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
             <div class="hidden" style="padding-top: 5px;">Secure</div>
         </div>
 
-        <hr style="    height: 0;
+        <hr  class="except" style="    height: 0;
     margin: 15px auto;
     width: 75%;
     overflow: hidden;
     background: transparent;
     border: 0;
     border-bottom: 1px solid hsla(210deg, 18%, 87%, 1);">
-        <div class="sidebar-item tablink">
+        <div class="sidebar-item tablink except">
             <div>
 
 
@@ -4072,11 +4093,29 @@ margin-left: 19px !important;
         onload="startTime()">
         
         <img src="https://img.wallscloud.net/uploads/thumb/526185173/Windows_11_SE-1024x576-MM-80.webp"
-            style="position: absolute;right: 0;top: 0;bottom: 0;left: 16px;max-width: none;">
+            style="position: absolute;right: 0;top: 0;bottom: 0;left: 16px;max-width: none;height: 100%;width: 100%;">
 
 
         <div
             style="position: absolute;top: 0;left: 0;right: 0;bottom: 0; background: hsla(0, 0%, 100%, .8);backdrop-filter: blur(40px);z-index: 250;">
+
+
+            
+            <div style="background: #fff;height: 48px;margin: 20px 12px;border-radius: 12px;line-height: 48px;display: flex;align-items: center;">
+                <div style="flex: 1;justify-content: left;display: flex;margin-left: 12px;font-size: 15px;">Change View: <span style="font-size: 13px;font-weight: 500;padding: 0 10px;background: #f5f5f5;height: 34px;margin: auto 5px;line-height: 34px;border-radius: 12px;letter-spacing: .5px;">Grid</span></div>
+                <div style="flex: 1;justify-content: center;display: flex;font-size:15px;">
+                Sort By:<span style="font-size: 13px;font-weight: 500;padding: 0 10px;background: #f5f5f5;height: 34px;margin: auto 5px;line-height: 34px;border-radius: 12px;">Date Modified</span>
+                </div>
+                <div style="flex: 1;justify-content: right;display: flex;">
+                    
+                    <span style="border-radius: 1000px;margin-right: 12px;height: 34px;line-height:34px;padding: 0 20px;font-size: 14px;font-weight: 400;position: relative;" class="file-share"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--themecolor)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link" style="display: inline-block;height:22px;width:22px">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg> <span style="margin-left: 8px;font-size: 14px;">Share a File</span></span></div>
+                </div>
+
+                
             <div
                 style=" border-radius: 100%;width: 150px;box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
                 height: 150px;    background: url(https://i.pinimg.com/474x/c6/46/2c/c6462c7ef1c65c2972aee6cbc5b31057.jpg);background-position: center center;background-size: 150px auto;margin: auto;margin-top: 138px;">
@@ -4182,7 +4221,186 @@ margin-left: 19px !important;
 
     <div id="Explore" class="contentarea2" style="z-index: 200;">
 
+        <div style="background: #fff;height: 48px;margin: 20px 12px;border-radius: 12px;line-height: 48px;display: flex;align-items: center;">
+            <div style="flex: 1;justify-content: left;display: flex;margin-left: 12px;font-size: 15px;">Change View: <span style="font-size: 13px;font-weight: 500;padding: 0 10px;background: #f5f5f5;height: 34px;margin: auto 5px;line-height: 34px;border-radius: 12px;letter-spacing: .5px;">Grid</span></div>
+            <div style="flex: 1;justify-content: center;display: flex;font-size:15px;">
+            Sort By:<span style="font-size: 13px;font-weight: 500;padding: 0 10px;background: #f5f5f5;height: 34px;margin: auto 5px;line-height: 34px;border-radius: 12px;">Date Modified</span>
+            </div>
+            <div style="flex: 1;justify-content: right;display: flex;">
+                
+                <span style="border-radius: 1000px;margin-right: 12px;height: 34px;line-height:34px;padding: 0 20px;font-size: 14px;font-weight: 400;position: relative;" class="file-share"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--themecolor)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link" style="display: inline-block;height:22px;width:22px">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg> <span style="margin-left: 8px;font-size: 14px;">Share a File</span></span></div>
+            </div>
 
+        <div style="display: flex
+        ;margin-top:12px;font-weight: 400;flex-wrap: wrap;">
+<div class="dropitem2">
+<img src="https://i.ytimg.com/vi/5288v2yNRNM/maxresdefault.jpg" style=" width: 100%;
+height: 118px;border-radius:calc(clamp(4px,(var(--column-width,0px) - 32px) * 0.025,8px) + 2px); ">
+   
+
+
+        <div style="font-size: 16px;margin-top: 16px;
+                        line-height: 1.7rem;color: var(--themecolor);font-weight: 420; ">
+                             Pokémon:</div>
+                             <div style="    font-size: 15px;
+margin-top: calc(0.25rem * calc(1 - 0));
+margin-bottom: calc(0.2rem);
+line-height: 1.9rem;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;margin-bottom: 19px;letter-spacing: .5px;color: #000;">
+                            The Arceus Chronicles </div>
+
+                            <div class="div7" style="height: 40px;flex: none;font-size: 13px;">Explore Now
+                            </div>
+
+
+
+</div>
+
+
+
+
+<div class="dropitem2">
+    <img src="	https://en.dragon-ball-official.com/dragonball/en/news/2022/02/dbs_pub_vol_2_en.jpg?_=1679719680" style=" width: 100%;
+    height: auto;border-radius:calc(clamp(4px,(var(--column-width,0px) - 32px) * 0.025,8px) + 2px); ">
+       
+    
+    
+            <div style="font-size: 16px;margin-top: 16px;
+                            line-height: 1.7rem;color: var(--themecolor);font-weight: 420; ">
+                                 Dragon Ball Super:</div>
+                                 <div style="    font-size: 15px;
+    margin-top: calc(0.25rem * calc(1 - 0));
+    margin-bottom: calc(0.2rem);
+    line-height: 1.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;margin-bottom: 19px;letter-spacing: .5px;color: #000;">
+                                Super Hero</div>
+    
+                                <div class="div7" style="height: 40px;flex: none;font-size: 13px;">Explore Now
+                                </div>
+    
+    
+    
+    </div>
+
+
+    <div class="dropitem2">
+        <img src="https://w0.peakpx.com/wallpaper/148/386/HD-wallpaper-pokemon-sophocles-pokemon-ash-ketchum-goh-pokemon-lana-pokemon-pikachu-eevee-pokemon-rotom-pokemon-raboot-pokemon-sobble-pokemon-boy-girl-kiawe-pokemon-mallow-pokemon.jpg" style=" width: 100%;
+        height: auto;border-radius:calc(clamp(4px,(var(--column-width,0px) - 32px) * 0.025,8px) + 2px); ">
+           
+        
+        
+                <div style="font-size: 16px;margin-top: 16px;
+                                line-height: 1.7rem;color: var(--themecolor);font-weight: 420; ">
+                                     Pokémon Journeys:</div>
+                                     <div style="    font-size: 15px;
+        margin-top: calc(0.25rem * calc(1 - 0));
+        margin-bottom: calc(0.2rem);
+        line-height: 1.9rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;margin-bottom: 19px;letter-spacing: .5px;color: #000;">
+                                    The Series</div>
+        
+                                    <div class="div7" style="height: 40px;flex: none;font-size: 13px;">Explore Now
+                                    </div>
+        
+        
+        
+        </div>
+
+
+        <div class="dropitem2">
+            <img src="https://sm.ign.com/ign_in/review/d/dragon-bal/dragon-ball-super-broly-review_prkb.jpg" style=" width: 100%;
+            height: 118px;border-radius:calc(clamp(4px,(var(--column-width,0px) - 32px) * 0.025,8px) + 2px); ">
+               
+            
+            
+                    <div style="font-size: 16px;margin-top: 16px;
+                                    line-height: 1.7rem;color: var(--themecolor);font-weight: 420; ">
+                                         Dragon Ball Super:</div>
+                                         <div style="    font-size: 15px;
+            margin-top: calc(0.25rem * calc(1 - 0));
+            margin-bottom: calc(0.2rem);
+            line-height: 1.9rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;margin-bottom: 19px;letter-spacing: .5px;color: #000;">
+                                        Broly</div>
+            
+                                        <div class="div7" style="height: 40px;flex: none;font-size: 13px;">Explore Now
+                                        </div>
+            
+            
+            
+            </div>
+
+            <div class="dropitem2">
+                <img src="https://decider.com/wp-content/uploads/2021/09/POKEMON-MASTER-JOURNEYS-THE-SERIES-NETFLIX-REVIEW.jpg?quality=75&strip=all" style=" width: 100%;
+                height: 118px;border-radius:calc(clamp(4px,(var(--column-width,0px) - 32px) * 0.025,8px) + 2px); ">
+                   
+                
+                
+                        <div style="font-size: 16px;margin-top: 16px;
+                                        line-height: 1.7rem;color: var(--themecolor);font-weight: 420; ">
+                                             
+
+Pokémon:</div>
+                                             <div style="    font-size: 15px;
+                margin-top: calc(0.25rem * calc(1 - 0));
+                margin-bottom: calc(0.2rem);
+                line-height: 1.9rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;margin-bottom: 19px;letter-spacing: .5px;color: #000;">
+                                            Master Journeys</div>
+                
+                                            <div class="div7" style="height: 40px;flex: none;font-size: 13px;">Explore Now
+                                            </div>
+                
+                
+                
+                </div>
+
+
+                <div class="dropitem2">
+                    <img src="https://pokemon.animepisode.com/wp-content/uploads/2022/12/JN136-765x500.jpg" style=" width: 100%;
+                    height: 118px;border-radius:calc(clamp(4px,(var(--column-width,0px) - 32px) * 0.025,8px) + 2px); ">
+                       
+                    
+                    
+                            <div style="font-size: 16px;margin-top: 16px;
+                                            line-height: 1.7rem;color: var(--themecolor);font-weight: 420; ">
+                                                
+
+Pokémon:</div>
+                                                 <div style="    font-size: 15px;
+                    margin-top: calc(0.25rem * calc(1 - 0));
+                    margin-bottom: calc(0.2rem);
+                    line-height: 1.9rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;margin-bottom: 19px;letter-spacing: .5px;color: #000;">
+                                                Ultimate Journeys</div>
+                    
+                                                <div class="div7" style="height: 40px;flex: none;font-size: 13px;">Explore Now
+                                                </div>
+                    
+                    
+                    
+                    </div>
+
+
+
+
+        </div>
     </div>
 
     <div id="Deleted" class="contentarea2"
@@ -4193,12 +4411,75 @@ margin-left: 19px !important;
 <div style="flex: 1;justify-content: center;display: flex;font-size:15px;">
 Filter By:<span style="font-size: 13px;font-weight: 500;padding: 0 10px;background: #f5f5f5;height: 34px;margin: auto 5px;line-height: 34px;border-radius: 12px;">Date Modified</span>
 </div>
-<div style="flex: 1;justify-content: right;display: flex;"><span style="background: var(--themecolor);border-radius: 1000px;margin-right: 12px;height: 34px;line-height:34px;padding: 0 18px;color: #fff;font-size: 14px;font-weight: 400;position: relative;" class="empty-bin-button">Empty Bin</span></div>
+<div style="flex: 1;justify-content: right;display: flex;"><span style="border-radius: 1000px;margin-right: 12px;height: 34px;line-height:34px;padding: 0 20px;font-size: 14px;font-weight: 400;position: relative;" class="file-share">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--themecolor)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2" style="pointer-events: none; display: inline-block; width: 22px; height: 22px;" >
+    <polyline points="3 6 5 6 21 6"></polyline>
+    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+    <line x1="10" y1="11" x2="10" y2="17"></line>
+    <line x1="14" y1="11" x2="14" y2="17"></line>
+</svg>
+
+<span style="margin-left: 8px;font-size: 14px;">Empty Bin</span></span></div>
 </div>
+<div style="display: flex;margin-top: 25px;margin: 25px 12px;margin-bottom: 0;">
+    <div style="display: flex;flex-direction: column;width: 400px;border-radius: 12px;background: #fff;overflow: hidden;height: 400px;align-items:center;padding: 0 28px;">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/000/439/792/small/Basic_Ui__28178_29.jpg" style="    height: auto;
+            width: 138px;margin: 15px auto;">
+          <div style="line-height: 2.4rem;
+        
+          letter-spacing: 0;font-weight: 450;"> About 6 months of storage left.</div> 
 
-        <img src="https://ssl.gstatic.com/social/photosui/images/null_sharing_view_460x218dp.svg" style="    height: 218px;
-            width: 460px;margin: auto;margin-top: 10%;">
+           <div style="    color: rgb(95,99,104);
+          
+           line-height: 1.5rem;
+           font-size: 15px;
+           letter-spacing: .00625em;
+           font-weight: 400;"> Personal estimate based on how often you back up content to your Account</div>
+  <div style="border-radius: 9999px;overflow: hidden;background: #dadce0;width: 100%;margin-top:24px;">
+    <div style=" width: 45%;
+    height: 6px;
+    background: var(--themecolor);
+    border-radius: 9999px;
+    transition-duration: 0.1s;
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    transition-delay: 0s;
+    transition-property: all;"></div>
+</div> 
 
+<div class="tablink" style="margin: 8px 8px;margin-top: 2px;
+    display: flex;
+    height: 42px;
+    width: calc(100% - 12px);
+    align-items: center;
+margin-left: 19px !important;
+    flex: none;
+    flex-direction: row;
+    justify-content: left;">
+            <div style="display: flex;flex: 1;
+    font-size: 14px;
+    align-items: center;
+    font-family: MiSans, system-ui, sans-serif;
+    font-weight: 450;
+
+    justify-content:center;
+    min-width: 50px;color: rgb(95,99,104);">
+
+
+
+<div style="width: 8px;height:8px;background:var(--themecolor);border-radius:1000px;">
+</div>
+              <span style="margin-left: 10px;">  9.5 GB of 15 GB used</span>
+
+            </div>
+
+        </div>
+        <div class="div7" style="width:240px;height: 42px;flex: none;    margin-top: calc(0.4rem * calc(1 - 0));">
+            Get more storage</div>
+        
+        
+        </div>
+<div style="display: flex;flex: 1;margin-left: 25px;background: #fff;border-radius: 12px;">
         <div style="flex:1; letter-spacing: .25px;font-weight: 400;font-size: 16px;font-family: MiSans, system-ui, sans-serif;margin: 15px;margin-top: 45px;display: flex;align-items: center;justify-content: center;text-align: center;line-height: 1.25rem;
             
             letter-spacing: .0142857143em;
@@ -4206,6 +4487,10 @@ Filter By:<span style="font-size: 13px;font-weight: 500;padding: 0 10px;backgrou
             Deleted Files will appear here
 
         </div>
+    
+    
+    </div>
+</div>
     </div>
 
     <div id="Library" class="contentarea2" style="z-index: 200;">
@@ -5020,7 +5305,7 @@ padding-bottom: 12px;
        line-height: 1.7rem;margin-left: 22px;display: flex;align-items: center;margin-bottom: 16px;">
        <div style="display: flex;align-items: center;font-size: 15px;font-weight: 450px;letter-spacing: .5px;">
         <img src="https://yt3.googleusercontent.com/pK5_z_dptxyLuGllTGH4voHjz6WNTv0vgysrHQtmK6X45fl8g_h1ytu1H-ir1ExvY8uph0MbQA=s176-c-k-c0x00ffffff-no-rj" style="border-radius: 100%;width: 35px;height: 35px;margin-right: 10px;">
-                            The Pokemon Company </div>
+                            The Pokémon Company </div>
 
                         <div style="display: flex;align-items: center;justify-content: right;flex: 1;padding-right: 12px;">
                             <span class="add-favourite"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px;fill:none">
@@ -5034,7 +5319,7 @@ padding-bottom: 12px;
                         </div>
                         <div style="font-size: 1rem;
                         line-height: 1.7rem;margin-left: 22px; color: var(--themecolor); ">
-                             Pokemon Movie:</div>
+                             Pokémon Movie:</div>
 
                         <div style="    font-size: 18px;
 margin-top: calc(0.28rem * calc(1 - 0));
@@ -5133,7 +5418,7 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
        line-height: 1.7rem;margin-left: 22px;display: flex;align-items: center;margin-bottom: 16px;">
        <div style="display: flex;align-items: center;font-size: 15px;font-weight: 450px;letter-spacing: .5px;">
         <img src="https://yt3.googleusercontent.com/pK5_z_dptxyLuGllTGH4voHjz6WNTv0vgysrHQtmK6X45fl8g_h1ytu1H-ir1ExvY8uph0MbQA=s176-c-k-c0x00ffffff-no-rj" style="border-radius: 100%;width: 35px;height: 35px;margin-right: 10px;">
-                            The Pokemon Company </div>
+                            The Pokémon Company </div>
 
                         <div style="display: flex;align-items: center;justify-content: right;flex: 1;padding-right: 12px;">
                             <span class="add-favourite"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px;fill:none">
@@ -5147,7 +5432,7 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
                         </div>
                         <div style="font-size: 1rem;
                         line-height: 1.7rem;margin-left: 22px; color: var(--themecolor); ">
-                             Pokemon Master Journeys:</div>
+                             Pokémon Master Journeys:</div>
 
                         <div style="    font-size: 18px;
 margin-top: calc(0.28rem * calc(1 - 0));
@@ -5367,7 +5652,7 @@ Prepare to let 'em rip again as the Beyblade animated saga continues with the la
        line-height: 1.7rem;margin-left: 22px;display: flex;align-items: center;margin-bottom: 16px;">
        <div style="display: flex;align-items: center;font-size: 15px;font-weight: 450px;letter-spacing: .5px;">
         <img src="https://yt3.googleusercontent.com/pK5_z_dptxyLuGllTGH4voHjz6WNTv0vgysrHQtmK6X45fl8g_h1ytu1H-ir1ExvY8uph0MbQA=s176-c-k-c0x00ffffff-no-rj" style="border-radius: 100%;width: 35px;height: 35px;margin-right: 10px;">
-                            The Pokemon Company </div>
+                            The Pokémon Company </div>
 
                         <div style="display: flex;align-items: center;justify-content: right;flex: 1;padding-right: 12px;">
                             <span class="add-favourite"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px;fill:none">
@@ -5381,7 +5666,7 @@ Prepare to let 'em rip again as the Beyblade animated saga continues with the la
                         </div>
                         <div style="font-size: 1rem;
                         line-height: 1.7rem;margin-left: 22px; color: var(--themecolor); ">
-                             Pokemon Movie:</div>
+                             Pokémon Movie:</div>
 
                         <div style="    font-size: 18px;
 margin-top: calc(0.28rem * calc(1 - 0));
@@ -5593,7 +5878,7 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
        line-height: 1.7rem;margin-left: 22px;display: flex;align-items: center;margin-bottom: 16px;">
        <div style="display: flex;align-items: center;font-size: 15px;font-weight: 450px;letter-spacing: .5px;">
         <img src="https://yt3.googleusercontent.com/pK5_z_dptxyLuGllTGH4voHjz6WNTv0vgysrHQtmK6X45fl8g_h1ytu1H-ir1ExvY8uph0MbQA=s176-c-k-c0x00ffffff-no-rj" style="border-radius: 100%;width: 35px;height: 35px;margin-right: 10px;">
-                            The Pokemon Company </div>
+                            The Pokémon Company </div>
 
                         <div style="display: flex;align-items: center;justify-content: right;flex: 1;padding-right: 12px;">
                             <span class="add-favourite"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f63e54" class="w-6 h-6" style="pointer-events: none; width: 22px; height: 22px;margin-right:10px;fill:none">
@@ -5607,7 +5892,7 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
                         </div>
                         <div style="font-size: 1rem;
                         line-height: 1.7rem;margin-left: 22px; color: var(--themecolor); ">
-                                Pokemon Horizons:</div>
+                                Pokémon Horizons:</div>
 
                         <div style="    font-size: 18px;
 margin-top: calc(0.28rem * calc(1 - 0));
@@ -5792,7 +6077,7 @@ margin-right: 0.5rem;
         </div>
         <div
             style="border-radius: 8px;height: 32px;margin: 12px;background: var(--color2);padding: 0 12px;color: var(--color3);vertical-align: middle;font-size: 14px;display:flex;align-items: center;flex: none;">
-            Pokemon
+            Pokémon
         </div>
 
         <div
@@ -6314,8 +6599,8 @@ function showSlidesa(n) {
 
                 {
                     "name": "1.2.3",
-                    "artist": "The Pokemon Company",
-                    "album": "Pokemon journeys",
+                    "artist": "The Pokémon Company",
+                    "album": "Pokémon journeys",
                     "url": "https://drive.google.com/uc?export=download&id=1O68MfpzL5ugAcd20NnSMcRT4IWPTBvLl",
                     "cover_art_url": "https://github.com/Lakshay-7134/Go/blob/main/203bef4b39bd430556e4e764e6160f78.jpg?raw=true"
                 }
