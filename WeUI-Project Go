@@ -1190,7 +1190,7 @@ overflow: hidden;background: #fff;
 
         .sidebar-collapsed .active:hover {
             color: var(--themecolor) !important;
-            background: #f5f5f5 !important;
+            background: rgba(0, 0, 0, 0.05)!important;
         }
 
         .sidebar .flex_menu_container:after {
@@ -1263,13 +1263,13 @@ overflow: hidden;background: #fff;
             background: rgba(0, 0, 0, 0.1) !important;
         }
 
-        .active2 {
-            letter-spacing: .9px;
+        .active2 {border-radius: 32px !important;
+            letter-spacing: .5px;
             font-size: 15px;
-            background: transparent !important;
-            color: var(--themecolor);
+            background: var(--themecolor);
+            color: #fff;
             position: relative;
-            font-weight: 470;
+            font-weight: 450;
 
         }
 
@@ -1291,7 +1291,7 @@ overflow: hidden;background: #fff;
         }
 
         .uppertabbar .active2:hover {
-            background: transparent !important;
+            background: var(--themecolor) !important;
         }
 
         .dark-mode .uppertabbar .active2:hover {
@@ -1307,8 +1307,8 @@ overflow: hidden;background: #fff;
         }
 
 
-        .active2::after {
-            content: '';
+        .active2::after {display: none;
+            content: none;
             margin: 0 auto;
             bottom: 0;
             left: 0;
@@ -1858,122 +1858,7 @@ overflow: hidden;background: #fff;
             display: block;
         }
 
-        ::-webkit-scrollbar {
-            width: 14px;
-            height: 14px;
-        }
-
-        .dark-mode::-webkit-scrollbar {
-            background: #0f0f0f;
-        }
-
-
-
-
-        ::-webkit-scrollbar-thumb {
-            background-color: rgba(0, 0, 0, .5);
-            background-clip: content-box;
-            border: 5px solid transparent;
-            border-radius: 0.625rem;
-        }
-
-
-
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgba(0, 0, 0, .5);
-            background-clip: content-box;
-
-            border: 4px solid transparent;
-            border-radius: 100px;
-        }
-
-        .dark-mode::-webkit-scrollbar-thumb {
-            background-color: hsl(0, 0%, 67%);
-            ;
-            background-clip: content-box;
-            border: 5px solid transparent;
-            border-radius: 0.625rem;
-        }
-
-
-
-
-        .dark-mode::-webkit-scrollbar-thumb:hover {
-            background: hsl(0, 0%, 67%);
-            background-clip: content-box;
-
-            border: 4px solid transparent;
-            border-radius: 100px;
-        }
-
-        html.no-border-radius ::-webkit-scrollbar-thumb {
-            border-radius: 0;
-        }
-
-        ::-webkit-scrollbar-corner {
-            background-color: transparent;
-        }
-
-
-
-        ::-webkit-scrollbar-button:single-button {
-            display: block;
-            background-repeat: no-repeat;
-            border: 0;
-            width: 14px;
-            height: 14px;
-        }
-
-
-
-        ::-webkit-scrollbar-button:single-button:vertical:decrement {
-            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
-            background-size: 8px;
-            background-position: 3px bottom;
-        }
-
-        .dark-mode::-webkit-scrollbar-button:single-button:vertical:decrement {
-            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iI0RERERERCIvPgo8L3N2Zz4K");
-        }
-
-
-        ::-webkit-scrollbar-button:single-button:vertical:increment {
-            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjODg4Ii8+PC9zdmc+");
-            background-size: 8px;
-            background-position: 3px top;
-        }
-
-        .dark-mode::-webkit-scrollbar-button:single-button:vertical:increment {
-            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjREREIi8+PC9zdmc+");
-        }
-
-
-
-        ::-webkit-scrollbar-button:single-button:horizontal {
-            background-size: 4.6px;
-        }
-
-        ::-webkit-scrollbar-button:single-button:horizontal:decrement {
-            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMTZMMTggMC40MTE1NDVMMTggMzEuNTg4NUwwIDE2WiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
-            background-position: right 3px;
-        }
-
-        .dark-mode::-webkit-scrollbar-button:single-button:horizontal:decrement {
-            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMTZMMTggLjQxMnYzMS4xNzdMMCAxNnoiIGZpbGw9IiNEREQiLz48L3N2Zz4=");
-        }
-
-
-
-        ::-webkit-scrollbar-button:single-button:horizontal:increment {
-            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4NUwwIDAuNDExNTQzTDE4IDE2WiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
-            background-position: left 3px;
-        }
-
-        .dark-mode::-webkit-scrollbar-button:single-button:horizontal:increment {
-            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4Vi40MTNMMTggMTZ6IiBmaWxsPSIjREREIi8+PC9zdmc+");
-        }
-
+    
 
         #arrow-holder {
             color: #1d1d1f;
@@ -2138,6 +2023,125 @@ overflow: hidden;background: #fff;
 
         }
 
+        @media screen and (min-width: 859px) {
+            ::-webkit-scrollbar {
+            width: 14px;
+            height: 14px;
+        }
+
+        .dark-mode::-webkit-scrollbar {
+            background: #0f0f0f;
+        }
+
+
+
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, .5);
+            background-clip: content-box;
+            border: 5px solid transparent;
+            border-radius: 0.625rem;
+        }
+
+
+
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 0, 0, .5);
+            background-clip: content-box;
+
+            border: 4px solid transparent;
+            border-radius: 100px;
+        }
+
+        .dark-mode::-webkit-scrollbar-thumb {
+            background-color: hsl(0, 0%, 67%);
+            ;
+            background-clip: content-box;
+            border: 5px solid transparent;
+            border-radius: 0.625rem;
+        }
+
+
+
+
+        .dark-mode::-webkit-scrollbar-thumb:hover {
+            background: hsl(0, 0%, 67%);
+            background-clip: content-box;
+
+            border: 4px solid transparent;
+            border-radius: 100px;
+        }
+
+        html.no-border-radius ::-webkit-scrollbar-thumb {
+            border-radius: 0;
+        }
+
+        ::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }
+
+
+
+        ::-webkit-scrollbar-button:single-button {
+            display: block;
+            background-repeat: no-repeat;
+            border: 0;
+            width: 14px;
+            height: 14px;
+        }
+
+
+
+        ::-webkit-scrollbar-button:single-button:vertical:decrement {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
+            background-size: 8px;
+            background-position: 3px bottom;
+        }
+
+        .dark-mode::-webkit-scrollbar-button:single-button:vertical:decrement {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzMiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDBMMzEuNTg4NSAxOEgwLjQxMTU0M0wxNiAwWiIgZmlsbD0iI0RERERERCIvPgo8L3N2Zz4K");
+        }
+
+
+        ::-webkit-scrollbar-button:single-button:vertical:increment {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjODg4Ii8+PC9zdmc+");
+            background-size: 8px;
+            background-position: 3px top;
+        }
+
+        .dark-mode::-webkit-scrollbar-button:single-button:vertical:increment {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDE4TDMxLjU4OCAwSC40MTNMMTYgMTh6IiBmaWxsPSIjREREIi8+PC9zdmc+");
+        }
+
+
+
+        ::-webkit-scrollbar-button:single-button:horizontal {
+            background-size: 4.6px;
+        }
+
+        ::-webkit-scrollbar-button:single-button:horizontal:decrement {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMTZMMTggMC40MTE1NDVMMTggMzEuNTg4NUwwIDE2WiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
+            background-position: right 3px;
+        }
+
+        .dark-mode::-webkit-scrollbar-button:single-button:horizontal:decrement {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMTZMMTggLjQxMnYzMS4xNzdMMCAxNnoiIGZpbGw9IiNEREQiLz48L3N2Zz4=");
+        }
+
+
+
+        ::-webkit-scrollbar-button:single-button:horizontal:increment {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxOCAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4NUwwIDAuNDExNTQzTDE4IDE2WiIgZmlsbD0iIzg4ODg4OCIvPgo8L3N2Zz4K");
+            background-position: left 3px;
+        }
+
+        .dark-mode::-webkit-scrollbar-button:single-button:horizontal:increment {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE4IDE2TDAgMzEuNTg4Vi40MTNMMTggMTZ6IiBmaWxsPSIjREREIi8+PC9zdmc+");
+        }
+
+            
+        }
         @media only screen and (max-width: 859px) {
             .slideshow::after {
                 content: none;
@@ -4101,7 +4105,7 @@ margin-left: 19px !important;
 
 
             
-            <div style="background: #fff;height: 48px;margin: 20px 12px;border-radius: 12px;line-height: 48px;display: flex;align-items: center;">
+            <div style="background: #fff;height: 48px;margin: 20px 12px;border-radius: 12px;line-height: 48px;display: flex;align-items: center;display: none;">
                 <div style="flex: 1;justify-content: left;display: flex;margin-left: 12px;font-size: 15px;">Change View: <span style="font-size: 13px;font-weight: 500;padding: 0 10px;background: #f5f5f5;height: 34px;margin: auto 5px;line-height: 34px;border-radius: 12px;letter-spacing: .5px;">Grid</span></div>
                 <div style="flex: 1;justify-content: center;display: flex;font-size:15px;">
                 Sort By:<span style="font-size: 13px;font-weight: 500;padding: 0 10px;background: #f5f5f5;height: 34px;margin: auto 5px;line-height: 34px;border-radius: 12px;">Date Modified</span>
@@ -4206,7 +4210,7 @@ margin-left: 19px !important;
                 </div>
             </span>
         </div>
-            <div style="position: absolute;left: 0;right: 0;bottom: 10px;text-align: center;font-size:15px"
+            <div style="position: absolute;left: 0;right: 0;bottom: 15px;text-align: center;font-size:15px"
                 id="pass-recognizer">
 
 
