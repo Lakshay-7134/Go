@@ -2164,7 +2164,7 @@ overflow: hidden;background: #fff;
 
 .mySlides{flex-direction: column-reverse;height: auto !important;overflow: auto;justify-content: space-evenly}
 
-.mySlides video{border-radius: 12px !important;}
+.mySlides video{border-radius: 15px !important;}
             .mini-sidebar-open {
 
                 display: block !important;
@@ -2172,7 +2172,7 @@ overflow: hidden;background: #fff;
 
 
             }
-            .mini-slides-padding{margin-top: 12px;}
+            .mini-slides-padding{margin-top: 18px;}
 
             .previousarrow {
                 margin-top: calc(0.6rem * calc(1 - 0));
