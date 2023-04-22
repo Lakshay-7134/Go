@@ -2169,6 +2169,13 @@ overflow: hidden;background: #fff;
 .trailer-play {
     display: flex !important;
 }
+
+.trailer-play span {
+    border-radius: 100px;
+    height: 70px;
+    width: 70px;
+    background-color: rgba(255, 255, 255, .8);
+}
             .mini-sidebar-open {
 
                 display: block !important;
