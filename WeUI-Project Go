@@ -2172,9 +2172,8 @@ overflow: hidden;background: #fff;
 
 .trailer-play span {
     border-radius: 100px;
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
-    background-color: rgba(255, 255, 255, .6) !important;
+   
+    background-color: rgba(255, 255, 255, .8) !important;
 }
             .mini-sidebar-open {
 
