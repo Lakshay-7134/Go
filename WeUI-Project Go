@@ -2162,9 +2162,9 @@ overflow: hidden;background: #fff;
                 display: none;
             }
 
-.mySlides{flex-direction: column-reverse;height: auto !important;overflow: auto;}
+.mySlides{flex-direction: column-reverse;height: auto !important;overflow: auto;justify-content: space-evenly}
 
-
+.mySlides video{border-radius: 15px !important;}
             .mini-sidebar-open {
 
                 display: block !important;
@@ -2172,6 +2172,7 @@ overflow: hidden;background: #fff;
 
 
             }
+            .mini-slides-padding{margin-top: 12px;}
 
             .previousarrow {
                 margin-top: calc(0.6rem * calc(1 - 0));
@@ -5301,7 +5302,7 @@ padding-bottom: 12px;
             <div class="mySlides" style="display: flex;height: 315px;overflow: hidden;">
 
 
-                <div style="flex: 1;overflow: hidden;">
+                <div style="flex: 1;overflow: hidden;" class="mini-slides-padding">
                     <div
                         style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;">
                         <div style="   
@@ -5414,7 +5415,7 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
             <div class="mySlides" style="display: flex;height: 315px;overflow: hidden;">
 
 
-                <div style="flex: 1;overflow: hidden;">
+                <div style="flex: 1;overflow: hidden;" class="mini-slides-padding">
                     <div
                         style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;">
                         <div style="   
@@ -5535,7 +5536,7 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
             <div class="mySlides" style="display: flex;height: 315px;overflow: hidden;">
 
 
-                <div style="flex: 1;overflow: hidden;">
+                <div style="flex: 1;overflow: hidden;" class="mini-slides-padding">
                     <div
                         style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;">
                         <div style="   
@@ -5648,7 +5649,7 @@ Prepare to let 'em rip again as the Beyblade animated saga continues with the la
             <div class="mySlides" style="display: flex;height: 315px;overflow: hidden;">
 
 
-                <div style="flex: 1;overflow: hidden;">
+                <div style="flex: 1;overflow: hidden;" class="mini-slides-padding">
                     <div
                         style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;">
                         <div style="   
@@ -5763,7 +5764,7 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
             <div class="mySlides" style="display: flex;height: 315px;overflow: hidden;">
 
 
-                <div style="flex: 1;overflow: hidden;">
+                <div style="flex: 1;overflow: hidden;" class="mini-slides-padding">
                     <div
                         style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;">
                         <div style="   
@@ -5874,7 +5875,7 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
             <div class="mySlides" style="display: flex;height: 315px;overflow: hidden;">
 
 
-                <div style="flex: 1;overflow: hidden;">
+                <div style="flex: 1;overflow: hidden;" class="mini-slides-padding">
                     <div
                         style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;">
                         <div style="   
