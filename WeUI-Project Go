@@ -2174,11 +2174,11 @@ overflow: hidden;background: #fff;
             }
 
             .previousarrow {
-                left: 28px;
+                margin-top: calc(0.6rem * calc(1 - 0));
             }
 
             .nextarrow {
-                right: 28px;
+                margin-top: calc(0.6rem * calc(1 - 0));
             }
 
             .menu-icon {
