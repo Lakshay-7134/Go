@@ -2164,7 +2164,7 @@ overflow: hidden;background: #fff;
 
 .mySlides{flex-direction: column-reverse;height: auto !important;overflow: auto;justify-content: space-evenly}
 
-.mySlides video{border-radius: 15px !important;}
+.mySlides video{border-radius: 12px !important;}
             .mini-sidebar-open {
 
                 display: block !important;
