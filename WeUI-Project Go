@@ -2143,6 +2143,7 @@ overflow: hidden;background: #fff;
             
         }
         @media only screen and (max-width: 859px) {
+
             .slideshow::after {
                 content: none;
                 display: none;
@@ -2161,8 +2162,7 @@ overflow: hidden;background: #fff;
                 display: none;
             }
 
-
-
+.mySlides{flex-direction: column-reverse;height: auto !important;overflow: auto;}
 
 
             .mini-sidebar-open {
@@ -2231,9 +2231,9 @@ overflow: hidden;background: #fff;
             }
 
             .slideshow {
-                padding: 6px 16px;
+                padding: 6px 0;
                 margin-top: 16px;
-                margin-left: 0;
+                margin-left: 0;margin-bottom: 40px;
             }
 
 
