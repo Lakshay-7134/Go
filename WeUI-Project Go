@@ -2143,7 +2143,7 @@ overflow: hidden;background: #fff;
             
         }
         @media only screen and (max-width: 859px) {
-
+.contentarea2{background: #f9f9f9 !important;}
             .slideshow::after {
                 content: none;
                 display: none;
