@@ -2421,7 +2421,7 @@ overflow: hidden;background: #fff;
 
                         <div
                             style=" border-radius: 0.375rem;width: 36px;
-                        height: 36px;background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGI_cDvFufG0eFqNUEbOjeP8fJ5qHkiD6Pug&usqp=CAU');  background-position: center center;background-size: cover;">
+                        height: 36px;background: url('https://m.media-amazon.com/images/I/815LSWir+OL.jpg');  background-position: top center;background-size: cover;">
 
                         </div>
 
@@ -2457,10 +2457,10 @@ overflow: hidden;background: #fff;
                     <div class="dropitem2">
 
                         <div
-                            style=" border-radius: 0.375rem;width: 36px;
-                        height: 36px;background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-mHSLpme6XRAIeQL257O3wiFe13ZR42Bc8g&usqp=CAU');  background-position: center center;background-size: cover;">
+                        style=" border-radius: 0.375rem;width: 36px;
+                    height: 36px;background: url('https://depor.com/resizer/2LNFE4FexP84k6ETmZ4fd_TPjG4=/1200x675/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/KIE2SXNV5VDAZKKQWZ6E5MFOTY.jpg');  background-position: center center;background-size: cover;">
 
-                        </div>
+                    </div>
 
                         <div
                             style="padding-left: 12px;flex: 1;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;letter-spacing: .5px;">
@@ -2479,7 +2479,7 @@ overflow: hidden;background: #fff;
 
                         <div
                             style=" border-radius: 0.375rem;width: 36px;
-                        height: 36px;background: url('https://www.whats-on-netflix.com/wp-content/uploads/2021/07/pokemon-master-journeys-the-series-netflix-september-2021.jpg');  background-position: center center;background-size: cover;">
+                        height: 36px;background: url('https://gizmostory.com/wp-content/uploads/2022/01/Pokemon-Master-Journeys-Plugged-In.jpg');  background-position: center center;background-size: cover;">
 
                         </div>
 
@@ -2500,7 +2500,7 @@ overflow: hidden;background: #fff;
 
                         <div
                             style=" border-radius: 0.375rem;width: 36px;
-                        height: 36px;background: url('https://i.pinimg.com/originals/ed/e0/36/ede036ffb3edfbee4a7a16292fd076cc.jpg');  background-position: center center;background-size: cover;">
+                        height: 36px;background: url('https://c4.wallpaperflare.com/wallpaper/151/420/907/movie-dragon-ball-super-broly-gogeta-dragon-ball-super-saiyan-blue-hd-wallpaper-preview.jpg');  background-position: center center;background-size: cover;">
 
                         </div>
 
@@ -2521,7 +2521,7 @@ overflow: hidden;background: #fff;
 
                         <div
                             style=" border-radius: 0.375rem;width: 36px;
-                        height: 36px;background: url('https://www.whats-on-netflix.com/wp-content/uploads/2022/05/pokemon-ultimate-journeys-coming-to-netflix-in-2022.webp');  background-position: center center;background-size: cover;">
+                        height: 36px;background: url('https://variety.com/wp-content/uploads/2022/12/Screen-Shot-2022-12-16-at-9.31.44-AM-e1671201592808.png?w=681&h=383&crop=1');  background-position: center center;background-size: cover;">
 
                         </div>
 
@@ -2542,7 +2542,7 @@ overflow: hidden;background: #fff;
 
                         <div
                             style=" border-radius: 0.375rem;width: 36px;
-                        height: 36px;background: url('https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/09/19/740522737.jpg');  background-position: center center;background-size: cover;">
+                        height: 36px;background: url('https://p325k7wa.twic.pics/high/dragon-ball/super-dragonball-heroes/00-page-setup/sdbh_game-thumbnail.jpg?twic=v1/resize=760/step=10/quality=80');  background-position: center center;background-size: cover;">
 
                         </div>
 
@@ -4160,7 +4160,7 @@ margin-left: 19px !important;
         appearance: none;
         z-index: 500;min-width:278px;
        
-        line-height: 3.5rem;background: #f9f9f9;border-radius: 12px 0 0 12px;width: 35%;
+        line-height: 3.5rem;background: #f9f9f9;border-radius: 50px 0 0 50px;width: 35%;
         
         
         
@@ -4180,7 +4180,7 @@ margin-left: 19px !important;
         -webkit-appearance: none;
         appearance: none;
         z-index: 500;
-        background: #f9f9f9;border-radius: 0 12px 12px 0;width: 3.5rem;
+        background: #f9f9f9;border-radius: 0 50px 50px 0;width: 3.5rem;
         
         margin-left: 0;
         
@@ -4200,7 +4200,7 @@ margin-left: 19px !important;
         -webkit-appearance: none;
         appearance: none;
         z-index: 500;
-        position:absolute;background: #f9f9f9;border-radius: 0 12px 12px 0;width: 3.5rem;
+        position:absolute;background: #f9f9f9;border-radius: 0 50px 50px 0;width: 3.5rem;
         
       
         
