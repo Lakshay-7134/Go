@@ -506,7 +506,7 @@
             position: absolute;
             background: hsla(0, 0%, 100%, .8);
             backdrop-filter: blur(40px);
-width: 275px;
+width: 260px;
 
 
 
@@ -5211,8 +5211,8 @@ margin-left: 19px !important;
 
         </div>
 
-<spa class="topnav-hover img-add"  style="position: fixed;right: 30px;bottom: 30px;background: var(--themecolor);padding: 0;width: 60px;height: 60px;color: #fff; " onclick="openGalleryEditor()">
-        <span style=" display: flex;align-items: center;justify-content: center;height: 60px;width: 60px;position: relative;border-radius: 100%;padding: 10px;"
+<spa class="topnav-hover img-add"  style="position: fixed;right: 30px;bottom: 30px;background: var(--themecolor);padding: 0;width: 58px;height: 58px;color: #fff; " onclick="openGalleryEditor()">
+        <span style=" display: flex;align-items: center;justify-content: center;height: 58px;width: 58px;position: relative;border-radius: 100%;padding: 10px;"
            >
 
 
