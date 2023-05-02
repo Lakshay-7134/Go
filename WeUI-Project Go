@@ -705,7 +705,7 @@ overflow: hidden;background: #fff;
 
 
         .trailer-play {
-            display: none;
+            display: none;display: flex;
         }
 
         .trailer-container:hover .trailer-play {
@@ -1885,7 +1885,7 @@ overflow: hidden;background: #fff;
 #arrow-holder svg{z-index: 15;}
         .arrow-holder-3:hover::after {
             z-index: 10;
-            opacity: 0.4;
+            opacity: 0.7;
             content: "";
             position: absolute;
             width: 3rem;
@@ -1899,7 +1899,7 @@ overflow: hidden;background: #fff;
 
         .arrow-holder-2:hover::after {
             z-index: 10;
-            opacity: 0.4;
+            opacity: 0.7;
             content: "";
             position: absolute;
             width: 3rem;
@@ -3046,6 +3046,24 @@ vertical-align: middle;color: #fff;font-size: 16px;font-weight: 500;
 
         </div>
 
+        <div class="dropitem" style="margin-bottom:0" onclick="opensettings()">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-settings" style="margin-left: 30px;">
+                    <circle cx="12" cy="12" r="3" />
+                    <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                </svg>
+            </div>
+
+            <div
+                style="padding-left: 25px;font-family: MiSans, system-ui, sans-serif;letter-spacing: .1px;font-weight: 500;font-size: 14px;">
+                Settings</div>
+
+
+
+        </div>
         <div class="dropitem" style="margin-bottom:0" onclick="opensettings()">
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
@@ -4643,6 +4661,140 @@ margin-left: 19px !important;
 </div>
     </div>
 
+
+
+    <div style="position:fixed;top:0;bottom:0;left:0;right: 0;background: hsla(0, 0%, 100%, .8);backdrop-filter: blur(40px);   overflow: hidden;z-index: 10000000000000;display: none;" id="gallery-slideshow">
+
+        <div style="width: 100%;height: 100%;display: flex;flex-direction: column;padding-left: 16px;padding-right: 16px;position: absolute;">
+        <div style="height:55px;align-items: center;justify-content: center;flex-direction: row;display: flex;">
+           
+           <div style="align-items: center;justify-content: left;display: flex;flex: 1;">
+            <div class="topnav-hover " style="padding: 10px;">
+    
+    
+    
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="22" height="22"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                  </svg>
+                  
+            </div>
+<span style="margin-left: 3px;font-size: 15px;">
+            Image: 1/72</span>
+        </div>
+
+          <div style="align-items: center;justify-content: center;display: flex;flex: 1;">
+            <div class="topnav-hover " style="padding: 10px;">
+    
+    
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3V15" />
+                  </svg>
+                  
+                  
+            </div>
+         
+
+            
+              
+            <div class="topnav-hover " style="padding: 10px;">
+    
+    
+    
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3" >
+                    <path d="M12 20h9"></path>
+                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                </svg>
+            </div>
+            <div class="topnav-hover " style="padding: 10px;margin-left: 3px;">
+    
+    
+    
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2">
+                    <polyline points="3 6 5 6 21 6"></polyline>
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                </svg>
+                  
+            </div>
+            <div class="topnav-hover " style="padding: 10px;margin-left: 3px;">
+    
+    
+    
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                  </svg>
+                  
+            </div>
+
+              
+            
+            <div class="topnav-hover "  style="padding: 10px;margin-left: 3px;">
+    
+    
+    
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                  </svg>
+                  
+                  
+            </div>
+
+
+           
+         
+              
+    
+        </div>
+        <div style="align-items: center;justify-content: right;display: flex;flex: 1;">
+        
+            <div  style="
+            height: 36px;border-radius: 6px;
+    margin: 12px;
+    padding: 0 15px;
+    margin-left: 24px;
+    vertical-align: middle;
+    font-size: 14px;
+    display: flex;font-weight: 410;letter-spacing: .5px;
+    align-items: center;color: #fff;
+    flex: none;background: var(--themecolor);
+">
+    
+    
+    
+               
+
+               Detail View
+                  
+            </div>
+          
+           
+              
+        </div>
+    
+        </div>
+    
+        <div style="flex: 1;align-items: center;justify-content: center;overflow: hidden;display: flex;">
+        
+        <img src="https://i.pinimg.com/474x/34/78/b4/3478b4351a160a51a4c497d3b48c1373.jpg" style="max-height: 100%;max-width: 100%;aspect-ratio: auto;flex: none;">
+        
+        <div class="dot-container scrollbar-hidden" style="align-items: center;justify-content: center;display: flex;height: 32px;position: absolute;margin-left:auto ;margin-right: auto;bottom: 28px;background: hsla(0, 0%, 100%, .8);backdrop-filter: blur(40px);width: 80px;border-radius: 32px; font-size: 14.5px;font-weight: 400;">
+            
+            1/75 
+            
+            
+                </div>
+        </div>
+    
+    
+        
+        
+        </div>
+    </div>
+
+
+
+
     <div id="Library" class="contentarea2" style="z-index: 200;">
 
 
@@ -5521,12 +5673,12 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
                     <div style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;" class="trailer-container">
 
                         <video
-                            poster="https://i.ytimg.com/vi/CbJcd1iVq5E/maxresdefault.jpg" style="border-radius: 6px;">
+                            poster="https://i.ytimg.com/vi/CbJcd1iVq5E/maxresdefault.jpg" style="border-radius: 12px;">
                             <source
-                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1683119415&Signature=u67RjAMQeuzueoLEaE13SCewNmNbVDag-68G5Xlwh-PBClMxcDICIZ1nPhX5UItaUj-yeNhKv1wRj~0gGPPXyGoWww8ENBekoke42CCAWVl63betm~zwaspTGlKxbOQoQV7zeXWBqpeVZJwszwegaDjapKl8ESpIeAZhZY3n-Znx~2Uwb5jV7Q69Y0YiyESt59TwIlymvkoQtx5rL5SslgpYsjnltufcA5HmhELda~TVRzl1SG~hwTthIGn8p5Clp4aWEr6G7QQXBA0n~r1CrJ4eIQv7NoxfNyT7AjVCDnxuTsm9k~CP8Yr0GBMWgzKt2x-x91TA7an0~pDE02RqKA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
                                 type="video/mp4" />
                             <source
-                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
+                                src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1683119415&Signature=u67RjAMQeuzueoLEaE13SCewNmNbVDag-68G5Xlwh-PBClMxcDICIZ1nPhX5UItaUj-yeNhKv1wRj~0gGPPXyGoWww8ENBekoke42CCAWVl63betm~zwaspTGlKxbOQoQV7zeXWBqpeVZJwszwegaDjapKl8ESpIeAZhZY3n-Znx~2Uwb5jV7Q69Y0YiyESt59TwIlymvkoQtx5rL5SslgpYsjnltufcA5HmhELda~TVRzl1SG~hwTthIGn8p5Clp4aWEr6G7QQXBA0n~r1CrJ4eIQv7NoxfNyT7AjVCDnxuTsm9k~CP8Yr0GBMWgzKt2x-x91TA7an0~pDE02RqKA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
                                 type="video/webm" />
 
 
@@ -5637,7 +5789,7 @@ Across the Hisui Region, many grow up believing people and Pokémon cannot live 
                     <div style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;" class="trailer-container">
 
                         <video
-                            poster="https://i.ytimg.com/vi/OLpFe1_qOgI/maxresdefault.jpg" style="border-radius: 6px;">
+                            poster="https://i.ytimg.com/vi/OLpFe1_qOgI/maxresdefault.jpg" style="border-radius: 12px;">
                             <source
                                 src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
                                 type="video/mp4" />
@@ -5759,7 +5911,7 @@ Prepare to let 'em rip again as the Beyblade animated saga continues with the la
                     <div style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;" class="trailer-container">
 
                         <video
-                            poster="https://i.ytimg.com/vi/ZUT8W0erisU/maxresdefault.jpg" style="border-radius: 6px;">
+                            poster="https://i.ytimg.com/vi/ZUT8W0erisU/maxresdefault.jpg" style="border-radius: 12px;">
                             <source
                                 src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
                                 type="video/mp4" />
@@ -5871,7 +6023,7 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
                     <div style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;" class="trailer-container">
 
                         <video
-                            poster="https://i.ytimg.com/vi/hJmACI_WF48/maxresdefault.jpg" style="border-radius: 6px;">
+                            poster="https://i.ytimg.com/vi/hJmACI_WF48/maxresdefault.jpg" style="border-radius: 12px;">
                             <source
                                 src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
                                 type="video/mp4" />
@@ -5985,7 +6137,7 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
                     <div style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;" class="trailer-container">
 
                         <video
-                            poster="https://imgmedia.larepublica.pe/640x377/larepublica/original/2021/10/07/615f724066f28741d7561e39.webp" style="border-radius: 6px;">
+                            poster="https://imgmedia.larepublica.pe/640x377/larepublica/original/2021/10/07/615f724066f28741d7561e39.webp" style="border-radius: 12px;">
                             <source
                                 src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
                                 type="video/mp4" />
@@ -6096,7 +6248,7 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
                     <div style="display: flex;flex-direction: column;justify-content: center;height: 100%;width: 100%;position: relative;" class="trailer-container">
 
                         <video 
-                            poster="https://i.ytimg.com/vi/_c_hMehCORQ/maxresdefault.jpg" style="border-radius: 6px;" >
+                            poster="https://i.ytimg.com/vi/_c_hMehCORQ/maxresdefault.jpg" style="border-radius: 12px;" >
                             <source
                                 src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1679660957&Signature=LJISx5s9cHy-cwOa6pFP7fzMKEvpI8TbrS7DOJnAkJQi9L5uBmwnnevG~5TjthuJOlgw-m5brRKrEaDZGrmRQmZs600obWtPxAahHkL2VeNoX8u~4uubV4NjLoXje20Hk9q35aAGAlKHTDRjw~kQu5ZuFMT2Rrzh0IAYooT78laL9VXuisULMrxtbydIs4N7rgmGvw0hJzZGI1gQEjLjpm7K-jycE45Owf1Q-YJTStzpU4urWvNuq7zkV0oDdgOpQnjiEtZTaArbYl~VJwsWC9k6AGwHo-wSWdxJIJGIc5K3e8frI0DsGlLDyDoJsUJnWuSiK9uGuIu4cHS4kn4lfg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"
                                 type="video/mp4" />
