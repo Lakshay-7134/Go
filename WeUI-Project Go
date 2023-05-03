@@ -4729,8 +4729,8 @@ margin-left: 19px !important;
                   </svg>
                   
             </div>
-<span style="margin-left: 3px;font-size: 14.5px;letter-spacing: .5px;">
-            Pokémon Movie: Secrets of the Jungle</span>
+<span style="margin-left: 3px;font-size: 14.5px;letter-spacing: .5px;" id="trailer-name">
+            </span>
         </div>
 
         
@@ -7118,6 +7118,12 @@ let slideIndexc = 1;
           slides[slideIndexc-1].style.display = "initial";  
           document.getElementById('dotsc').innerText = slideIndexc + "/" + slides.length;
          
+if(slideIndexc == "1"){document.getElementById("trailer-name").innerText = "Pokémon Movie: Secrets of the jungle"}
+else if(slideIndexc == "2") {document.getElementById("trailer-name").innerText = "Pokémon Movie: The Power of Us"}
+else if(slideIndexc == "3") {document.getElementById("trailer-name").innerText = "Pokémon Horizons: The Series"}
+
+else{document.getElementById("trailer-name").innerText = "Error"}
+          
         }
         
 
