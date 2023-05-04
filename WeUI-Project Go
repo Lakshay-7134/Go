@@ -1438,8 +1438,12 @@ overflow: hidden;background: #fff;
         }
 
 
+.mySlidesc .plyr__control--overlaid {
+    -webkit-appearance: button;
+    background-color: var(--themecolor);
+    background-image: none;}
 
-
+  .mySlidesc  .plyr__control--forward{border-radius: 4px;}
         .uppertabbar .tabbar-shadow-right::after {
             background: linear-gradient(to left, rgba(255, 255, 255, 0.98) 20%, rgba(255, 255, 255, 0) 80%);
             content: "";
@@ -4782,7 +4786,7 @@ margin-left: 19px !important;
 
 <video controls data-poster="https://i.ytimg.com/vi/CbJcd1iVq5E/maxresdefault.jpg" style="max-height: 100%;max-width: 100%;aspect-ratio: auto;flex: none;" class="vid1">
     <!-- Video files -->
-    <source src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1683217861&Signature=SJYcDu8HF7lZryHOZ8b9m8y-RItXQtRV1jxuZ3EbSBvfaKaKiSwe4GbR2xGcLb2nzgtz9WAwriNQLdef4EurmNGeRHiFy7KAx5J9-Gw2WLWUmzGU9KI4u~6NMnFaRT-8sIlZICappw7E-19muBpgaE1eP6KJHTaQmR3WRmok4Y4YsZY1nEM66lPn5isghbXFWQGZW2ps0Xg52qzZ3Jf4fgTVCD6mypZ0vb4eQGx68KGtGvmTrXXFccYo9HmUneSUF78U5-83dyThFdwY98av6rkfuJRgmthZpY6Qh2gyA6lfx9u9WAYBIqz~fABJVSQ1IZU0Oj86kf5wYHdpl5g0Ng__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/mp4" size="576" />
+    <source src="https://imdb-video.media-imdb.com/vi1908261657/1434659607842-pgv4ql-1631785822744.mp4?Expires=1683304265&Signature=ENjJQlu-XxTWMTsEdXF1kAQNGWXkuvHBWomLfmSW3gVFTn6DV7Ykxt9U841PviiLo9JDXH8x4DqdgaRj9aYLzzk5gO-fOHQ5YqaKDLIDnohn3O~OcZn5TuyL10Wd81mKD299v2iiXVJUqiaex8RhrZDBlfAHzG059SdQzlr5TR1~ht1FSIprkAGkCNeajnh9N2zov2WQapWcjg3N6eZrdn4icHsLNIUiv5ELMJgMG8rcDJyoE6U54Wlj~wudfJ1tckY45LWlIpOYx3oFYutsecm~14iEUYyq5McFBir0I-hcuwogycOqDbyLjRVVbQyjJiTvCe6Y-DpSzwF8pGefFw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/mp4" size="576" />
 
     <!-- Caption files -->
     <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default />
@@ -4792,31 +4796,84 @@ margin-left: 19px !important;
 </div>
 
 
-<div  class="mySlidesc">
+  
 
-<video controls data-poster="https://i.ytimg.com/vi/hJmACI_WF48/maxresdefault.jpg" style="max-height: 100%;max-width: 100%;aspect-ratio: auto;flex: none;" class="vid2">
-    <!-- Video files -->
-    <source src="https://imdb-video.media-imdb.com/vi401127961/1434659607842-pgv4ql-1564616968539.mp4?Expires=1683218796&Signature=uO4rTZII84BR~pd-s0VWyiKMmjrr356FbhHDwMt7WHDKw87C6pNEYKAqOHlRYOyqbl9t3N6KALYNZ5q0UkPTCE9UzKuc5e4vCP3OBKkwB4UM76Pqv5vC8qPGWPr7RmFpsscmeRGV1dc2QFe0Gr3Qau8AXO4u2GBOed2Lruh6lzPBd80ysqgibTqdvFJYmPhiMS04Abv5Syu7ehVvvQb5LEWWpt2bHZxAClWNtQ9xWLBUlEnyFMOiqQf2~wiyG7zznCGH1FZYpO0DFe1YWeojkB14No7NgjoQCiH-pfdg0ghdbehxHUxOCvBArFI0YhKV0nQCjoQVdy5q82~ebrCNYg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/mp4" size="576" />
 
-    <!-- Caption files -->
-    <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default />
-    
+ <div  class="mySlidesc" style="height: 100%;width: 100%;">
 
-  </video>
+   <div style="width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;" >
+<div style="width: 100%;max-height: 100%;flex: none;">
+    <div style="max-width: 854px;margin: 0 auto;height: auto;" class="vid2">
+<iframe data-poster="https://i.ytimg.com/vi/OLpFe1_qOgI/maxresdefault.jpg" src="https://youtu.be/OLpFe1_qOgI"   title="BEYBLADE BURST QUADSTRIKE Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+   
+</div>
 
 </div>
-    <div  class="mySlidesc">
-      <video controls data-poster="https://imgmedia.larepublica.pe/640x377/larepublica/original/2021/10/07/615f724066f28741d7561e39.webp" style="max-height: 100%;max-width: 100%;aspect-ratio: auto;flex: none;" class="vid3">
-    <!-- Video files -->
-    <source src="https://imdb-video.media-imdb.com/vi2480587545/1434659607842-pgv4ql-1638453892403.mp4?Expires=1683276001&Signature=UbapoJK8TlywEIvgkhTcCk~fK5Vo-NfXY-XG~~aaJe5sFTYPCYI~lFfwPw1OJQFSl1VXR1mk7pzQ8XY14NABVGnbheF7G5-UObLCTanDXWQXOPMFgNj~y7v1GdqUAeGI6919czCatyXcxecx5TvmpGk~h2-lDGNvaah-pUyWQW-Mar0lxec1A9SP9FZO6wJptIOIfO3tBXSVsicph6ntGmw9PUutUIzgql2NgGvrXlLFhQy2dDZ63nCxhnSVqOVEO4heqG4LxgtJxOMaIMjRR0Rk9zw~gqGF9EP1eGY9olKTlBjnQXX7xU-Ee84sRYo47ifrAkGppHyaAbia1dySNQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/mp4" size="576" />
-
-    <!-- Caption files -->
-    <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default />
-    
-
-  </video>
+</div>
 
 </div>
+
+
+
+
+  <div  class="mySlidesc" style="height: 100%;width: 100%;">
+
+   <div style="width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;" >
+<div style="width: 100%;max-height: 100%;flex: none;">
+    <div style="max-width: 854px;margin: 0 auto;height: auto;" class="vid3">
+<iframe data-poster="https://i.ytimg.com/vi/ZUT8W0erisU/maxresdefault.jpg" src="https://www.youtube.com/embed/xjFQsmXbed0"   title="BEYBLADE BURST QUADSTRIKE Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+</div>
+</div>
+
+</div>
+
+  <div  class="mySlidesc" style="height: 100%;width: 100%;">
+
+   <div style="width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;" >
+<div style="width: 100%;max-height: 100%;flex: none;">
+    <div style="max-width: 854px;margin: 0 auto;height: auto;" class="vid4">
+<iframe data-poster="https://i.ytimg.com/vi/hJmACI_WF48/maxresdefault.jpg" src="https://youtu.be/DNmOnhtDyAo"   title="BEYBLADE BURST QUADSTRIKE Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+</div>
+</div>
+
+</div>
+
+
+ <div  class="mySlidesc" style="height: 100%;width: 100%;">
+
+   <div style="width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;" >
+<div style="width: 100%;max-height: 100%;flex: none;">
+    <div style="max-width: 854px;margin: 0 auto;height: auto;" class="vid5">
+<iframe data-poster="https://imgmedia.larepublica.pe/640x377/larepublica/original/2021/10/07/615f724066f28741d7561e39.webp" src="https://youtu.be/EGIkuEnfHn4"   title="BEYBLADE BURST QUADSTRIKE Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+</div>
+</div>
+
+</div>
+
+  
+ <div  class="mySlidesc" style="height: 100%;width: 100%;">
+
+   <div style="width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;" >
+<div style="width: 100%;max-height: 100%;flex: none;">
+    <div style="max-width: 854px;margin: 0 auto;height: auto;" class="vid6">
+<iframe data-poster="https://i.ytimg.com/vi/_c_hMehCORQ/maxresdefault.jpg" src="https://youtu.be/_KdHc6Pi9nE"   title="BEYBLADE BURST QUADSTRIKE Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+</div>
+</div>
+
+</div>
+
+
+
+
+
     
         
         
@@ -6033,7 +6090,7 @@ Across the Hisui Region, many grow up believing people and Pokémon cannot live 
 
                         </video>
                         <span style="border-radius: 6px;position: absolute;top: 0;left: 0;right: 0;bottom: 0;align-items: center;justify-content: center;
-                        background: transparent;" class="cursor-pointer button trailer-play" onclick="openTrailerSlideshow()">
+                        background: transparent;" class="cursor-pointer button trailer-play" onclick="openTrailerSlideshow(), currentSlidec(2)">
                         <span style="border-radius: 100px;height: 80px;width: 80px;background-color: rgba(255, 255, 255, .5);display: flex;align-items: center;justify-content: center;">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(7, 48, 66);
                                                     " viewBox="0 0 24 24" stroke-width="1.5" stroke="rgb(7, 48, 66);
@@ -6157,7 +6214,7 @@ Prepare to let 'em rip again as the Beyblade animated saga continues with the la
 
 
                         <span style="border-radius: 6px;position: absolute;top: 0;left: 0;right: 0;bottom: 0;align-items: center;justify-content: center;
-                        background: transparent;" class="cursor-pointer button trailer-play" onclick="openTrailerSlideshow()">
+                        background: transparent;" class="cursor-pointer button trailer-play" onclick="openTrailerSlideshow(), currentSlidec(3)">
                         <span style="border-radius: 100px;height: 80px;width: 80px;background-color: rgba(255, 255, 255, .5);display: flex;align-items: center;justify-content: center;">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(7, 48, 66);
                                                     " viewBox="0 0 24 24" stroke-width="1.5" stroke="rgb(7, 48, 66);
@@ -6267,7 +6324,7 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
 
                         </video>
                         <span style="border-radius: 6px;position: absolute;top: 0;left: 0;right: 0;bottom: 0;align-items: center;justify-content: center;
-                        background: transparent;" class="cursor-pointer button trailer-play" onclick="openTrailerSlideshow(), currentSlidec(2)">
+                        background: transparent;" class="cursor-pointer button trailer-play" onclick="openTrailerSlideshow(), currentSlidec(4)">
                         <span style="border-radius: 100px;height: 80px;width: 80px;background-color: rgba(255, 255, 255, .5);display: flex;align-items: center;justify-content: center;">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(7, 48, 66);
                                                     " viewBox="0 0 24 24" stroke-width="1.5" stroke="rgb(7, 48, 66);
@@ -6382,7 +6439,7 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
                         </video>
 
                         <span style="border-radius: 6px;position: absolute;top: 0;left: 0;right: 0;bottom: 0;align-items: center;justify-content: center;
-                        background: transparent;" class="cursor-pointer button trailer-play" onclick="openTrailerSlideshow(), currentSlidec(3)">
+                        background: transparent;" class="cursor-pointer button trailer-play" onclick="openTrailerSlideshow(), currentSlidec(5)">
                         <span style="border-radius: 100px;height: 80px;width: 80px;background-color: rgba(255, 255, 255, .5);display: flex;align-items: center;justify-content: center;">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(7, 48, 66);
                                                     " viewBox="0 0 24 24" stroke-width="1.5" stroke="rgb(7, 48, 66);
@@ -6493,7 +6550,7 @@ margin-left: 22px;margin-bottom: 36px;padding-right: 15px;line-clamp: 2;display:
                         </video>
                         
                         <span style="border-radius: 6px;position: absolute;top: 0;left: 0;right: 0;bottom: 0;align-items: center;justify-content: center;
-                        background: transparent;" class="cursor-pointer button trailer-play" onclick="openTrailerSlideshow()">
+                        background: transparent;" class="cursor-pointer button trailer-play" onclick="openTrailerSlideshow(), currentSlidec(6)">
                         <span style="border-radius: 100px;height: 80px;width: 80px;padding: 6px;background-color: rgba(255, 255, 255, .5);display: flex;align-items: center;justify-content: center;">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(7, 48, 66);
                                                     " viewBox="0 0 24 24" stroke-width="1.5" stroke="rgb(7, 48, 66);
@@ -7136,9 +7193,12 @@ let slideIndexc = 1;
           document.getElementById('dotsc').innerText = slideIndexc + "/" + slides.length;
          
 if(slideIndexc == "1"){document.getElementById("trailer-name").innerText = "Pokémon Movie: Secrets of the jungle"}
-else if(slideIndexc == "2") {document.getElementById("trailer-name").innerText = "Pokémon Movie: The Power of Us"}
-else if(slideIndexc == "3") {document.getElementById("trailer-name").innerText = "Pokémon Horizons: The Series"}
+else if(slideIndexc == "2") {document.getElementById("trailer-name").innerText = "Pokémon: Hisuian Snow"}
+else if(slideIndexc == "3") {document.getElementById("trailer-name").innerText = "Beyblade Burst: Quadstrike"}
+else if(slideIndexc == "4") {document.getElementById("trailer-name").innerText = "Pokémon Movie: The Power of Us"}
 
+else if(slideIndexc == "5") {document.getElementById("trailer-name").innerText = "Dragon Ball Super: Super Hero"}
+else if(slideIndexc == "6") {document.getElementById("trailer-name").innerText = "Pokémon Horizons: The Series"}
 else{document.getElementById("trailer-name").innerText = "Error"}
           
         }
@@ -7254,7 +7314,7 @@ else{document.getElementById("trailer-name").innerText = "Error"}
     //'fast-forward', // Fast forward by the seek time (default 10 seconds)
     'progress', // The progress bar and scrubber for playback and buffering
     'current-time', // The current time of playback
-  
+ 
     'duration', // The full duration of the media
     'mute', // Toggle mute
     'volume', // Volume control
@@ -7269,7 +7329,9 @@ else{document.getElementById("trailer-name").innerText = "Error"}
   const player = new Plyr('.vid1',{controls});
   const player2 = new Plyr('.vid2',{controls});
 const player3 = new Plyr('.vid3',{controls});
-
+const player4 = new Plyr('.vid4',{controls});
+  const player5 = new Plyr('.vid5',{controls});
+const player6 = new Plyr('.vid6',{controls});
 
 </script>
 
