@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/png" sizes="16x16"
+    href="https://cdn-icons-png.flaticon.com/512/3789/3789765.png">
+    
+    
+<title>Happy Birthday</title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=Gaegu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Yuji+Boku&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fcc7d0;
+}
+
+.card {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  width: 633px;
+  height: 400px;
+  transition: 1s;
+  transform: translate(-40%, -40%);
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+}
+
+.card:hover {
+  transform: translate(-40%, -40%) rotate(5deg);
+}
+
+
+
+.card:hover .cover {
+  transform: rotateY(-160deg);
+}
+
+
+.cover {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 50.2%;
+  z-index: 1;
+  transform-origin: left;
+  transition: 2s;
+border-radius: 0 22px 22px 0;
+overflow: hidden;
+ 
+}
+.cover-front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("https://i.ibb.co/tx5DBHc/bday-card-2.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.inside {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  
+  border-radius: 0 22px 22px 0;
+  overflow: hidden;
+  background: #ffefef;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  box-shadow: 1px 5px 20px #e3a8b2;
+
+}
+
+.inside h1 {
+  position: absolute;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 10px;
+  color: #989898;
+  transform: translateY(-30px);
+}
+
+.inside p {
+  position: absolute;
+  line-height: 13px;
+  transform: rotate(-10deg);
+  padding: 0 20px 0 20px;
+  font-family: "Gaegu", cursive;
+}
+
+#message {
+  margin-top: 130px;
+}
+
+.signature {
+  margin-top: 200px;
+  right: 20px;
+  text-align: right;
+}
+@media (max-width: 600px) {
+  .inside p {
+    font-size: 8px;
+  }
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<div class="card">
+
+
+    <div class="cover">
+        <div class="cover-front">
+        </div>
+      </div>
+
+      <div class="inside">
+        <h1>HAPPY BIRTHDAY!</h1>
+        <p id="message">
+            Forget the past; look forward to the future, for the best things are yet to come.
+        </p>
+        <p class="signature">&#10084 Love, Sender</p>
+      </div>
+
+</div>
+
+</body>
+</html>
