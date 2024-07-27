@@ -1,0 +1,567 @@
+<html>
+    <head></head>
+    <body style="background: url('https://images2.alphacoders.com/132/1323443.jpg');">
+      <style> 
+      @import url("https://font.sec.miui.com/font/css?family=MiSans:300,450,500,650:Chinese_Simplify,Latin,Chinese_Traditional&display=swap");
+
+      </style>
+
+        <div style="z-index: 1000;position: fixed;top: 0;bottom: 0;left: 0;backdrop-filter: blur(50px);right: 0;overflow-y: scroll;overflow-x: hidden;background: rgba(255, 255, 255, 5%);">
+            <div style="display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-top: 50px;">
+            
+            
+            <style>
+                
+            .control-center-widget {
+              
+              height: 600px;
+              border-radius: 20px;
+            
+              padding: 20px 20px 20px 20px;
+              position: relative;
+            }
+            .control-center-widget .content-text {
+              font-size: 20px;
+              text-align: center;
+              font-weight: bold;
+              color: #001f54;
+            }
+            .control-center-widget .control-center {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 16px 16px;
+              place-items: center;
+              margin-top: 30px;
+              opacity: 0.82;
+            }
+            .control-center-widget .control-center .network {
+                background: rgb(0, 0, 0, 60%);
+                -webkit-backdrop-filter: blur(25px);
+                backdrop-filter: blur(25px);
+              width: 160px;
+              height: 160px;
+              border-radius: 32px;
+              cursor: pointer;
+            }
+            .control-center-widget .control-center .music {
+              background: rgb(0, 0, 0, 60%);
+                -webkit-backdrop-filter: blur(25px);
+                backdrop-filter: blur(25px);
+              width: 160px;
+              height: 160px;
+              cursor: pointer;
+              border-radius: 32px;
+            }
+            .control-center-widget .control-center .screen-modes {
+              display: flex;
+              width: 160px;
+              height: 160px;
+              justify-content: center;
+              align-items: center;
+              gap: 16px;
+              flex-direction: column;
+            }
+            .control-center-widget .control-center .screen-modes .rotate-nightmode {
+              display: flex;
+            
+              height: 50%;
+              gap: 10px;
+            }
+            .control-center-widget .control-center .screen-modes .rotate-nightmode > * {
+              width: 72px;
+              height: 72px;
+              background: rgb(0, 0, 0, 60%);
+                -webkit-backdrop-filter: blur(25px);
+                backdrop-filter: blur(25px);
+              border-radius: 1000px;
+              cursor: pointer;
+            }
+            .control-center-widget .control-center .screen-modes .screen-morning {
+              background: rgb(0, 0, 0, 60%);
+                -webkit-backdrop-filter: blur(25px);
+                backdrop-filter: blur(25px);
+              height: 50%;
+              width: 100%;
+              border-radius: 25px;
+              cursor: pointer;width: 160px;height: 72px;
+            }
+            .control-center-widget .control-center .volume-britghtness-widget {
+              display: flex;
+              
+              justify-content: center;
+              align-items: center;
+              gap: 12px;
+            }
+            .control-center-widget .control-center .volume-britghtness-widget > * {
+              background: rgb(0, 0, 0, 60%);
+                -webkit-backdrop-filter: blur(25px);
+                backdrop-filter: blur(25px);
+              height: 100%;
+              width: 50%;
+              border-radius: 25px;
+              cursor: pointer;
+            }
+            .control-center-widget .control-center .daily-use-widget {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              place-items: center;
+              width: 140px;
+              height: 145px;
+              gap: 12px 10px;
+            }
+            .control-center-widget .control-center .daily-use-widget > * {
+              height: 100.5%;
+              width: 100%;
+              background: rgb(0, 0, 0, 60%);
+                -webkit-backdrop-filter: blur(25px);
+                backdrop-filter: blur(25px);
+              border-radius: 20px;
+              cursor: pointer;
+            }
+            .control-center-widget .control-center .universal-options-item {
+              display: flex;
+              
+              height: 145px;
+              gap: 10px;
+            }
+            .control-center-widget .control-center .universal-options-item > * {
+              height: 72px;
+              width: 72px;
+              background: rgb(0, 0, 0, 60%);
+                -webkit-backdrop-filter: blur(25px);
+                backdrop-filter: blur(25px);
+              border-radius: 1000px;
+              cursor: pointer;
+            }
+
+
+            .controlButton {
+    border-radius: 1000px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.125s ease-in-out;
+}
+
+.connectionButton {
+  height: 100%;
+    width: 100%;
+    border-radius: 1000px;
+    border: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.125s ease-in-out;
+}
+.controlButton:hover {
+    background-color: #f5f5f7;
+}
+.controlButton:hover svg path{
+    fill: #fb4d66 !important;
+}
+
+.connectionButton:hover {
+    background-color: #35C78F;
+}
+.connectionButton--orange:hover {
+    background-color: #f95c30;
+}
+.connectionButton--blue:hover {
+    background-color: #007AFF;
+}
+.connectionButton--purple:hover{
+  background: #3d44c3;
+}
+
+.connectionButton.is-active {
+    background-color: #35C78F !important;
+}
+
+.connectionButton--orange.is-active {
+    background-color: #f95c30 !important;
+}
+
+.connectionButton--blue.is-active {
+    background-color: #007AFF !important;
+}
+.connectionButton--purple.is-active {
+  background: #3d44c3 !important;
+}
+
+
+/* .controlButton .is-active {
+    background-color: #fff;
+}
+.controlButton .is-active path {
+  fill: #fb4d66 !important;
+} */
+            </style>
+            
+            
+                <div class="control-center-widget">
+                    <div id="batteryStatus" style="display: none;"></div>
+                    <div class="control-center">
+                      <div class="network" style="display: grid;
+    grid-template-columns: repeat(2, 1fr);  place-items: center;">
+<div style="height: 60px;width: 60px;background: rgba(255, 255, 255, 15%);border-radius: 1000px;">
+  <button class="connectionButton connectionButton--orange is-active">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/airplane-mode-solid-rounded.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="transparent">
+      <path d="M3.78524 11.9122L7.38354 9.7388C7.98738 9.37467 8.2893 9.19259 8.49772 8.94287C9.39969 7.86213 8.60539 6.26589 8.73989 5.00912C8.87911 3.70822 10.1293 1.92895 11.3895 1.37733C11.7774 1.20756 12.2223 1.20756 12.6102 1.37733C13.8704 1.92895 15.1206 3.70822 15.2598 5.00912C15.3943 6.26589 14.6 7.86213 15.502 8.94287C15.7104 9.19259 16.0124 9.37467 16.6162 9.7388L20.2148 11.9121C21.3162 12.5772 21.75 13.2871 21.75 14.6224C21.75 15.3492 21.4259 15.5441 20.7723 15.3957L14.462 13.9631L14.1787 16.4235C14.0759 17.3157 14.0246 17.7617 14.1731 18.1703C14.521 19.1273 15.7023 19.911 16.4237 20.6071C16.8224 20.9918 17.2575 22.0979 16.8029 22.6009C16.5222 22.9115 16.0663 22.6594 15.7525 22.5383L12.7314 21.3723C12.3702 21.2329 12.1895 21.1632 11.9999 21.1632C11.8102 21.1632 11.6296 21.2329 11.2683 21.3723L8.24724 22.5383C7.93345 22.6594 7.47752 22.9115 7.19684 22.6009C6.74221 22.0979 7.17734 20.9918 7.57604 20.6071C8.29746 19.911 9.4787 19.1273 9.82661 18.1703C9.97516 17.7617 9.92379 17.3157 9.82105 16.4235L9.53771 13.9631L3.22782 15.3956C2.57395 15.544 2.24981 15.3491 2.25001 14.622C2.25037 13.2869 2.6841 12.5773 3.78524 11.9122Z" fill="#ffffff"></path>
+      </svg>
+  </button>
+</div>
+<div style="height: 60px;width: 60px;background: rgba(255, 255, 255, 15%);border-radius: 1000px;">
+
+  <button class="connectionButton">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/arrow-data-transfer-vertical-solid-rounded.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="transparent">
+      <path d="M15.9998 19C15.9998 19.5523 15.5521 20 14.9998 20C14.4475 20 13.9998 19.5523 13.9998 19L14 6.7395C13.9999 6.26801 13.9998 5.80423 14.0557 5.44568C14.109 5.10422 14.2783 4.39991 15.0634 4.10522C15.8365 3.81502 16.4872 4.19563 16.7859 4.39925C17.1027 4.61518 17.4627 4.94149 17.8317 5.27604L17.8317 5.27605L18.5521 5.92887C18.9307 6.27177 19.2981 6.60453 19.5418 6.89751C19.767 7.16831 20.2092 7.78044 19.8854 8.51516C19.5616 9.24988 18.783 9.40097 18.4174 9.44863C18.0219 9.5002 17.5079 9.5001 16.9782 9.49999L15.9998 9.49998L15.9998 19Z" fill="#ffffff"></path>
+      <path d="M8.00019 4.99999C8.00019 4.4477 8.44791 3.99999 9.00019 3.99999C9.55248 3.99999 10.0002 4.4477 10.0002 4.99999L9.99999 17.2605C10.0001 17.732 10.0002 18.1958 9.94429 18.5543C9.891 18.8958 9.72174 19.6001 8.93662 19.8948C8.16345 20.185 7.51278 19.8044 7.21405 19.6008C6.89727 19.3848 6.53733 19.0585 6.1683 18.724L6.16829 18.724L5.44786 18.0711C5.06928 17.7282 4.7019 17.3955 4.45822 17.1025C4.23298 16.8317 3.79078 16.2196 4.1146 15.4848C4.43843 14.7501 5.217 14.599 5.5826 14.5514C5.97814 14.4998 6.49214 14.4999 7.0218 14.5L8.00019 14.5L8.00019 4.99999Z" fill="#ffffff"></path>
+      </svg>
+  </button>
+</div>
+<div style="height: 60px;width: 60px;background: rgba(255, 255, 255, 15%);border-radius: 1000px;">
+  <button class="connectionButton connectionButton--blue is-active">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/wifi-02-solid-rounded.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="transparent">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 18.5C10.5 17.6716 11.1716 17 12 17H12.0118C12.8402 17 13.5118 17.6716 13.5118 18.5C13.5118 19.3284 12.8402 20 12.0118 20H12C11.1716 20 10.5 19.3284 10.5 18.5Z" fill="#ffffff"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.54289 14.7929C9.93342 12.4024 14.0666 12.4024 16.4571 14.7929C16.8476 15.1834 16.8476 15.8166 16.4571 16.2071C16.0666 16.5976 15.4334 16.5976 15.0429 16.2071C13.4334 14.5976 10.5666 14.5976 8.95711 16.2071C8.56658 16.5976 7.93342 16.5976 7.54289 16.2071C7.15237 15.8166 7.15237 15.1834 7.54289 14.7929Z" fill="#ffffff"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.85984 11.7318C9.21914 8.09903 15.0058 8.07336 19.1626 11.751C19.5763 12.117 19.6149 12.749 19.249 13.1626C18.883 13.5763 18.251 13.6149 17.8374 13.249C14.459 10.26 9.78091 10.2343 6.14021 13.2682C5.71593 13.6218 5.08537 13.5645 4.7318 13.1402C4.37824 12.7159 4.43556 12.0853 4.85984 11.7318Z" fill="#ffffff"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4.5C15.695 4.49998 19.3379 5.94312 22.6452 8.73585C23.0672 9.09217 23.1204 9.72309 22.7641 10.1451C22.4077 10.567 21.7768 10.6202 21.3548 10.2639C18.3463 7.72345 15.1472 6.49999 12 6.5C8.85288 6.50001 5.65374 7.7235 2.6452 10.264C2.22324 10.6204 1.59231 10.5671 1.23599 10.1452C0.879668 9.72322 0.93288 9.09229 1.35484 8.73597C4.6621 5.94319 8.30506 4.50002 12 4.5Z" fill="#ffffff"></path>
+      </svg>
+  </button>
+</div>
+<div style="height: 60px;width: 60px;background: rgba(255, 255, 255, 15%);border-radius: 1000px;">
+  <button class="connectionButton connectionButton--purple is-active">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/bluetooth-solid-rounded.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="transparent">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9293 4.11572C15.9496 4.13112 15.9701 4.14658 15.9906 4.16209L16.6965 4.6955C16.7141 4.70877 16.7316 4.72201 16.749 4.73521C17.2213 5.09194 17.6594 5.42294 17.9701 5.73771C18.3103 6.08248 18.6465 6.55322 18.6465 7.20025C18.6465 7.84728 18.3103 8.31802 17.9701 8.66279C17.6594 8.97756 17.2213 9.30856 16.749 9.6653C16.7316 9.6785 16.714 9.69173 16.6965 9.705L13.6582 12.001L16.6965 14.297C16.7141 14.3102 16.7316 14.3235 16.7491 14.3367C17.2213 14.6934 17.6594 15.0244 17.9701 15.3392C18.3103 15.6839 18.6465 16.1547 18.6465 16.8017C18.6465 17.4487 18.3103 17.9195 17.9701 18.2643C17.6594 18.579 17.2213 18.91 16.749 19.2668C16.7316 19.28 16.7141 19.2932 16.6965 19.3065L15.9293 19.8862C15.2428 20.4051 14.6394 20.8611 14.1316 21.1392C13.6155 21.4218 12.8877 21.6953 12.1349 21.3161C11.3853 20.9385 11.1679 20.1935 11.0831 19.6108C10.9993 19.0359 10.9994 18.2769 10.9995 17.4114L10.9995 14.0101L6.24943 17.5995C5.80881 17.9325 5.18168 17.8452 4.84872 17.4046C4.51575 16.964 4.60302 16.3369 5.04365 16.0039L10.3408 12.001L5.04365 7.99807C4.60302 7.66511 4.51575 7.03798 4.84872 6.59736C5.18168 6.15673 5.80881 6.06946 6.24943 6.40243L10.9995 9.9919V6.66684C10.9995 6.64132 10.9995 6.61589 10.9995 6.59056C10.9994 5.72503 10.9993 4.9661 11.0831 4.39111C11.1679 3.80851 11.3853 3.0635 12.1349 2.68591C12.8877 2.30667 13.6155 2.5802 14.1316 2.8628C14.6394 3.14087 15.2428 3.59687 15.9293 4.11572ZM12.9995 14.4119C12.9995 14.1019 13.0727 14.0654 13.3201 14.2523L15.4907 15.8926C15.8188 16.1405 16.1818 16.3798 16.4783 16.6728C16.5958 16.789 16.5958 16.8144 16.4783 16.9306C16.1818 17.2236 15.8188 17.4629 15.4907 17.7108L14.7848 18.2442C14.3239 18.5925 13.804 19.0352 13.2814 19.3468C13.0621 19.4776 12.9993 19.4318 12.9993 19.18C12.9994 18.706 12.9995 17.8226 12.9995 17.3351V14.4119ZM13.3201 9.74965C13.0727 9.93655 12.9995 9.9001 12.9995 9.59008V6.66684C12.9995 6.19821 12.9994 5.36382 12.9993 4.87889C12.9993 4.58526 13.0691 4.54815 13.3111 4.71467C13.7156 4.99295 14.4132 5.47688 14.7848 5.75773L15.4907 6.29115C15.8188 6.53905 16.1818 6.77834 16.4783 7.07135C16.5958 7.18753 16.5958 7.21297 16.4783 7.32915C16.1818 7.62216 15.8188 7.86146 15.4907 8.10935L13.3201 9.74965Z" fill="#ffffff"></path>
+
+      </svg>
+  </button>
+</div>
+
+
+
+                      </div>
+                      <div class="music">
+                        <div style="display: flex;">
+                          <div style="height: 55px;width: 55px;border-radius: 17px;background: rgba(255, 255, 255, 25%);margin-top: 15px;margin-left: 15px;"></div>
+                          <div style="height: 42px;width: 42px;border-radius: 1000px;background: rgba(0, 0, 0, 25%);margin-top: 15px;margin-left: 33px;">
+
+                            <img src="https://i.pinimg.com/736x/6e/2c/66/6e2c669da97f9eff52a7f6926cda064d.jpg" style="height:42px;width: 42px;border-radius: 1000px;">
+                          </div>
+
+                        </div>
+
+                        <div style="color: #fff;margin-left: 17px;margin-top: 17px;font-family: MiSans, system-ui, sans-serif;
+                        font-weight: 400;
+                        font-size: 15px;opacity: 60%;letter-spacing: .3px;">Not Playing</div>
+                        
+
+<style>
+.musicPlayer__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;margin-top: 3px;
+}
+.musicPlayer__controls > span {
+    padding: 0.5rem;
+}
+
+</style>
+
+                        <div class="musicPlayer__controls">
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/backward-02-solid-rounded.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="transparent">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.55591 9.38142C3.04444 8.95368 3.70801 8.47444 4.53474 7.87736L4.53474 7.87736L4.53474 7.87736C5.6695 7.05779 6.6311 6.36329 7.36541 5.93266C8.09833 5.50285 8.79652 5.20916 9.5161 5.25464C10.4636 5.31451 11.3456 5.75989 11.9534 6.48772C12.4158 7.04155 12.5876 7.77819 12.6688 8.62019C12.6875 8.81522 12.702 9.02401 12.7131 9.24699C13.1834 8.8533 13.7935 8.41269 14.5347 7.87736L14.5347 7.87736L14.5348 7.87734C15.6695 7.05778 16.6311 6.36328 17.3654 5.93266C18.0983 5.50285 18.7965 5.20916 19.5161 5.25464C20.4636 5.31451 21.3456 5.75989 21.9534 6.48772C22.4158 7.04155 22.5876 7.77819 22.6688 8.62019C22.75 9.46374 22.75 10.5647 22.75 11.9576V11.9577V12.0423V12.0424C22.75 13.4353 22.75 14.5362 22.6688 15.3798C22.5876 16.2218 22.4158 16.9584 21.9534 17.5123C21.3456 18.2401 20.4636 18.6855 19.5161 18.7454C18.7965 18.7908 18.0983 18.4971 17.3654 18.0673C16.6311 17.6367 15.6695 16.9422 14.5348 16.1227L14.5348 16.1226L14.5347 16.1226C13.7935 15.5873 13.1834 15.1467 12.7131 14.753C12.702 14.976 12.6875 15.1848 12.6688 15.3798C12.5876 16.2218 12.4158 16.9584 11.9534 17.5123C11.3456 18.2401 10.4636 18.6855 9.5161 18.7454C8.79652 18.7908 8.09833 18.4971 7.36541 18.0673C6.63111 17.6367 5.66952 16.9422 4.53479 16.1227L4.53476 16.1226L4.53473 16.1226C3.70801 15.5255 3.04444 15.0463 2.55591 14.6186C2.05802 14.1826 1.66379 13.7355 1.45872 13.1759C1.18043 12.4164 1.18043 11.5836 1.45872 10.8241C1.66379 10.2645 2.05802 9.81736 2.55591 9.38142Z"  fill="#FFF" fill-rule="evenodd" fill-opacity=".6"></path>
+                              </svg>
+                          </span>
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/play-solid-rounded.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="transparent">
+                              <path d="M13.9405 6.33706C15.5735 7.26475 16.8567 7.99375 17.7709 8.66154C18.6913 9.33392 19.3721 10.0367 19.6159 10.9632C19.7947 11.6427 19.7947 12.3574 19.6159 13.0369C19.3721 13.9634 18.6913 14.6662 17.7709 15.3386C16.8567 16.0064 15.5735 16.7354 13.9406 17.663L13.9406 17.663C12.3632 18.5592 11.033 19.3149 10.0232 19.7444C9.0053 20.1774 8.07729 20.3968 7.17536 20.1412C6.51252 19.9534 5.90941 19.5969 5.42356 19.1067C4.76419 18.4414 4.49951 17.522 4.37429 16.4154C4.24998 15.317 4.24999 13.879 4.25 12.0502V12.0502V11.95V11.95C4.24999 10.1211 4.24998 8.68315 4.37429 7.5847C4.49951 6.47816 4.76419 5.55867 5.42356 4.89341C5.90941 4.40323 6.51252 4.04672 7.17536 3.8589C8.07729 3.60331 9.0053 3.82275 10.0232 4.25571C11.033 4.68522 12.3632 5.4409 13.9405 6.33706Z" fill="#ffffff"></path>
+                              </svg>
+                          </span>
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/forward-02-solid-rounded.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="transparent">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4441 9.38142C20.9556 8.95368 20.292 8.47444 19.4653 7.87736L19.4653 7.87736L19.4653 7.87736C18.3305 7.05779 17.3689 6.36329 16.6346 5.93266C15.9017 5.50285 15.2035 5.20916 14.4839 5.25464C13.5364 5.31451 12.6544 5.75989 12.0466 6.48772C11.5842 7.04155 11.4124 7.77819 11.3312 8.62019C11.3125 8.81522 11.298 9.02401 11.2869 9.24699C10.8166 8.8533 10.2065 8.41269 9.46526 7.87736L9.46526 7.87736L9.46523 7.87734C8.33048 7.05778 7.3689 6.36328 6.63459 5.93266C5.90167 5.50285 5.20348 5.20916 4.4839 5.25464C3.53643 5.31451 2.65444 5.75989 2.04665 6.48772C1.58417 7.04155 1.41236 7.77819 1.33125 8.62019C1.24999 9.46374 1.24999 10.5647 1.25 11.9576V11.9577V12.0423V12.0424C1.24999 13.4353 1.24999 14.5362 1.33125 15.3798C1.41236 16.2218 1.58417 16.9584 2.04665 17.5123C2.65444 18.2401 3.53643 18.6855 4.4839 18.7454C5.20348 18.7908 5.90167 18.4971 6.63459 18.0673C7.36889 17.6367 8.33048 16.9422 9.4652 16.1227L9.46524 16.1226L9.46527 16.1226C10.2065 15.5873 10.8166 15.1467 11.2869 14.753C11.298 14.976 11.3125 15.1848 11.3312 15.3798C11.4124 16.2218 11.5842 16.9584 12.0466 17.5123C12.6544 18.2401 13.5364 18.6855 14.4839 18.7454C15.2035 18.7908 15.9017 18.4971 16.6346 18.0673C17.3689 17.6367 18.3305 16.9422 19.4652 16.1227L19.4652 16.1226L19.4653 16.1226C20.292 15.5255 20.9556 15.0463 21.4441 14.6186C21.942 14.1826 22.3362 13.7355 22.5413 13.1759C22.8196 12.4164 22.8196 11.5836 22.5413 10.8241C22.3362 10.2645 21.942 9.81736 21.4441 9.38142Z" fill="#FFF" fill-rule="evenodd" fill-opacity=".6"></path>
+                              </svg>
+                          </span>
+                        </div>
+
+
+
+
+
+                        
+                      </div>
+                      <div class="screen-modes">
+
+
+                        <div class="rotate-nightmode">
+                          <div class="rotate" style="display: flex;align-items: center;justify-content: center;">
+            
+                            <button class="controlButton">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/rotate-top-left-solid-rounded.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="transparent">
+                                <path d="M9.94425 7.25C8.34166 7.24998 7.0627 7.24997 6.05961 7.38483C5.02335 7.52415 4.16994 7.81966 3.4948 8.4948C2.81966 9.16994 2.52415 10.0233 2.38483 11.0596C2.24997 12.0627 2.24998 13.3417 2.25 14.9443V15.0557C2.24998 16.6583 2.24997 17.9373 2.38483 18.9404C2.52415 19.9767 2.81966 20.8301 3.4948 21.5052C4.16994 22.1803 5.02335 22.4759 6.05961 22.6152C7.0627 22.75 8.34166 22.75 9.94426 22.75H10.0557C11.6583 22.75 12.9373 22.75 13.9404 22.6152C14.9767 22.4759 15.8301 22.1803 16.5052 21.5052C17.1803 20.8301 17.4758 19.9767 17.6152 18.9404C17.75 17.9373 17.75 16.6583 17.75 15.0558V15.0557V14.9443V14.9443C17.75 13.3417 17.75 12.0627 17.6152 11.0596C17.4758 10.0233 17.1803 9.16994 16.5052 8.4948C15.8301 7.81966 14.9767 7.52415 13.9404 7.38483C12.9373 7.24997 11.6583 7.24998 10.0558 7.25H10.0557H9.94426H9.94425Z" fill="#ffffff"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9415 1.61367C14.5901 1.18764 13.9598 1.12718 13.5338 1.47864L12.1881 2.58877C12.1737 2.60065 12.1593 2.61252 12.1449 2.62438C11.8244 2.88865 11.5103 3.14769 11.2845 3.39183C11.0377 3.65863 10.75 4.0592 10.75 4.61366C10.75 4.87888 10.8554 5.13323 11.0429 5.32077C11.2304 5.50831 11.4848 5.61366 11.75 5.61366H12.75C14.6639 5.61366 15.9987 5.61579 17.0058 5.75119C17.9842 5.88273 18.5023 6.12333 18.8713 6.49234C19.2403 6.86136 19.4809 7.37946 19.6125 8.35782C19.7479 9.36496 19.75 10.6998 19.75 12.6137V13.25C19.75 13.8023 20.1977 14.25 20.75 14.25C21.3023 14.25 21.75 13.8023 21.75 13.25L21.75 12.5405C21.75 10.717 21.75 9.24728 21.5946 8.09133C21.4333 6.89118 21.0881 5.88069 20.2855 5.07813C19.483 4.27557 18.4725 3.93038 17.2723 3.76903C16.3962 3.65124 15.3399 3.62274 14.0859 3.61585L14.8065 3.02142C15.2325 2.66997 15.293 2.03969 14.9415 1.61367Z" fill="#ffffff"></path>
+                                </svg>
+                            </button>
+            
+                          </div>
+                          <div class="nightmode" style="display: flex;align-items: center;justify-content: center;">
+                           
+                            <button class="controlButton">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/moon-02-solid-rounded.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="transparent">
+                                <path d="M10.5163 2.04299C10.6958 2.27652 10.722 2.59348 10.5832 2.85329C9.99927 3.94693 9.66792 5.1961 9.66792 6.52489C9.66792 10.8367 13.1633 14.3321 17.4751 14.3321C18.8039 14.3321 20.0531 14.0008 21.1467 13.4168C21.4065 13.2781 21.7235 13.3043 21.957 13.4837C22.1906 13.6632 22.2974 13.9628 22.2302 14.2495C21.1556 18.835 17.0409 22.25 12.1269 22.25C6.39589 22.25 1.75 17.6041 1.75 11.8732C1.75 6.95909 5.16505 2.84448 9.7505 1.76982C10.0373 1.70261 10.3368 1.80947 10.5163 2.04299Z" fill="#ffffff"></path>
+                                </svg>
+                            </button>
+
+            
+                          </div>
+                        </div>
+
+
+<div>
+                        <div class="screen-morning" style="display: flex;align-items: center;">
+                            <span style="border-radius: 1000px;height: 44px;width: 44px;display: flex ; align-items: center;justify-content: center ; background: rgba(255, 255, 255, 0.15);margin-left: 14px;">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/square-lock-02-solid-rounded.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="#000000">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.25C10.067 3.25 8.5 4.817 8.5 6.75V8.31016C9.61773 8.27048 10.7654 8.25 12 8.25C13.2346 8.25 14.3823 8.27048 15.5 8.31016V6.75C15.5 4.817 13.933 3.25 12 3.25ZM6.5 6.75V8.52712C4.93233 9.00686 3.74925 10.3861 3.52452 12.0552C3.37636 13.1556 3.25 14.3118 3.25 15.5C3.25 16.6882 3.37636 17.8444 3.52452 18.9448C3.79609 20.9618 5.46716 22.5555 7.52522 22.6501C8.95364 22.7158 10.4042 22.75 12 22.75C13.5958 22.75 15.0464 22.7158 16.4748 22.6501C18.5328 22.5555 20.2039 20.9618 20.4755 18.9448C20.6236 17.8444 20.75 16.6882 20.75 15.5C20.75 14.3118 20.6236 13.1556 20.4755 12.0552C20.2508 10.3861 19.0677 9.00686 17.5 8.52712V6.75C17.5 3.71243 15.0376 1.25 12 1.25C8.96243 1.25 6.5 3.71243 6.5 6.75ZM13 14.5C13 13.9477 12.5523 13.5 12 13.5C11.4477 13.5 11 13.9477 11 14.5V16.5C11 17.0523 11.4477 17.5 12 17.5C12.5523 17.5 13 17.0523 13 16.5V14.5Z" fill="#ffffff"></path>
+                                </svg>
+
+                            
+                            </span>
+                            <span style="border-radius: 1000px;margin-left: 10px;color: #fff;font-family: MiSans, system-ui, sans-serif;font-weight: 500;
+    font-size: 13px;display: flex;justify-content: center;align-items: center;flex-direction: column;letter-spacing: .3px;">
+    
+                            <span>Device</span>  <span style="margin-top: 2px;">Protection</span>   
+                            </span>
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+
+
+
+                      </div>
+                      <div class="volume-britghtness-widget">
+                        <style>
+                
+                            .wrapper {
+                              position: relative;
+                              height: 160px;
+                              width: 72px;
+                            }
+                            .wrapper::before, .wrapper::after {
+                              display: block;
+                              position: absolute;
+                              z-index: 99;
+                              color: #fff;
+                              width: 100%;
+                              text-align: center;
+                              font-size: 1.5rem;
+                              line-height: 1;
+                              padding: 0.75rem 0;
+                              pointer-events: none;
+                            }
+                         
+                            .wrapper::before {
+                          content: "";   
+                            }
+                            .wrapper::after {
+                              content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/sun-03-solid-rounded.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="%23000000"><path d="M17.5 12C17.5 15.0376 15.0376 17.5 12 17.5C8.96243 17.5 6.5 15.0376 6.5 12C6.5 8.96243 8.96243 6.5 12 6.5C15.0376 6.5 17.5 8.96243 17.5 12Z" fill="%23ffb905"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C12.5523 1 13 1.44772 13 2V3.5C13 4.05228 12.5523 4.5 12 4.5C11.4477 4.5 11 4.05228 11 3.5V2C11 1.44772 11.4477 1 12 1ZM4.22149 4.22149C4.61202 3.83097 5.24518 3.83097 5.6357 4.22149L6.69636 5.28215C7.08689 5.67268 7.08689 6.30584 6.69636 6.69636C6.30584 7.08689 5.67268 7.08689 5.28215 6.69636L4.22149 5.6357C3.83097 5.24518 3.83097 4.61201 4.22149 4.22149ZM19.7784 4.2216C20.1689 4.61213 20.1689 5.24529 19.7784 5.63582L18.7177 6.69648C18.3272 7.087 17.694 7.087 17.3035 6.69648C16.913 6.30595 16.913 5.67279 17.3035 5.28226L18.3642 4.2216C18.7547 3.83108 19.3879 3.83108 19.7784 4.2216ZM1 12C1 11.4477 1.44772 11 2 11H3.5C4.05228 11 4.5 11.4477 4.5 12C4.5 12.5523 4.05228 13 3.5 13H2C1.44772 13 1 12.5523 1 12ZM19.5 12C19.5 11.4477 19.9477 11 20.5 11H22C22.5523 11 23 11.4477 23 12C23 12.5523 22.5523 13 22 13H20.5C19.9477 13 19.5 12.5523 19.5 12ZM17.303 17.3035C17.6936 16.913 18.3267 16.913 18.7172 17.3035L19.7779 18.3642C20.1684 18.7547 20.1684 19.3879 19.7779 19.7784C19.3874 20.1689 18.7542 20.1689 18.3637 19.7784L17.303 18.7177C16.9125 18.3272 16.9125 17.694 17.303 17.3035ZM6.69685 17.3036C7.08738 17.6942 7.08738 18.3273 6.69685 18.7178L5.63619 19.7785C5.24567 20.169 4.6125 20.169 4.22198 19.7785C3.83145 19.388 3.83145 18.7548 4.22198 18.3643L5.28264 17.3036C5.67316 16.9131 6.30633 16.9131 6.69685 17.3036ZM12 19.5C12.5523 19.5 13 19.9477 13 20.5V22C13 22.5523 12.5523 23 12 23C11.4477 23 11 22.5523 11 22V20.5C11 19.9477 11.4477 19.5 12 19.5Z" fill="%23ffb905"></path></svg>');
+                              bottom: 0;
+                            margin-bottom: 5px;
+                            }
+                            
+                            .wrapper-v::before {
+                          content: "";   
+                            }
+                            .wrapper-v::after {
+                              content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/volume-high-solid-rounded.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="%23000000"><path d="M10.9916 3.9756C11.6784 3.44801 12.4957 3.01957 13.367 3.38808C14.2302 3.75318 14.5076 4.63267 14.6274 5.49785C14.7502 6.38459 14.7502 7.60557 14.7502 9.12365V14.8794C14.7502 16.3975 14.7502 17.6185 14.6274 18.5052C14.5076 19.3704 14.2302 20.2499 13.367 20.615C12.4957 20.9835 11.6784 20.5551 10.9916 20.0275C10.2892 19.488 9.3966 18.5765 8.34667 17.5044L8.34663 17.5044C7.80717 16.9535 7.44921 16.6873 7.08663 16.5374C6.72221 16.3868 6.27914 16.3229 5.50619 16.3229C4.83768 16.3229 4.23963 16.3229 3.78679 16.2758C3.31184 16.2265 2.87088 16.1191 2.47421 15.8485C1.7184 15.3328 1.42917 14.5777 1.31957 13.8838C1.23785 13.3663 1.24723 12.7981 1.25479 12.3405V11.6626C1.24723 11.205 1.23785 10.6368 1.31957 10.1193C1.42917 9.42536 1.7184 8.67029 2.47421 8.15462C2.87088 7.88398 3.31184 7.77657 3.78679 7.72723C4.23963 7.68019 4.83768 7.68021 5.50619 7.68023C6.27914 7.68023 6.72221 7.61628 7.08663 7.46563C7.44922 7.31574 7.80717 7.04954 8.34663 6.49869L8.34664 6.49869C9.39659 5.42655 10.2892 4.51511 10.9916 3.9756Z" fill="%23000000"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16.3935 8.20504C16.8325 7.87003 17.4601 7.95439 17.7951 8.39347C18.5519 9.38539 19.0001 10.6418 19.0001 12.0001C19.0001 13.3583 18.5519 14.6147 17.7951 15.6066C17.4601 16.0457 16.8325 16.1301 16.3935 15.7951C15.9544 15.4601 15.87 14.8325 16.205 14.3935C16.699 13.746 17.0001 12.9149 17.0001 12.0001C17.0001 11.0852 16.699 10.2541 16.205 9.60664C15.87 9.16756 15.9544 8.54004 16.3935 8.20504Z" fill="%23000000"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M19.3247 6.26245C19.7321 5.8895 20.3646 5.91738 20.7376 6.32472C22.1408 7.8573 23 9.83247 23 12C23 14.1675 22.1408 16.1427 20.7376 17.6753C20.3646 18.0826 19.7321 18.1105 19.3247 17.7376C18.9174 17.3646 18.8895 16.7321 19.2625 16.3247C20.3609 15.125 21 13.621 21 12C21 10.379 20.3609 8.87497 19.2625 7.6753C18.8895 7.26796 18.9174 6.63541 19.3247 6.26245Z" fill="%23000000"></path></svg>');
+                              bottom: 0;
+                              margin-bottom: 5px;
+                            }
+
+                            input[type=range] {
+                              -webkit-appearance: none;
+                              background: rgb(0, 0, 0, 60%);
+                              position: absolute;
+                              top: 50%;
+                              left: 50%;
+                              margin: 0;
+                              padding: 0;
+                              width: 160px;
+                              height: 72px;
+                              transform: translate(-50%, -50%) rotate(-90deg);
+                              /* border-radius: 1rem; */
+                              overflow: hidden;
+                              cursor: row-resize;
+                            }
+                            input[type=range][step] {
+                              background-color: transparent;
+                              background-image: repeating-linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) calc(12.5% - 1px), #05051a 12.5%);
+                            }
+                            input[type=range]::-webkit-slider-thumb {
+                              -webkit-appearance: none;
+                              width: 0;
+                              box-shadow: -20rem 0 0 20rem rgba(217, 217, 217, 1);
+                              box-shadow: -20rem 0 0 20rem rgba(255, 255, 255, 0.9);
+                             
+                            }
+                            input[type=range]::-moz-range-thumb {
+                              border: none;
+                              width: 0;
+                              box-shadow: -20rem 0 0 20rem rgba(255, 255, 255, 0.2);
+                            }
+                            
+                            </style>
+                        <div class="brightness" style="overflow: hidden;background: transparent;">
+            
+                            <div class="wrapper">
+                                <input type="range" min="0" max="100" value="50" />
+                            </div>
+                            
+                        </div>
+
+                        <div class="volume" style="overflow: hidden;background: transparent;">
+            
+            
+<div class="wrapper wrapper-v">
+	<input type="range" min="0" max="100" value="50"/>
+  
+</div>
+            
+            
+            
+                        </div>
+                      </div>
+                      <!-- <div class="daily-use-widget">
+                        <div class="vedio-recorder"></div>
+                        <div class="battery"></div>
+                        <div class="voice-recorder"></div>
+                        <div class="notes"></div>
+                      </div>
+                      <div class="daily-use-widget">
+                        <div class="Invertcolor"></div>
+                        <div class="hearing manegement"></div>
+                        <div class="calculator"></div>
+                        <div class="alarm"></div>
+                      </div> -->
+                      <div class="universal-options-item">
+                        <div class="torch-light" style="display: flex;align-items: center;justify-content: center;">
+                        
+                          <button class="controlButton">
+                           
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/notification-03-solid-rounded.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="#000000">
+                              <path d="M3.92773 9.27683C3.92777 4.84138 7.54406 1.24986 11.9999 1.24986C16.4557 1.24986 20.072 4.84141 20.072 9.27689C20.0721 10.3086 20.1415 11.0872 20.6172 11.7871C20.7983 12.0496 21.1412 12.4935 21.3695 12.8504C21.6254 13.2502 21.8753 13.7323 21.9612 14.294C22.2415 16.1268 20.9493 17.3135 19.6624 17.8452C15.1297 19.7181 8.87004 19.7181 4.33734 17.8452C3.05043 17.3135 1.75824 16.1268 2.03855 14.294C2.12447 13.7323 2.3744 13.2502 2.63021 12.8504C2.85861 12.4934 3.20156 12.0495 3.38259 11.7871C3.85826 11.0872 3.92764 10.3085 3.92773 9.27683Z" fill="#ffffff"></path>
+                              <path d="M14.7775 21.9509C13.9741 22.4562 13.0186 22.7476 11.9983 22.7476C10.9781 22.7476 10.0226 22.4562 9.21922 21.9509C8.50617 21.5025 8.14965 21.2783 8.27441 20.9056C8.39918 20.5329 8.89114 20.5746 9.87506 20.6581C11.2822 20.7774 12.7144 20.7774 14.1216 20.6581C15.1055 20.5746 15.5975 20.5329 15.7223 20.9056C15.847 21.2783 15.4905 21.5025 14.7775 21.9509Z" fill="#ffffff"></path>
+                              </svg>
+
+                         
+                          </button>
+                        </div>
+            
+            
+                        <div class="file-manager"  style="display: flex;align-items: center;justify-content: center;">
+                          <button class="controlButton">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/search-visual-solid-rounded.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="#000000">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.98326 1.97723C9.99584 2.52937 9.55844 2.98717 9.0063 2.99975C6.16249 3.06454 4.92642 3.35541 4.12342 4.15563C3.42972 4.84692 3.10692 5.87538 2.99879 8.04968C2.97136 8.60128 2.50195 9.0262 1.95035 8.99877C1.39875 8.97134 0.973824 8.50194 1.00126 7.95033C1.1122 5.7195 1.44478 4.00145 2.71166 2.73896C4.14878 1.30683 6.19134 1.06337 8.96074 1.00026C9.51288 0.987684 9.97068 1.42508 9.98326 1.97723ZM14.0168 1.97723C14.0294 1.42508 14.4872 0.987684 15.0393 1.00026C17.8087 1.06337 19.8513 1.30683 21.2884 2.73896C22.5553 4.00145 22.8878 5.7195 22.9988 7.95033C23.0262 8.50194 22.6013 8.97134 22.0497 8.99877C21.4981 9.0262 21.0287 8.60128 21.0013 8.04968C20.8931 5.87538 20.5703 4.84692 19.8766 4.15563C19.0736 3.35541 17.8376 3.06454 14.9937 2.99975C14.4416 2.98717 14.0042 2.52937 14.0168 1.97723ZM1.95035 15.0012C2.50195 14.9738 2.97136 15.3987 2.99879 15.9503C3.10692 18.1246 3.42972 19.1531 4.12342 19.8444C4.92642 20.6446 6.16249 20.9355 9.0063 21.0003C9.55844 21.0128 9.99584 21.4706 9.98326 22.0228C9.97068 22.5749 9.51288 23.0123 8.96074 22.9997C6.19134 22.9366 4.14878 22.6932 2.71166 21.261C1.44478 19.9986 1.1122 18.2805 1.00126 16.0497C0.973824 15.4981 1.39875 15.0287 1.95035 15.0012ZM22.0497 15.0012C22.6013 15.0287 23.0262 15.4981 22.9988 16.0497C22.8878 18.2805 22.5553 19.9986 21.2884 21.261C19.8513 22.6932 17.8087 22.9366 15.0393 22.9997C14.4872 23.0123 14.0294 22.5749 14.0168 22.0228C14.0042 21.4706 14.4416 21.0128 14.9937 21.0003C17.8376 20.9355 19.0736 20.6446 19.8766 19.8444C20.5703 19.1531 20.8931 18.1246 21.0013 15.9503C21.0287 15.3987 21.4981 14.9738 22.0497 15.0012Z" fill="#ffffff"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M6 11.5C6 8.46243 8.46243 6 11.5 6C14.5376 6 17 8.46243 17 11.5C17 12.6575 16.6424 13.7315 16.0317 14.6175L17.7071 16.2929C18.0976 16.6834 18.0976 17.3166 17.7071 17.7071C17.3166 18.0976 16.6834 18.0976 16.2929 17.7071L14.6175 16.0317C13.7315 16.6424 12.6575 17 11.5 17C8.46243 17 6 14.5376 6 11.5ZM11.5 8C9.567 8 8 9.567 8 11.5C8 13.433 9.567 15 11.5 15C13.433 15 15 13.433 15 11.5C15 9.567 13.433 8 11.5 8Z" fill="#ffffff"></path>
+                              </svg>
+                          </button>
+                        </div>
+            
+            
+                      </div>
+                      <div class="universal-options-item">
+                        <div class="universal-remote"  style="display: flex;align-items: center;justify-content: center;">
+                           
+                          <button class="controlButton">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/align-box-middle-right-solid-rounded.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="transparent">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4635 1.37373C15.3214 1.24999 13.8818 1.24999 12.0453 1.25H11.9547C10.1182 1.24999 8.67861 1.24999 7.53648 1.37373C6.37094 1.50001 5.42656 1.76232 4.62024 2.34815C4.13209 2.70281 3.70281 3.13209 3.34815 3.62024C2.76232 4.42656 2.50001 5.37094 2.37373 6.53648C2.24999 7.67861 2.24999 9.11822 2.25 10.9548V13.0453C2.24999 14.8818 2.24999 16.3214 2.37373 17.4635C2.50001 18.6291 2.76232 19.5734 3.34815 20.3798C3.70281 20.8679 4.13209 21.2972 4.62024 21.6518C5.42656 22.2377 6.37094 22.5 7.53648 22.6263C8.67859 22.75 10.1182 22.75 11.9547 22.75H12.0453C13.8818 22.75 15.3214 22.75 16.4635 22.6263C17.6291 22.5 18.5734 22.2377 19.3798 21.6518C19.8679 21.2972 20.2972 20.8679 20.6518 20.3798C21.2377 19.5734 21.5 18.6291 21.6263 17.4635C21.75 16.3214 21.75 14.8818 21.75 13.0453V10.9547C21.75 9.11824 21.75 7.67859 21.6263 6.53648C21.5 5.37094 21.2377 4.42656 20.6518 3.62024C20.2972 3.13209 19.8679 2.70281 19.3798 2.34815C18.5734 1.76232 17.6291 1.50001 16.4635 1.37373ZM8 9.5C8 8.94772 8.44772 8.5 9 8.5H17C17.5523 8.5 18 8.94772 18 9.5C18 10.0523 17.5523 10.5 17 10.5H9C8.44772 10.5 8 10.0523 8 9.5ZM13 14.5C13 13.9477 13.4477 13.5 14 13.5H17C17.5523 13.5 18 13.9477 18 14.5C18 15.0523 17.5523 15.5 17 15.5H14C13.4477 15.5 13 15.0523 13 14.5Z" fill="#ffffff"></path>
+                              </svg>
+                          </button>
+                        </div>
+                        <div class="camara"  style="display: flex;align-items: center;justify-content: center;">
+                          <button class="controlButton">
+                           
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/edit-01-solid-rounded.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="#000000">
+                              <path d="M17.9799 1.33814C18.6382 1.05395 19.3846 1.05395 20.043 1.33814C20.3076 1.45237 20.5299 1.61728 20.745 1.80587C20.9512 1.9866 21.1861 2.22154 21.4653 2.50074L21.4993 2.53471C21.7785 2.81389 22.0134 3.04883 22.1941 3.25496C22.3827 3.47007 22.5476 3.6924 22.6619 3.95701C22.9461 4.61536 22.9461 5.36178 22.6619 6.02013C22.5476 6.28474 22.3827 6.50707 22.1941 6.72218C22.0134 6.9283 21.7785 7.16322 21.4993 7.44237L21.4993 7.44243L16.3602 12.5815L16.3602 12.5815C15.2196 13.7225 14.5141 14.4282 13.6205 14.851C12.7269 15.2737 11.5924 15.3855 9.98688 15.5436L9.19865 15.6214C8.97513 15.6434 8.75349 15.5641 8.59467 15.4053C8.43585 15.2465 8.35657 15.0249 8.37863 14.8014L8.4564 14.0131C8.61455 12.4076 8.72631 11.2731 9.14905 10.3795C9.5718 9.48586 10.2775 8.78038 11.4185 7.63978L16.5575 2.50077C16.8367 2.22156 17.0717 1.9866 17.2778 1.80587C17.4929 1.61728 17.7153 1.45237 17.9799 1.33814Z" fill="#ffffff"></path>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.125 16.625C1.125 15.1062 2.35622 13.875 3.875 13.875H6.125C6.67728 13.875 7.125 14.3227 7.125 14.875C7.125 15.4273 6.67728 15.875 6.125 15.875H3.875C3.46079 15.875 3.125 16.2108 3.125 16.625C3.125 17.0392 3.46079 17.375 3.875 17.375H13.375C14.8938 17.375 16.125 18.6062 16.125 20.125C16.125 21.6438 14.8938 22.875 13.375 22.875H11.125C10.5727 22.875 10.125 22.4273 10.125 21.875C10.125 21.3227 10.5727 20.875 11.125 20.875H13.375C13.7892 20.875 14.125 20.5392 14.125 20.125C14.125 19.7108 13.7892 19.375 13.375 19.375H3.875C2.35622 19.375 1.125 18.1438 1.125 16.625Z" fill="#ffffff"></path>
+                              </svg>
+                              </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            
+            </div>
+            
+            </div>
+            
+            
+            
+            <script>
+                function updateBatteryStatus(battery) {
+                    const batteryStatusDiv = document.getElementById('batteryStatus');
+                    const level = battery.level * 100;
+                    const charging = battery.charging ? "Charging" : "Not Charging";
+                    batteryStatusDiv.textContent = `Battery Level: ${level}% - ${charging}`;
+                }
+            
+                navigator.getBattery().then(function(battery) {
+                    // Initial update
+                    updateBatteryStatus(battery);
+            
+                    // Update on level change
+                    battery.addEventListener('levelchange', function() {
+                        updateBatteryStatus(battery);
+                    });
+            
+                    // Update on charging change
+                    battery.addEventListener('chargingchange', function() {
+                        updateBatteryStatus(battery);
+                    });
+                });
+
+
+
+
+
+
+
+
+            </script>
+
+<script>
+  
+
+  const btnElements = document.querySelectorAll('.connectionButton');
+
+btnElements.forEach(btnEl => {
+  btnEl.addEventListener('click', (ev) => {
+    ev.target.classList.toggle('is-active');
+  });
+});
+
+</script>
+    </body>
+</html>
